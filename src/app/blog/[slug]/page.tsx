@@ -11,7 +11,7 @@ const posts: Record<string, string> = {
   "conference-highlights": "Key takeaways from our recent international conference...",
 };
 
-export default function BlogPostPage({ params }: BlogPostProps) {
+export default function BlogPostPage({ params }: PageProps) {
   const content = posts[params.slug];
 
   if (!content) return notFound();
