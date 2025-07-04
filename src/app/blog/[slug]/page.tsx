@@ -1,9 +1,10 @@
 // FILE: src/app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
-interface BlogPostProps {
-  params: { slug: string };
+interface PageProps {
+  params: { [key: string]: string };
 }
+
 
 const posts: Record<string, string> = {
   "ai-research-journey": "This is our journey into Artificial Intelligence research...",
