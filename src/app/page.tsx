@@ -4,8 +4,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react"; // Removed useEffect, useRef if no longer directly needed here
-import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
-import { FiArrowRight, FiCpu, FiZap, FiLayers, FiBarChart2, FiGlobe, FiTool, FiUsers, FiAward, FiBookOpen } from "react-icons/fi";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { FiArrowRight, FiCpu, FiZap, FiLayers, FiBarChart2, FiGlobe, FiTool } from "react-icons/fi";
 import Slider from "react-slick"; // For carousels, a popular choice
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -184,7 +184,7 @@ export default function HomePage() {
             Our Vision & Mission
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            At IIT Bhilai's AMDCG, we are dedicated to pushing the boundaries of technology
+            At IIT Bhilai AMDCG, we are dedicated to pushing the boundaries of technology
             through groundbreaking research in computational modeling, machine learning, and intelligent systems.
           </p>
         </motion.div>
@@ -352,7 +352,7 @@ export default function HomePage() {
             Meet Our Brilliant Minds
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Dedicated researchers and innovators driving our group's success.
+            Dedicated researchers and innovators driving our group success.
           </p>
         </motion.div>
 
@@ -452,7 +452,7 @@ export default function HomePage() {
             Join Us in Shaping the Future of Technology
           </h2>
           <p className="text-lg md:text-xl opacity-90 mb-10">
-            Whether you're a prospective student, a collaborating researcher, or an industry partner,
+            Whether you are a prospective student, a collaborating researcher, or an industry partner,
             we invite you to explore opportunities with the AMDCG group.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">

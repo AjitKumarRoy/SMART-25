@@ -10,9 +10,18 @@ interface SearchBarProps {
   onClose: () => void;
 }
 
+
+interface SearchResult {
+  url: string;
+  title: string;
+  description?: string;
+}
+
+
 const SearchBar = ({ onClose }: SearchBarProps) => {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+//  const [results, setResults] = useState<any[]>([]);
+const [results, setResults] = useState<SearchResult[]>([]);
   const searchBarContentRef = useRef<HTMLDivElement>(null); // Ref for the actual search input/results container
 
   // Fuse.js setup (assuming searchData structure is compatible)

@@ -1,7 +1,7 @@
 // src/components/sections/UpcomingEvents.tsx
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaCalendar, FaLocationDot, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";

@@ -108,7 +108,7 @@ export function AnnouncementRecruitment() {
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-10">
-            {tabs.map((tab, idx) => {
+            {tabs.map((tab) => {
               const TabIcon = tab.icon;
               return (
                 <Tab
