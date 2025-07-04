@@ -1,0 +1,158 @@
+{
+  "heroCarousel": [
+    {
+      "id": 1,
+      "image": "/images/hero/hero-lab1.jpg",
+      "title": "Pioneering AI for Tomorrow's World",
+      "description": "Driving innovation in artificial intelligence and machine learning research."
+    },
+    {
+      "id": 2,
+      "image": "/images/hero/hero-robotics.jpg",
+      "title": "Advancing Robotics & Automation",
+      "description": "Designing intelligent robotic systems for complex challenges."
+    },
+    {
+      "id": 3,
+      "image": "/images/hero/hero-design.jpg",
+      "title": "Next-Gen Machine Design & Simulation",
+      "description": "Utilizing advanced computational tools for robust engineering solutions."
+    },
+    {
+      "id": 4,
+      "image": "/images/hero/hero-research.jpg",
+      "title": "Collaborative Research Excellence",
+      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
+    }
+  ],
+  "researchAreas": [
+    {
+      "id": 1,
+      "title": "Artificial Intelligence & ML",
+      "description": "From deep learning to reinforcement learning, we explore the frontiers of intelligent algorithms.",
+      "icon": "FiCpu",
+      "link": "/research#ai-ml"
+    },
+    {
+      "id": 2,
+      "title": "Robotics & Automation",
+      "description": "Developing autonomous systems, human-robot interaction, and industrial automation solutions.",
+      "icon": "FiZap",
+      "link": "/research#robotics"
+    },
+    {
+      "id": 3,
+      "title": "Computational Design",
+      "description": "Leveraging simulation and optimization for novel material and structural design.",
+      "icon": "FiLayers",
+      "link": "/research#computational-design"
+    },
+    {
+      "id": 4,
+      "title": "Data Science & Analytics",
+      "description": "Extracting insights from complex datasets to drive data-driven decisions.",
+      "icon": "FiBarChart2",
+      "link": "/research#data-science"
+    },
+    {
+      "id": 5,
+      "title": "Augmented & Virtual Reality",
+      "description": "Creating immersive experiences for training, visualization, and human-computer interaction.",
+      "icon": "FiGlobe",
+      "link": "/research#ar-vr"
+    },
+    {
+      "id": 6,
+      "title": "Advanced Manufacturing",
+      "description": "Innovating in additive manufacturing, smart factories, and process optimization.",
+      "icon": "FiTool",
+      "link": "/research#manufacturing"
+    }
+  ],
+  "featuredProjects": [
+    {
+      "id": 1,
+      "image": "/images/projects/project1.jpg",
+      "title": "Intelligent Robotic Arm Control",
+      "category": "Robotics",
+      "link": "/projects/robot-arm"
+    },
+    {
+      "id": 2,
+      "image": "/images/projects/project2.jpg",
+      "title": "Predictive Maintenance using ML",
+      "category": "AI/ML",
+      "link": "/projects/predictive-maintenance"
+    },
+    {
+      "id": 3,
+      "image": "/images/projects/project3.jpg",
+      "title": "Generative Design for Aerospace",
+      "category": "Computational Design",
+      "link": "/projects/aerospace-design"
+    },
+    {
+      "id": 4,
+      "image": "/images/projects/project4.jpg",
+      "title": "AI-Powered Drug Discovery",
+      "category": "Data Science",
+      "link": "/projects/drug-discovery"
+    },
+    {
+      "id": 5,
+      "image": "/images/projects/project5.jpg",
+      "title": "VR Training Simulation",
+      "category": "AR/VR",
+      "link": "/projects/vr-training"
+    }
+  ],
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Dr. Kavya Sharma",
+      "title": "Principal Investigator",
+      "image": "/images/team/kavya-sharma.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Arjun Patel",
+      "title": "Lead Researcher - AI",
+      "image": "/images/team/arjun-patel.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Priya Singh",
+      "title": "Robotics Engineer",
+      "image": "/images/team/priya-singh.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Vikram Rao",
+      "title": "Computational Designer",
+      "image": "/images/team/vikram-rao.jpg"
+    }
+  ],
+  "newsEvents": [
+    {
+      "id": 1,
+      "title": "AMDCG to Host International AI Conference 2025",
+      "date": "July 15, 2025",
+      "image": "/images/news/conference.jpg",
+      "link": "/news/ai-conference-2025"
+    },
+    {
+      "id": 2,
+      "title": "New Paper Published in Nature Machine Intelligence",
+      "date": "June 28, 2025",
+      "image": "/images/news/paper.jpg",
+      "link": "/news/new-paper-nature-mi"
+    },
+    {
+      "id": 3,
+      "title": "Student Project Wins National Robotics Competition",
+      "date": "May 20, 2025",
+      "image": "/images/news/robotics-win.jpg",
+      "link": "/news/robotics-competition-win"
+    }
+  ]
+}

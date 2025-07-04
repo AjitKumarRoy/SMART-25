@@ -1,0 +1,48 @@
+research-website/
+├── public/                # Static assets (images, PDFs, etc.)
+│   ├── images/
+│   └── searchIndex.json
+
+├── src/
+│   ├── app/               # Pages & routing using App Router
+│   │   ├── page.tsx       # Home page
+│   │   ├── about/         # Route: /about
+│   │   │   └── page.tsx
+│   │   ├── contact/
+│   │   │   └── page.tsx
+│   │   ├── team/
+│   │   │   └── page.tsx
+│   │   ├── research/
+│   │   │   └── page.tsx
+│   │   ├── publications/
+│   │   │   └── page.tsx
+│   │   ├── events/
+│   │   │   └── page.tsx
+│   │   ├── facilities/
+│   │   │   └── page.tsx
+│   │   ├── gallery/
+│   │   │   └── page.tsx
+│   │   ├── careers/
+│   │   │   └── page.tsx
+│   │   ├── blog/
+│   │   │   └── page.tsx
+│   │   │         └── [slug]
+│   │   │               └── page.tsx
+│   │   └── layout.tsx     # Global layout
+│
+│   ├── components/        # Reusable UI components
+│   │   ├── Navbar.tsx
+│   │   ├── Footer.tsx
+│   │   └── SearchBar.tsx
+│
+│   ├── styles/            # Tailwind and global CSS
+│   │   └── globals.css
+│
+│   ├── data/              # Local JSON/TS data
+│   │   ├── team.json
+│   │   ├── publications.json
+│   │   ├── research.json
+│   │   └── events.json
+│
+│   ├── posts/             # Blog posts as markdown files
+│   │   └── your-blog.md

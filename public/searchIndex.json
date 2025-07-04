@@ -1,0 +1,5 @@
+[
+  { "title": "Our Team", "url": "/team", "description": "Meet our researchers" },
+  { "title": "Research Projects", "url": "/research", "description": "Explore our projects" },
+  { "title": "Publications", "url": "/publications", "description": "View papers and journals" }
+]
