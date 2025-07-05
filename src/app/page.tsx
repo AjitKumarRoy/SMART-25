@@ -3,8 +3,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react"; // Removed useEffect, useRef if no longer directly needed here
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion, useScroll, useTransform, Variants } from "framer-motion"; // Import Variants type
 import { FiArrowRight, FiCpu, FiZap, FiLayers, FiBarChart2, FiGlobe, FiTool } from "react-icons/fi";
 import Slider from "react-slick"; // For carousels, a popular choice
 import "slick-carousel/slick/slick.css";
@@ -14,10 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 import homepageData from "@/data/homepage.json";
 
 // Import new components
-import { Notices } from "@/components/sections/Notices";
-import  About  from "@/components/sections/About";
-import  ResearchandInnovations  from "@/components/sections/ResearchandInnovations";
-import  Collaborators  from "@/components/sections/Collaborators";
+import { Notices } from "@/components/sections/Notices"; // Assuming this is UpcomingEvents/AnnouncementRecruitment
+import About from "@/components/sections/About";
+import ResearchandInnovations from "@/components/sections/ResearchandInnovations";
+import Collaborators from "@/components/sections/Collaborators";
 
 // Dynamic icon mapping for research areas (keep this if you still use it)
 const researchIcons: { [key: string]: React.ElementType } = {
@@ -29,8 +29,8 @@ const researchIcons: { [key: string]: React.ElementType } = {
   FiTool,
 };
 
-// Animation Variants for sections (keep this)
-const sectionVariants = {
+// Animation Variants for sections
+const sectionVariants: Variants = { // Explicitly type as Variants
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -39,14 +39,13 @@ const sectionVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
+      // Removed duration and delay as they are not properties for a spring transition type
     },
   },
 };
 
-// Animation Variants for cards/items (keep this)
-const cardVariants = {
+// Animation Variants for cards/items
+const cardVariants: Variants = { // Explicitly type as Variants
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -55,7 +54,7 @@ const cardVariants = {
       type: "spring",
       damping: 12,
       stiffness: 120,
-      duration: 0.6,
+      // Removed duration as it is not a property for a spring transition type
     },
   },
 };
@@ -145,7 +144,7 @@ export default function HomePage() {
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5, duration: 0.8 }}
+                  transition={{ delay: 0.5, duration: 0.8 }} // Delay and duration are valid here
                   className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 drop-shadow-lg"
                 >
                   {item.title}
@@ -153,7 +152,7 @@ export default function HomePage() {
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7, duration: 0.8 }}
+                  transition={{ delay: 0.7, duration: 0.8 }} // Delay and duration are valid here
                   className="text-lg md:text-xl max-w-2xl mb-8 opacity-90 drop-shadow-md"
                 >
                   {item.description}
@@ -161,7 +160,7 @@ export default function HomePage() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9, duration: 0.8 }}
+                  transition={{ delay: 0.9, duration: 0.8 }} // Delay and duration are valid here
                 >
                   <Link href="/about" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2">
                     Learn More <FiArrowRight />
@@ -173,76 +172,16 @@ export default function HomePage() {
         </Slider>
       </section>
 
-      {/* About/Mission Section */}
-      {/* <section className="py-20 px-6 max-w-7xl mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
-            Our Vision & Mission
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            At IIT Bhilai AMDCG, we are dedicated to pushing the boundaries of technology
-            through groundbreaking research in computational modeling, machine learning, and intelligent systems.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={cardVariants}
-          >
-            <Image
-              src="/images/lab.jpg"
-              alt="AMDCG Lab"
-              width={800}
-              height={500}
-              className="rounded-3xl shadow-2xl object-cover w-full h-auto transform hover:scale-102 transition-transform duration-300"
-            />
-          </motion.div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            variants={cardVariants}
-            className="flex flex-col items-center md:items-start text-center md:text-left"
-          >
-            <h3 className="text-2xl md:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">
-              Innovating for a Smarter Future
-            </h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg mb-6">
-              Our interdisciplinary team works tirelessly to bridge the gap between theoretical research
-              and practical applications. We aim to develop real-world solutions that address
-              critical global challenges across various domains.
-            </p>
-            <Link href="/about" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-500 font-semibold inline-flex items-center gap-2 group">
-              Discover Our Story
-              <FiArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
-          </motion.div>
-        </div>
-      </section> */}
-
-      {/* --- NEW COMPONENTS INTEGRATION START --- */}
-
       {/* Announcements & Recruitment Section */}
       <div className="py-20"> {/* Added a div for spacing */}
-         <Notices />
+          <Notices /> {/* Assuming Notices is the AnnouncementRecruitment component */}
       </div>
 
       <About/>
 
       <ResearchandInnovations />
 
-      
-
-      {/* --- NEW COMPONENTS INTEGRATION END --- */}
+      <Collaborators />
 
 
       {/* Key Research Areas Section */}
@@ -272,7 +211,7 @@ export default function HomePage() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.5 }}
                 variants={cardVariants}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.1 }} // Delay is valid here
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 flex flex-col items-center text-center border border-gray-100 dark:border-gray-700 transform hover:-translate-y-2"
               >
                 {IconComponent && <IconComponent className="text-blue-600 dark:text-blue-400 text-5xl mb-4" />}
@@ -309,7 +248,7 @@ export default function HomePage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
+          variants={cardVariants} // Apply cardVariants here
         >
           <Slider {...generalCarouselSettings}>
             {homepageData.featuredProjects.map((project) => (
@@ -363,7 +302,7 @@ export default function HomePage() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
+          variants={cardVariants} // Apply cardVariants here
         >
           <Slider {...{ ...generalCarouselSettings, slidesToShow: 4, responsive: [
             { breakpoint: 1024, settings: { slidesToShow: 3 } },
@@ -391,7 +330,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-          {/* Call to Action Section */}
+      {/* Call to Action Section */}
       <section className="bg-blue-600 dark:bg-blue-800 py-20 px-6 text-white text-center">
         <motion.div
           initial="hidden"
