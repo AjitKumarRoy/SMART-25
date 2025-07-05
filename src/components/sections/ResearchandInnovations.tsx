@@ -4,7 +4,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFolderOpen, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6"; // Chevron icons are now unused but kept for reference
+import { FaFolderOpen, FaArrowRight } from "react-icons/fa6"; // Chevron icons are now unused but kept for reference
 
 // Import react-slick components and CSS
 import Slider from "react-slick";
