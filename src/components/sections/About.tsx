@@ -94,7 +94,7 @@ export default function About() {
             <div className="flex items-center mb-6">
               <FaUserTie className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
               <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-                Group's Head
+                AMDCG Head
               </h2>
             </div>
             <div className="relative w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-blue-600 dark:border-blue-400 shadow-lg">
@@ -225,7 +225,7 @@ export default function About() {
                   </div>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Visit of Hon'ble President Droupadi Murmu
+                  Visit of Honourable President Droupadi Murmu
                 </h3>
                 <Link href="https://www.youtube.com/watch?v=your-video-id-1" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                   Watch Video

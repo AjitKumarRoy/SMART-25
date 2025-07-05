@@ -25,20 +25,20 @@ interface RecruitmentItem {
 }
 
 // Reusing variants from UpcomingEvents for consistency
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 10,
-      stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
-    },
-  },
-};
+// const sectionVariants = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       type: "spring",
+//       damping: 10,
+//       stiffness: 100,
+//       duration: 0.8,
+//       delay: 0.1,
+//     },
+//   },
+// };
 
 const listVariants = {
   hidden: { opacity: 0 },
