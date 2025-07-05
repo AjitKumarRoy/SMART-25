@@ -16,12 +16,14 @@ interface AnnouncementItem {
   title: string;
   link: string;
   date?: string; // date is now required for 'New' tag logic
+  isNew?: boolean; // <--- ADDED: This property is added during processing
 }
 
 interface RecruitmentItem {
   id: number;
   title: string;
   link: string;
+  isNew?: boolean; // <--- ADDED: This property is added during processing
 }
 
 // Reusing variants from UpcomingEvents for consistency - UNCOMMENTED and FIXED
