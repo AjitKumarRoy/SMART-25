@@ -3,9 +3,9 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import { Tab } from "@headlessui/react";
-import { FaBullhorn, FaTags, FaArrowRight } from "react-icons/fa6"; // Changed FaBullhorn to FaMegaphone for heading consistency
+import { FaBullhorn, FaTags, FaArrowRight, FaMegaphone } from "react-icons/fa6"; // Using Fa6 for modern icons
 
 // Import data
 import announcementsData from "@/data/announcements.json";
@@ -24,23 +24,23 @@ interface RecruitmentItem {
   link: string;
 }
 
-// Reusing variants from UpcomingEvents for consistency
-// const sectionVariants = {
-//   hidden: { opacity: 0, y: 50 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       type: "spring",
-//       damping: 10,
-//       stiffness: 100,
-//       duration: 0.8,
-//       delay: 0.1,
-//     },
-//   },
-// };
+// Reusing variants from UpcomingEvents for consistency - UNCOMMENTED and FIXED
+const sectionVariants: Variants = { // Added Variants type
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 100,
+      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
+      // The 'delay' for the section itself will be applied where the section component is used (e.g., in page.tsx).
+    },
+  },
+};
 
-const listVariants = {
+const listVariants: Variants = { // Added Variants type
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -51,7 +51,7 @@ const listVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -93,9 +93,6 @@ export function AnnouncementRecruitment() {
 
   // Process data for Recruitments: reverse
   const processedRecruitments = useMemo(() => {
-    // Current time is Saturday, July 5, 2025 at 1:45:15 PM IST.
-    // Assuming recruitments can also have a 'New' tag, let's process them similarly
-    // If recruitment data doesn't have a date, the 'isNew' check will safely return false.
     return (recruitmentsData as RecruitmentItem[])
       .map((item) => ({
         ...item,
@@ -106,7 +103,7 @@ export function AnnouncementRecruitment() {
   }, []); // Depend on recruitmentsData, stable import
 
   const tabs = [
-    { name: "Announcements", icon: FaBullhorn, data: processedAnnouncements, link: "/announcements" }, // Changed icon and added link
+    { name: "Announcements", icon: FaMegaphone, data: processedAnnouncements, link: "/announcements" }, // Changed icon and added link
     { name: "Recruitment", icon: FaTags, data: processedRecruitments, link: "/recruitments" }, // Added link
   ];
 
@@ -121,9 +118,25 @@ export function AnnouncementRecruitment() {
   return (
     <>
       {/* Main content container with fixed width/height and styling, matching UpcomingEvents */}
-      <div className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
+      <motion.div // Applied motion.div here
+        className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700"
+        variants={sectionVariants} // Applied sectionVariants here
+        initial="hidden"
+        animate="visible"
+        transition={{ delay: 0.1 }} // Applying delay directly to the motion component
+      >
 
-      
+        {/* Header and navigation controls (similar to UpcomingEvents) */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center">
+            {/* The icon here will be static for the overall section, not tab-specific */}
+            <FaMegaphone className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mr-4">
+              Notices & Recruitments
+            </h2>
+            <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
+          </div>
+        </div>
 
         {/* Tab Group for Announcements and Recruitments */}
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
@@ -219,7 +232,7 @@ export function AnnouncementRecruitment() {
           </div>
 
         </Tab.Group>
-      </div>
+      </motion.div>
     </>
   );
 }
