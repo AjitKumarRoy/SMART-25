@@ -1,8 +1,8 @@
 // FILE: src/components/SearchBar.tsx
 "use client";
-import { useEffect, useState, useRef } from "react"; // Added useRef
+import { useEffect, useState, useRef, useMemo } from "react"; // Added useMemo for fuse
 import Fuse from "fuse.js";
-import searchData from "@/../public/searchIndex.json";
+import searchData from "@/../public/searchIndex.json"; // Assuming this path is correct
 import Link from "next/link";
 import { FiX } from "react-icons/fi"; // Added FiX for close button
 
@@ -10,35 +10,34 @@ interface SearchBarProps {
   onClose: () => void;
 }
 
-
 interface SearchResult {
   url: string;
   title: string;
   description?: string;
 }
 
-
 const SearchBar = ({ onClose }: SearchBarProps) => {
   const [query, setQuery] = useState("");
-//  const [results, setResults] = useState<any[]>([]);
-const [results, setResults] = useState<SearchResult[]>([]);
+  const [results, setResults] = useState<SearchResult[]>([]);
   const searchBarContentRef = useRef<HTMLDivElement>(null); // Ref for the actual search input/results container
 
-  // Fuse.js setup (assuming searchData structure is compatible)
-  const fuse = new Fuse(searchData, {
-    keys: ["title", "description"],
-    threshold: 0.3,
-  });
+  // Fuse.js setup - use useMemo to ensure fuse object is stable and only re-created if searchData changes
+  const fuse = useMemo(() => {
+    return new Fuse(searchData, {
+      keys: ["title", "description"],
+      threshold: 0.3,
+    });
+  }, [searchData]); // Dependency on searchData, which is imported and should be stable
 
   // Handle search query changes
   useEffect(() => {
     if (query.trim() === "") {
       setResults([]);
     } else {
-      const searchResults = fuse.search(query).map((r) => r.item);
+      const searchResults = fuse.search(query).map((r) => r.item as SearchResult);
       setResults(searchResults);
     }
-  }, [query]);
+  }, [query, fuse]); // <--- ADDED 'fuse' HERE to resolve the warning
 
   // Handle clicks outside the search bar content to close it
   useEffect(() => {
