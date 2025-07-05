@@ -21,20 +21,6 @@ interface EventItem {
   isNew?: boolean;
 }
 
-const sectionVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 10,
-      stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
-    },
-  },
-};
 
 // Variants for the overall list container (ul)
 const listVariants = {
