@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import ReactMarkdown from "react-markdown";
 import { FaCalendarAlt, FaUserCircle, FaArrowLeft } from "react-icons/fa";
 
@@ -18,8 +18,8 @@ interface BlogPostContentProps {
   };
 }
 
-// Animation variants for page entry
-const pageVariants = {
+// Animation variants for page entry - explicitly typed
+const pageVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -28,7 +28,7 @@ const pageVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.5,
+      // Removed 'duration' as it's not a valid property for 'spring' transitions
     },
   },
 };
