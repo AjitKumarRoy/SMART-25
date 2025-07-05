@@ -126,18 +126,6 @@ export function AnnouncementRecruitment() {
         transition={{ delay: 0.1 }} // Applying delay directly to the motion component
       >
 
-        {/* Header and navigation controls (similar to UpcomingEvents) */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center">
-            {/* The icon here will be static for the overall section, not tab-specific */}
-            <FaBullhorn className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mr-4">
-              Notices & Recruitments
-            </h2>
-            <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
-          </div>
-        </div>
-
         {/* Tab Group for Announcements and Recruitments */}
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
           <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-8"> {/* Adjusted mb */}
