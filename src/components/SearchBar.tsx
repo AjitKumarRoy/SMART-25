@@ -27,7 +27,7 @@ const SearchBar = ({ onClose }: SearchBarProps) => {
       keys: ["title", "description"],
       threshold: 0.3,
     });
-  }, [searchData]); // Dependency on searchData, which is imported and should be stable
+  }, []); // Dependency on searchData, which is imported and should be stable
 
   // Handle search query changes
   useEffect(() => {

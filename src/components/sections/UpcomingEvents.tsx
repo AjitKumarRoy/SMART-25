@@ -69,7 +69,7 @@ export function UpcomingEvents() {
         const dateB = b.parsedDate ? b.parsedDate.getTime() : 0;
         return dateA - dateB;
       });
-  }, [upcomingEventsData]);
+  }, []);
 
   // Calculate the animation duration based on the number of items
   // This makes the scroll speed relatively consistent regardless of item count
