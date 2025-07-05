@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "IIT Guwahati Researchers Explore Traditional Assamese Fermented Food for Sustainable Industrial Applications",
+    "image": "https://placehold.co/400x250/A3BE8C/FFFFFF?text=Biosurfactant",
+    "link": "/research/assamese-food-research"
+  },
+  {
+    "id": 2,
+    "title": "Researchers have designed an affordable and efficient 'passive' radiative cooling system that does not require electricity to operate",
+    "image": "https://placehold.co/400x250/88C0D0/FFFFFF?text=Cooling+System",
+    "link": "/research/cooling-system"
+  },
+  {
+    "id": 3,
+    "title": "New Breakthrough in AI for Medical Diagnosis: Enhancing Accuracy and Speed",
+    "image": "https://placehold.co/400x250/BF616A/FFFFFF?text=AI+Diagnosis",
+    "link": "/research/ai-medical-diagnosis"
+  },
+  {
+    "id": 4,
+    "title": "Advancements in Renewable Energy Storage: Next-Gen Battery Technologies",
+    "image": "https://placehold.co/400x250/D08770/FFFFFF?text=Energy+Storage",
+    "link": "/research/energy-storage"
+  },
+  {
+    "id": 5,
+    "title": "Developing Biodegradable Plastics from Agricultural Waste",
+    "image": "https://placehold.co/400x250/EBCB8B/FFFFFF?text=Biodegradable+Plastic",
+    "link": "/research/biodegradable-plastics"
+  }
+]

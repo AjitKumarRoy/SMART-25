@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Indian Institute of Technology Bombay",
+    "logo": "https://placehold.co/200x80/E0E0E0/333333?text=IIT+Bombay",
+    "link": "https://www.iitb.ac.in/"
+  },
+  {
+    "id": 2,
+    "name": "Indian Institute of Science",
+    "logo": "https://placehold.co/200x80/D0D0D0/444444?text=IISc+Bangalore",
+    "link": "https://www.iisc.ac.in/"
+  },
+  {
+    "id": 3,
+    "name": "Tata Institute of Fundamental Research",
+    "logo": "https://placehold.co/200x80/C0C0C0/555555?text=TIFR",
+    "link": "https://www.tifr.res.in/"
+  },
+  {
+    "id": 4,
+    "name": "Council of Scientific & Industrial Research",
+    "logo": "https://placehold.co/200x80/B0B0B0/666666?text=CSIR",
+    "link": "https://www.csir.res.in/"
+  },
+  {
+    "id": 5,
+    "name": "Indian Space Research Organisation",
+    "logo": "https://placehold.co/200x80/A0A0A0/777777?text=ISRO",
+    "link": "https://www.isro.gov.in/"
+  },
+  {
+    "id": 6,
+    "name": "Defence Research and Development Organisation",
+    "logo": "https://placehold.co/200x80/909090/888888?text=DRDO",
+    "link": "https://www.drdo.gov.in/"
+  },
+  {
+    "id": 7,
+    "name": "National Centre for Biological Sciences",
+    "logo": "https://placehold.co/200x80/808080/999999?text=NCBS",
+    "link": "https://www.ncbs.res.in/"
+  },
+  {
+    "id": 8,
+    "name": "All India Institute of Medical Sciences",
+    "logo": "https://placehold.co/200x80/707070/AAAAAA?text=AIIMS",
+    "link": "https://www.aiims.edu/"
+  }
+]

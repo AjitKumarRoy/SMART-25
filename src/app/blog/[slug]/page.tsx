@@ -1,17 +1,16 @@
 // FILE: src/app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 
-interface PageProps {
-  params: { [key: string]: string };
+interface BlogPostProps {
+  params: { slug: string };
 }
-
 
 const posts: Record<string, string> = {
   "ai-research-journey": "This is our journey into Artificial Intelligence research...",
   "conference-highlights": "Key takeaways from our recent international conference...",
 };
 
-export default function BlogPostPage({ params }: PageProps) {
+export default function BlogPostPage({ params }: BlogPostProps) {
   const content = posts[params.slug];
 
   if (!content) return notFound();

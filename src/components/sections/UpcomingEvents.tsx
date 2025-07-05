@@ -4,7 +4,7 @@
 import { useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FaCalendar, FaLocationDot, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaCalendar, FaLocationDot, FaArrowRight } from "react-icons/fa6";
 
 // Import data and helper functions
 import upcomingEventsData from "@/data/upcomingEvents.json";
@@ -94,15 +94,9 @@ export function UpcomingEvents() {
   };
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={sectionVariants}
-      className="bg-white dark:bg-gray-900 py-20 px-6 relative overflow-hidden"
-    >
+    <>
       {/* Main content container with fixed width/height and styling */}
-      <div className="max-w-4xl mx-auto relative z-10 p-8 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
+      <div className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
         
         {/* Header and navigation controls */}
         <div className="flex items-center justify-between mb-8">
@@ -113,21 +107,7 @@ export function UpcomingEvents() {
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
             </div>
-            <div className="flex space-x-2">
-                {/* Navigation Arrows (UI only for auto-scroll; not functional for manual scroll) */}
-                <button
-                    className="p-3 rounded-full bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                    aria-label="Previous event"
-                >
-                    <FaChevronLeft className="text-lg" />
-                </button>
-                <button
-                    className="p-3 rounded-full bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 shadow-md hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                    aria-label="Next event"
-                >
-                    <FaChevronRight className="text-lg" />
-                </button>
-            </div>
+          
         </div>
 
         {/* Scrolling Event List Container: fixed height, overflow hidden, and scrolling content */}
@@ -194,12 +174,12 @@ export function UpcomingEvents() {
         {/* View All Button */}
         {processedEvents.length > 0 && (
           <div className="text-center mt-8">
-            <Link href="/events" className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg">
+            <Link href="/events" className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg">
               View All Events <FaArrowRight className="ml-3 -mr-1 text-xl" />
             </Link>
           </div>
         )}
       </div>
-    </motion.section>
+    </>
   );
 }

@@ -1,14 +1,15 @@
+// src/components/sections/AnnouncementRecruitment.tsx
 "use client";
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Tab } from "@headlessui/react";
-import { FaBullhorn, FaTags, FaArrowRight } from "react-icons/fa6"; // Using Fa6 for modern icons
+import { FaBullhorn, FaTags, FaArrowRight } from "react-icons/fa6"; // Changed FaBullhorn to FaMegaphone for heading consistency
 
 // Import data
-import announcementsData from "@/data/announcements.json"; // Renamed to avoid conflict
-import recruitmentsData from "@/data/recruitments.json"; // Renamed to avoid conflict
+import announcementsData from "@/data/announcements.json";
+import recruitmentsData from "@/data/recruitments.json";
 
 interface AnnouncementItem {
   id: number;
@@ -22,6 +23,22 @@ interface RecruitmentItem {
   title: string;
   link: string;
 }
+
+// Reusing variants from UpcomingEvents for consistency
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      damping: 10,
+      stiffness: 100,
+      duration: 0.8,
+      delay: 0.1,
+    },
+  },
+};
 
 const listVariants = {
   hidden: { opacity: 0 },
@@ -72,42 +89,45 @@ export function AnnouncementRecruitment() {
         const dateB = b.date ? new Date(b.date).getTime() : 0;
         return dateB - dateA; // For descending order (newest first)
       });
-  }, [announcementsData]);
+  }, []); // Depend on announcementsData, but since it's imported, it's stable
 
   // Process data for Recruitments: reverse
   const processedRecruitments = useMemo(() => {
-    return (recruitmentsData as RecruitmentItem[]).slice().reverse();
-  }, [recruitmentsData]);
+    // Current time is Saturday, July 5, 2025 at 1:45:15 PM IST.
+    // Assuming recruitments can also have a 'New' tag, let's process them similarly
+    // If recruitment data doesn't have a date, the 'isNew' check will safely return false.
+    return (recruitmentsData as RecruitmentItem[])
+      .map((item) => ({
+        ...item,
+        isNew: false, // Recruitments typically don't have a date for 'newness'
+      }))
+      .slice() // Create a shallow copy before reversing if you want to keep original array immutable
+      .reverse();
+  }, []); // Depend on recruitmentsData, stable import
 
   const tabs = [
-    { name: "Announcements", icon: FaBullhorn, data: processedAnnouncements },
-    { name: "Recruitment", icon: FaTags, data: processedRecruitments },
+    { name: "Announcements", icon: FaBullhorn, data: processedAnnouncements, link: "/announcements" }, // Changed icon and added link
+    { name: "Recruitment", icon: FaTags, data: processedRecruitments, link: "/recruitments" }, // Added link
   ];
 
   // Calculate the animation duration based on the number of items
   // This makes the scroll speed relatively consistent regardless of item count
   const calculateAnimationDuration = (itemCount: number) => {
-    // You might want to adjust these numbers for desired speed
-    const minDuration = 20; // Minimum duration in seconds
-    const durationPerItem = 3; // Seconds per item
+    const minDuration = 20; // Minimum duration in seconds for a full scroll cycle
+    const durationPerItem = 3; // Seconds per item (adjust this value for desired overall speed)
     return `${Math.max(minDuration, itemCount * durationPerItem)}s`;
   };
 
   return (
-    <motion.section
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
-      variants={listVariants}
-      className="bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 py-16 rounded-3xl shadow-xl overflow-hidden relative"
-    >
-      {/* Background blobs for visual interest */}
-      <div className="absolute top-0 left-0 w-48 h-48 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    <>
+      {/* Main content container with fixed width/height and styling, matching UpcomingEvents */}
+      <div className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
 
-      <div className="max-w-4xl mx-auto px-6 relative z-10">
+      
+
+        {/* Tab Group for Announcements and Recruitments */}
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-          <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-10">
+          <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-8"> {/* Adjusted mb */}
             {tabs.map((tab) => {
               const TabIcon = tab.icon;
               return (
@@ -132,73 +152,74 @@ export function AnnouncementRecruitment() {
             })}
           </Tab.List>
 
-          {/* Fixed Width & Height Container for Tab Panels */}
-          <Tab.Panels className="mt-8 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100 dark:border-gray-700 max-w-2xl mx-auto h-96">
+          {/* Scrolling Content Area: fixed height, overflow hidden, and scrolling content */}
+          {/* This `div` matches the structure and `h-96` from UpcomingEvents */}
+          <Tab.Panels className="relative h-96 overflow-hidden rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-inner">
             {tabs.map((tab, idx) => (
               <Tab.Panel
                 key={idx}
                 className="focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60 h-full flex flex-col"
               >
                 {tab.data.length > 0 ? (
-                  // Scrolling Container for the list (takes remaining height)
-                  <div className="relative flex-grow overflow-hidden rounded-lg">
-                    <motion.ul
-                      variants={listVariants}
-                      initial="hidden"
-                      animate="visible"
-                      // Apply the custom CSS class for animation
-                      className="space-y-4 animate-scrollUp absolute top-0 left-0 w-full"
-                      style={{
-                        // Set the animation duration dynamically
-                        animationDuration: calculateAnimationDuration(tab.data.length),
-                        paddingBottom: '100%', // Crucial for seamless looping
-                      }}
-                    >
-                      {/* Duplicate content for seamless scrolling loop */}
-                      {[...tab.data, ...tab.data].map((item: AnnouncementItem | RecruitmentItem, itemIndex) => (
-                        <motion.li
-                          key={`${item.id}-${itemIndex}`} // Unique key for duplicated items
-                          variants={itemVariants}
-                          className="group flex items-start gap-3 p-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 border-b border-gray-100 dark:border-gray-700 last:border-b-0"
-                        >
-                          <span className="flex-shrink-0 text-blue-600 dark:text-blue-400 mt-1">
-                            <FaBullhorn className="text-lg" /> {/* Generic icon for list items */}
-                          </span>
-                          <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex-grow">
-                            <p className="text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-200">
-                              {item.title}
-                              {(tab.name === "Announcements" && (item as AnnouncementItem).isNew) && (
-                                <span className="ml-2 inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 animate-pulse">
-                                  New
-                                </span>
-                              )}
-                            </p>
-                            {(item as AnnouncementItem).date && (
-                              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                                Published: {(item as AnnouncementItem).date}
-                              </p>
+                  <motion.ul
+                    variants={listVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="space-y-4 animate-scrollUp absolute top-0 left-0 w-full"
+                    style={{
+                      animationDuration: calculateAnimationDuration(tab.data.length),
+                      paddingBottom: '100%', // Crucial for seamless looping
+                    }}
+                  >
+                    {/* Duplicate content for seamless scrolling loop */}
+                    {[...tab.data, ...tab.data].map((item: AnnouncementItem | RecruitmentItem, itemIndex) => (
+                      <motion.li
+                        key={`${item.id}-${itemIndex}`} // Unique key for duplicated items
+                        variants={itemVariants}
+                        className="group flex items-start gap-3 p-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors duration-200 border-b border-gray-100 dark:border-gray-700 last:border-b-0"
+                      >
+                        <span className="flex-shrink-0 text-blue-600 dark:text-blue-400 mt-1">
+                          {/* Choose an appropriate icon for each item if desired, or keep generic */}
+                          {tab.name === "Announcements" ? <FaBullhorn className="text-lg" /> : <FaTags className="text-lg" />}
+                        </span>
+                        <Link href={item.link} target="_blank" rel="noopener noreferrer" className="flex-grow">
+                          <p className="text-lg font-medium text-gray-800 dark:text-gray-200 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-200">
+                            {item.title}
+                            {/* Only show 'New' tag for Announcements, and if 'isNew' is true */}
+                            {(tab.name === "Announcements" && (item as AnnouncementItem).isNew) && (
+                              <span className="ml-2 inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 animate-pulse">
+                                New
+                              </span>
                             )}
-                          </Link>
-                        </motion.li>
-                      ))}
-                    </motion.ul>
-                  </div>
+                          </p>
+                          {(item as AnnouncementItem).date && (
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                              Published: {(item as AnnouncementItem).date}
+                            </p>
+                          )}
+                        </Link>
+                      </motion.li>
+                    ))}
+                  </motion.ul>
                 ) : (
-                  <motion.li variants={itemVariants} className="text-center text-gray-500 dark:text-gray-400 p-8">
-                    No items available at the moment. Please check back later!
-                  </motion.li>
+                  <motion.div variants={itemVariants} className="text-center text-gray-500 dark:text-gray-400 p-8">
+                    No {tab.name.toLowerCase()} available at the moment. Please check back later!
+                  </motion.div>
                 )}
-                {/* View All Link at the bottom */}
-                <div className="text-center mt-8">
-                  <Link href={`/${tab.name.toLowerCase()}`} className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
-                    View All {tab.name} <FaArrowRight className="ml-2 -mr-1" />
-                  </Link>
-                </div>
               </Tab.Panel>
             ))}
           </Tab.Panels>
+
+          {/* View All Button - placed outside Tab.Panels but still within the main container */}
+          {/* This is a single "View All" button at the bottom of the section */}
+          <div className="text-center mt-8">
+            <Link href={tabs[selectedIndex].link} className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg">
+              View All {tabs[selectedIndex].name} <FaArrowRight className="ml-3 -mr-1 text-xl" />
+            </Link>
+          </div>
+
         </Tab.Group>
       </div>
-    </motion.section>
+    </>
   );
 }

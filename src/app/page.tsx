@@ -14,8 +14,10 @@ import "slick-carousel/slick/slick-theme.css";
 import homepageData from "@/data/homepage.json";
 
 // Import new components
-import { AnnouncementRecruitment } from "@/components/sections/AnnouncementRecruitment";
-import { UpcomingEvents } from "@/components/sections/UpcomingEvents";
+import { Notices } from "@/components/sections/Notices";
+import  About  from "@/components/sections/About";
+import  ResearchandInnovations  from "@/components/sections/ResearchandInnovations";
+import  Collaborators  from "@/components/sections/Collaborators";
 
 // Dynamic icon mapping for research areas (keep this if you still use it)
 const researchIcons: { [key: string]: React.ElementType } = {
@@ -172,7 +174,7 @@ export default function HomePage() {
       </section>
 
       {/* About/Mission Section */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      {/* <section className="py-20 px-6 max-w-7xl mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -225,19 +227,20 @@ export default function HomePage() {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* --- NEW COMPONENTS INTEGRATION START --- */}
 
       {/* Announcements & Recruitment Section */}
       <div className="py-20"> {/* Added a div for spacing */}
-         <AnnouncementRecruitment />
+         <Notices />
       </div>
 
-      {/* Upcoming Events Section */}
-      <div className="py-20"> {/* Added a div for spacing */}
-        <UpcomingEvents />
-      </div>
+      <About/>
+
+      <ResearchandInnovations />
+
+      
 
       {/* --- NEW COMPONENTS INTEGRATION END --- */}
 
@@ -388,58 +391,7 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Latest News & Events Section (This will now be replaced by UpcomingEvents component) */}
-      {/* <section className="py-20 px-6 max-w-7xl mx-auto">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
-            Latest News & Events
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Stay updated with our recent breakthroughs, announcements, and upcoming activities.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={cardVariants}
-        >
-          <Slider {...generalCarouselSettings}>
-            {homepageData.newsEvents.map((item) => (
-              <div key={item.id} className="px-3">
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 transform hover:-translate-y-1">
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover object-center"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{item.date}</p>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2">{item.title}</h3>
-                    <Link href={item.link} className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-500 font-semibold inline-flex items-center gap-2 group">
-                      Read More
-                      <FiArrowRight className="transition-transform duration-200 group-hover:translate-x-1" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </motion.div>
-      </section> */}
-
-      {/* Call to Action Section */}
+          {/* Call to Action Section */}
       <section className="bg-blue-600 dark:bg-blue-800 py-20 px-6 text-white text-center">
         <motion.div
           initial="hidden"
@@ -479,6 +431,9 @@ export default function HomePage() {
           </div>
         </motion.div>
       </section>
+
+      <Collaborators />
+
     </div>
   );
 }
