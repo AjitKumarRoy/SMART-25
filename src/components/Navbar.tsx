@@ -63,7 +63,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-gradient-to-r from-white/90 to-gray-50/90 dark:from-gray-950/90 dark:to-gray-900/90 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 shadow-lg transition-all duration-300 ease-in-out font-jakarta">
+    <nav className="sticky top-0 w-full z-50 bg-gradient-to-r from-white/90 to-gray-50/90 dark:from-gray-950/90 dark:to-gray-900/90 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800 shadow-lg transition-all duration-300 ease-in-out font-jakarta">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side for Desktop: Home Icon and All Nav Links */}
         {mounted && (
