@@ -139,7 +139,7 @@ export default function ResearchandInnovations() {
         {/* Removed horizontal margins as arrows are no longer present */}
         <div className="relative py-4">
           <Slider {...sliderSettings}>
-            {researchInnovationsData.map((item, index) => (
+            {researchInnovationsData.map((item) => (
               <motion.div
                 key={item.id}
                 variants={itemVariants}
