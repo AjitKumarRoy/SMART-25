@@ -15,11 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    // IMPORTANT: No 'dark' class here, and no inline script.
-    // Navbar will manage the 'dark' class on <html>.
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${plusJakartaSans.variable}`}>
-      <body>
-        {/* REMOVED: The inline script for theme initialization */}
+      <body> {/* Make sure <body> starts immediately after <html> closing tag */}
         <InitialLoader />
         <Navbar />
         <main className="min-h-screen pt-16">{children}</main>

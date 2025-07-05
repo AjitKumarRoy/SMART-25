@@ -2,17 +2,15 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
-import { FiSearch, FiMenu, FiX, FiHome, FiChevronDown, FiChevronUp, FiSun, FiMoon } from "react-icons/fi";
-import { motion, AnimatePresence, Variants } from "framer-motion";
-import SearchBar from "./SearchBar";
+import { FiSearch, FiMenu, FiX, FiHome, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { motion, AnimatePresence, Variants } from "framer-motion"; // Import motion, AnimatePresence, and Variants
+import SearchBar from "./SearchBar"; // Assuming SearchBar component exists
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMoreOpen, setIsMoreOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-  // Initialize theme state to 'dark' as a fallback, it will be updated by useEffect
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const moreDropdownRef = useRef<HTMLDivElement>(null);
@@ -20,33 +18,8 @@ const Navbar = () => {
   useEffect(() => {
     setMounted(true);
 
-    // This useEffect will now handle the initial theme setup from localStorage
-    // and apply the 'dark' class to the html element.
-    try {
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light' || savedTheme === 'dark') {
-        setTheme(savedTheme);
-        // Apply the class immediately based on saved preference
-        if (savedTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } else {
-        // If no theme saved, default to dark and save it
-        setTheme('dark');
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      }
-    } catch (e) {
-      console.error("Failed to access localStorage for theme:", e);
-      // Fallback to default dark if localStorage is inaccessible
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
-    }
-
-
     const handleClickOutside = (event: MouseEvent) => {
+      // Close mobile menu if click is outside the menu AND it's open
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target as Node) &&
@@ -55,6 +28,7 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
       }
 
+      // Close "More" dropdown if click is outside the dropdown and it's open (for desktop)
       if (
         moreDropdownRef.current &&
         !moreDropdownRef.current.contains(event.target as Node) &&
@@ -69,17 +43,7 @@ const Navbar = () => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isMobileMenuOpen, isMoreOpen]); // Dependencies remain for click-outside logic
-
-  // Function to toggle theme
-  const toggleTheme = () => {
-    setTheme(prevTheme => {
-      const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('theme', newTheme); // Save preference
-      document.documentElement.classList.toggle('dark', newTheme === 'dark'); // Apply class
-      return newTheme;
-    });
-  };
+  }, [isMobileMenuOpen, isMoreOpen]);
 
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
@@ -88,12 +52,12 @@ const Navbar = () => {
   };
 
   // Variants for Framer Motion animations - explicitly typed
-  const dropdownVariants: Variants = {
+  const dropdownVariants: Variants = { // Added Variants type
     hidden: { opacity: 0, height: 0, transition: { duration: 0.3, ease: "easeOut" } },
     visible: { opacity: 1, height: "auto", transition: { duration: 0.3, ease: "easeOut" } },
   };
 
-  const mobileMenuVariants: Variants = {
+  const mobileMenuVariants: Variants = { // Added Variants type
     hidden: { x: "-100%", transition: { duration: 0.3, ease: "easeOut" } },
     visible: { x: "0%", transition: { duration: 0.3, ease: "easeOut" } },
   };
@@ -184,23 +148,9 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Right side for Desktop: Theme Toggle and Search Icon */}
+        {/* Right side for Desktop: Search Icon */}
         {mounted && (
-          <div className="hidden md:flex items-center gap-4"> {/* Added gap for spacing */}
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className="p-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? (
-                <FiSun className="text-xl" /> // Sun icon for dark mode
-              ) : (
-                <FiMoon className="text-xl" /> // Moon icon for light mode
-              )}
-            </button>
-
-            {/* Search Icon */}
+          <div className="hidden md:flex items-center">
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="p-3 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -211,7 +161,7 @@ const Navbar = () => {
           </div>
         )}
 
-        {/* Mobile Layout: Hamburger/Close (Left) and Theme Toggle/Search (Right) */}
+        {/* Mobile Layout: Hamburger/Close (Left) and Search (Right) */}
         {mounted && (
           <div className="md:hidden flex items-center justify-between w-full">
             {/* Hamburger/Close Menu Icon for Mobile (Left) */}
@@ -227,30 +177,14 @@ const Navbar = () => {
               )}
             </button>
 
-            {/* Mobile Theme Toggle and Search Buttons (Right) */}
-            <div className="flex items-center gap-2"> {/* Added gap for spacing */}
-              {/* Mobile Theme Toggle Button */}
-              <button
-                onClick={toggleTheme}
-                className="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? (
-                  <FiSun className="text-xl" />
-                ) : (
-                  <FiMoon className="text-xl" />
-                )}
-              </button>
-
-              {/* Mobile Search Button */}
-              <button
-                onClick={() => setIsSearchOpen(!isSearchOpen)}
-                className="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-                aria-label="Toggle search"
-              >
-                <FiSearch className="text-xl" />
-              </button>
-            </div>
+            {/* Mobile Search Button (Right) */}
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="p-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+              aria-label="Toggle search"
+            >
+              <FiSearch className="text-xl" />
+            </button>
           </div>
         )}
       </div>
