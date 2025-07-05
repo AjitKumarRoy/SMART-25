@@ -1,0 +1,248 @@
+[
+  {
+    "id": "prof-jose-immanuel",
+    "name": "Prof. Jose Immanuel R",
+    "title": "Assistant Professor & Head, AMDCG",
+    "category": "professors",
+    "image": "https://placehold.co/400x400/4A90E2/FFFFFF?text=Prof.+Jose",
+    "bio": "Specializing in advanced materials and computational design, Prof. Immanuel leads the group with a vision for impactful research and innovation.",
+    "socialLinks": {
+      "website": "https://faculty.iitbhilai.ac.in/~joseimmanuel/",
+      "researchGate": "https://www.researchgate.net/profile/Jose-Immanuel-R",
+      "googleScholar": "https://scholar.google.com/citations?user=YOUR_GS_ID&hl=en",
+      "linkedin": "https://www.linkedin.com/in/jose-immanuel-r-a0b2b810/",
+      "twitter": "https://twitter.com/your_handle",
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Quantum Material Simulations",
+        "role": "Principal Investigator",
+        "years": "2020-Present",
+        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
+      },
+      {
+        "project": "AI-Driven Drug Discovery",
+        "role": "Co-Investigator",
+        "years": "2021-Present",
+        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2020 - Present"
+  },
+  {
+    "id": "prof-ananya-singh",
+    "name": "Prof. Ananya Singh",
+    "title": "Associate Professor",
+    "category": "professors",
+    "image": "https://placehold.co/400x400/38B2AC/FFFFFF?text=Prof.+Ananya",
+    "bio": "Prof. Singh's research focuses on sustainable energy solutions, particularly in the realm of advanced solar cell technologies.",
+    "socialLinks": {
+      "website": "https://www.example.com/ananya",
+      "researchGate": null,
+      "googleScholar": "https://scholar.google.com/citations?user=ANANYA_GS_ID&hl=en",
+      "linkedin": "https://www.linkedin.com/in/ananya-singh/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Perovskite Solar Cell Optimization",
+        "role": "Principal Investigator",
+        "years": "2019-Present",
+        "description": "Driving innovations in perovskite material synthesis and device architecture to achieve higher efficiencies and stability."
+      },
+      {
+        "project": "Renewable Energy Grid Integration",
+        "role": "Researcher",
+        "years": "2020-2023",
+        "description": "Investigating smart grid solutions for seamless integration of renewable energy sources into national power grids."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2019 - Present"
+  },
+  {
+    "id": "postdoc-vikram-reddy",
+    "name": "Dr. Vikram Reddy",
+    "title": "Postdoctoral Researcher",
+    "category": "postdoctorals",
+    "image": "https://placehold.co/400x400/D08770/FFFFFF?text=Dr.+Vikram",
+    "bio": "Dr. Reddy's work is centered on developing novel algorithms for machine learning applications in scientific discovery.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/vikram-reddy/",
+      "twitter": "https://twitter.com/vikram_r",
+      "github": "https://github.com/vikramreddy"
+    },
+    "contributions": [
+      {
+        "project": "Neural Network Optimization",
+        "role": "Lead Developer",
+        "years": "2023-Present",
+        "description": "Designing and implementing efficient neural network architectures for accelerating material property predictions."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2023 - Present"
+  },
+  {
+    "id": "phd-sarah-khan",
+    "name": "Sarah Khan",
+    "title": "Ph.D. Scholar",
+    "category": "phd_scholars",
+    "image": "https://placehold.co/400x400/BF616A/FFFFFF?text=Sarah+Khan",
+    "bio": "Sarah's doctoral research explores the use of quantum machine learning for secure communication protocols.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/sarah-khan-phd/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Quantum Cryptography",
+        "role": "Ph.D. Candidate",
+        "years": "2022-Present",
+        "description": "Investigating quantum key distribution protocols and their resilience against quantum attacks."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2022 - Present"
+  },
+  {
+    "id": "phd-arjun-gupta",
+    "name": "Arjun Gupta",
+    "title": "Ph.D. Scholar",
+    "category": "phd_scholars",
+    "image": "https://placehold.co/400x400/5E81AC/FFFFFF?text=Arjun+Gupta",
+    "bio": "Arjun is developing computational models to simulate complex fluid dynamics for aerospace applications.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/arjun-gupta/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Computational Fluid Dynamics",
+        "role": "Ph.D. Candidate",
+        "years": "2021-Present",
+        "description": "Developing high-fidelity numerical methods for simulating turbulent flows around complex geometries."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2021 - Present"
+  },
+  {
+    "id": "research-associate-priya-sharma",
+    "name": "Priya Sharma",
+    "title": "Research Associate",
+    "category": "research_staff",
+    "image": "https://placehold.co/400x400/B48EAD/FFFFFF?text=Priya+Sharma",
+    "bio": "Priya manages the lab's experimental setup and data collection for material synthesis projects.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/priya-sharma-ra/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Advanced Material Synthesis",
+        "role": "Lab Manager & Data Analyst",
+        "years": "2023-Present",
+        "description": "Responsible for experimental design, data acquisition, and initial analysis of novel material synthesis processes."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2023 - Present"
+  },
+  {
+    "id": "intern-ritika-verma",
+    "name": "Ritika Verma",
+    "title": "Research Intern",
+    "category": "interns",
+    "image": "https://placehold.co/400x400/8FBCBB/FFFFFF?text=Ritika+Verma",
+    "bio": "Ritika is assisting with data preprocessing and model training for our AI healthcare initiatives.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/ritika-verma-intern/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "AI for Medical Imaging",
+        "role": "Intern",
+        "years": "Summer 2025",
+        "description": "Assisted in data annotation and training of deep learning models for early cancer detection from medical images."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "Summer 2025"
+  },
+  {
+    "id": "alumni-dr-sanjay-mittal",
+    "name": "Dr. Sanjay Mittal",
+    "title": "Former Postdoctoral Researcher",
+    "category": "alumni",
+    "image": "https://placehold.co/400x400/A3BE8C/FFFFFF?text=Dr.+Sanjay",
+    "bio": "Dr. Mittal contributed significantly to our quantum computing projects before moving to a faculty position.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/sanjay-mittal-alumni/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Quantum Algorithm Development",
+        "role": "Postdoctoral Researcher",
+        "years": "2018-2022",
+        "description": "Developed and optimized quantum algorithms for simulating molecular dynamics, leading to two high-impact publications."
+      }
+    ],
+    "workingStatus": "Alumni",
+    "yearsWorked": "2018 - 2022"
+  },
+  {
+    "id": "alumni-dr-pooja-desai",
+    "name": "Dr. Pooja Desai",
+    "title": "Former Ph.D. Scholar",
+    "category": "alumni",
+    "image": "https://placehold.co/400x400/EBCB8B/FFFFFF?text=Dr.+Pooja",
+    "bio": "Dr. Desai's thesis focused on AI applications in environmental monitoring. She is now a data scientist at a leading tech firm.",
+    "socialLinks": {
+      "website": null,
+      "researchGate": null,
+      "googleScholar": null,
+      "linkedin": "https://www.linkedin.com/in/pooja-desai-alumni/",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Environmental AI Monitoring",
+        "role": "Ph.D. Candidate",
+        "years": "2017-2021",
+        "description": "Developed machine learning models for predicting air quality based on sensor data, culminating in her doctoral dissertation."
+      }
+    ],
+    "workingStatus": "Alumni",
+    "yearsWorked": "2017 - 2021"
+  }
+]
