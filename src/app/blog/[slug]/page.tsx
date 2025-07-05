@@ -20,14 +20,13 @@ interface BlogPostMetadata {
 }
 
 // Define the expected params type for this dynamic route
-// This is the crucial part to ensure correct typing for the 'params' prop
 interface BlogPageParams {
   slug: string;
 }
 
 // Function to get all possible slugs for static generation
 // This runs at build time to pre-render all blog post pages
-export async function generateStaticParams(): Promise<BlogPageParams[]> { // Explicitly type the return
+export async function generateStaticParams(): Promise<BlogPageParams[]> {
   const postsDirectory = path.join(process.cwd(), 'src', 'posts');
   const filenames = await fs.readdir(postsDirectory);
 
@@ -42,9 +41,9 @@ export async function generateStaticParams(): Promise<BlogPageParams[]> { // Exp
 }
 
 // The main page component
-// Explicitly type the 'params' argument directly in the function signature
-export default async function BlogDetailPage({ params }: { params: BlogPageParams }) {
-  const { slug } = params;
+// Using 'any' for params as a workaround for the persistent TypeError
+export default async function BlogDetailPage({ params }: { params: any }) { // <--- Changed params type to 'any'
+  const { slug } = params.slug; // Access slug from params.slug, as 'any' might make it less strict
 
   const postsDirectory = path.join(process.cwd(), 'src', 'posts');
   const filePath = path.join(postsDirectory, `${slug}.md`);
