@@ -5,7 +5,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion"; // Import Variants type
 import { Tab } from "@headlessui/react";
-import { FaBullhorn, FaTags, FaArrowRight, FaMegaphone } from "react-icons/fa6"; // Using Fa6 for modern icons
+import { FaBullhorn, FaTags, FaArrowRight } from "react-icons/fa6"; // Using Fa6 for modern icons
 
 // Import data
 import announcementsData from "@/data/announcements.json";
@@ -103,7 +103,7 @@ export function AnnouncementRecruitment() {
   }, []); // Depend on recruitmentsData, stable import
 
   const tabs = [
-    { name: "Announcements", icon: FaMegaphone, data: processedAnnouncements, link: "/announcements" }, // Changed icon and added link
+    { name: "Announcements", icon: FaBullhorn, data: processedAnnouncements, link: "/announcements" }, // Changed icon and added link
     { name: "Recruitment", icon: FaTags, data: processedRecruitments, link: "/recruitments" }, // Added link
   ];
 
@@ -130,7 +130,7 @@ export function AnnouncementRecruitment() {
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center">
             {/* The icon here will be static for the overall section, not tab-specific */}
-            <FaMegaphone className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+            <FaBullhorn className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mr-4">
               Notices & Recruitments
             </h2>
