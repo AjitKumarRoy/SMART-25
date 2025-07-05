@@ -13,7 +13,7 @@ interface BlogPostMetadata {
   id: number;
   title: string;
   slug: string;
-  date: string; // YYYY-MM-DD format
+  date: string; //YYYY-MM-DD format
   author: string;
   image: string;
   excerpt: string;
@@ -41,8 +41,8 @@ export async function generateStaticParams(): Promise<BlogPageParams[]> {
 }
 
 // The main page component
-// Using 'any' for params as a workaround for the persistent TypeError
-export default async function BlogDetailPage({ params }: { params: any }) { // <--- Changed params type to 'any'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function BlogDetailPage({ params }: { params: any }) { // <--- ESLint disable comment added here
   const { slug } = params.slug; // Access slug from params.slug, as 'any' might make it less strict
 
   const postsDirectory = path.join(process.cwd(), 'src', 'posts');
