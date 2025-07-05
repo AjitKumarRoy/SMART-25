@@ -43,7 +43,7 @@ export async function generateStaticParams(): Promise<BlogPageParams[]> {
 // The main page component
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function BlogDetailPage({ params }: { params: any }) { // <--- ESLint disable comment added here
-  const { slug } = params.slug; // Access slug from params.slug, as 'any' might make it less strict
+  const { slug } = params; // Access slug from params as 'any' might make it less strict
 
   const postsDirectory = path.join(process.cwd(), 'src', 'posts');
   const filePath = path.join(postsDirectory, `${slug}.md`);
