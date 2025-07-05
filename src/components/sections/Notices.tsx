@@ -1,11 +1,11 @@
 // src/components/sections/Notices.tsx (or wherever you prefer)
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import { AnnouncementRecruitment } from "./AnnouncementRecruitment"; // Adjust path as necessary
 import { UpcomingEvents } from "./UpcomingEvents"; // Adjust path as necessary
 
-const sectionVariants = {
+const sectionVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -14,8 +14,8 @@ const sectionVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
+      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
+      // The 'delay' for the section itself will be applied where the section component is used.
     },
   },
 };
@@ -27,6 +27,7 @@ export function Notices() {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={sectionVariants}
+      transition={{ delay: 0.1 }} // Applying delay directly to the motion component
       className="py-8 relative overflow-hidden" // Main section padding and overflow
     >
       {/* Background blobs for visual interest */}
