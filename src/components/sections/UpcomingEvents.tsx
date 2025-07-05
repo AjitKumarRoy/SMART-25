@@ -3,7 +3,7 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import { FaCalendar, FaLocationDot, FaArrowRight } from "react-icons/fa6";
 
 // Import data and helper functions
@@ -21,9 +21,8 @@ interface EventItem {
   isNew?: boolean;
 }
 
-
-// Variants for the overall list container (ul)
-const listVariants = {
+// Variants for the overall list container (ul) - explicitly typed
+const listVariants: Variants = { // Added Variants type
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -34,8 +33,8 @@ const listVariants = {
   },
 };
 
-// Variants for individual list items (li)
-const itemVariants = {
+// Variants for individual list items (li) - explicitly typed
+const itemVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -54,7 +53,7 @@ export function UpcomingEvents() {
     // Current time is Friday, July 4, 2025 at 10:50:26 PM IST.
     // Use this fixed date for filtering if you want consistent results for testing,
     // otherwise use `new Date()` for the actual current date.
-    const now = new Date('2025-07-04T22:50:26'); 
+    const now = new Date('2025-07-04T22:50:26');
 
     return (upcomingEventsData as EventItem[])
       .map(event => ({
@@ -83,7 +82,7 @@ export function UpcomingEvents() {
     <>
       {/* Main content container with fixed width/height and styling */}
       <div className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
-        
+
         {/* Header and navigation controls */}
         <div className="flex items-center justify-between mb-8">
             <div className="flex items-center">
@@ -93,7 +92,7 @@ export function UpcomingEvents() {
                 </h2>
                 <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
             </div>
-          
+
         </div>
 
         {/* Scrolling Event List Container: fixed height, overflow hidden, and scrolling content */}
@@ -122,8 +121,8 @@ export function UpcomingEvents() {
                   >
                     {/* Date Block (left side as per image) */}
                     {/* Note: bg-brown-600 requires 'brown' to be defined in tailwind.config.js
-                                If not defined, Tailwind won't generate the class.
-                                Use an existing color like bg-amber-800 or bg-stone-700 if you don't configure 'brown'. */}
+                        If not defined, Tailwind won't generate the class.
+                        Use an existing color like bg-amber-800 or bg-stone-700 if you don't configure 'brown'. */}
                     <div className="flex-shrink-0 w-24 bg-brown-600 text-white rounded-lg p-3 text-center shadow-md">
                       <p className="text-lg font-bold leading-none">{monthDay}</p>
                       <p className="text-sm">{year}</p>
