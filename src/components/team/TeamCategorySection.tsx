@@ -87,7 +87,7 @@ export default function TeamCategorySection({ title, members, onMemberClick }: T
           // No variants prop here, as sectionVariants handles staggerChildren.
           // Children (TeamMemberCard) will use itemVariants.
         >
-          {members.map((member, index) => (
+          {members.map((member) => (
             <motion.div key={member.id} variants={itemVariants}>
               <TeamMemberCard member={member} onClick={onMemberClick} />
             </motion.div>
