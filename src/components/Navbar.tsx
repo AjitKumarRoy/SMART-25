@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import { FiSearch, FiMenu, FiX, FiHome, FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion"; // Import motion and AnimatePresence
+import { motion, AnimatePresence, Variants } from "framer-motion"; // Import motion, AnimatePresence, and Variants
 import SearchBar from "./SearchBar"; // Assuming SearchBar component exists
 
 const Navbar = () => {
@@ -51,13 +51,13 @@ const Navbar = () => {
     setIsSearchOpen(false);
   };
 
-  // Variants for Framer Motion animations
-  const dropdownVariants = {
+  // Variants for Framer Motion animations - explicitly typed
+  const dropdownVariants: Variants = { // Added Variants type
     hidden: { opacity: 0, height: 0, transition: { duration: 0.3, ease: "easeOut" } },
     visible: { opacity: 1, height: "auto", transition: { duration: 0.3, ease: "easeOut" } },
   };
 
-  const mobileMenuVariants = {
+  const mobileMenuVariants: Variants = { // Added Variants type
     hidden: { x: "-100%", transition: { duration: 0.3, ease: "easeOut" } },
     visible: { x: "0%", transition: { duration: 0.3, ease: "easeOut" } },
   };
