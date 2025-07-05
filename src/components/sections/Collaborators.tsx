@@ -1,7 +1,7 @@
 // src/components/sections/Collaborators.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import Image from "next/image";
 import Link from "next/link";
 import { FaHandshake, FaArrowRight } from "react-icons/fa6"; // Icon for collaborators
@@ -14,8 +14,8 @@ import "slick-carousel/slick/slick-theme.css";
 // Import data
 import collaboratorsData from "@/data/collaboratorsData.json";
 
-// Animation variants for the overall section
-const sectionVariants = {
+// Animation variants for the overall section - explicitly typed
+const sectionVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -24,14 +24,14 @@ const sectionVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
+      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
+      // The 'delay' for the section itself will be applied where the section component is used.
     },
   },
 };
 
-// Animation variants for individual carousel items (logos)
-const itemVariants = {
+// Animation variants for individual carousel items (logos) - explicitly typed
+const itemVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, scale: 0.8 },
   visible: {
     opacity: 1,
@@ -93,6 +93,7 @@ export default function Collaborators() {
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
+      transition={{ delay: 0.1 }} // Applying delay directly to the motion component
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
