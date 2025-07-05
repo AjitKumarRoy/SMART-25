@@ -121,7 +121,7 @@ export function AnnouncementRecruitment() {
     <>
       {/* Main content container with fixed width/height and styling, matching UpcomingEvents */}
       <motion.div // Applied motion.div here
-        className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700"
+        className="max-w-4xl mx-auto relative z-10 p-4 px-0 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700"
         variants={sectionVariants} // Applied sectionVariants here
         initial="hidden"
         animate="visible"
@@ -130,7 +130,7 @@ export function AnnouncementRecruitment() {
 
         {/* Tab Group for Announcements and Recruitments */}
         <Tab.Group selectedIndex={selectedIndex} onChange={setSelectedIndex}>
-          <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-8"> {/* Adjusted mb */}
+          <Tab.List className="flex space-x-1 rounded-full bg-white dark:bg-gray-800 p-1 shadow-lg max-w-md mx-auto mb-8 "> {/* Adjusted mb */}
             {tabs.map((tab) => {
               const TabIcon = tab.icon;
               return (

@@ -173,9 +173,7 @@ export default function HomePage() {
       </section>
 
       {/* Announcements & Recruitment Section */}
-      <div className="py-20"> {/* Added a div for spacing */}
-          <Notices /> {/* Assuming Notices is the AnnouncementRecruitment component */}
-      </div>
+      <Notices />
 
       <About/>
 

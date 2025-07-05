@@ -1,9 +1,8 @@
-// src/components/sections/UpcomingEvents.tsx
 "use client";
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { motion, Variants } from "framer-motion"; // Import Variants type
+import { motion, Variants } from "framer-motion";
 import { FaCalendar, FaLocationDot, FaArrowRight } from "react-icons/fa6";
 
 // Import data and helper functions
@@ -21,20 +20,20 @@ interface EventItem {
   isNew?: boolean;
 }
 
-// Variants for the overall list container (ul) - explicitly typed
-const listVariants: Variants = { // Added Variants type
+// Variants for the overall list container (ul)
+const listVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05, // Stagger individual items within the list
+      staggerChildren: 0.05,
       delayChildren: 0.1,
     },
   },
 };
 
-// Variants for individual list items (li) - explicitly typed
-const itemVariants: Variants = { // Added Variants type
+// Variants for individual list items (li)
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -71,41 +70,40 @@ export function UpcomingEvents() {
   }, []);
 
   // Calculate the animation duration based on the number of items
-  // This makes the scroll speed relatively consistent regardless of item count
   const calculateAnimationDuration = (itemCount: number) => {
-    const minDuration = 20; // Minimum duration in seconds for a full scroll cycle
-    const durationPerItem = 3; // Seconds per item (adjust this value for desired overall speed)
+    const minDuration = 20;
+    const durationPerItem = 3;
     return `${Math.max(minDuration, itemCount * durationPerItem)}s`;
   };
 
   return (
     <>
       {/* Main content container with fixed width/height and styling */}
-      <div className="max-w-4xl mx-auto relative z-10 p-4 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700">
+      <div className="max-w-4xl mx-auto relative z-10 p-4 px-0 rounded-2xl shadow-xl bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-700
+                  w-full sm:w-[calc(100%-2rem)] md:w-full"> {/* Adjusted width for mobile and tablet */}
 
         {/* Header and navigation controls */}
-        <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center">
-                <FaCalendar className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mr-4">
-                    Upcoming Events
-                </h2>
-                <div className="w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
-            </div>
-
+        <div className="flex items-center justify-between mb-8 px-4">
+          <div className="flex items-center">
+            <FaCalendar className="text-3xl sm:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100 mr-4"> {/* Adjusted font size */}
+              Upcoming Events
+            </h2>
+            <div className="w-12 sm:w-16 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"></div> {/* Underline */}
+          </div>
         </div>
 
         {/* Scrolling Event List Container: fixed height, overflow hidden, and scrolling content */}
-        <div className="relative h-96 overflow-hidden rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-4 shadow-inner">
+        <div className="relative h-96 overflow-hidden rounded-lg bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 p-2 sm:p-4 shadow-inner"> {/* Adjusted padding */}
           {processedEvents.length > 0 ? (
             <motion.ul
-              variants={listVariants} // Apply list variants to the ul
+              variants={listVariants}
               initial="hidden"
               animate="visible"
               className="space-y-4 animate-scrollUp absolute top-0 left-0 w-full"
               style={{
                 animationDuration: calculateAnimationDuration(processedEvents.length),
-                paddingBottom: '100%', // Crucial for seamless looping: ensures content has space to scroll completely out
+                paddingBottom: '100%',
               }}
             >
               {/* Duplicate content for seamless scrolling loop */}
@@ -115,22 +113,19 @@ export function UpcomingEvents() {
 
                 return (
                   <motion.li
-                    key={`${event.id}-${index}`} // Unique key for duplicated items
-                    variants={itemVariants} // Apply item variants to each li
-                    className="flex items-start gap-4 p-4 rounded-lg bg-white dark:bg-gray-700 shadow-sm hover:shadow-md transition-shadow duration-200"
+                    key={`${event.id}-${index}`}
+                    variants={itemVariants}
+                    className="flex items-start gap-4 px-0.5 py-4 sm:p-4 rounded-lg bg-white dark:bg-gray-700 shadow-sm hover:shadow-md transition-shadow duration-200" // Adjusted padding here
                   >
-                    {/* Date Block (left side as per image) */}
-                    {/* Note: bg-brown-600 requires 'brown' to be defined in tailwind.config.js
-                        If not defined, Tailwind won't generate the class.
-                        Use an existing color like bg-amber-800 or bg-stone-700 if you don't configure 'brown'. */}
-                    <div className="flex-shrink-0 w-24 bg-brown-600 text-white rounded-lg p-3 text-center shadow-md">
-                      <p className="text-lg font-bold leading-none">{monthDay}</p>
-                      <p className="text-sm">{year}</p>
+                    {/* Date Block */}
+                    <div className="flex-shrink-0 w-20 sm:w-24 bg-amber-800 text-white rounded-lg p-2 sm:p-3 text-center shadow-md"> {/* Changed to amber-800 and adjusted width/padding */}
+                      <p className="text-base sm:text-lg font-bold leading-none">{monthDay}</p>
+                      <p className="text-xs sm:text-sm">{year}</p>
                     </div>
 
-                    {/* Event Details (right side as per image) */}
+                    {/* Event Details */}
                     <Link href={event.link} target="_blank" rel="noopener noreferrer" className="flex-grow group">
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
+                      <h3 className="text-base sm:text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 mb-1">
                         {event.title}
                         {isCurrentNew && (
                           <span className="ml-2 inline-flex items-center rounded-full bg-red-100 px-2.5 py-0.5 text-xs font-medium text-red-800 animate-pulse">
@@ -139,7 +134,7 @@ export function UpcomingEvents() {
                         )}
                       </h3>
                       {event.location && (
-                        <div className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                        <div className="flex items-center text-gray-600 dark:text-gray-300 text-xs sm:text-sm">
                           <FaLocationDot className="mr-1" />
                           <span>{event.location}</span>
                         </div>
@@ -159,8 +154,8 @@ export function UpcomingEvents() {
         {/* View All Button */}
         {processedEvents.length > 0 && (
           <div className="text-center mt-8">
-            <Link href="/events" className="inline-flex items-center px-8 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg">
-              View All Events <FaArrowRight className="ml-3 -mr-1 text-xl" />
+            <Link href="/events" className="inline-flex items-center px-6 py-2 sm:px-8 sm:py-2 border border-transparent text-sm sm:text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"> {/* Adjusted padding and font size */}
+              View All Events <FaArrowRight className="ml-2 sm:ml-3 text-base sm:text-xl" /> {/* Adjusted icon size */}
             </Link>
           </div>
         )}

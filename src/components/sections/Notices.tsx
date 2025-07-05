@@ -37,12 +37,12 @@ export function Notices() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row lg:space-x-8 space-y-12 lg:space-y-0 justify-center items-start">
           {/* Announcement & Recruitment Section */}
-          <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-3xl shadow-xl p-8">
+          <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-3xl shadow-xl">
             <AnnouncementRecruitment />
           </div>
 
           {/* Upcoming Events Section */}
-          <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-3xl shadow-xl p-8">
+          <div className="w-full lg:w-1/2 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-3xl shadow-xl p-0">
             <UpcomingEvents />
           </div>
         </div>
