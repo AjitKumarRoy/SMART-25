@@ -3,24 +3,24 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import { FaNewspaper, FaCalendarAlt, FaUserCircle, FaArrowRight } from "react-icons/fa"; // Using Fa for consistency
 
-// Import dummy blog post data
+// Import blog post data
 import blogPosts from "@/data/blogPosts.json"; // Assuming you place blogPosts.json in src/data
 
 interface BlogPost {
   id: number;
   title: string;
   slug: string;
-  date: string; // YYYY-MM-DD format
+  date: string; //YYYY-MM-DD format
   author: string;
   image: string;
   excerpt: string;
 }
 
 // Animation variants for sections
-const sectionVariants = {
+const sectionVariants: Variants = { // Explicitly type as Variants
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -29,14 +29,13 @@ const sectionVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
+      // Removed duration and delay as they are not properties for a spring transition type
     },
   },
 };
 
 // Animation variants for individual blog post cards
-const cardVariants = {
+const cardVariants: Variants = { // Explicitly type as Variants
   hidden: { opacity: 0, scale: 0.95 },
   visible: {
     opacity: 1,
@@ -45,6 +44,7 @@ const cardVariants = {
       type: "spring",
       damping: 12,
       stiffness: 120,
+      // Removed duration as it is not a property for a spring transition type
     },
   },
 };
@@ -90,7 +90,8 @@ export default function BlogListPage() {
               variants={cardVariants}
               initial="hidden"
               animate="visible"
-              transition={{ delay: index * 0.1 }} // Stagger animation for each card
+              // Moved delay directly to the motion component's transition prop
+              transition={{ delay: index * 0.1 }}
               className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100 dark:border-gray-700 transform hover:scale-[1.01]"
             >
               <div className="relative w-full h-56 overflow-hidden">
@@ -132,7 +133,7 @@ export default function BlogListPage() {
         {/* Call to Action / Newsletter Section */}
         <motion.div
           className="bg-blue-700 dark:bg-blue-900 text-white rounded-3xl p-8 text-center shadow-2xl"
-          variants={sectionVariants}
+          variants={sectionVariants} // Using sectionVariants here
           initial="hidden"
           animate="visible"
           transition={{ delay: sortedPosts.length * 0.1 + 0.2 }} // Delay after all cards
