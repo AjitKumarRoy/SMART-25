@@ -1,13 +1,13 @@
 // src/components/sections/About.tsx
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion"; // Import Variants type
 import Image from "next/image"; // Using next/image for optimized images
 import Link from "next/link";
 import { FaBookOpen, FaPlayCircle, FaUserTie, FaArrowRight } from "react-icons/fa"; // Icons for sections
 
-// Animation variants for sections
-const sectionVariants = {
+// Animation variants for sections - explicitly typed
+const sectionVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -16,26 +16,27 @@ const sectionVariants = {
       type: "spring",
       damping: 10,
       stiffness: 100,
-      duration: 0.8,
-      delay: 0.1,
+      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
+      // The 'delay' for the section itself will be applied where the section component is used (e.g., in page.tsx).
     },
   },
 };
 
-// Animation variants for the overall list container (ul or grid parent)
-const listVariants = {
+// Animation variants for the overall list container (ul or grid parent) - explicitly typed
+const listVariants: Variants = { // Added Variants type
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
       staggerChildren: 0.05, // Stagger individual items within the list
       delayChildren: 0.1,
+      // These are valid for default (tween) transition type
     },
   },
 };
 
-// Animation variants for individual items (e.g., newsletter cards, video cards)
-const itemVariants = {
+// Animation variants for individual items (e.g., newsletter cards, video cards) - explicitly typed
+const itemVariants: Variants = { // Added Variants type
   hidden: { opacity: 0, scale: 0.9 },
   visible: {
     opacity: 1,
@@ -44,6 +45,7 @@ const itemVariants = {
       type: "spring",
       damping: 12,
       stiffness: 120,
+      // No 'duration' or 'delay' here, which is correct for spring type
     },
   },
 };
@@ -65,6 +67,8 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
+            // The delay for this specific section is applied here, not within the variant definition
+            transition={{ delay: 0.1 }} // Applying delay directly to the motion component
           >
             <div className="flex items-center mb-6">
               <FaBookOpen className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
@@ -73,7 +77,7 @@ export default function About() {
               </h2>
             </div>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Welcome to the cutting-edge world of our research group, where innovation meets impact. We are dedicated to pushing the boundaries of knowledge in [Your Field/Area of Research, e.g., Artificial Intelligence, Sustainable Energy, Biomedical Engineering]. 
+              Welcome to the cutting-edge world of our research group, where innovation meets impact. We are dedicated to pushing the boundaries of knowledge in [Your Field/Area of Research, e.g., Artificial Intelligence, Sustainable Energy, Biomedical Engineering].
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               Through rigorous experimentation, theoretical advancements, and collaborative partnerships, we strive to create groundbreaking solutions that address real-world problems. Explore our work, discover our publications, and learn how you can be a part of our exciting journey.
@@ -89,7 +93,7 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.3 }} // Delay applied directly here
           >
             <div className="flex items-center mb-6">
               <FaUserTie className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
@@ -118,13 +122,13 @@ export default function About() {
 
         {/* Bottom Sections: Newsletter and Videos */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        
+
           <motion.div
             className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 border border-gray-100 dark:border-gray-700 transform hover:scale-[1.005] transition-transform duration-300"
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.5 }} // Delay applied directly here
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
@@ -144,7 +148,7 @@ export default function About() {
               initial="hidden"
               animate="visible"
             >
-            
+
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
@@ -162,7 +166,7 @@ export default function About() {
                   Download PDF
                 </Link>
               </motion.div>
-              
+
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
@@ -183,13 +187,13 @@ export default function About() {
             </motion.div>
           </motion.div>
 
-         
+
           <motion.div
             className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 border border-gray-100 dark:border-gray-700 transform hover:scale-[1.005] transition-transform duration-300"
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.7 }}
+            transition={{ delay: 0.7 }} // Delay applied directly here
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
@@ -231,7 +235,7 @@ export default function About() {
                   Watch Video
                 </Link>
               </motion.div>
-              
+
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
@@ -255,7 +259,7 @@ export default function About() {
             </motion.div>
           </motion.div>
         </div>
-        
+
       </div>
     </div>
   );
