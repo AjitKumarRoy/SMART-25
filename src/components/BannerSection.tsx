@@ -4,6 +4,10 @@
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 
+//import all the images
+import amdcgLogo from '../../public/images/amdcg-logo2.png'
+import iitBhLogo from '../../public/images/iitbh_logo.png'
+
 // Animation variants for the banner elements
 const bannerVariants: Variants = {
   hidden: { opacity: 0, y: -20 },
@@ -60,11 +64,12 @@ export function BannerSection() {
       {/* Left Logo - IIT Bhilai */}
       <motion.div variants={logoVariants} className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
         <Image
-          src="/images/iit-bhilai-logo.png" // Placeholder, replace with actual path
+          src={amdcgLogo} // Placeholder, replace with actual path
           alt="IIT Bhilai Logo"
           width={150}
           height={150}
-          className="h-24 w-auto object-contain dark:filter dark:invert" // Adjust size as needed
+          // Changed className: added rounded-full, adjusted h- and w- classes for responsiveness
+          className="h-24 w-24 object-contain rounded-full md:h-28 md:w-28 lg:h-34 lg:w-34"
           onError={(e) => {
             e.currentTarget.src = "https://placehold.co/150x150/4A90E2/FFFFFF?text=IIT+Logo";
             e.currentTarget.srcset = "";
@@ -75,7 +80,7 @@ export function BannerSection() {
       {/* Center Text - Group Name */}
       <motion.div variants={titleVariants} className="flex-grow text-center max-w-2xl">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight mb-2">
-          ADVANCED MATERIALS & DEVICES COMPUTATIONAL GROUP
+          Advanced Materials Development and Characterization Group
         </h1>
         <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
           INDIAN INSTITUTE OF TECHNOLOGY BHILAI
@@ -85,11 +90,12 @@ export function BannerSection() {
       {/* Right Logo - G20 or similar */}
       <motion.div variants={logoVariants} className="flex-shrink-0 mt-4 md:mt-0 md:ml-8">
         <Image
-          src="/images/g20-logo.png" // Placeholder, replace with actual path
+          src={iitBhLogo} // Placeholder, replace with actual path
           alt="G20 Logo"
-          width={120}
-          height={120}
-          className="h-20 w-auto object-contain" // Adjust size as needed
+          width={150}
+          height={150}
+          // Changed className: added rounded-full, adjusted h- and w- classes for responsiveness
+          className="h-24 w-24 object-contain rounded-full md:h-28 md:w-28 lg:h-34 lg:w-34"
           onError={(e) => {
             e.currentTarget.src = "https://placehold.co/120x120/E53E3E/FFFFFF?text=G20+Logo";
             e.currentTarget.srcset = "";
