@@ -117,7 +117,7 @@ export default function TeamPage() {
 
         {/* Professors Section */}
         <TeamCategorySection
-          title="Professors"
+          title="AMDCG Head"
           members={categorizedMembers.professors}
           onMemberClick={openModal}
         />
