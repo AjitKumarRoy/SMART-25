@@ -193,6 +193,7 @@ const Footer = () => {
           Designed & Developed by {" "}
           <Link
             href="https://www.linkedin.com/in/ajitroyofficial/" 
+            target="_blank"
             className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
           >
             Ajit Kumar Roy
