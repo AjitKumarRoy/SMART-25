@@ -3,7 +3,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { FiLoader } from 'react-icons/fi'; // Keeping FiLoader for potential future use or just as an example
+//import { FiLoader } from 'react-icons/fi'; // Keeping FiLoader for potential future use or just as an example
 import { useLoading } from '@/context/LoadingContext'; // Import useLoading hook
 
 // --- TypeScript Fix Start ---
