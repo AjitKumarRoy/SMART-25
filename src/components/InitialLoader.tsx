@@ -1,77 +1,115 @@
-// FILE: src/components/Loader.tsx
-"use client"; // This is a client component as it uses browser APIs (canvas, window)
+// FILE: src/components/InitialLoader.tsx
+"use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+// Removed: import Image from 'next/image';
+import { FiLoader } from 'react-icons/fi'; // Keeping FiLoader for potential future use or just as an example
+import { useLoading } from '@/context/LoadingContext'; // Import useLoading hook
 
-// Define the Particle class with explicit TypeScript types
-class Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  color: string;
-  ctx: CanvasRenderingContext2D; // Add context to particle for drawing
+// Animation variants for the loader container
+const loaderVariants: Variants = {
+  hidden: { opacity: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: "easeIn" } },
+  exit: { opacity: 0, transition: { duration: 0.7, ease: "easeOut" } }
+};
 
-  constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-    this.ctx = ctx; // Store the context
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 5 + 1;
-    this.speedX = Math.random() * 3 - 1.5; // Random speed between -1.5 and 1.5
-    this.speedY = Math.random() * 3 - 1.5; // Random speed between -1.5 and 1.5
-    this.color = `hsl(${Math.random() * 360}, 70%, 60%)`; // Random HSL color
-  }
+// Animation variants for the inner content (e.g., logo/text)
+const contentVariants: Variants = {
+  initial: { scale: 0.8, opacity: 0 },
+  animate: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  exit: { scale: 1.2, opacity: 0, transition: { duration: 0.7, ease: "easeIn" } }
+};
 
-  // Update particle position
-  update(canvas: HTMLCanvasElement) {
-    this.x += this.speedX;
-    this.y += this.speedY;
-
-    // Bounce off walls
-    if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
-    if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
-  }
-
-  // Draw particle
-  draw() {
-    this.ctx.fillStyle = this.color;
-    this.ctx.beginPath();
-    this.ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    this.ctx.fill();
-  }
-}
-
-const Loader: React.FC = () => {
+export default function InitialLoader() {
+  const { isLoading } = useLoading(); // Consume isLoading from context
+  const [mounted, setMounted] = useState(false); // State to track if component is mounted on client
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    setMounted(true); // Component is now mounted on the client
+
     const canvas = canvasRef.current;
-    if (!canvas) return; // Ensure canvas element exists
+    if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return; // Ensure 2D context is available
+    if (!ctx) return;
 
     let animationFrameId: number;
     let particles: Particle[] = [];
 
-    // Function to set canvas size and re-create particles
+    // Define colors for different "atom" types
+    const atomColors = [
+      '#FF6347', // Tomato (Red)
+      '#4682B4', // SteelBlue (Blue)
+      '#3CB371', // MediumSeaGreen (Green)
+      '#FFD700', // Gold (Yellow)
+      '#8A2BE2', // BlueViolet (Purple)
+    ];
+
+    // Particle class defined inside useEffect to capture canvas/ctx scope
+    class Particle {
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      color: string;
+      originalColor: string; // To keep track of the base color
+      oscillationOffset: number; // For subtle pulsing effect
+
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1; // Smaller base size for atoms
+        this.speedX = Math.random() * 1 - 0.5; // Slower movement
+        this.speedY = Math.random() * 1 - 0.5; // Slower movement
+        this.originalColor = atomColors[Math.floor(Math.random() * atomColors.length)];
+        this.color = this.originalColor;
+        this.oscillationOffset = Math.random() * Math.PI * 2; // Random phase for pulsing
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // Bounce off edges
+        if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
+        if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
+
+        // Subtle pulsing effect
+        const pulseFactor = 0.5 + 0.5 * Math.sin(Date.now() * 0.002 + this.oscillationOffset);
+        this.size = (Math.random() * 2 + 1) * pulseFactor; // Vary size slightly
+      }
+
+      draw() {
+        ctx.fillStyle = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Optional: Add a subtle glow/shadow for a more ethereal look
+        ctx.shadowBlur = 5;
+        ctx.shadowColor = this.color;
+        ctx.fill();
+        ctx.shadowBlur = 0; // Reset shadow for other drawings
+      }
+    }
+
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      createParticles(); // Re-create particles for new dimensions
+      createParticles();
     };
 
-    // Create particles
     const createParticles = () => {
-      particles = []; // Clear existing particles
-      const numberOfParticles = 150; // You can adjust this number
+      particles = [];
+      const numberOfParticles = 80; // Fewer particles for a clearer molecular look
       for (let i = 0; i < numberOfParticles; i++) {
-        particles.push(new Particle(canvas, ctx));
+        particles.push(new Particle());
       }
     };
 
-    // Connect particles with lines
     const connect = () => {
       for (let a = 0; a < particles.length; a++) {
         for (let b = a; b < particles.length; b++) {
@@ -79,9 +117,10 @@ const Loader: React.FC = () => {
           const dy = particles[a].y - particles[b].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 100) { // Only connect if particles are close enough
-            ctx.strokeStyle = `rgba(79, 70, 229, ${1 - distance / 100})`; // Fade lines based on distance (blue-600 like color)
-            ctx.lineWidth = 0.4;
+          // Connect particles within a certain distance to simulate bonds
+          if (distance < 120) { // Increased connection distance for more "molecules"
+            ctx.strokeStyle = `rgba(173, 216, 230, ${1 - distance / 120})`; // Light blue for bonds
+            ctx.lineWidth = 0.8; // Thicker bonds
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
             ctx.lineTo(particles[b].x, particles[b].y);
@@ -91,71 +130,83 @@ const Loader: React.FC = () => {
       }
     };
 
-    // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas for next frame
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // Slight fade effect for trails
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
 
       for (let i = 0; i < particles.length; i++) {
-        particles[i].update(canvas); // Update particle position
-        particles[i].draw(); // Draw particle
+        particles[i].update();
+        particles[i].draw();
       }
 
-      connect(); // Draw connections between particles
+      connect();
 
-      animationFrameId = requestAnimationFrame(animate); // Request next frame
+      animationFrameId = requestAnimationFrame(animate);
     };
 
-    // Initialize on component mount
-    setCanvasSize(); // Set initial size and create particles
-    animate(); // Start the animation loop
+    // Initialize
+    setCanvasSize();
+    animate();
 
     // Handle resize events
     const handleResize = () => {
-      setCanvasSize(); // Recalculate size and re-create particles on resize
+      setCanvasSize();
     };
 
     window.addEventListener('resize', handleResize);
 
-    // Cleanup function for useEffect
+    // Cleanup function
     return () => {
-      window.removeEventListener('resize', handleResize); // Remove resize listener
-      cancelAnimationFrame(animationFrameId); // Cancel animation frame to prevent memory leaks
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount and cleans up on unmount
+  }, []); // Empty dependency array means this runs only once on mount and cleans up on unmount
+
+  // Render nothing on the server (before mounted) to prevent hydration issues
+  if (!mounted) {
+    return null;
+  }
 
   return (
-    <div className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-indigo-900 z-[9999]"> {/* High z-index to cover everything */}
-      <canvas ref={canvasRef} className="absolute inset-0" />
+    <AnimatePresence>
+      {isLoading && ( // Only render the loader if isLoading is true from context
+        <motion.div
+          className="fixed inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-gray-900 to-indigo-900 dark:from-gray-900 dark:to-black text-white z-[9999]"
+          variants={loaderVariants}
+          initial="visible"
+          animate="visible"
+          exit="exit"
+        >
+          <canvas ref={canvasRef} className="absolute inset-0" />
 
-      <div className="relative z-10 flex flex-col items-center">
-        {/* Animated circle loader */}
-        <div className="relative">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-r from-blue-600 to-indigo-700 flex items-center justify-center animate-pulse-custom">
-            <div className="w-24 h-24 rounded-full bg-gray-900 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 animate-ping-custom" />
+          <motion.div
+            className="relative z-10 flex flex-col items-center p-8 rounded-xl bg-white/10 backdrop-blur-sm shadow-2xl border border-white/20"
+            variants={contentVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+          >
+            {/* Removed the Image component as requested */}
+            <h2 className="mt-8 text-3xl md:text-4xl font-bold text-white text-shadow-lg">
+              AMDCG Research Group
+            </h2>
+            <p className="mt-2 text-blue-200 text-lg opacity-80">IIT Bhilai</p>
+
+            {/* Bouncing dots indicator */}
+            <div className="mt-8 flex space-x-4">
+              {[...Array(3)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-3 h-3 rounded-full bg-white opacity-40 animate-bounce-custom" // Using custom animation class
+                  style={{ animationDelay: `${i * 0.2}s` }}
+                />
+              ))}
             </div>
-          </div>
-        </div>
-
-        {/* Text content */}
-        <h1 className="mt-8 text-3xl md:text-4xl font-bold text-white text-shadow-lg">
-          AMDCG Research Group
-        </h1>
-        <p className="mt-2 text-blue-200 text-lg opacity-80">IIT Bhilai</p>
-
-        {/* Bouncing dots indicator */}
-        <div className="mt-8 flex space-x-4">
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="w-3 h-3 rounded-full bg-white opacity-40 animate-bounce-custom"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
-};
-
-export default Loader;
+}

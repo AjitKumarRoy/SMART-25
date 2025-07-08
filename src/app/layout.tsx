@@ -1,12 +1,10 @@
-// src/app/layout.tsx
+// FILE: src/app/layout.tsx
 import "@/styles/globals.css";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import InitialLoader from "@/components/InitialLoader";
-import { NotificationBar } from "@/components/NotificationBar"; // Import NotificationBar
-import { BannerSection } from "@/components/BannerSection"; // Import BannerSection
-
+// Removed direct imports for Navbar, Footer, InitialLoader, NotificationBar, BannerSection
+// as they are now managed by AppContentWrapper
+import { LoadingProvider } from "@/context/LoadingContext"; // Keep LoadingProvider
+import AppContentWrapper from "@/components/AppContentWrapper"; // Import the new wrapper component
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-plus-jakarta-sans' });
@@ -19,13 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${plusJakartaSans.variable}`}>
-      <body> {/* Make sure <body> starts immediately after <html> closing tag */}
-        <InitialLoader />
-        <NotificationBar />
-        <BannerSection />
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+      <body>
+        {/* Wrap the entire AppContentWrapper with LoadingProvider */}
+        <LoadingProvider>
+          <AppContentWrapper>{children}</AppContentWrapper>
+        </LoadingProvider>
       </body>
     </html>
   );

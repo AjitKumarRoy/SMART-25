@@ -365,3 +365,56 @@ html.dark .dark\:hover\:text-blue-400:hover { color: #60A5FA; }
 .animate-scrollUp:hover {
   animation-play-state: paused;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------- */
+
+
+
+
+/* In your global CSS file, e.g., src/app/globals.css or src/styles/globals.css */
+
+@keyframes pulse-custom {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-custom {
+  animation: pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce-custom {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-bounce-custom {
+  animation: bounce-custom 0.6s infinite alternate;
+}
+
+.text-shadow-lg {
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
