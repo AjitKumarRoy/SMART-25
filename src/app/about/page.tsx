@@ -52,7 +52,7 @@ export default function AboutPage() {
             className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
           >
             The Advanced Materials and Data Computing Group (AMDCG) is at the forefront of interdisciplinary research,
-            merging cutting-edge material science with advanced computational techniques to solve the world's most pressing challenges.
+            merging cutting-edge material science with advanced computational techniques to solve the world&apos;s most pressing challenges.
           </motion.p>
         </motion.div>
         {/* Subtle background pattern/shape for premium feel */}
