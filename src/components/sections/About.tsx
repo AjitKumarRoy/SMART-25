@@ -192,6 +192,7 @@ export default function About() {
                 <Link href="https://www.sentinelassam.com/north-east-india-news/arunachal-news/arunachals-bije-bamboo-shows-exceptional-strength-say-researchers" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                   View More
                 </Link>
+                
               </motion.div>
 
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
