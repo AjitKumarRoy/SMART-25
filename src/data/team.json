@@ -1,17 +1,17 @@
 [
   {
     "id": "prof-jose-immanuel",
-    "name": "Prof. Jose Immanuel R",
-    "title": "Assistant Professor & Head, AMDCG",
+    "name": "Dr. Jose Immanuel R",
+    "title": "Assistant Professor, Outstanding Young Faculty Chair & Head, AMDCG",
     "category": "professors",
-    "image": "https://placehold.co/400x400/4A90E2/FFFFFF?text=Prof.+Jose",
-    "bio": "Specializing in advanced materials and computational design, Prof. Immanuel leads the group with a vision for impactful research and innovation.",
+    "image": "/images/teams/jose-sir.jpeg",
+    "bio": "Specializing in advanced materials and computational design, Prof. Jose Immanuel leads the group with a vision for impactful research and innovation.",
     "socialLinks": {
-      "website": "https://faculty.iitbhilai.ac.in/~joseimmanuel/",
-      "researchGate": "https://www.researchgate.net/profile/Jose-Immanuel-R",
-      "googleScholar": "https://scholar.google.com/citations?user=YOUR_GS_ID&hl=en",
-      "linkedin": "https://www.linkedin.com/in/jose-immanuel-r-a0b2b810/",
-      "twitter": "https://twitter.com/your_handle",
+      "website": "https://www.iitbhilai.ac.in/index.php?pid=jose",
+      "researchGate": "https://www.researchgate.net/profile/Jose-Immanuel-Rajan",
+      "googleScholar": "https://scholar.google.co.in/citations?user=OetaUXoAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/rajiimmanuel/?originalSubdomain=in",
+      "twitter": "https://x.com/joseimmanuel",
       "github": null
     },
     "contributions": [
@@ -32,17 +32,49 @@
     "yearsWorked": "2020 - Present"
   },
   {
-    "id": "prof-ananya-singh",
-    "name": "Prof. Ananya Singh",
-    "title": "Associate Professor",
+    "id": "prof-santosh-tamang",
+    "name": "Dr. Santosh Kumar Tamang",
+    "title": "Assistant Professor",
     "category": "professors",
-    "image": "https://placehold.co/400x400/38B2AC/FFFFFF?text=Prof.+Ananya",
-    "bio": "Prof. Singh's research focuses on sustainable energy solutions, particularly in the realm of advanced solar cell technologies.",
+    "image": "/images/teams/santosh-sir-passport.jpeg",
+    "bio": "Research Interests: Optimization and Soft Computing Techniques for Design and Manufacturing, GPU Computing For FEA, Composite Materials, Machine Learning and Artificial Intelligence, and DFT/Molecular Dynamics/FEA-based simulations.",
     "socialLinks": {
-      "website": "https://www.example.com/ananya",
-      "researchGate": null,
-      "googleScholar": "https://scholar.google.com/citations?user=ANANYA_GS_ID&hl=en",
-      "linkedin": "https://www.linkedin.com/in/ananya-singh/",
+      "website": "https://nerist.ac.in/faculty/santosh-kumar-tamang/",
+      "researchGate": "https://www.researchgate.net/profile/Santosh-Tamang",
+      "googleScholar": "https://scholar.google.co.in/citations?user=t4MkF9YAAAAJ&hl=en&oi=ao",
+      "linkedin": "https://www.linkedin.com/in/santosh-tamang-277132129/?originalSubdomain=in",
+      "twitter": "https://x.com/tamangs07",
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Perovskite Solar Cell Optimization",
+        "role": "Principal Investigator",
+        "years": "2019-Present",
+        "description": "Driving innovations in perovskite material synthesis and device architecture to achieve higher efficiencies and stability."
+      },
+      {
+        "project": "Renewable Energy Grid Integration",
+        "role": "Researcher",
+        "years": "2020-2023",
+        "description": "Investigating smart grid solutions for seamless integration of renewable energy sources into national power grids."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2019 - Present"
+  },
+  {
+    "id": "prof-anil-kumar",
+    "name": "Dr. Anil Kumar",
+    "title": "Assistant Professor",
+    "category": "professors",
+    "image": "/images/teams/anil-sir.jpg",
+    "bio": "Research Interests: Optimization and Soft Computing Techniques for Design and Manufacturing, GPU Computing For FEA, Composite Materials, Machine Learning and Artificial Intelligence, and DFT/Molecular Dynamics/FEA-based simulations.",
+    "socialLinks": {
+      "website": "https://bitdurg.ac.in/faculty-details/index?fcid=199",
+      "researchGate": "https://www.researchgate.net/profile/Anil-Kumar-211",
+      "googleScholar": "https://scholar.google.com/citations?user=CCQvS7IAAAAJ&hl=en&source=sh/x/srp/wr/m1/0&kgs=5a1632460821e641",
+      "linkedin": "https://www.linkedin.com/in/dr-anil-kumar-754a5b64/?originalSubdomain=in",
       "twitter": null,
       "github": null
     },
@@ -64,8 +96,8 @@
     "yearsWorked": "2019 - Present"
   },
   {
-    "id": "postdoc-vikram-reddy",
-    "name": "Dr. Vikram Reddy",
+    "id": "postdoc-sindhu-maam",
+    "name": "Dr. Sindhu",
     "title": "Postdoctoral Researcher",
     "category": "postdoctorals",
     "image": "https://placehold.co/400x400/D08770/FFFFFF?text=Dr.+Vikram",
@@ -90,17 +122,17 @@
     "yearsWorked": "2023 - Present"
   },
   {
-    "id": "phd-sarah-khan",
-    "name": "Sarah Khan",
+    "id": "phd-rahul-patel",
+    "name": "RAHUL SINGH PATEL",
     "title": "Ph.D. Scholar",
     "category": "phd_scholars",
-    "image": "https://placehold.co/400x400/BF616A/FFFFFF?text=Sarah+Khan",
-    "bio": "Sarah's doctoral research explores the use of quantum machine learning for secure communication protocols.",
+    "image": "/images/teams/rahul-phd.jpeg",
+    "bio": "Research area: Optimization of thermomechanical treatment of AA- 7068 alloy, Deformation behaviour of Materials,Cryorolling, Friction Stir processing ( FSP) , Residual stress development during processing of Materials and its Impact on Stress corrosion cracking behaviour of Al -7068.",
     "socialLinks": {
       "website": null,
       "researchGate": null,
       "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/sarah-khan-phd/",
+      "linkedin": null,
       "twitter": null,
       "github": null
     },

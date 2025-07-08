@@ -1,32 +1,38 @@
 [
   {
     "id": 1,
-    "title": "IIT Guwahati Researchers Explore Traditional Assamese Fermented Food for Sustainable Industrial Applications",
-    "image": "https://placehold.co/400x250/A3BE8C/FFFFFF?text=Biosurfactant",
-    "link": "/research/assamese-food-research"
+    "title": "A collaborative research by IIT Bhilai and NERIST reveals groundbreaking findings on Phyllostachys bambusoides (Bije bamboo), a rare species from Ziro Valley, Arunachal Pradesh.",
+    "image": "/images/research&publications/bamboo-media.png",
+    "link": "/research/bamboo"
   },
   {
     "id": 2,
-    "title": "Researchers have designed an affordable and efficient 'passive' radiative cooling system that does not require electricity to operate",
-    "image": "https://placehold.co/400x250/88C0D0/FFFFFF?text=Cooling+System",
+    "title": "The Techneck issue, characterized by discomfort and muscular strain from prolonged device use in poor postures, has been tackled by our group.",
+    "image": "/images/research&publications/techneckal-media.png",
     "link": "/research/cooling-system"
   },
   {
     "id": 3,
-    "title": "New Breakthrough in AI for Medical Diagnosis: Enhancing Accuracy and Speed",
-    "image": "https://placehold.co/400x250/BF616A/FFFFFF?text=AI+Diagnosis",
-    "link": "/research/ai-medical-diagnosis"
+    "title": "A collaborative research by IIT Bhilai and NERIST reveals groundbreaking findings on Phyllostachys bambusoides (Bije bamboo), a rare species from Ziro Valley, Arunachal Pradesh.",
+    "image": "/images/research&publications/bamboo-media.png",
+    "link": "/research/bamboo"
   },
   {
     "id": 4,
-    "title": "Advancements in Renewable Energy Storage: Next-Gen Battery Technologies",
-    "image": "https://placehold.co/400x250/D08770/FFFFFF?text=Energy+Storage",
-    "link": "/research/energy-storage"
+    "title": "The Techneck issue, characterized by discomfort and muscular strain from prolonged device use in poor postures, has been tackled by our group.",
+    "image": "/images/research&publications/techneckal-media.png",
+    "link": "/research/cooling-system"
   },
   {
     "id": 5,
-    "title": "Developing Biodegradable Plastics from Agricultural Waste",
-    "image": "https://placehold.co/400x250/EBCB8B/FFFFFF?text=Biodegradable+Plastic",
-    "link": "/research/biodegradable-plastics"
+    "title": "A collaborative research by IIT Bhilai and NERIST reveals groundbreaking findings on Phyllostachys bambusoides (Bije bamboo), a rare species from Ziro Valley, Arunachal Pradesh.",
+    "image": "/images/research&publications/bamboo-media.png",
+    "link": "/research/bamboo"
+  },
+  {
+    "id": 6,
+    "title": "The Techneck issue, characterized by discomfort and muscular strain from prolonged device use in poor postures, has been tackled by our group.",
+    "image": "/images/research&publications/techneckal-media.png",
+    "link": "/research/cooling-system"
   }
 ]

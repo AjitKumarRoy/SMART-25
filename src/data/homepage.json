@@ -1,30 +1,7 @@
+
+
+
 {
-  "heroCarousel": [
-    {
-      "id": 1,
-      "image": "/images/hero/hero-lab1.jpg",
-      "title": "Pioneering AI for Tomorrow's World",
-      "description": "Driving innovation in artificial intelligence and machine learning research."
-    },
-    {
-      "id": 2,
-      "image": "/images/hero/hero-robotics.jpg",
-      "title": "Advancing Robotics & Automation",
-      "description": "Designing intelligent robotic systems for complex challenges."
-    },
-    {
-      "id": 3,
-      "image": "/images/hero/hero-design.jpg",
-      "title": "Next-Gen Machine Design & Simulation",
-      "description": "Utilizing advanced computational tools for robust engineering solutions."
-    },
-    {
-      "id": 4,
-      "image": "/images/hero/hero-research.jpg",
-      "title": "Collaborative Research Excellence",
-      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
-    }
-  ],
   "researchAreas": [
     {
       "id": 1,

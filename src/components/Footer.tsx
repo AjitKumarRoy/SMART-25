@@ -1,6 +1,7 @@
 // FILE: src/components/Footer.tsx
 "use client";
 import Link from "next/link";
+import Image from "next/image"; // Import Image component for the logo
 import {
   FiMail,
   FiPhone,
@@ -21,7 +22,7 @@ const Footer = () => {
   // Handle scroll event for scroll-to-top button
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) { // Show button after scrolling 300px down
+      if (window.scrollY > 300) {
         setShowScrollToTop(true);
       } else {
         setShowScrollToTop(false);
@@ -43,14 +44,21 @@ const Footer = () => {
     <footer className="relative bg-gradient-to-r from-gray-50 dark:from-gray-900 to-gray-100 dark:to-gray-950 py-12 border-t border-gray-200 dark:border-gray-800 font-jakarta text-gray-700 dark:text-gray-300">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
 
-        {/* Column 1: About/Brand */}
+        {/* Column 1: About/Brand (Now with Logo) */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <Link href="/" className="flex items-center gap-2 mb-4">
-            {/* Replace with your actual logo or text branding */}
-            <span className="text-2xl font-bold text-blue-600 dark:text-blue-400">AMDCG</span>
-            <span className="text-xl font-semibold text-gray-800 dark:text-gray-200">IIT Bhilai</span>
+          <Link href="/" className="mb-4"> {/* Removed old flex/gap, adjusted alignment */}
+            {/* Replace with your actual logo image */}
+            <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-blue-600 dark:border-blue-400 shadow-lg mx-auto md:mx-0">
+              <Image
+                src="/images/amdcg-logo.png" // <<< IMPORTANT: Replace with the actual path to your logo image
+                alt="AMDCG IIT Bhilai Logo"
+                layout="fill"
+                objectFit="contain" // Use 'contain' to ensure the whole logo is visible, or 'cover' if it should fill and potentially crop
+                className="rounded-full" // Ensures the image itself respects the rounded container
+              />
+            </div>
           </Link>
-          <p className="text-sm leading-relaxed max-w-xs">
+          <p className="text-sm leading-relaxed max-w-xs mt-4"> {/* Added mt-4 for spacing */}
             Advancing research and innovation in cutting-edge fields at IIT Bhilai.
             Committed to excellence and impactful contributions.
           </p>
@@ -64,7 +72,7 @@ const Footer = () => {
               { href: "/about", label: "About Us" },
               { href: "/team", label: "Our Team" },
               { href: "/research", label: "Research Areas" },
-              { href: "/publications", label: "Publications" },
+              { href: "/publications", "label": "Publications" },
               { href: "/events", label: "Events" },
               { href: "/blog", label: "Blog" },
             ].map((item) => (
@@ -89,8 +97,8 @@ const Footer = () => {
               { href: "/facilities", label: "Facilities" },
               { href: "/gallery", label: "Gallery" },
               { href: "/careers", label: "Careers" },
-              { href: "/privacy", label: "Privacy Policy" }, // Example additional link
-              { href: "/terms", label: "Terms of Service" }, // Example additional link
+              { href: "/privacy", label: "Privacy Policy" },
+              { href: "/terms", label: "Terms of Service" },
             ].map((item) => (
               <li key={item.href}>
                 <Link
@@ -110,19 +118,19 @@ const Footer = () => {
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 border-b-2 border-blue-500 dark:border-blue-400 pb-2 inline-block">Contact Us</h3>
           <address className="not-italic space-y-3 mb-6 text-sm">
             <p className="flex items-center justify-center md:justify-start gap-3">
-              <FiMapPin className="text-blue-500 dark:text-blue-400 text-xl" />
-              Naya Raipur, Chhattisgarh 493661, India
+              <span><FiMapPin className="text-blue-500 dark:text-blue-400 text-xl" /></span>
+                Research Lab-414, ED-2,  Department of Mechanical Engineering, IIT Bhilai Kutelabhata,  Durg-491001
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <FiMail className="text-blue-500 dark:text-blue-400 text-xl" />
               <a href="mailto:info@iitbhilai.ac.in" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-                info@iitbhilai.ac.in
+                amdcg@iitbhilai.ac.in
               </a>
             </p>
             <p className="flex items-center justify-center md:justify-start gap-3">
               <FiPhone className="text-blue-500 dark:text-blue-400 text-xl" />
-              <a href="tel:+917712977400" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
-                +91 77129 77400
+              <a href="tel:+911234567890" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">
+                +91 1234567890
               </a>
             </p>
           </address>
@@ -180,9 +188,16 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="border-t border-gray-200 dark:border-gray-800 mt-10 pt-6 text-center text-sm text-gray-600 dark:text-gray-400 px-6">
-        <p>&copy; {new Date().getFullYear()} AMDCG – IIT Bhilai. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} AMDCG – IIT Bhilai. All rights reserved.</p>
         <p className="mt-1">
-          Made with ❤️ for the future of research.
+          Designed & Developed by {" "}
+          <Link
+            href="https://www.linkedin.com/in/ajitroyofficial/" 
+            className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
+          >
+            Ajit Kumar Roy
+          </Link>
+          .
         </p>
       </div>
 

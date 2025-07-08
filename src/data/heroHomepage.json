@@ -1,0 +1,34 @@
+{
+  "heroCarousel": [
+    {
+      "id": 1,
+      "image": "/images/iitbh-htower.jpg",  
+      "title": "Pioneering AI for Tomorrow's World",
+      "description": "Driving innovation in artificial intelligence and machine learning research."
+    },
+    {
+      "id": 2,
+      "image": "/images/jose-sir-conference.jpeg",
+      "title": "Advancing Robotics & Automation",
+      "description": "Designing intelligent robotic systems for complex challenges."
+    },
+    {
+      "id": 3,
+      "image": "/images/group2.jpeg",
+      "title": "Next-Gen Machine Design & Simulation",
+      "description": "Utilizing advanced computational tools for robust engineering solutions."
+    },
+    {
+      "id": 4,
+      "image": "/images/group4.jpeg",
+      "title": "Collaborative Research Excellence",
+      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
+    },
+    {
+      "id": 4,
+      "image": "/images/group7.jpeg",
+      "title": "Collaborative Research Excellence",
+      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
+    }
+  ]
+}

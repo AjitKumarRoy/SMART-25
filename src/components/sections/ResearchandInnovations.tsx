@@ -1,10 +1,10 @@
-// src/components/sections/ResearchandInnovations.tsx
+// FILE: src/components/sections/ResearchandInnovations.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion"; // Import Variants type
 import Image from "next/image";
 import Link from "next/link";
-import { FaFolderOpen, FaArrowRight } from "react-icons/fa6"; // Chevron icons are now unused but kept for reference
+import { FaFolderOpen, FaArrowRight } from "react-icons/fa6";
 
 // Import react-slick components and CSS
 import Slider from "react-slick";
@@ -15,7 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import researchInnovationsData from "@/data/researchInnovationsData.json";
 
 // Animation variants for the overall section - explicitly typed
-const sectionVariants: Variants = { // Added Variants type
+const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
     opacity: 1,
@@ -24,14 +24,12 @@ const sectionVariants: Variants = { // Added Variants type
       type: "spring",
       damping: 10,
       stiffness: 100,
-      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
-      // The 'delay' for the section itself will be applied where the section component is used.
     },
   },
 };
 
 // Animation variants for individual carousel items (applied to the content inside slick-slide) - explicitly typed
-const itemVariants: Variants = { // Added Variants type
+const itemVariants: Variants = {
   hidden: { opacity: 0, scale: 0.95 },
   visible: {
     opacity: 1,
@@ -44,50 +42,16 @@ const itemVariants: Variants = { // Added Variants type
   },
 };
 
-// Custom Next Arrow component for react-slick (This component is now unused)
-// const NextArrow = (props: any) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} !block !right-0 z-10`} // Override default positioning
-//       style={{ ...style, display: "block" }} // Ensure it's visible
-//       onClick={onClick}
-//     >
-//       <button className="bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-//         <FaChevronRight className="text-xl" />
-//       </button>
-//     </div>
-//   );
-// };
-
-// Custom Prev Arrow component for react-slick (This component is now unused)
-// const PrevArrow = (props: any) => {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={`${className} !block !left-0 z-10`} // Override default positioning
-//       style={{ ...style, display: "block" }} // Ensure it's visible
-//       onClick={onClick}
-//     >
-//       <button className="bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 p-3 rounded-full shadow-md hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-//         <FaChevronLeft className="text-xl" />
-//       </button>
-//     </div>
-//   );
-// };
-
 export default function ResearchandInnovations() {
   const sliderSettings = {
-    dots: false, // No dots as per image
-    infinite: true, // Infinite looping
-    speed: 800, // Animation speed in ms
-    slidesToShow: 2, // Default to 2 items visible
-    slidesToScroll: 1, // Scroll one item at a time
-    autoplay: true, // Auto-play the carousel
-    autoplaySpeed: 4000, // Time between slides in ms (4 seconds)
-    cssEase: "ease-in-out", // For smoother animation
-    // nextArrow: <NextArrow />, // Removed to hide next button
-    // prevArrow: <PrevArrow />, // Removed to hide previous button
+    dots: false,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "ease-in-out",
     responsive: [
       {
         breakpoint: 1024, // lg breakpoint
@@ -119,25 +83,33 @@ export default function ResearchandInnovations() {
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
-      transition={{ delay: 0.1 }} // Applying delay directly to the motion component
+      transition={{ delay: 0.1 }}
     >
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex items-center justify-between mb-12">
           <div className="flex items-center">
-            <FaFolderOpen className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+            {/* Icon size: text-3xl for mobile, md:text-4xl for tablet/desktop */}
+            <FaFolderOpen className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+            {/* Heading size: text-xl for mobile, md:text-2xl for tablet, lg:text-3xl for desktop */}
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
               Research and Innovations
             </h2>
           </div>
-          <Link href="/research" className="inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg group">
+          {/* View All button: Smaller for mobile, scales up for md and lg */}
+          <Link href="/research" className="inline-flex items-center
+            px-4 py-2 text-sm                   {/* Mobile default */}
+            md:px-6 md:py-2.5 md:text-base    {/* Medium screens */}
+            lg:px-8 lg:py-2 lg:text-lg        {/* Large screens */}
+            border border-transparent font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 group"
+          >
             View All
-            <FaArrowRight className="ml-2 -mr-1 text-xl group-hover:translate-x-1 transition-transform duration-200" />
+            {/* Arrow icon: text-lg for mobile, md:text-xl for tablet/desktop */}
+            <FaArrowRight className="ml-2 -mr-1 text-lg md:text-xl group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>
 
         {/* Carousel Container */}
-        {/* Removed horizontal margins as arrows are no longer present */}
         <div className="relative py-4">
           <Slider {...sliderSettings}>
             {researchInnovationsData.map((item) => (
@@ -157,7 +129,8 @@ export default function ResearchandInnovations() {
                     />
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3 line-clamp-3">
+                    {/* Item title: text-base for mobile, md:text-lg for tablet/desktop */}
+                    <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3 line-clamp-3">
                       {item.title}
                     </h3>
                     <div className="mt-auto">

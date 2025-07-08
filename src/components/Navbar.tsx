@@ -2,9 +2,10 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
+import { usePathname } from "next/navigation"; // Import usePathname
 import { FiSearch, FiMenu, FiX, FiHome, FiChevronDown, FiChevronUp } from "react-icons/fi";
-import { motion, AnimatePresence, Variants } from "framer-motion"; // Import motion, AnimatePresence, and Variants
-import SearchBar from "./SearchBar"; // Assuming SearchBar component exists
+import { motion, AnimatePresence, Variants } from "framer-motion";
+import SearchBar from "./SearchBar";
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -14,12 +15,12 @@ const Navbar = () => {
 
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const moreDropdownRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname(); // Get the current path
 
   useEffect(() => {
     setMounted(true);
 
     const handleClickOutside = (event: MouseEvent) => {
-      // Close mobile menu if click is outside the menu AND it's open
       if (
         mobileMenuRef.current &&
         !mobileMenuRef.current.contains(event.target as Node) &&
@@ -28,7 +29,6 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
       }
 
-      // Close "More" dropdown if click is outside the dropdown and it's open (for desktop)
       if (
         moreDropdownRef.current &&
         !moreDropdownRef.current.contains(event.target as Node) &&
@@ -51,15 +51,25 @@ const Navbar = () => {
     setIsSearchOpen(false);
   };
 
-  // Variants for Framer Motion animations - explicitly typed
-  const dropdownVariants: Variants = { // Added Variants type
+  const dropdownVariants: Variants = {
     hidden: { opacity: 0, height: 0, transition: { duration: 0.3, ease: "easeOut" } },
     visible: { opacity: 1, height: "auto", transition: { duration: 0.3, ease: "easeOut" } },
   };
 
-  const mobileMenuVariants: Variants = { // Added Variants type
+  const mobileMenuVariants: Variants = {
     hidden: { x: "-100%", transition: { duration: 0.3, ease: "easeOut" } },
     visible: { x: "0%", transition: { duration: 0.3, ease: "easeOut" } },
+  };
+
+  // Helper function to determine if a link is active
+  const isActive = (href: string) => {
+    // Special handling for the root path
+    if (href === "/" && pathname === "/") {
+      return true;
+    }
+    // For other paths, check if the pathname starts with the href
+    // This handles cases like /research/topic also highlighting /research
+    return href !== "/" && pathname.startsWith(href);
   };
 
   return (
@@ -68,16 +78,24 @@ const Navbar = () => {
         {/* Left side for Desktop: Home Icon and All Nav Links */}
         {mounted && (
           <div className="hidden md:flex gap-8 items-center relative text-gray-800 dark:text-gray-200">
+            {/* Home Link */}
             <Link
               href="/"
-              className="relative flex items-center gap-1 text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 group"
+              className={`
+                relative flex items-center gap-1 text-lg font-medium transition-colors duration-300 group
+                ${isActive("/") ? "text-blue-600 dark:text-blue-400" : "hover:text-blue-600 dark:hover:text-blue-400"}
+              `}
               onClick={handleLinkClick}
             >
               <FiHome className="text-xl" /> Home
-              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform scaleX-0 group-hover:scaleX-100 transition-transform origin-left duration-300"></span>
+              <span className={`
+                absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform
+                ${isActive("/") ? "scaleX-100" : "scaleX-0 group-hover:scaleX-100"}
+                transition-transform origin-left duration-300
+              `}></span>
             </Link>
 
-            {/* Regular Nav Links with Hover Animation */}
+            {/* Regular Nav Links with Hover/Active Animation */}
             {[
               { href: "/about", label: "About" },
               { href: "/team", label: "Team" },
@@ -89,11 +107,18 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 group"
+                className={`
+                  relative text-lg font-medium transition-colors duration-300 group
+                  ${isActive(item.href) ? "text-blue-600 dark:text-blue-400" : "hover:text-blue-600 dark:hover:text-blue-400"}
+                `}
                 onClick={handleLinkClick}
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform scaleX-0 group-hover:scaleX-100 transition-transform origin-left duration-300"></span>
+                <span className={`
+                  absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform
+                  ${isActive(item.href) ? "scaleX-100" : "scaleX-0 group-hover:scaleX-100"}
+                  transition-transform origin-left duration-300
+                `}></span>
               </Link>
             ))}
 
@@ -105,7 +130,13 @@ const Navbar = () => {
               ref={moreDropdownRef}
             >
               <button
-                className="text-lg font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center gap-1 group"
+                className={`
+                  text-lg font-medium transition-colors duration-300 flex items-center gap-1 group
+                  ${isMoreOpen || (pathname.startsWith("/facilities") || pathname.startsWith("/gallery") || pathname.startsWith("/careers") || pathname.startsWith("/blog"))
+                    ? "text-blue-600 dark:text-blue-400"
+                    : "hover:text-blue-600 dark:hover:text-blue-400"
+                  }
+                `}
               >
                 More{" "}
                 <span className="text-sm">
@@ -115,7 +146,14 @@ const Navbar = () => {
                     <FiChevronDown className="h-5 w-5 transform rotate-0 transition-transform duration-300" />
                   )}
                 </span>
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform scaleX-0 group-hover:scaleX-100 transition-transform origin-left duration-300"></span>
+                <span className={`
+                  absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 dark:bg-blue-400 transform
+                  ${isMoreOpen || (pathname.startsWith("/facilities") || pathname.startsWith("/gallery") || pathname.startsWith("/careers") || pathname.startsWith("/blog"))
+                    ? "scaleX-100"
+                    : "scaleX-0 group-hover:scaleX-100"
+                  }
+                  transition-transform origin-left duration-300
+                `}></span>
               </button>
               <AnimatePresence>
                 {isMoreOpen && (
@@ -135,7 +173,10 @@ const Navbar = () => {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-5 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 text-base"
+                        className={`
+                          block px-5 py-2 transition-colors duration-200 text-base
+                          ${isActive(item.href) ? "bg-blue-50 dark:bg-gray-700 text-blue-600 dark:text-blue-400" : "text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400"}
+                        `}
                         onClick={handleLinkClick}
                       >
                         {item.label}
@@ -222,9 +263,16 @@ const Navbar = () => {
           </div>
 
           <div className="flex-1 p-5 flex flex-col gap-2 overflow-y-auto hide-scrollbar">
+            {/* Home Link for Mobile */}
             <Link
               href="/"
-              className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 py-3 px-3 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors duration-200 flex items-center gap-3 font-medium text-lg"
+              className={`
+                block py-3 px-3 rounded-lg transition-colors duration-200 flex items-center gap-3 font-medium text-lg
+                ${isActive("/")
+                  ? "bg-blue-100 dark:bg-blue-700 text-blue-600 dark:text-blue-400"
+                  : "text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                }
+              `}
               onClick={handleLinkClick}
             >
               <FiHome className="text-xl" /> Home
@@ -240,7 +288,13 @@ const Navbar = () => {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 py-3 px-3 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors duration-200 font-medium text-lg"
+                className={`
+                  block py-3 px-3 rounded-lg transition-colors duration-200 font-medium text-lg
+                  ${isActive(item.href)
+                    ? "bg-blue-100 dark:bg-blue-700 text-blue-600 dark:text-blue-400"
+                    : "text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                  }
+                `}
                 onClick={handleLinkClick}
               >
                 {item.label}
@@ -251,7 +305,13 @@ const Navbar = () => {
             <div className="relative">
               <button
                 onClick={() => setIsMoreOpen(!isMoreOpen)}
-                className="block w-full text-left text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 py-3 px-3 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors duration-200 flex items-center justify-between font-medium text-lg"
+                className={`
+                  block w-full text-left py-3 px-3 rounded-lg transition-colors duration-200 flex items-center justify-between font-medium text-lg
+                  ${isMoreOpen || (pathname.startsWith("/facilities") || pathname.startsWith("/gallery") || pathname.startsWith("/careers") || pathname.startsWith("/blog"))
+                    ? "bg-blue-100 dark:bg-blue-700 text-blue-600 dark:text-blue-400"
+                    : "text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                  }
+                `}
               >
                 More{" "}
                 <span className="text-sm">
@@ -280,7 +340,13 @@ const Navbar = () => {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-md transition-colors duration-200 text-base"
+                        className={`
+                          block px-4 py-2 rounded-md transition-colors duration-200 text-base
+                          ${isActive(item.href)
+                            ? "bg-blue-100 dark:bg-gray-700 text-blue-600 dark:text-blue-400"
+                            : "text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-600 dark:hover:text-blue-400"
+                          }
+                        `}
                         onClick={handleLinkClick}
                       >
                         {item.label}

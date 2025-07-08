@@ -1,10 +1,16 @@
-// src/components/sections/About.tsx
+// FILE: src/components/sections/About.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion"; // Import Variants type
 import Image from "next/image"; // Using next/image for optimized images
 import Link from "next/link";
 import { FaBookOpen, FaPlayCircle, FaUserTie, FaArrowRight } from "react-icons/fa"; // Icons for sections
+
+import joseSir from "../../../public/images/jose-sir.jpeg"
+import techNeckalMedia from "../../../public/images/techneckal-media.png"
+import bambooMedia from "../../../public/images/bamboo-media.png"
+import smartCityMedia from "../../../public/images/smartCity-media.png"
+import droupadiMurmu from "../../../public/images/droupadi-murmu-iitbh.png"
 
 // Animation variants for sections - explicitly typed
 const sectionVariants: Variants = { // Added Variants type
@@ -16,8 +22,6 @@ const sectionVariants: Variants = { // Added Variants type
       type: "spring",
       damping: 10,
       stiffness: 100,
-      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
-      // The 'delay' for the section itself will be applied where the section component is used (e.g., in page.tsx).
     },
   },
 };
@@ -30,7 +34,6 @@ const listVariants: Variants = { // Added Variants type
     transition: {
       staggerChildren: 0.05, // Stagger individual items within the list
       delayChildren: 0.1,
-      // These are valid for default (tween) transition type
     },
   },
 };
@@ -45,7 +48,6 @@ const itemVariants: Variants = { // Added Variants type
       type: "spring",
       damping: 12,
       stiffness: 120,
-      // No 'duration' or 'delay' here, which is correct for spring type
     },
   },
 };
@@ -67,22 +69,28 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            // The delay for this specific section is applied here, not within the variant definition
-            transition={{ delay: 0.1 }} // Applying delay directly to the motion component
+            transition={{ delay: 0.1 }}
           >
             <div className="flex items-center mb-6">
-              <FaBookOpen className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+              <FaBookOpen className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+              {/* HEADING CHANGE: Made smaller for mobile (text-xl), scaled up for md and lg */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
                 Welcome to Our Research Group
               </h2>
             </div>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-              Welcome to the cutting-edge world of our research group, where innovation meets impact. We are dedicated to pushing the boundaries of knowledge in [Your Field/Area of Research, e.g., Artificial Intelligence, Sustainable Energy, Biomedical Engineering].
+              Greetings and welcome to the AMDCG at IIT Bhilai! This is a dynamic research group focused on shaping the future through advancements in materials science and metallurgical engineering. With a commitment to both global excellence and local relevance, materials are developed and characterized with the potential for real-world impact. You are welcome to join in this endeavor.
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
               Through rigorous experimentation, theoretical advancements, and collaborative partnerships, we strive to create groundbreaking solutions that address real-world problems. Explore our work, discover our publications, and learn how you can be a part of our exciting journey.
             </p>
-            <Link href="/about-us" className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105">
+            {/* BUTTON CHANGE: Made smaller for mobile, scaled up for md and lg */}
+            <Link href="/about-us" className="inline-flex items-center
+              px-4 py-2 text-sm                   {/* Mobile default */}
+              md:px-6 md:py-2.5 md:text-base    {/* Medium screens */}
+              lg:px-8 lg:py-3 lg:text-lg        {/* Large screens */}
+              border border-transparent font-medium rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
+            >
               Learn More About Us
             </Link>
           </motion.div>
@@ -93,25 +101,25 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.3 }} // Delay applied directly here
+            transition={{ delay: 0.3 }}
           >
             <div className="flex items-center mb-6">
-              <FaUserTie className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-              <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+              <FaUserTie className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+              {/* HEADING CHANGE: Made smaller for mobile (text-xl), scaled up for md and lg */}
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
                 AMDCG Head
               </h2>
             </div>
             <div className="relative w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-blue-600 dark:border-blue-400 shadow-lg">
-              {/* Using a placeholder image for the director */}
               <Image
-                src="https://placehold.co/192x192/4A90E2/FFFFFF?text=Director"
-                alt="Director Prof. Devendra Jalihal"
+                src={joseSir}
+                alt="Professor Jose Immanuel R"
                 layout="fill"
                 objectFit="cover"
                 className="rounded-full"
               />
             </div>
-            <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
               Prof. Jose Immanuel R
             </h3>
             <p className="text-md text-gray-600 dark:text-gray-400">
@@ -128,18 +136,19 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.5 }} // Delay applied directly here
+            transition={{ delay: 0.5 }}
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-                <FaBookOpen className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-                  Research Group Newsletter
+                <FaBookOpen className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+                {/* HEADING CHANGE: Made smaller for mobile (text-xl), scaled up for md and lg */}
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+                  Media Coverage
                 </h2>
               </div>
-              <Link href="/newsletters" className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-lg flex items-center">
+              <Link href="/newsletters" className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-base md:text-lg flex items-center">
                 View All
-                <FaArrowRight className="ml-2 text-xl" />
+                <FaArrowRight className="ml-2 text-lg md:text-xl" />
               </Link>
             </div>
             <motion.div
@@ -152,38 +161,57 @@ export default function About() {
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
-                    src="https://placehold.co/300x160/667EEA/FFFFFF?text=Newsletter+Cover"
-                    alt="Newsletter Cover"
+                    src={techNeckalMedia}
+                    alt="Times Of India"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Volume VI Issue XI, November 2024
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  AIIMS Raipur and IIT Bhilai reserachers recognized for Techneck solution.
                 </h3>
-                <Link href="/newsletters/november-2024.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-                  Download PDF
+                <Link href="https://timesofindia.indiatimes.com/city/raipur/aiims-raipur-and-iit-bhilai-researchers-recognized-for-techneck-solution/articleshow/112608502.cms" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                  View More
                 </Link>
               </motion.div>
 
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
-                    src="https://placehold.co/300x160/38B2AC/FFFFFF?text=Newsletter+Cover"
-                    alt="Newsletter Cover"
+                    src={bambooMedia}
+                    alt="The Sentinel Assam"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
                   />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Volume V Issue X, October 2024
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  Arunachal's Bije Bamboo Shows Exceptional Strength, Say Researchers
                 </h3>
-                <Link href="/newsletters/october-2024.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
-                  Download PDF
+                <Link href="https://www.sentinelassam.com/north-east-india-news/arunachal-news/arunachals-bije-bamboo-shows-exceptional-strength-say-researchers" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                  View More
                 </Link>
               </motion.div>
+
+              <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
+                <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+                  <Image
+                    src={smartCityMedia}
+                    alt="Times Of India"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-lg"
+                  />
+                </div>
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  AMDCG Team from IIT Bhilai surverys Raipur Smart city for traffic solutions.
+                </h3>
+                <Link href="https://timesofindia.indiatimes.com/city/raipur/iit-bhilai-team-surveys-raipur-smart-city-for-traffic-solutions/articleshow/109208512.cms" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                  View More
+                </Link>
+              </motion.div>
+
             </motion.div>
           </motion.div>
 
@@ -193,18 +221,19 @@ export default function About() {
             variants={sectionVariants}
             initial="hidden"
             animate="visible"
-            transition={{ delay: 0.7 }} // Delay applied directly here
+            transition={{ delay: 0.7 }}
           >
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center">
-                <FaPlayCircle className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-                <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
-                  Research Group Videos
+                <FaPlayCircle className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+                {/* HEADING CHANGE: Made smaller for mobile (text-xl), scaled up for md and lg */}
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+                  AMDCG Videos
                 </h2>
               </div>
-              <Link href="/videos" className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-lg flex items-center">
+              <Link href="/videos" className="text-blue-600 dark:text-blue-400 hover:underline font-medium text-base md:text-lg flex items-center">
                 View All
-                <FaArrowRight className="ml-2 text-xl" />
+                <FaArrowRight className="ml-2 text-lg md:text-xl" />
               </Link>
             </div>
             <motion.div
@@ -216,22 +245,18 @@ export default function About() {
 
               <motion.div variants={itemVariants} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-5 shadow-inner flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
-                  {/* Placeholder for YouTube thumbnail or custom video cover */}
                   <Image
-                    src="https://placehold.co/300x160/E53E3E/FFFFFF?text=Video+Thumbnail"
+                    src={droupadiMurmu}
                     alt="Video Thumbnail: Visit of Hon'ble President"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg">
-                    <FaPlayCircle className="text-white text-5xl opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
-                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                   Visit of Honourable President Droupadi Murmu
                 </h3>
-                <Link href="https://www.youtube.com/watch?v=your-video-id-1" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                <Link href="https://www.youtube.com/watch?v=ezZ62pQrOlc" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                   Watch Video
                 </Link>
               </motion.div>
@@ -240,19 +265,19 @@ export default function About() {
                 <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-600">
                   <Image
                     src="https://placehold.co/300x160/3182CE/FFFFFF?text=Video+Thumbnail"
-                    alt="Video Thumbnail: Research Breakthrough"
+                    alt="Video Thumbnail: AMDCG LAb"
                     layout="fill"
                     objectFit="cover"
                     className="rounded-lg"
                   />
-                   <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg">
-                    <FaPlayCircle className="text-white text-5xl opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 rounded-lg">
+                    <FaPlayCircle className="text-4xl md:text-5xl text-white opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
                   </div>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Our Latest Research Breakthrough
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                  Team Operating FESEM at our Lab
                 </h3>
-                <Link href="https://www.youtube.com/watch?v=your-video-id-2" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
+                <Link href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                   Watch Video
                 </Link>
               </motion.div>

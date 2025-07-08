@@ -1,4 +1,4 @@
-// src/components/sections/Collaborators.tsx
+// FILE: src/components/sections/Collaborators.tsx
 "use client";
 
 import { motion, Variants } from "framer-motion"; // Import Variants type
@@ -24,8 +24,6 @@ const sectionVariants: Variants = { // Added Variants type
       type: "spring",
       damping: 10,
       stiffness: 100,
-      // Removed 'duration' and 'delay' from here as they are not valid for 'spring' type transitions.
-      // The 'delay' for the section itself will be applied where the section component is used.
     },
   },
 };
@@ -99,14 +97,23 @@ export default function Collaborators() {
         {/* Header Section */}
         <div className="flex items-center justify-between mb-12">
           <div className="flex items-center">
-            <FaHandshake className="text-4xl text-blue-600 dark:text-blue-400 mr-4" />
-            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
+            {/* Heading Icon: Smaller for mobile, scales up */}
+            <FaHandshake className="text-3xl md:text-4xl text-blue-600 dark:text-blue-400 mr-4" />
+            {/* Heading Text: Smaller for mobile, scales up */}
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100">
               Our Collaborators
             </h2>
           </div>
-          <Link href="/collaborators" className="inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 text-lg group">
+          {/* View All button: Smaller for mobile, scales up */}
+          <Link href="/collaborators" className="inline-flex items-center
+            px-4 py-2 text-sm                   {/* Mobile default */}
+            md:px-6 md:py-2.5 md:text-base    {/* Medium screens */}
+            lg:px-8 lg:py-3 lg:text-lg        {/* Large screens */}
+            border border-transparent font-medium rounded-full shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 group"
+          >
             View All
-            <FaArrowRight className="ml-2 -mr-1 text-xl group-hover:translate-x-1 transition-transform duration-200" />
+            {/* Arrow icon: Smaller for mobile, scales up */}
+            <FaArrowRight className="ml-2 -mr-1 text-lg md:text-xl group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </div>
 
