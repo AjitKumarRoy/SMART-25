@@ -187,7 +187,7 @@ export default function About() {
                   />
                 </div>
                 <h3 className="text-base md:text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                  Arunachal's Bije Bamboo Shows Exceptional Strength, Say Researchers
+                  Arunachal&apos;s Bije Bamboo Shows Exceptional Strength, Say Researchers
                 </h3>
                 <Link href="https://www.sentinelassam.com/north-east-india-news/arunachal-news/arunachals-bije-bamboo-shows-exceptional-strength-say-researchers" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline text-sm">
                   View More
