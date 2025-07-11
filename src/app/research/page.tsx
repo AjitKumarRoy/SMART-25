@@ -108,7 +108,7 @@ export default function ResearchPage() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           variants={sectionVariants}
           className="max-w-6xl mx-auto text-center"
         >
@@ -119,7 +119,7 @@ export default function ResearchPage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true}}
             variants={staggerContainerVariants}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           >

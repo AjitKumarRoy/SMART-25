@@ -74,7 +74,7 @@ export default function TeamCategorySection({ title, members, onMemberClick }: T
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0 }}
     >
       <h2 className="text-4xl font-extrabold text-gray-900 dark:text-gray-100 mb-8 text-center relative pb-4">
         {title}

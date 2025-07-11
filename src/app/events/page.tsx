@@ -1,8 +1,8 @@
 // FILE: src/app/news-events/page.tsx
-"use client"; // This page uses client-side interactivity (useState, useMemo, Framer Motion)
+"use client";
 
 import { useState, useMemo } from "react";
-import { motion, Variants, AnimatePresence } from "framer-motion"; // Import AnimatePresence
+import { motion, Variants, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
   FiExternalLink,
@@ -11,18 +11,16 @@ import {
   FiInfo,
   FiFileText,
   FiBriefcase,
-  FiFilter, // Import the filter icon
-  FiX, // Import close icon for the filter menu
+  FiFilter,
+  FiX,
 } from "react-icons/fi";
 import { format, isAfter, subDays } from "date-fns";
 
-// Import your ALL-IN-ONE consolidated news data (for general news/announcements)
 import rawAllUpdates from "@/data/notices.json";
 const allUpdates: UpdateItem[] = rawAllUpdates as UpdateItem[];
 
 import { CallToActionSection } from "@/components/sections/CallToActionSection";
 
-// --- Type Definition for Clarity ---
 interface UpdateItem {
   id: string;
   title: string;
@@ -33,10 +31,8 @@ interface UpdateItem {
   description: string | null;
 }
 
-// Define a type for the filter categories, including 'All'
 type FilterCategory = UpdateItem["type"] | "All";
 
-// --- Animation Variants (Consistent with previous pages) ---
 const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -65,14 +61,11 @@ const listItemVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
-// Variants for the filter dropdown
 const filterDropdownVariants: Variants = {
   hidden: { opacity: 0, height: 0, transition: { duration: 0.3 } },
   visible: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
 };
 
-
-// Helper function to check if an item is "new" based on its date
 const isNewItem = (itemDate: string): boolean => {
   const sevenDaysAgo = subDays(new Date(), 7);
   const itemParsedDate = new Date(itemDate);
@@ -81,11 +74,11 @@ const isNewItem = (itemDate: string): boolean => {
 
 export default function NewsEventsPage() {
   const [filter, setFilter] = useState<FilterCategory>("All");
-  const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false); // New state for filter menu
+  const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
 
   const handleFilterClick = (category: FilterCategory) => {
     setFilter(category);
-    setIsFilterMenuOpen(false); // Close menu after selection on mobile
+    setIsFilterMenuOpen(false);
   };
 
   const filteredAndSortedGeneralUpdates = useMemo(() => {
@@ -94,7 +87,8 @@ export default function NewsEventsPage() {
     if (filter !== "All") {
       currentUpdates = currentUpdates.filter((item) => item.type === (filter as UpdateItem["type"]));
     } else {
-      currentUpdates = currentUpdates.filter((item) => item.type !== "Event");
+      // Show all items, including Events
+      currentUpdates = [...allUpdates];
     }
 
     currentUpdates.sort((a, b) => {
@@ -187,10 +181,11 @@ export default function NewsEventsPage() {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true }}
           variants={sectionVariants}
           className="max-w-6xl mx-auto"
         >
+          
 
           {/* Filter Buttons (Desktop) and Filter Icon (Mobile) */}
           <div className="mb-12">
