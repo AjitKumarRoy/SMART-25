@@ -2,7 +2,7 @@
 "use client"; // This page uses client-side interactivity (useState, useMemo, Framer Motion)
 
 import { useState, useMemo } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, AnimatePresence } from "framer-motion"; // Import AnimatePresence
 import Link from "next/link";
 import {
   FiExternalLink,
@@ -11,12 +11,14 @@ import {
   FiInfo,
   FiFileText,
   FiBriefcase,
+  FiFilter, // Import the filter icon
+  FiX, // Import close icon for the filter menu
 } from "react-icons/fi";
 import { format, isAfter, subDays } from "date-fns";
 
 // Import your ALL-IN-ONE consolidated news data (for general news/announcements)
-import allUpdates from "@/data/notices.json";
-
+import rawAllUpdates from "@/data/notices.json";
+const allUpdates: UpdateItem[] = rawAllUpdates as UpdateItem[];
 
 import { CallToActionSection } from "@/components/sections/CallToActionSection";
 
@@ -30,6 +32,9 @@ interface UpdateItem {
   location: string | null;
   description: string | null;
 }
+
+// Define a type for the filter categories, including 'All'
+type FilterCategory = UpdateItem["type"] | "All";
 
 // --- Animation Variants (Consistent with previous pages) ---
 const sectionVariants: Variants = {
@@ -60,6 +65,13 @@ const listItemVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: "easeOut" } },
 };
 
+// Variants for the filter dropdown
+const filterDropdownVariants: Variants = {
+  hidden: { opacity: 0, height: 0, transition: { duration: 0.3 } },
+  visible: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
+};
+
+
 // Helper function to check if an item is "new" based on its date
 const isNewItem = (itemDate: string): boolean => {
   const sevenDaysAgo = subDays(new Date(), 7);
@@ -68,35 +80,32 @@ const isNewItem = (itemDate: string): boolean => {
 };
 
 export default function NewsEventsPage() {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState<FilterCategory>("All");
+  const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false); // New state for filter menu
 
-  // Memoize filtered and sorted general updates (News, Announcements, Recruitment)
+  const handleFilterClick = (category: FilterCategory) => {
+    setFilter(category);
+    setIsFilterMenuOpen(false); // Close menu after selection on mobile
+  };
+
   const filteredAndSortedGeneralUpdates = useMemo(() => {
     let currentUpdates: UpdateItem[] = [...allUpdates];
 
-    // Filter out "Events" type if it's "All" because we have a dedicated events section
-    // Or, apply the specific filter
     if (filter !== "All") {
-      currentUpdates = currentUpdates.filter((item) => item.type === filter);
+      currentUpdates = currentUpdates.filter((item) => item.type === (filter as UpdateItem["type"]));
     } else {
-        // If "All" is selected, exclude "Event" types from this main list
-        // as they are covered in the dedicated section.
-        currentUpdates = currentUpdates.filter((item) => item.type !== "Event");
+      currentUpdates = currentUpdates.filter((item) => item.type !== "Event");
     }
 
-    // Sort past/current items by most recent first
     currentUpdates.sort((a, b) => {
       const dateA = new Date(a.date);
       const dateB = new Date(b.date);
-      return dateB.getTime() - dateA.getTime(); // Descending sort (newest first)
+      return dateB.getTime() - dateA.getTime();
     });
 
     return currentUpdates;
   }, [filter]);
 
-
-
-  // Helper to get the correct icon based on type
   const getTypeIcon = (type: UpdateItem["type"]) => {
     switch (type) {
       case "Announcement":
@@ -173,7 +182,6 @@ export default function NewsEventsPage() {
         </div>
       </section>
 
-    
       {/* Latest News & Announcements Section */}
       <section className="py-20 px-6 bg-white dark:bg-gray-900">
         <motion.div
@@ -183,24 +191,65 @@ export default function NewsEventsPage() {
           variants={sectionVariants}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800 dark:text-blue-300">
-            Latest News & Announcements
-          </h2>
-          {/* Filter Buttons for general updates */}
-          <div className="flex justify-center flex-wrap mb-12 gap-4">
-            {["All", "News", "Announcement", "Recruitment", "Event"].map((category) => ( 
+
+          {/* Filter Buttons (Desktop) and Filter Icon (Mobile) */}
+          <div className="mb-12">
+            {/* Mobile Filter Button */}
+            <div className="flex justify-center md:hidden mb-6">
               <button
-                key={category}
-                onClick={() => setFilter(category)}
-                className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
-                  filter === category
-                    ? "bg-blue-600 text-white shadow-lg"
-                    : "bg-gray-200 text-gray-800 hover:bg-blue-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
-                }`}
+                onClick={() => setIsFilterMenuOpen(!isFilterMenuOpen)}
+                className="flex items-center gap-2 px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-lg hover:bg-blue-700 transition-colors duration-300"
               >
-                {category}
+                {isFilterMenuOpen ? <FiX /> : <FiFilter />}
+                {isFilterMenuOpen ? "Close Filters" : "Filter by Type"}
               </button>
-            ))}
+            </div>
+
+            {/* Filter Buttons (Visible on md screens and up) */}
+            <div className="hidden md:flex justify-center flex-wrap gap-4">
+              {["All", "News", "Announcement", "Recruitment", "Event"].map((category) => (
+                <button
+                  key={category}
+                  onClick={() => handleFilterClick(category as FilterCategory)}
+                  className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+                    filter === category
+                      ? "bg-blue-600 text-white shadow-lg"
+                      : "bg-gray-200 text-gray-800 hover:bg-blue-100 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile Filter Dropdown (using AnimatePresence for exit animations) */}
+            <AnimatePresence>
+              {isFilterMenuOpen && (
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                  variants={filterDropdownVariants}
+                  className="md:hidden mt-4 bg-gray-100 dark:bg-gray-850 p-4 rounded-lg shadow-inner border border-gray-200 dark:border-gray-700 overflow-hidden"
+                >
+                  <div className="flex flex-col space-y-3">
+                    {["All", "News", "Announcement", "Recruitment", "Event"].map((category) => (
+                      <button
+                        key={category}
+                        onClick={() => handleFilterClick(category as FilterCategory)}
+                        className={`w-full text-left px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                          filter === category
+                            ? "bg-blue-600 text-white shadow-md"
+                            : "bg-white text-gray-800 hover:bg-blue-50 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
+                        }`}
+                      >
+                        {category}
+                      </button>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {/* General Updates List */}
@@ -222,11 +271,11 @@ export default function NewsEventsPage() {
                       className={`px-2 py-1 rounded-md text-xs font-semibold flex items-center gap-1 ${
                         item.type === "Announcement"
                           ? "bg-purple-100 text-purple-800 dark:bg-purple-700 dark:text-purple-100"
-                          : item.type === "Event" // Event items should ideally not appear here due to filter
+                          : item.type === "Event"
                           ? "bg-green-100 text-green-800 dark:bg-green-700 dark:text-green-100"
                           : item.type === "Recruitment"
                           ? "bg-blue-100 text-blue-800 dark:bg-blue-700 dark:text-blue-100"
-                          : "bg-orange-100 text-orange-800 dark:bg-orange-700 dark:text-orange-100" // For general News
+                          : "bg-orange-100 text-orange-800 dark:bg-orange-700 dark:text-orange-100"
                       }`}
                     >
                       {getTypeIcon(item.type)} {item.type}
