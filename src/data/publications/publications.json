@@ -1,0 +1,80 @@
+
+[
+  {
+    "id": "pub1",
+    "title": "High-Entropy Alloys for Advanced Structural Applications: A Review",
+    "authors": [
+      "A. Gupta",
+      "S. Khan",
+      "P. Sharma"
+    ],
+    "journalOrConference": "Materials Science and Engineering: R: Reports",
+    "year": 2024,
+    "abstract": "This review summarizes the recent advancements in high-entropy alloys, focusing on their unique microstructures, mechanical properties, and potential applications in extreme environments. We discuss various synthesis routes and characterization techniques, highlighting key challenges and future directions in the field.",
+    "link": "https://doi.org/10.1016/j.mser.2024.112345",
+    "pdfLink": "/assets/pubs/high-entropy-alloys.pdf",
+    "imageUrl": "/images/publications/hea-review.jpeg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub2",
+    "title": "Machine Learning Approaches for Predicting Battery Performance Degradation",
+    "authors": [
+      "R. Verma",
+      "S. Reddy"
+    ],
+    "journalOrConference": "Journal of Power Sources",
+    "year": 2023,
+    "abstract": "We present a comprehensive study on the application of various machine learning models to predict the degradation behavior of lithium-ion batteries. Our models, trained on extensive cycling data, show high accuracy in forecasting capacity fade and resistance increase, enabling proactive battery management.",
+    "link": "https://doi.org/10.1016/j.jpowsour.2023.234567",
+    "pdfLink": "/assets/pubs/ml-battery.pdf",
+    "imageUrl": "/images/publications/battery-ml.jpeg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub3",
+    "title": "Enhanced Photocatalytic Activity of Graphitic Carbon Nitride/TiO2 Composites",
+    "authors": [
+      "A. Singh",
+      "R. Das",
+      "A. Gupta"
+    ],
+    "journalOrConference": "Applied Catalysis B: Environmental",
+    "year": 2023,
+    "abstract": "This work explores the synthesis and characterization of novel g-C3N4/TiO2 composite materials for improved photocatalytic degradation of organic pollutants. We demonstrate significantly enhanced efficiency under visible light irradiation, attributing it to synergistic effects.",
+    "link": "https://doi.org/10.1016/j.apcatb.2023.456789",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/photocatalysis.jpeg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub4",
+    "title": "Quantum Mechanical Simulations of Defect Formation in Perovskite Solar Cells",
+    "authors": [
+      "P. Sharma",
+      "S. Khan"
+    ],
+    "journalOrConference": "Nano Letters (Conference Presentation)",
+    "year": 2024,
+    "abstract": "Using density functional theory, we investigate the energetics and electronic effects of various point defects in hybrid organic-inorganic perovskites. Our findings provide insights into stability issues and strategies for defect passivation in high-efficiency solar cells.",
+    "link": "https://pubs.acs.org/doi/10.1021/acs.nanolett.xxxxxxx",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/perovskite.jpeg",
+    "type": "Conference Paper"
+  },
+  {
+    "id": "pub5",
+    "title": "Review on Additive Manufacturing of Biomedical Implants",
+    "authors": [
+      "S. Reddy",
+      "R. Das"
+    ],
+    "journalOrConference": "Journal of Biomedical Materials Research Part B: Applied Biomaterials",
+    "year": 2022,
+    "abstract": "Additive manufacturing (AM) offers unprecedented design freedom for patient-specific biomedical implants. This review covers the state-of-the-art in AM techniques, materials, and challenges in fabricating implants with complex geometries and enhanced biocompatibility.",
+    "link": "https://doi.org/10.1002/jbm.b.34567",
+    "pdfLink": "/assets/pubs/biomedical-implants.pdf",
+    "imageUrl": "/images/publications/biomed-review.jpeg",
+    "type": "Journal Article"
+  }
+]

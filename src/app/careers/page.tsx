@@ -1,4 +1,6 @@
 // FILE: src/app/careers/page.tsx
+import { UnderConstructionSection } from "@/components/UnderConstructionSection";
+
 export default function CareersPage() {
   return (
     <section className="pt-20 px-4 max-w-7xl mx-auto">
@@ -6,6 +8,8 @@ export default function CareersPage() {
       <p className="text-gray-700 dark:text-gray-300">
         Interested in working with us? Check back here for internships, research assistant roles, and Ph.D. openings.
       </p>
+
+      <UnderConstructionSection />
     </section>
   );
 }

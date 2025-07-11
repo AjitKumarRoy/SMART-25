@@ -32,6 +32,70 @@
     "yearsWorked": "2020 - Present"
   },
   {
+    "id": "prof-santosh-tamang",
+    "name": "Dr. Santosh Kumar Tamang",
+    "title": "Assistant Professor, NERIST, Arunachal Pradesh",
+    "category": "collaborators",
+    "image": "/images/teams/santosh-sir-passport.jpeg",
+    "bio": "Research Interests: Optimization and Soft Computing Techniques for Design and Manufacturing, GPU Computing For FEA, Composite Materials, Machine Learning and Artificial Intelligence, and DFT/Molecular Dynamics/FEA-based simulations.",
+    "socialLinks": {
+      "website": "https://nerist.ac.in/faculty/santosh-kumar-tamang/",
+      "researchGate": "https://www.researchgate.net/profile/Santosh-Tamang",
+      "googleScholar": "https://scholar.google.com/citations?user=t4MkF9YAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/santosh-tamang-277132129/?originalSubdomain=in",
+      "twitter": "https://x.com/tamangs07",
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Quantum Material Simulations",
+        "role": "Principal Investigator",
+        "years": "2020-Present",
+        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
+      },
+      {
+        "project": "AI-Driven Drug Discovery",
+        "role": "Co-Investigator",
+        "years": "2021-Present",
+        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2020 - Present"
+  },
+  {
+    "id": "pro-anil-kumar",
+    "name": "Dr. Anil Kumar",
+    "title": "Assistant Professor, BIT Durg",
+    "category": "collaborators",
+    "image": "/images/teams/anil-sir.jpg",
+    "bio": "Research Interests: Alloy design, High Entropy Alloy, Advanced Aluminium Casting, Vacuum arc melting Technique, Spark Plasma Sintering, Welding Technology, High Temperature Corrosion analysis, X-ray Diffraction Analysis, Scanning Electron Microscopy.",
+    "socialLinks": {
+      "website": "https://bitdurg.ac.in/faculty-details/index?fcid=199",
+      "researchGate": "https://www.researchgate.net/profile/Anil-Kumar-211",
+      "googleScholar": "https://scholar.google.com/citations?user=CCQvS7IAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/dr-anil-kumar-754a5b64/?originalSubdomain=in",
+      "twitter": null,
+      "github": null
+    },
+    "contributions": [
+      {
+        "project": "Quantum Material Simulations",
+        "role": "Principal Investigator",
+        "years": "2020-Present",
+        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
+      },
+      {
+        "project": "AI-Driven Drug Discovery",
+        "role": "Co-Investigator",
+        "years": "2021-Present",
+        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+      }
+    ],
+    "workingStatus": "Current",
+    "yearsWorked": "2020 - Present"
+  },
+  {
     "id": "postdoc-sindhu-maam",
     "name": "Dr. Sindhu",
     "title": "Postdoctoral Researcher",

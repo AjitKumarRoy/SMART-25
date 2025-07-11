@@ -79,10 +79,23 @@ export function BannerSection() {
 
       {/* Center Text - Group Name */}
       <motion.div variants={titleVariants} className="flex-grow text-center max-w-2xl">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight mb-2">
-          Advanced Materials Development and Characterization Group
+        <h1 className="
+          text-2xl md:text-3xl lg:text-4xl
+          font-extrabold
+          bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400
+          text-transparent bg-clip-text
+          leading-tight mb-2
+          font-heading-display
+        ">
+          Advanced Materials Development & Characterization Group
         </h1>
-        <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+        <p className="
+          text-base md:text-lg
+          text-gray-700 dark:text-gray-300
+          font-body-text /* Changed from font-sans-body for consistency */
+          font-semibold /* Added font weight for more presence */
+          tracking-wider /* Added letter spacing for better appearance in all-caps */
+        ">
           INDIAN INSTITUTE OF TECHNOLOGY BHILAI
         </p>
       </motion.div>

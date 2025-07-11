@@ -2,8 +2,17 @@
 "use client"; // Required for client-side interactivity and Framer Motion
 
 import { motion, Variants } from "framer-motion";
-import { FiTarget,  FiZap, FiUsers, FiGlobe } from "react-icons/fi"; // Example icons
-import { CallToActionSection } from "@/components/sections/CallToActionSection"; // Adjust path as needed
+import Image from "next/image";
+import { FiTarget, FiZap, FiUsers, FiGlobe } from "react-icons/fi";
+import { CallToActionSection } from "@/components/sections/CallToActionSection";
+
+// Import react-slick components and styles
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Import your team images data
+import teamImages from "@/data/about/team.json"; // Adjusted path based on typical Next.js structure
 
 // --- Animation Variants for consistency ---
 const sectionVariants: Variants = {
@@ -23,13 +32,58 @@ const itemVariants: Variants = {
 const staggerContainerVariants: Variants = {
   visible: {
     transition: {
-      staggerChildren: 0.1, // Delay between children animations
-      delayChildren: 0.3, // Delay before first child animates
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
     },
   },
 };
 
 export default function AboutPage() {
+
+
+  // react-slick settings for the carousel
+  const sliderSettings = {
+    dots: true, // Show navigation dots
+    infinite: true, // Loop the carousel
+    speed: 800, // Transition speed in ms
+    slidesToShow: 1, // Show one image at a time
+    slidesToScroll: 1, // Scroll one image at a time
+    autoplay: true, // Auto-play the carousel
+    autoplaySpeed: 5000, // Time between slides in ms (5 seconds)
+    cssEase: "ease-in-out", // CSS easing function for smooth transitions
+    fade: true, // Enable fade effect for transitions (instead of slide)
+    arrows: true, // Show navigation arrows
+
+    // Responsive settings for min-height and potentially other properties
+    responsive: [
+      {
+        breakpoint: 1280, // xl breakpoint
+        settings: {
+          // No specific height needed here, as min-h will control it
+          // You could add other settings specific to large desktops if needed
+        }
+      },
+      {
+        breakpoint: 1024, // lg breakpoint
+        settings: {
+          // No specific height needed here
+        }
+      },
+      {
+        breakpoint: 768, // md breakpoint
+        settings: {
+          // No specific height needed here
+        }
+      },
+      {
+        breakpoint: 640, // sm breakpoint
+        settings: {
+          // No specific height needed here
+        }
+      },
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-jakarta">
       {/* Hero Section */}
@@ -45,14 +99,20 @@ export default function AboutPage() {
             variants={itemVariants}
             className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-blue-800 dark:text-blue-300"
           >
-            Pioneering the Future of Technology
+            About AMDCG
           </motion.h1>
+          <motion.p
+            variants={itemVariants}
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 pb-6"
+          >
+            The Advanced Materials and Data Computing Group (AMDCG) is at the forefront of interdisciplinary research,
+            merging cutting-edge material science with advanced computational techniques to solve the world&apos;s most pressing challenges.
+          </motion.p>
           <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
           >
-            The Advanced Materials and Data Computing Group (AMDCG) is at the forefront of interdisciplinary research,
-            merging cutting-edge material science with advanced computational techniques to solve the world&apos;s most pressing challenges.
+            The Advanced Materials Development and Characterization Group (AMDCG) at the Indian Institute of Technology Bhilai (IIT Bhilai) is a dynamic research hub dedicated to pushing the boundaries of materials science and engineering. Situated in Chhattisgarh, a state rich in mineral resources and home to significant industrial infrastructure like the Bhilai Steel Plant, our group benefits from a unique environment that seamlessly connects academic excellence with real-world applications.
           </motion.p>
         </motion.div>
         {/* Subtle background pattern/shape for premium feel */}
@@ -185,6 +245,52 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </motion.div>
+        </motion.div>
+      </section>
+
+      {/* --- Meet the Team Section (with Slick Carousel) --- */}
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-950">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={sectionVariants}
+          className="max-w-5xl mx-auto text-center"
+        >
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-blue-700 dark:text-blue-400">
+            Meet the Team
+          </motion.h2>
+
+          <motion.div
+            variants={itemVariants}
+            // Responsive min-height for the carousel container
+            className="mb-8 relative rounded-lg overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700
+                       min-h-[250px] sm:min-h-[300px] lg:min-h-[450px] xl:min-h-[600px]
+                       slick-carousel-custom"
+          >
+            <Slider {...sliderSettings}>
+              {teamImages.map((image, index) => (
+                <div key={index} className="relative w-full h-full">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    objectFit="cover"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+              ))}
+            </Slider>
+          </motion.div>
+
+          <motion.p variants={itemVariants} className="text-lg md:text-xl max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed">
+            Behind every breakthrough at AMDCG is a dedicated team of brilliant minds. Our diverse group
+            of researchers, scientists, and students brings together a wealth of expertise from various
+            disciplines, united by a shared passion for discovery and innovation. We believe in a collaborative
+            and supportive environment where ideas flourish, challenges are met with creativity, and collective
+            efforts lead to transformative results. Each member plays a crucial role in pushing the boundaries
+            of materials science and computational research, contributing to a future shaped by scientific excellence.
+          </motion.p>
         </motion.div>
       </section>
 

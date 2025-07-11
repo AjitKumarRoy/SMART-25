@@ -73,6 +73,7 @@ export default function TeamPage() {
   const categorizedMembers = useMemo(() => {
     const categories: { [key: string]: TeamMember[] } = {
       professors: [],
+      collaborators: [],
       postdoctorals: [],
       phd_scholars: [],
       research_staff: [],
@@ -122,6 +123,13 @@ export default function TeamPage() {
           onMemberClick={openModal}
         />
 
+        {/* Collaborators Section */}
+        <TeamCategorySection 
+          title="Collaborators"
+          members={categorizedMembers.collaborators}
+          onMemberClick={openModal}
+        />
+
         {/* Postdoctoral Researchers Section */}
         <TeamCategorySection
           title="Postdoctoral Researchers"
@@ -167,3 +175,5 @@ export default function TeamPage() {
     </motion.div>
   );
 }
+
+
