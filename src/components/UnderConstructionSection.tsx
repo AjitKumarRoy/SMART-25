@@ -44,7 +44,7 @@ export function UnderConstructionSection() {
           variants={itemVariants}
           className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6"
         >
-          This page is currently under construction. We're working hard to bring you exciting new content and features!
+          This page is currently under construction. We&apos;re working hard to bring you exciting new content and features!
         </motion.p>
         <motion.div variants={itemVariants} className="flex items-center justify-center text-gray-500 dark:text-gray-400 text-md">
           <FiClock className="mr-2 text-xl" />

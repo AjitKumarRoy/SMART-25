@@ -65,7 +65,7 @@ export default function ContactPage() {
             variants={itemVariants}
             className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
           >
-            We're here to help! Reach out to us through the form or find our contact details below.
+            We&apos;re here to help! Reach out to us through the form or find our contact details below.
           </motion.p>
         </motion.div>
         {/* Subtle background pattern/shape */}
