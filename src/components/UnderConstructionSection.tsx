@@ -38,7 +38,7 @@ export function UnderConstructionSection() {
           variants={itemVariants}
           className="text-3xl md:text-4xl font-extrabold text-gray-800 dark:text-gray-100 mb-4 leading-tight"
         >
-          Pardon Our Dust!
+          Pardon Us!
         </motion.h2>
         <motion.p
           variants={itemVariants}
