@@ -6,7 +6,7 @@ import matter from "gray-matter"; // For parsing front matter
 import { notFound } from "next/navigation";
 
 // Import the Client Component
-import BlogPostContent from "@/components/blog/BlogPostContent";
+import BlogPostContent from "@/components/blogPage/BlogPostContent";
 
 // Define the shape of our blog post metadata (front matter)
 interface BlogPostMetadata {
