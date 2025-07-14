@@ -6,7 +6,7 @@ import { motion, Variants } from "framer-motion";
 import { FiCpu, FiZap, FiLayers, FiBarChart2, FiGlobe, FiTool, FiArrowRight } from "react-icons/fi";
 
 // Import your data
-import homepageData from "@/data/homepage.json";
+import homepageData from "@/data/homePage/coreResearchAreas.json";
 
 // Dynamic icon mapping
 const researchIcons: { [key: string]: React.ElementType } = {

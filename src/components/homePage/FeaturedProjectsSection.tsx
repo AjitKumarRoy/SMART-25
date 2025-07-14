@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FiArrowRight } from "react-icons/fi";
 
 // Import your data
-import homepageData from "@/data/homepage.json";
+import homepageData from "@/data/homePage/featuredProjects.json";
 
 // Animation Variants (from original page.tsx)
 const sectionVariants: Variants = {

@@ -25,7 +25,7 @@ export function Notices() {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true }}
       variants={sectionVariants}
       transition={{ delay: 0.1 }} // Applying delay directly to the motion component
       className="py-8 relative overflow-hidden" // Main section padding and overflow

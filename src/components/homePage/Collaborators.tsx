@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import data
-import collaboratorsData from "@/data/collaboratorsData.json";
+import collaboratorsData from "@/data/homePage/collaboratorsData.json";
 
 // Animation variants for the overall section - explicitly typed
 const sectionVariants: Variants = { // Added Variants type

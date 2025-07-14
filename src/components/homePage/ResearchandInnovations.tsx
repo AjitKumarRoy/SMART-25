@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import data
-import researchInnovationsData from "@/data/researchInnovationsData.json";
+import researchInnovationsData from "@/data/homePage/researchInnovationsData.json";
 
 // Animation variants for the overall section - explicitly typed
 const sectionVariants: Variants = {

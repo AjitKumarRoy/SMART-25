@@ -7,8 +7,8 @@ import { Tab } from "@headlessui/react";
 import { FaBullhorn, FaTags, FaArrowRight } from "react-icons/fa6";
 
 // Import data
-import announcementsData from "@/data/announcements.json";
-import recruitmentsData from "@/data/recruitments.json";
+import announcementsData from "@/data/homePage/announcements.json";
+import recruitmentsData from "@/data/homePage/recruitments.json";
 
 interface AnnouncementItem {
   id: number;

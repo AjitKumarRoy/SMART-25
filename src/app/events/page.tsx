@@ -16,10 +16,10 @@ import {
 } from "react-icons/fi";
 import { format, isAfter, subDays } from "date-fns";
 
-import rawAllUpdates from "@/data/notices.json";
+import rawAllUpdates from "@/data/news&events/notices.json";
 const allUpdates: UpdateItem[] = rawAllUpdates as UpdateItem[];
 
-import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
 interface UpdateItem {
   id: string;
@@ -128,13 +128,13 @@ export default function NewsEventsPage() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-blue-800 dark:text-blue-300"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
           >
             News & Events
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
           >
             Stay updated with our latest announcements, upcoming events, and important news.
           </motion.p>

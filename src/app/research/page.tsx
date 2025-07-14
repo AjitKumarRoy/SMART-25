@@ -8,7 +8,7 @@ import { FiArrowRight } from "react-icons/fi";
 
 // Import your research projects data
 import researchProjects from "@/data/research/research.json";
-import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
 // --- Animation Variants ---
 const sectionVariants: Variants = {
@@ -78,13 +78,13 @@ export default function ResearchPage() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-purple-800 dark:text-purple-300"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
           >
             Pioneering Research
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
           >
             At AMDCG, we are at the forefront of interdisciplinary scientific exploration,
             driving innovation in materials science, data computing, and their profound applications.
@@ -112,7 +112,7 @@ export default function ResearchPage() {
           variants={sectionVariants}
           className="max-w-6xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-purple-700 dark:text-purple-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
             Our Key Projects
           </motion.h2>
 
@@ -195,7 +195,7 @@ export default function ResearchPage() {
           variants={sectionVariants}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-purple-700 dark:text-purple-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
             Our Research Philosophy
           </motion.h2>
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">

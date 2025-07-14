@@ -31,17 +31,61 @@ research-website/
 │   │   └── layout.tsx     # Global layout
 │
 │   ├── components/        # Reusable UI components
+│   │   └── blogPage
+│   │   |     └── BlogPostContent.tsx   
+│   │   └── homePage
+│   │   |     └── About.tsx   
+│   │   |     └── AnnouncementRecruitment.tsx   
+│   │   |     └── CallToActionSection.tsx   
+│   │   |     └── Collaborators.tsx   
+│   │   |     └── FeaturedProjectsSection.tsx   
+│   │   |     └── HeroSection.tsx   
+│   │   |     └── Notices.tsx   
+│   │   |     └── ResearchandInnovations.tsx   
+│   │   |     └── ReserachAreasSection.tsx   
+│   │   |     └── TeamSpotlightSection.tsx   
+│   │   |     └── UpcomingEvents.tsx   
+│   │   └── teamPage
+│   │   |     └── TeamCategorySection.tsx   
+│   │   |     └── TeamMemberCard.tsx   
+│   │   |     └── TeamMemberModal.tsx   
 │   │   ├── Navbar.tsx
 │   │   ├── Footer.tsx
-│   │   └── SearchBar.tsx
-│
+│   │   ├── AppContentWrapper.tsx
+│   │   ├── BannerSection.tsx
+│   │   ├── InitialLoader.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── NotificationBar.tsx
+│   │   ├── SearchBar.tsx
+│   │   └── UnderConstructionSection.tsx
+│   |
 │   ├── styles/            # Tailwind and global CSS
 │   │   └── globals.css
-│
+│   |
+│   ├── context/          
+│   │   └── LoadingContext.tsx
+|   |
 │   ├── data/              # Local JSON/TS data
-│   │   ├── team.json
-│   │   ├── publications.json
-│   │   ├── research.json
+│   │   └── about
+│   │   |     └── team.json 
+│   │   └── publications
+│   │   |     └── publications.json 
+│   │   └── research
+│   │   |     └── research.json 
+│   │   ├── announcements.json
+│   │   ├── blogPosts.json
+│   │   ├── collaboratorsData.json
+│   │   ├── events.json
+│   │   ├── heroHomepage.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
+│   │   ├── collaboratorsData.json
 │   │   └── events.json
 │
 │   ├── posts/             # Blog posts as markdown files

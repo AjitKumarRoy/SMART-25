@@ -12,7 +12,7 @@ import {
   FiClipboard,
   FiExternalLink,
 } from "react-icons/fi";
-import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
 // --- Animation Variants (Consistent with other pages) ---
 const sectionVariants: Variants = {
@@ -57,13 +57,13 @@ export default function ContactPage() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-blue-800 dark:text-blue-300"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
           >
             Get In Touch
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
           >
             We&apos;re here to help! Reach out to us through the form or find our contact details below.
           </motion.p>
@@ -188,7 +188,7 @@ export default function ContactPage() {
           variants={sectionVariants}
           className="max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-800 dark:text-blue-300">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
             Our Campus Location
           </h2>
           <motion.div

@@ -2,15 +2,15 @@
 "use client"; // This component needs to be client-side to use state, effects, and Framer Motion
 
 // Import all your new section components
-import { HeroSection } from "@/components/sections/HeroSection";
-import { Notices } from "@/components/sections/Notices"; // Assuming this is UpcomingEvents/AnnouncementRecruitment
-import About from "@/components/sections/About";
-import ResearchandInnovations from "@/components/sections/ResearchandInnovations";
-import Collaborators from "@/components/sections/Collaborators";
-import { ResearchAreasSection } from "@/components/sections/ResearchAreasSection";
-import { FeaturedProjectsSection } from "@/components/sections/FeaturedProjectsSection";
-import { TeamSpotlightSection } from "@/components/sections/TeamSpotlightSection";
-import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { HeroSection } from "@/components/homePage/HeroSection";
+import { Notices } from "@/components/homePage/Notices"; // Assuming this is UpcomingEvents/AnnouncementRecruitment
+import About from "@/components/homePage/About";
+import ResearchandInnovations from "@/components/homePage/ResearchandInnovations";
+import Collaborators from "@/components/homePage/Collaborators";
+import { ResearchAreasSection } from "@/components/homePage/ResearchAreasSection";
+import { FeaturedProjectsSection } from "@/components/homePage/FeaturedProjectsSection";
+import { TeamSpotlightSection } from "@/components/homePage/TeamSpotlightSection";
+import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
 export default function HomePage() {
   return (

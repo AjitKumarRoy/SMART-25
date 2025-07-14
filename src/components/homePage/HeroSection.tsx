@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FiArrowRight } from "react-icons/fi";
 
 // Import your homepage data (assuming it's accessible or passed as prop)
-import homepageData from "@/data/heroHomepage.json";
+import homepageData from "@/data/homePage/heroSection.json";
 
 // Animation Variants (could be moved to a central variants file if many components use them)
 const heroTitleVariants: Variants = {

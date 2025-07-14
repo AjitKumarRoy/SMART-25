@@ -6,7 +6,7 @@ import { motion, Variants } from "framer-motion";
 import { FaCalendar, FaLocationDot, FaArrowRight } from "react-icons/fa6";
 
 // Import data and helper functions
-import upcomingEventsData from "@/data/upcomingEvents.json";
+import upcomingEventsData from "@/data/homePage/upcomingEvents.json";
 import { getFormattedDateParts, isEventNew, parseEventDate } from "@/utils/dateHelpers";
 
 interface EventItem {

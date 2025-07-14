@@ -4,7 +4,7 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import { FiTarget, FiZap, FiUsers, FiGlobe } from "react-icons/fi";
-import { CallToActionSection } from "@/components/sections/CallToActionSection";
+import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
 // Import react-slick components and styles
 import Slider from "react-slick";
@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import your team images data
-import teamImages from "@/data/about/team.json"; // Adjusted path based on typical Next.js structure
+import teamImages from "@/data/aboutPage/team.json"; // Adjusted path based on typical Next.js structure
 
 // --- Animation Variants for consistency ---
 const sectionVariants: Variants = {
@@ -97,23 +97,23 @@ export default function AboutPage() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-blue-800 dark:text-blue-300"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
           >
             About AMDCG
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 pb-6"
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 pb-6 text-gray-700 dark:text-gray-300"
           >
             The Advanced Materials and Data Computing Group (AMDCG) is at the forefront of interdisciplinary research,
             merging cutting-edge material science with advanced computational techniques to solve the world&apos;s most pressing challenges.
           </motion.p>
-          <motion.p
+          {/* <motion.p
             variants={itemVariants}
             className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
           >
             The Advanced Materials Development and Characterization Group (AMDCG) at the Indian Institute of Technology Bhilai (IIT Bhilai) is a dynamic research hub dedicated to pushing the boundaries of materials science and engineering. Situated in Chhattisgarh, a state rich in mineral resources and home to significant industrial infrastructure like the Bhilai Steel Plant, our group benefits from a unique environment that seamlessly connects academic excellence with real-world applications.
-          </motion.p>
+          </motion.p> */}
         </motion.div>
         {/* Subtle background pattern/shape for premium feel */}
         <div className="absolute inset-0 z-0 opacity-10 dark:opacity-5">
@@ -137,7 +137,7 @@ export default function AboutPage() {
           variants={sectionVariants}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-blue-700 dark:text-blue-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
             Our Mission & Vision
           </motion.h2>
 
@@ -177,7 +177,7 @@ export default function AboutPage() {
           variants={sectionVariants}
           className="max-w-5xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-blue-700 dark:text-blue-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
             Our Core Research Areas
           </motion.h2>
           <motion.div
@@ -221,7 +221,7 @@ export default function AboutPage() {
           variants={sectionVariants}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-blue-700 dark:text-blue-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
             Our Guiding Principles
           </motion.h2>
           <motion.div
@@ -257,7 +257,7 @@ export default function AboutPage() {
           variants={sectionVariants}
           className="max-w-5xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-blue-700 dark:text-blue-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
             Meet the Team
           </motion.h2>
 

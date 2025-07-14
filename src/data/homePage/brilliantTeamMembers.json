@@ -1,0 +1,28 @@
+{
+ "teamMembers": [
+    {
+      "id": 1,
+      "name": "Dr. Kavya Sharma",
+      "title": "Principal Investigator",
+      "image": "/images/team/kavya-sharma.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Arjun Patel",
+      "title": "Lead Researcher - AI",
+      "image": "/images/team/arjun-patel.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Priya Singh",
+      "title": "Robotics Engineer",
+      "image": "/images/team/priya-singh.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Vikram Rao",
+      "title": "Computational Designer",
+      "image": "/images/team/vikram-rao.jpg"
+    }
+  ]
+}

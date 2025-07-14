@@ -7,7 +7,7 @@
 // import { FaNewspaper, FaCalendarAlt, FaUserCircle, FaArrowRight } from "react-icons/fa"; // Using Fa for consistency
 
 // // Import blog post data
-// import blogPosts from "@/data/blogPosts.json"; // Assuming you place blogPosts.json in src/data
+// import blogPosts from "@/data/blogPage/blogPosts.json"; // Assuming you place blogPosts.json in src/data
 
 // interface BlogPost {
 //   id: number;

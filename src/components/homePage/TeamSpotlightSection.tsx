@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import your data
-import homepageData from "@/data/homepage.json";
+import homepageData from "@/data/homePage/brilliantTeamMembers.json";
 
 // Animation Variants (from original page.tsx)
 const sectionVariants: Variants = {

@@ -6,11 +6,11 @@ import { motion, Variants } from 'framer-motion';
 import { FaUsers } from 'react-icons/fa'; // Main icon for the team page
 
 // Import data
-import teamData from '@/data/team.json';
+import teamData from '@/data/teamPage/team.json';
 
 // Import components
-import TeamCategorySection from '@/components/team/TeamCategorySection';
-import TeamMemberModal from '@/components/team/TeamMemberModal';
+import TeamCategorySection from '@/components/teamPage/TeamCategorySection';
+import TeamMemberModal from '@/components/teamPage/TeamMemberModal';
 
 // Define the shape of a single team member (matching team.json)
 interface TeamMember {
@@ -107,7 +107,7 @@ export default function TeamPage() {
         <div className="flex items-center mb-16 justify-center text-center">
           <FaUsers className="text-5xl text-blue-600 dark:text-blue-400 mr-4" />
           <div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 mb-4">
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100">
               Meet Our Team
             </h1>
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">

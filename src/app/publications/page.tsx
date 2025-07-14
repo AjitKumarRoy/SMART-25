@@ -8,7 +8,7 @@ import { FiExternalLink, FiDownload } from "react-icons/fi"; // Icons for extern
 
 // Import your publications data
 import publicationsData from "@/data/publications/publications.json";
-import { CallToActionSection } from "@/components/sections/CallToActionSection"; // Assuming you want to reuse this
+import { CallToActionSection } from "@/components/homePage/CallToActionSection"; // Assuming you want to reuse this
 
 
 // --- Animation Variants (Consistent with other pages) ---
@@ -54,13 +54,13 @@ export default function PublicationsPage() {
         >
           <motion.h1
             variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-teal-800 dark:text-teal-300"
+            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
           >
             Our Published Works
           </motion.h1>
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90"
+            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
           >
             Explore the latest scientific contributions and breakthroughs from the Advanced Materials and Data Computing Group.
           </motion.p>
@@ -87,7 +87,7 @@ export default function PublicationsPage() {
           variants={sectionVariants}
           className="max-w-6xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-teal-700 dark:text-teal-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-gray-100">
             Recent Publications
           </motion.h2>
 
@@ -175,7 +175,7 @@ export default function PublicationsPage() {
           variants={sectionVariants}
           className="max-w-4xl mx-auto text-center"
         >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-teal-700 dark:text-teal-400">
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
             Our Commitment to Open Science
           </motion.h2>
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">

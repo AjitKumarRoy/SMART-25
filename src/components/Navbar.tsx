@@ -101,7 +101,7 @@ const Navbar = () => {
               { href: "/team", label: "Team" },
               { href: "/research", label: "Research" },
               { href: "/publications", label: "Publications" },
-              { href: "/events", label: "Events" },
+              { href: "/events", label: "News & Events" },
               { href: "/contact", label: "Contact" },
             ].map((item) => (
               <Link
@@ -282,7 +282,7 @@ const Navbar = () => {
               { href: "/team", label: "Team" },
               { href: "/research", label: "Research" },
               { href: "/publications", label: "Publications" },
-              { href: "/events", label: "Events" },
+              { href: "/events", label: "News & Events" },
               { href: "/contact", label: "Contact" },
             ].map((item) => (
               <Link
