@@ -1,4 +1,3 @@
-
 [
   {
     "id": "pub1",
@@ -76,5 +75,81 @@
     "pdfLink": "/assets/pubs/biomedical-implants.pdf",
     "imageUrl": "/images/publications/biomed-review.jpeg",
     "type": "Journal Article"
+  },
+  {
+    "id": "pub6",
+    "title": "Data-Driven Materials Discovery: A Computational Perspective",
+    "authors": [
+      "A. Gupta",
+      "R. Verma"
+    ],
+    "journalOrConference": "Computational Materials Science: Methods and Applications",
+    "year": 2023,
+    "abstract": "This book chapter explores the role of data-driven approaches in accelerating materials discovery, with a focus on machine learning and high-throughput computational methods. Case studies in alloy design and energy materials are presented.",
+    "link": "https://doi.org/10.1007/978-3-030-12345-6_5",
+    "pdfLink": "/assets/pubs/data-driven-materials.pdf",
+    "imageUrl": "/images/publications/data-driven.jpeg",
+    "type": "Book Chapter"
+  },
+  {
+    "id": "pub7",
+    "title": "Technical Report on Scalable Quantum Computing Architectures",
+    "authors": [
+      "S. Khan",
+      "P. Sharma",
+      "A. Singh"
+    ],
+    "journalOrConference": "Advanced Materials and Data Computing Group Technical Report",
+    "year": 2024,
+    "abstract": "This technical report outlines the design and simulation of scalable quantum computing architectures using novel materials. We discuss implementation challenges and propose solutions for fault-tolerant systems.",
+    "link": null,
+    "pdfLink": "/assets/pubs/quantum-computing-report.pdf",
+    "imageUrl": "/images/publications/quantum-report.jpeg",
+    "type": "Technical Report"
+  },
+  {
+    "id": "pat1",
+    "title": "Novel High-Entropy Alloy Composition for Structural Applications",
+    "authors": [
+      "A. Gupta",
+      "S. Khan"
+    ],
+    "patentNumber": "US9876543B2",
+    "year": 2024,
+    "abstract": "This patent describes a novel high-entropy alloy composition with enhanced strength and corrosion resistance for structural applications in extreme environments.",
+    "link": "https://patents.google.com/patent/US9876543B2",
+    "pdfLink": "/assets/patents/alloy-patent.pdf",
+    "imageUrl": "/images/patents/alloy-patent.jpeg",
+    "type": "Utility Patent"
+  },
+  {
+    "id": "pat2",
+    "title": "Photocatalytic Coating for Environmental Purification",
+    "authors": [
+      "A. Singh",
+      "R. Das"
+    ],
+    "patentNumber": "US1234567A1",
+    "year": 2023,
+    "abstract": "This patent covers a novel photocatalytic coating design based on g-C3N4/TiO2 composites for efficient degradation of organic pollutants under visible light.",
+    "link": "https://patents.google.com/patent/US1234567A1",
+    "pdfLink": "/assets/patents/photocatalytic-coating.pdf",
+    "imageUrl": "/images/patents/photocatalytic-patent.jpeg",
+    "type": "Utility Patent"
+  },
+  {
+    "id": "pat3",
+    "title": "Design for a Biomedical Implant with Enhanced Biocompatibility",
+    "authors": [
+      "S. Reddy",
+      "R. Das"
+    ],
+    "patentNumber": "USD789123S1",
+    "year": 2022,
+    "abstract": "This design patent covers the unique geometric configuration of a biomedical implant optimized for enhanced biocompatibility and mechanical stability.",
+    "link": "https://patents.google.com/patent/USD789123S1",
+    "pdfLink": null,
+    "imageUrl": "/images/patents/implant-design.jpeg",
+    "type": "Design Patent"
   }
 ]
