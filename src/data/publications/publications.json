@@ -1,18 +1,17 @@
 [
   {
     "id": "pub1",
-    "title": "High-Entropy Alloys for Advanced Structural Applications: A Review",
+    "title": "Influence of cryorolling on microstructure and mechanical properties of a cast hypoeutectic Al–Si alloy",
     "authors": [
-      "A. Gupta",
-      "S. Khan",
-      "P. Sharma"
+      "Jose Immanuel Rajan",
+      "Sushanta Panigrahi"
     ],
-    "journalOrConference": "Materials Science and Engineering: R: Reports",
-    "year": 2024,
-    "abstract": "This review summarizes the recent advancements in high-entropy alloys, focusing on their unique microstructures, mechanical properties, and potential applications in extreme environments. We discuss various synthesis routes and characterization techniques, highlighting key challenges and future directions in the field.",
-    "link": "https://doi.org/10.1016/j.mser.2024.112345",
-    "pdfLink": "/assets/pubs/high-entropy-alloys.pdf",
-    "imageUrl": "/images/publications/hea-review.jpeg",
+    "journalOrConference": "Materials Science and Engineering: A (Elsevier), vol. 640, 2015, pp. 424–435",
+    "year": 2015,
+    "abstract": "Cast Al–Si alloys often show poor tensile strength, less ductility and poor fatigue performance due to cast microstructure and presence of porosity. An attempt has been made to improve mechanical properties of a cast hypoeutectic Al–Si alloy (A356) by cryorolling. As cast Al–Si alloy (A356) processed by cryorolling at different imposed strain levels was subjected to microstructural analysis and mechanical testing. Cryorolling resulted in break up and uniform distribution of coarse acicular eutectic particles in the aluminium matrix, elimination of casting porosity, microstructural refinement and significant accumulation of dislocation density. These microstructural changes resulted in significant improvement in the strength (248%) and ductility (37%). The influence of cryorolling on mechanism of microstructural modification, strengthening mechanism and failure mechanism are studied in detail.",
+    "link": "https://www.researchgate.net/publication/278687973_Influence_of_cryorolling_on_microstructure_and_mechanical_properties_of_a_cast_hypoeutectic_Al-Si_alloy",
+    "pdfLink": "/pdfs/publications/2015/1-s2.0-S0921509315300757-main_2.pdf",
+    "imageUrl": "/images/publications/Three-dimensional-microstructure-of-a-AC-b-ST-c-50CR-and-d-87CR-materials.png",
     "type": "Journal Article"
   },
   {
