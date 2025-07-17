@@ -1,3 +1,5 @@
+// FILE: src/app/components/InitialLoader.tsx
+
 "use client";
 
 import React, { useRef, useEffect, useState } from 'react';
@@ -7,7 +9,6 @@ import { useLoading } from '@/context/LoadingContext';
 
 const amdcgLogo = "/images/amdcg-logo.png";
 
-// Define colors for atoms
 const atomColors = [
   '#FF6347', // Tomato (Red)
   '#4682B4', // SteelBlue (Blue)
@@ -16,12 +17,13 @@ const atomColors = [
   '#8A2BE2', // BlueViolet (Purple)
 ];
 
-// Molecule class to simulate atoms with orbital paths
+// Molecule class (keep this exactly as you have it)
 class Molecule {
   x: number;
   y: number;
   speedX: number;
   speedY: number;
+  initialCentralAtomSize: number; // Added for consistent pulsing
   centralAtomSize: number;
   centralAtomColor: string;
   satelliteAtoms: { x: number; y: number; size: number; color: string; orbitRadius: number; angle: number; speed: number }[];
@@ -31,11 +33,12 @@ class Molecule {
     this.ctx = ctx;
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.speedX = Math.random() * 0.5 - 0.25; // Slower movement
-    this.speedY = Math.random() * 0.5 - 0.25;
-    this.centralAtomSize = Math.random() * 4 + 3; // Central atom size
+    // --- INCREASED SPEED HERE ---
+    this.speedX = Math.random() * 1 - 0.5; // Increased from 0.5 to 1 (range -0.5 to 0.5)
+    this.speedY = Math.random() * 1 - 0.5; // Increased from 0.5 to 1 (range -0.5 to 0.5)
+    this.initialCentralAtomSize = Math.random() * 4 + 3; // Store original size
+    this.centralAtomSize = this.initialCentralAtomSize; // Initialize with original size
     this.centralAtomColor = atomColors[Math.floor(Math.random() * atomColors.length)];
-    // Create 2–4 satellite atoms
     this.satelliteAtoms = Array.from({ length: Math.floor(Math.random() * 3) + 2 }, () => ({
       x: 0,
       y: 0,
@@ -43,7 +46,8 @@ class Molecule {
       color: atomColors[Math.floor(Math.random() * atomColors.length)],
       orbitRadius: Math.random() * 20 + 10,
       angle: Math.random() * Math.PI * 2,
-      speed: Math.random() * 0.02 + 0.01,
+      // --- INCREASED SATELLITE ORBIT SPEED HERE ---
+      speed: Math.random() * 0.04 + 0.02, // Increased from 0.02+0.01 to 0.04+0.02
     }));
   }
 
@@ -51,24 +55,21 @@ class Molecule {
     this.x += this.speedX;
     this.y += this.speedY;
 
-    // Bounce off canvas edges
     if (this.x < 0 || this.x > canvas.width) this.speedX = -this.speedX;
     if (this.y < 0 || this.y > canvas.height) this.speedY = -this.speedY;
 
-    // Update satellite atom positions
     this.satelliteAtoms.forEach(atom => {
       atom.angle += atom.speed;
       atom.x = this.x + Math.cos(atom.angle) * atom.orbitRadius;
       atom.y = this.y + Math.sin(atom.angle) * atom.orbitRadius;
     });
 
-    // Pulse central atom size
+    // Pulse central atom size based on initial size
     const pulseFactor = 0.8 + 0.2 * Math.sin(Date.now() * 0.002);
-    this.centralAtomSize = (Math.random() * 4 + 3) * pulseFactor;
+    this.centralAtomSize = this.initialCentralAtomSize * pulseFactor;
   }
 
   draw() {
-    // Draw central atom
     this.ctx.fillStyle = this.centralAtomColor;
     this.ctx.shadowBlur = 10;
     this.ctx.shadowColor = this.centralAtomColor;
@@ -77,20 +78,17 @@ class Molecule {
     this.ctx.fill();
     this.ctx.shadowBlur = 0;
 
-    // Draw orbital paths (dashed circles)
     this.satelliteAtoms.forEach(atom => {
       this.ctx.strokeStyle = `rgba(255, 255, 255, 0.3)`;
       this.ctx.lineWidth = 0.5;
-      this.ctx.setLineDash([2, 3]); // Dashed line
+      this.ctx.setLineDash([2, 3]);
       this.ctx.beginPath();
       this.ctx.arc(this.x, this.y, atom.orbitRadius, 0, Math.PI * 2);
       this.ctx.stroke();
-      this.ctx.setLineDash([]); // Reset to solid line
+      this.ctx.setLineDash([]);
     });
 
-    // Draw satellite atoms and bonds
     this.satelliteAtoms.forEach(atom => {
-      // Draw bond (line to central atom)
       this.ctx.strokeStyle = `rgba(255, 255, 255, 0.5)`;
       this.ctx.lineWidth = 1;
       this.ctx.beginPath();
@@ -98,7 +96,6 @@ class Molecule {
       this.ctx.lineTo(atom.x, atom.y);
       this.ctx.stroke();
 
-      // Draw satellite atom
       this.ctx.fillStyle = atom.color;
       this.ctx.shadowBlur = 5;
       this.ctx.shadowColor = atom.color;
@@ -110,7 +107,7 @@ class Molecule {
   }
 }
 
-// Animation variants
+// Animation variants (keep these as is)
 const loaderVariants: Variants = {
   hidden: { opacity: 0, transition: { duration: 0.5, ease: "easeOut" } },
   visible: { opacity: 1, transition: { duration: 0.5, ease: "easeIn" } },
@@ -123,19 +120,41 @@ const contentVariants: Variants = {
   exit: { scale: 1.2, opacity: 0, transition: { duration: 0.7, ease: "easeIn" } },
 };
 
+const dotVariants: Variants = {
+  animate: {
+    scale: [1, 1.5, 1],
+    opacity: [0.5, 1, 0.5],
+    transition: {
+      repeat: Infinity,
+      duration: 1.2,
+      ease: "easeInOut",
+      delay: 0.1, // Fixed delay, as per previous fix
+    },
+  },
+};
+
 export default function InitialLoader() {
   const { isLoading } = useLoading();
-  const [mounted, setMounted] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  useEffect(() => {
-    setMounted(true);
+  // console.log("[InitialLoader] Rendered. Current isLoading:", isLoading);
+  // useEffect(() => {
+  //   console.log("[InitialLoader] useEffect: isLoading changed to", isLoading);
+  // }, [isLoading]);
 
+
+  useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    if (!canvas) {
+        // console.log("Canvas ref is not available yet.");
+        return;
+    }
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!ctx) {
+        console.error("Failed to get 2D rendering context for canvas.");
+        return;
+    }
 
     let animationFrameId: number;
     let molecules: Molecule[] = [];
@@ -143,12 +162,15 @@ export default function InitialLoader() {
     const setCanvasSize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      // console.log('Canvas resized to:', canvas.width, canvas.height);
       createMolecules();
     };
 
     const createMolecules = () => {
-      molecules = [];
-      const numberOfMolecules = Math.floor(window.innerWidth / 200) + 5; // Adjust based on screen size
+      molecules = []; // Clear existing molecules on resize
+      // --- INCREASED NUMBER OF MOLECULES HERE ---
+      const numberOfMolecules = Math.floor(window.innerWidth / 100) + 10; // Increased density and base count
+      // console.log('Animating', numberOfMolecules, 'molecules');
       for (let i = 0; i < numberOfMolecules; i++) {
         molecules.push(new Molecule(canvas, ctx));
       }
@@ -156,7 +178,7 @@ export default function InitialLoader() {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.1)'; // For the trailing effect
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       molecules.forEach(molecule => {
@@ -167,24 +189,22 @@ export default function InitialLoader() {
       animationFrameId = requestAnimationFrame(animate);
     };
 
+    // Initial setup
     setCanvasSize();
     animate();
 
+    // Event listener for window resize
     const handleResize = () => {
       setCanvasSize();
     };
-
     window.addEventListener('resize', handleResize);
 
+    // Cleanup function
     return () => {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
-
-  if (!mounted) {
-    return null;
-  }
+  }, [canvasRef.current]);
 
   return (
     <AnimatePresence>
@@ -196,21 +216,38 @@ export default function InitialLoader() {
           animate="visible"
           exit="exit"
         >
-          <canvas ref={canvasRef} className="absolute inset-0" />
+          <canvas
+            ref={canvasRef}
+            className="absolute inset-0"
+          />
           <motion.div
-            className="relative z-10"
+            className="relative z-10 flex flex-col items-center gap-4"
             variants={contentVariants}
             initial="initial"
             animate="animate"
             exit="exit"
           >
             <Image
-              src={amdcgLogo} // Replace with your actual logo path
+              src={amdcgLogo}
               alt="AMDCG Logo"
               width={200}
               height={200}
               className="rounded-full shadow-2xl border-2 border-white/20 sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px]"
             />
+            <div className="flex flex-col items-center gap-2">
+              <span className="text-white text-lg md:text-xl font-jakarta font-medium">IIT Bhilai</span>
+              <div className="flex gap-2">
+                {[0, 1, 2].map((i) => (
+                  <motion.span
+                    key={i}
+                    className="w-2 h-2 bg-white rounded-full"
+                    variants={dotVariants}
+                    animate="animate"
+                    custom={i}
+                  />
+                ))}
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       )}
