@@ -21,7 +21,7 @@ interface Publication {
   year: number | string; // Allow string from JSON, will parse to number
   imageUrl?: string;
   link?: string;
-  pdfLink?: string;
+  pdfLink?: string | undefined | null; // Allow null to match data
   patentNumber?: string;
   abstract?: string;
 }
