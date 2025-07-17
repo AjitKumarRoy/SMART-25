@@ -17,11 +17,11 @@ interface Publication {
   title: string;
   type: string;
   authors: string[];
-  journalOrConference: string | undefined;
+  journalOrConference?: string | undefined; // Allow undefined for patents
   year: number | string; // Allow string from JSON, will parse to number
   imageUrl?: string;
   link?: string;
-  pdfLink?: string | undefined | null; // Allow null to match data
+  pdfLink?: string | undefined | null; // Allow null from previous fix
   patentNumber?: string;
   abstract?: string;
 }
@@ -88,6 +88,7 @@ export default function PublicationsAndPatentsPage() {
   // Debug state changes
   useEffect(() => {
     console.log("Filter State:", { typeFilter, yearFilter, filteredItems: filteredData.length });
+    console.log("Publications Data:", publicationsData.map(item => ({ id: item.id, year: item.year, pdfLink: item.pdfLink, journalOrConference: item.journalOrConference })));
   }, [typeFilter, yearFilter, filteredData]);
 
   // Close dropdown when clicking outside
@@ -337,7 +338,9 @@ export default function PublicationsAndPatentsPage() {
                     <p className="text-gray-500 dark:text-gray-400 text-xs mb-3">
                       {item.patentNumber
                         ? `Patent ${item.patentNumber} (${item.year})`
-                        : `${item.journalOrConference} (${item.year})`}
+                        : item.journalOrConference
+                        ? `${item.journalOrConference} (${item.year})`
+                        : `(${item.year})`}
                     </p>
                     <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-4 flex-grow">
                       {item.abstract}
