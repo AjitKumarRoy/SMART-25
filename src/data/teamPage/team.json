@@ -4,7 +4,7 @@
     "name": "Dr. Jose Immanuel R",
     "title": "Assistant Professor, Outstanding Young Faculty Chair & Head, AMDCG",
     "category": "professors",
-    "image": "/images/teams/jose-sir.jpeg",
+    "image": "/images/teams/professors/jose-sir.jpeg",
     "bio": "Specializing in advanced materials and computational design, Prof. Jose Immanuel leads the group with a vision for impactful research and innovation.",
     "socialLinks": {
       "website": "https://www.iitbhilai.ac.in/index.php?pid=jose",
@@ -16,27 +16,21 @@
     },
     "contributions": [
       {
-        "project": "Quantum Material Simulations",
+        "project": "To be updated soon",
         "role": "Principal Investigator",
-        "years": "2020-Present",
-        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
-      },
-      {
-        "project": "AI-Driven Drug Discovery",
-        "role": "Co-Investigator",
-        "years": "2021-Present",
-        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "2020 - Present"
+    "yearsWorked": "2018 - Present"
   },
   {
     "id": "prof-santosh-tamang",
     "name": "Dr. Santosh Kumar Tamang",
     "title": "Assistant Professor, NERIST, Arunachal Pradesh",
     "category": "collaborators",
-    "image": "/images/teams/santosh-sir-passport.jpeg",
+    "image": "/images/teams/professors/santosh-sir-passport.jpeg",
     "bio": "Research Interests: Optimization and Soft Computing Techniques for Design and Manufacturing, GPU Computing For FEA, Composite Materials, Machine Learning and Artificial Intelligence, and DFT/Molecular Dynamics/FEA-based simulations.",
     "socialLinks": {
       "website": "https://nerist.ac.in/faculty/santosh-kumar-tamang/",
@@ -48,16 +42,10 @@
     },
     "contributions": [
       {
-        "project": "Quantum Material Simulations",
-        "role": "Principal Investigator",
-        "years": "2020-Present",
-        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
-      },
-      {
-        "project": "AI-Driven Drug Discovery",
-        "role": "Co-Investigator",
-        "years": "2021-Present",
-        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+        "project": "To be updated soon",
+        "role": "Collaborator",
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Current",
@@ -68,7 +56,7 @@
     "name": "Dr. Anil Kumar",
     "title": "Assistant Professor, BIT Durg",
     "category": "collaborators",
-    "image": "/images/teams/anil-sir.jpg",
+    "image": "/images/teams/professors/anil-sir.jpg",
     "bio": "Research Interests: Alloy design, High Entropy Alloy, Advanced Aluminium Casting, Vacuum arc melting Technique, Spark Plasma Sintering, Welding Technology, High Temperature Corrosion analysis, X-ray Diffraction Analysis, Scanning Electron Microscopy.",
     "socialLinks": {
       "website": "https://bitdurg.ac.in/faculty-details/index?fcid=199",
@@ -80,16 +68,10 @@
     },
     "contributions": [
       {
-        "project": "Quantum Material Simulations",
-        "role": "Principal Investigator",
-        "years": "2020-Present",
-        "description": "Leading the development of novel quantum algorithms for simulating complex material properties and predicting their behavior at atomic scales."
-      },
-      {
-        "project": "AI-Driven Drug Discovery",
-        "role": "Co-Investigator",
-        "years": "2021-Present",
-        "description": "Overseeing the application of machine learning techniques to accelerate the identification and design of new therapeutic compounds."
+        "project": "To be updated soon",
+        "role": "Collaborator",
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Current",
@@ -97,29 +79,41 @@
   },
   {
     "id": "postdoc-sindhu-maam",
-    "name": "Dr. Sindhu",
+    "name": "Dr. V. Sindhu ",
     "title": "Postdoctoral Researcher",
     "category": "postdoctorals",
-    "image": "https://placehold.co/400x400/D08770/FFFFFF?text=Dr.+Vikram",
-    "bio": "Dr. Reddy's work is centered on developing novel algorithms for machine learning applications in scientific discovery.",
+    "image": "/images/teams/post-doc/sindhu.jpeg",
+    "bio": "Dr. V. Sindhu is currently a Project Associate in the Mechanical Engineering Department at IIT Bhilai, bringing a strong interdisciplinary background to her work. She earned her Ph.D. in Mechanical Engineering from IIT Madras in 2020, following an M.E. in Mechatronics from Madras Institute of Technology (MIT) in 2013, and a B.E. in Electronics and Communication Engineering from SSN College of Engineering in 2011. Prior to her current role, Dr. Sindhu gained experience as a Project Officer in an ISRO-funded project at IIT Madras for eight months, contributing to Rapid prototyping area. Her research interests are centered around Mechatronic system design, Robotics, Reverse Engineering, and Implant modelling.",
     "socialLinks": {
       "website": null,
       "researchGate": null,
       "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/vikram-reddy/",
-      "twitter": "https://twitter.com/vikram_r",
-      "github": "https://github.com/vikramreddy"
+      "linkedin": "https://www.linkedin.com/in/sindhuviswakumar",
+      "twitter": null,
+      "github": null
     },
     "contributions": [
       {
-        "project": "Neural Network Optimization",
-        "role": "Lead Developer",
-        "years": "2023-Present",
-        "description": "Designing and implementing efficient neural network architectures for accelerating material property predictions."
+        "project": "DRISHTI funded Automation research project",
+        "role": "Project Associate",
+        "years": "Jul 2024 - Jan 2025",
+        "description": "Development and clinical testing of an IoT-enabled mouth opening device for Trismas treatment."
+      },
+      {
+        "project": "SECL-funded Research Project",
+        "role": "Project Associate",
+        "years": "Jan 2025 - Apr 2025",
+        "description": "Verification of data regarding surplus mine water and & gainful utilization for community use."
+      },
+      {
+        "project": "Impact assessment of schools established by IB group in Chhattisgarh",
+        "role": "Project Assistant",
+        "years": "May 2025 - Present",
+        "description": "Worked as a Project Assistant for IB group funded Research Project where we determined the impact assessment of schools established by IB group in Chhatisgarh"
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "2023 - Present"
+    "yearsWorked": "July 2024 - Present"
   },
   {
     "id": "phd-rahul-patel",

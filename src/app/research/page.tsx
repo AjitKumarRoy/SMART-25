@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiArrowRight } from "react-icons/fi";
+import HeroSection from "@/components/HeroSection";
 
 // Import your research projects data
 import researchProjects from "@/data/research/research.json";
@@ -67,41 +68,13 @@ const getStatusBadge = (status: string) => {
 export default function ResearchPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-jakarta">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 md:py-32 bg-gradient-to-br from-purple-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 text-center">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          variants={sectionVariants}
-          className="max-w-5xl mx-auto px-6 relative z-10"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
-          >
-            Pioneering Research
-          </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
-          >
-            At AMDCG, we are at the forefront of interdisciplinary scientific exploration,
-            driving innovation in materials science, data computing, and their profound applications.
-          </motion.p>
-        </motion.div>
-        {/* Subtle background pattern/shape for premium feel */}
-        <div className="absolute inset-0 z-0 opacity-10 dark:opacity-5">
-          <svg className="w-full h-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <pattern id="pattern-grid" x="0" y="0" width=".1" height=".1" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-                <path d="M 0 0 L 10 0 L 10 10 L 0 10 Z M 0 10 L 10 10 L 10 20 L 0 20 Z" fill="currentColor"></path>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-grid)"></rect>
-          </svg>
-        </div>
-      </section>
+        {/* Hero Section */}
+            <HeroSection
+              title="Pioneering Research"
+              description="At AMDCG, we are at the forefront of interdisciplinary scientific exploration, driving innovation in materials science, data computing, and their profound applications."
+              gradientFrom="from-blue-50"
+              gradientTo="to-blue-100"
+            />
 
       {/* Research Projects Grid Section */}
       <section className="py-20 px-6 bg-white dark:bg-gray-900">

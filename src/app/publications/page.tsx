@@ -1,10 +1,11 @@
 "use client"; // Required for client-side interactivity and Framer Motion
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FiExternalLink, FiDownload } from "react-icons/fi"; // Icons for external link and download
+import { FiExternalLink, FiDownload, FiFilter } from "react-icons/fi"; 
+import HeroSection from "@/components/HeroSection";
 
 // Import your publications and patents data
 import publicationsData from "@/data/publications/publications.json";
@@ -41,8 +42,10 @@ const cardVariants: Variants = {
 
 export default function PublicationsAndPatentsPage() {
   // State for filters
-  const [typeFilter, setTypeFilter] = useState<"all" | "publication" | "patent">("all");
+  const [typeFilter, setTypeFilter] = useState<"all" | "journal article" | "conference presentation" | "book chapter" | "patent">("all");
   const [yearFilter, setYearFilter] = useState<string>("all");
+  const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false); // State for dropdown
+  const dropdownRef = useRef<HTMLDivElement>(null); // Ref for dropdown
 
   // Get unique years from data for the year filter
   const uniqueYears = Array.from(
@@ -50,102 +53,202 @@ export default function PublicationsAndPatentsPage() {
   ).sort((a, b) => parseInt(b) - parseInt(a));
 
   // Filter data based on type and year
-  const filteredData = publicationsData.filter((item) => {
-    const isPatent = item.type.toLowerCase().includes("patent");
-    const matchesType =
-      typeFilter === "all" ||
-      (typeFilter === "publication" && !isPatent) ||
-      (typeFilter === "patent" && isPatent);
-    const matchesYear = yearFilter === "all" || item.year.toString() === yearFilter;
-    return matchesType && matchesYear;
-  });
+  const filteredData = publicationsData
+    .filter((item) => {
+      const isPatent = item.type.toLowerCase().includes("patent");
+      const matchesType =
+        typeFilter === "all" ||
+        (typeFilter === "journal article" && item.type === "Journal Article") ||
+        (typeFilter === "conference presentation" && item.type === "Conference Paper") ||
+        (typeFilter === "book chapter" && item.type === "Book Chapter") ||
+        (typeFilter === "patent" && isPatent);
+      const matchesYear = yearFilter === "all" || item.year.toString() === yearFilter;
+      return matchesType && matchesYear;
+    })
+    .sort((a, b) => b.year - a.year); // Sort by year in descending order
 
   // Debug state changes
   useEffect(() => {
     console.log("Filter State:", { typeFilter, yearFilter, filteredItems: filteredData.length });
   }, [typeFilter, yearFilter, filteredData]);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsTypeDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-jakarta">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 md:py-32 bg-gradient-to-br from-teal-50 to-cyan-100 dark:from-gray-900 dark:to-gray-800 text-center">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={sectionVariants}
-          className="max-w-5xl mx-auto px-6 relative z-10"
-        >
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-gray-100"
-          >
-            Publications and Patents
-          </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl max-w-3xl mx-auto opacity-90 text-gray-700 dark:text-gray-300"
-          >
-            Explore the scientific contributions and innovative patents from the Advanced Materials and Data Computing Group.
-          </motion.p>
-        </motion.div>
-        <div className="absolute inset-0 z-0 opacity-10 dark:opacity-5">
-          <svg className="w-full h-full" fill="none" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
-            <defs>
-              <pattern id="pattern-dots" x="0" y="0" width=".5" height=".5" patternUnits="userSpaceOnUse" patternContentUnits="userSpaceOnUse">
-                <circle id="pattern-dot" cx="2" cy="2" r="1" fill="currentColor"></circle>
-              </pattern>
-            </defs>
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-dots)"></rect>
-          </svg>
-        </div>
-      </section>
+     {/* Hero Section */}
+      <HeroSection
+        title="Publications"
+        description="Explore the scientific contributions and innovative patents from the Advanced Materials Development & Characterization Group."
+        gradientFrom="from-teal-50"
+        gradientTo="to-cyan-100"
+      />
 
       {/* Filter Section */}
       <section className="py-10 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center">
             {/* Type Filter */}
-            <div className="flex gap-2">
+            <div className="relative" ref={dropdownRef}>
+              {/* Dropdown Button for Mobile/Tablet */}
               <button
-                onClick={() => {
-                  console.log("Clicked All");
-                  setTypeFilter("all");
-                }}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
-                  typeFilter === "all"
-                    ? "bg-teal-600 text-white"
-                    : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
-                }`}
+                onClick={() => setIsTypeDropdownOpen(!isTypeDropdownOpen)}
+                className="lg:hidden px-4 py-2 rounded-lg font-semibold transition-colors duration-200 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white flex items-center"
               >
-                All
+                Filter by Type <FiFilter className="ml-2" />
               </button>
-              <button
-                onClick={() => {
-                  console.log("Clicked Publications");
-                  setTypeFilter("publication");
-                }}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
-                  typeFilter === "publication"
-                    ? "bg-teal-600 text-white"
-                    : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
-                }`}
-              >
-                Publications
-              </button>
-              <button
-                onClick={() => {
-                  console.log("Clicked Patents");
-                  setTypeFilter("patent");
-                }}
-                className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
-                  typeFilter === "patent"
-                    ? "bg-teal-600 text-white"
-                    : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
-                }`}
-              >
-                Patents
-              </button>
+              {/* Dropdown Menu for Mobile/Tablet */}
+              {isTypeDropdownOpen && (
+                <div className="lg:hidden absolute z-10 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+                  <button
+                    onClick={() => {
+                      console.log("Clicked All");
+                      setTypeFilter("all");
+                      setIsTypeDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 font-semibold transition-colors duration-200 ${
+                      typeFilter === "all"
+                        ? "bg-teal-600 text-white"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                    }`}
+                  >
+                    All
+                  </button>
+                  <button
+                    onClick={() => {
+                      console.log("Clicked Journal Article");
+                      setTypeFilter("journal article");
+                      setIsTypeDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 font-semibold transition-colors duration-200 ${
+                      typeFilter === "journal article"
+                        ? "bg-teal-600 text-white"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                    }`}
+                  >
+                    Journal Article
+                  </button>
+                  <button
+                    onClick={() => {
+                      console.log("Clicked Conference Presentation");
+                      setTypeFilter("conference presentation");
+                      setIsTypeDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 font-semibold transition-colors duration-200 ${
+                      typeFilter === "conference presentation"
+                        ? "bg-teal-600 text-white"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                    }`}
+                  >
+                    Conference Presentation
+                  </button>
+                  <button
+                    onClick={() => {
+                      console.log("Clicked Book Chapter");
+                      setTypeFilter("book chapter");
+                      setIsTypeDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 font-semibold transition-colors duration-200 ${
+                      typeFilter === "book chapter"
+                        ? "bg-teal-600 text-white"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                    }`}
+                  >
+                    Book Chapter
+                  </button>
+                  <button
+                    onClick={() => {
+                      console.log("Clicked Patents");
+                      setTypeFilter("patent");
+                      setIsTypeDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 font-semibold transition-colors duration-200 ${
+                      typeFilter === "patent"
+                        ? "bg-teal-600 text-white"
+                        : "text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                    }`}
+                  >
+                    Patents
+                  </button>
+                </div>
+              )}
+              {/* Buttons for Desktop */}
+              <div className="hidden lg:flex flex-wrap gap-2">
+                <button
+                  onClick={() => {
+                    console.log("Clicked All");
+                    setTypeFilter("all");
+                  }}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
+                    typeFilter === "all"
+                      ? "bg-teal-600 text-white"
+                      : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                  }`}
+                >
+                  All
+                </button>
+                <button
+                  onClick={() => {
+                    console.log("Clicked Journal Article");
+                    setTypeFilter("journal article");
+                  }}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
+                    typeFilter === "journal article"
+                      ? "bg-teal-600 text-white"
+                      : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                  }`}
+                >
+                  Journal Article
+                </button>
+                <button
+                  onClick={() => {
+                    console.log("Clicked Conference Presentation");
+                    setTypeFilter("conference presentation");
+                  }}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
+                    typeFilter === "conference presentation"
+                      ? "bg-teal-600 text-white"
+                      : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                  }`}
+                >
+                  Conference Presentation
+                </button>
+                <button
+                  onClick={() => {
+                    console.log("Clicked Book Chapter");
+                    setTypeFilter("book chapter");
+                  }}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
+                    typeFilter === "book chapter"
+                      ? "bg-teal-600 text-white"
+                      : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                  }`}
+                >
+                  Book Chapter
+                </button>
+                <button
+                  onClick={() => {
+                    console.log("Clicked Patents");
+                    setTypeFilter("patent");
+                  }}
+                  className={`px-4 py-2 rounded-lg font-semibold transition-colors duration-200 ${
+                    typeFilter === "patent"
+                      ? "bg-teal-600 text-white"
+                      : "bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white"
+                  }`}
+                >
+                  Patents
+                </button>
+              </div>
             </div>
             {/* Year Filter */}
             <select
@@ -258,30 +361,6 @@ export default function PublicationsAndPatentsPage() {
               ))}
             </motion.div>
           )}
-        </motion.div>
-      </section>
-
-      {/* Description Section */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-950">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <motion.h2
-            variants={itemVariants}
-            className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100"
-          >
-            Our Commitment to Innovation
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed"
-          >
-            We are dedicated to advancing science and technology through rigorous research and innovative solutions. Our publications and patents reflect our commitment to impactful contributions and intellectual property across various disciplines.
-          </motion.p>
         </motion.div>
       </section>
 

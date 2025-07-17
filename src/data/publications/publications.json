@@ -9,144 +9,732 @@
     "journalOrConference": "Materials Science and Engineering: A (Elsevier), vol. 640, 2015, pp. 424–435",
     "year": 2015,
     "abstract": "Cast Al–Si alloys often show poor tensile strength, less ductility and poor fatigue performance due to cast microstructure and presence of porosity. An attempt has been made to improve mechanical properties of a cast hypoeutectic Al–Si alloy (A356) by cryorolling. As cast Al–Si alloy (A356) processed by cryorolling at different imposed strain levels was subjected to microstructural analysis and mechanical testing. Cryorolling resulted in break up and uniform distribution of coarse acicular eutectic particles in the aluminium matrix, elimination of casting porosity, microstructural refinement and significant accumulation of dislocation density. These microstructural changes resulted in significant improvement in the strength (248%) and ductility (37%). The influence of cryorolling on mechanism of microstructural modification, strengthening mechanism and failure mechanism are studied in detail.",
-    "link": "https://www.researchgate.net/publication/278687973_Influence_of_cryorolling_on_microstructure_and_mechanical_properties_of_a_cast_hypoeutectic_Al-Si_alloy",
-    "pdfLink": "/pdfs/publications/2015/1-s2.0-S0921509315300757-main_2.pdf",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0921509315300757?via%3Dihub",
+    "pdfLink": null,
     "imageUrl": "/images/publications/Three-dimensional-microstructure-of-a-AC-b-ST-c-50CR-and-d-87CR-materials.png",
     "type": "Journal Article"
   },
   {
     "id": "pub2",
-    "title": "Machine Learning Approaches for Predicting Battery Performance Degradation",
+    "title": "Transformation of cast A356 ingots to wrought sheets with enhanced mechanical and tribological properties by different thermo-mechanical processing routes",
     "authors": [
-      "R. Verma",
-      "S. Reddy"
+      "R.J. Immanuel",
+      "S.K. Panigrahi"
     ],
-    "journalOrConference": "Journal of Power Sources",
-    "year": 2023,
-    "abstract": "We present a comprehensive study on the application of various machine learning models to predict the degradation behavior of lithium-ion batteries. Our models, trained on extensive cycling data, show high accuracy in forecasting capacity fade and resistance increase, enabling proactive battery management.",
-    "link": "https://doi.org/10.1016/j.jpowsour.2023.234567",
-    "pdfLink": "/assets/pubs/ml-battery.pdf",
-    "imageUrl": "/images/publications/battery-ml.jpeg",
+    "journalOrConference": "Materials & Design (Elsevier), vol. 101, 2016, pp. 44–55",
+    "year": 2016,
+    "abstract": "The dendritic microstructure with non-uniform distribution of hard second phase particles degrades the mechanical and tribological properties of Alsingle bondSi alloys. Severe plastic deformation methods are found effective in refining microstructure and enhancing the material properties. In our present study, two different thermo-mechanical processing routes were employed on a cast hypo-eutectic Alsingle bondSi alloy to produce wrought sheets with refined microstructure. In one processing route, the material is subjected to cryorolling after solution treatment and in the other route, the material is subjected to a thermal-treatment between solution treatment and cryorolling. Cryorolling imposes severe plastic deformation onto the material resulting in refinement and redistribution of second phase particles leading to enhanced strength and ductility. Cryorolling with pre-roll thermal-treatment resulted in finer grain structures than the material without thermal-treatment. The tribological behaviour of processed materials are studied and compared with the base materials by pin-on-disk method. Maximum wear resistance is observed in thermal-treated material followed by cryorolled material with pre-roll thermal-treatment. Transformation from adhesion wear to oxidative-delamination wear is found to be the primary reason for the enhanced wear resistance in thermal-treated material. The various wear mechanisms involved are explained in detail based on the microstructural evolution and mechanical properties.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0264127516304063",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Transformation-of-cast-A356.jpg",
     "type": "Journal Article"
   },
   {
     "id": "pub3",
-    "title": "Enhanced Photocatalytic Activity of Graphitic Carbon Nitride/TiO2 Composites",
+    "title": "Influence of multi-pass friction stir processing on wear behaviour and machinability of an Al-Si hypoeutectic A356 alloy",
     "authors": [
-      "A. Singh",
-      "R. Das",
-      "A. Gupta"
+      "Sandeep Kumar Singh",
+      "R.J. Immanuel",
+      "S. Babu",
+      "S.K. Panigrahi",
+      "G.D. Janaki Ram"
     ],
-    "journalOrConference": "Applied Catalysis B: Environmental",
-    "year": 2023,
-    "abstract": "This work explores the synthesis and characterization of novel g-C3N4/TiO2 composite materials for improved photocatalytic degradation of organic pollutants. We demonstrate significantly enhanced efficiency under visible light irradiation, attributing it to synergistic effects.",
-    "link": "https://doi.org/10.1016/j.apcatb.2023.456789",
+    "journalOrConference": "Journal of Materials Processing Technology (Elsevier), vol. 236, 2016, pp. 252–262",
+    "year": 2016,
+    "abstract": "A356 is a widely used Al-Si alloy in automotive and aerospace industries for its good combination of mechanical and tribological properties. When these materials are to be considered for advanced engineering applications, machining becomes inevitable. However, presence of coarse and non-uniformly distributed silicon particles greatly influence the material properties imposing great challenge to its machinability. Our present work is focussed to improve the wear resistance and machinability of this alloy using multi pass friction stir processing (FSP). The wear behaviour of FSPed materials is characterised against metallic and abrasive medium and the machining studies are done by drilling experiments in dry condition. Under metallic wear condition, the wear resistance is maximum for the material subjected to 3 pass FSP and in case of abrasive wear, the maximum wear resistance is observed in 2 pass FSPed material. A decrease in both drilling force and surface roughness is observed with increase in FSP passes upto 2 pass beyond which they increased. Study on edge burr formation during drilling suggests that the entry and exit burrs are minimal for 3 pass FSPed material. A detailed investigation on the observed results is done in correlation with the microstructural evolution and mechanical properties.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0924013616301601",
     "pdfLink": null,
-    "imageUrl": "/images/publications/photocatalysis.jpeg",
+    "imageUrl": "/images/publications/Influence-of-multi-pass-friction.jpg",
     "type": "Journal Article"
   },
   {
     "id": "pub4",
-    "title": "Quantum Mechanical Simulations of Defect Formation in Perovskite Solar Cells",
+    "title": "Particle refinement and fine-grain formation leading to enhanced mechanical behaviour in a hypo-eutectic Al–Si alloy subjected to multi-pass friction stir processing",
     "authors": [
-      "P. Sharma",
-      "S. Khan"
+      "Sumit Meenia",
+      "F. Khan MD",
+      "S. Babu",
+      "R.J. Immanuel",
+      "S.K. Panigrahi",
+      "G.D. Janaki Ram"
     ],
-    "journalOrConference": "Nano Letters (Conference Presentation)",
-    "year": 2024,
-    "abstract": "Using density functional theory, we investigate the energetics and electronic effects of various point defects in hybrid organic-inorganic perovskites. Our findings provide insights into stability issues and strategies for defect passivation in high-efficiency solar cells.",
-    "link": "https://pubs.acs.org/doi/10.1021/acs.nanolett.xxxxxxx",
+    "journalOrConference": "Materials Characterization (Elsevier), vol. 113, 2016, pp. 134–143",
+    "year": 2016,
+    "abstract": "The present research aims at studying the synergetic effect of pre-process thermal treatment and multi pass friction stir processing (FSP) on microstructure and mechanical properties of a hypo-eutectic Al–Si automotive alloy. The effect of FSP with and without pre-process thermal treatment is studied up to 3 passes and it is found that both the size of silicon particles and aluminium grains become finer with increasing FSP passes. Maximum particle and grain refinement is observed in the material subjected to 3 passes of FSP with pre-process thermal treatment. The thermal treatment prior to FSP led to spheroidization of silicon particles which influenced the particle and grain refinement during FSP to a great extent. The effect of microstructural modification by FSP on the mechanical properties has been studied by micro-hardness and tensile testing. The 3 pass FSPed material without thermal treatment showed maximum ductility of 36.5%. However, maximum tensile strength of 251 MPa is obtained in the 3 pass FSPed material with pre-process thermal treatment. The various mechanisms involved in enhancing the mechanical properties are explained by means of fractography results and the microstructural evolution during multiple FSP passes.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S1044580316300110",
     "pdfLink": null,
-    "imageUrl": "/images/publications/perovskite.jpeg",
-    "type": "Conference Paper"
+    "imageUrl": "/images/publications/Particle-refinement.jpg",
+    "type": "Journal Article"
   },
   {
     "id": "pub5",
-    "title": "Review on Additive Manufacturing of Biomedical Implants",
+    "title": "Influence of Initial Microstructure on Microstructural Stability and Mechanical Behavior of Cryorolled A356 Alloy Subjected to Annealing",
     "authors": [
-      "S. Reddy",
-      "R. Das"
+      "Jose Immanuel Rajan",
+      "Sushanta Panigrahi"
     ],
-    "journalOrConference": "Journal of Biomedical Materials Research Part B: Applied Biomaterials",
-    "year": 2022,
-    "abstract": "Additive manufacturing (AM) offers unprecedented design freedom for patient-specific biomedical implants. This review covers the state-of-the-art in AM techniques, materials, and challenges in fabricating implants with complex geometries and enhanced biocompatibility.",
-    "link": "https://doi.org/10.1002/jbm.b.34567",
-    "pdfLink": "/assets/pubs/biomedical-implants.pdf",
-    "imageUrl": "/images/publications/biomed-review.jpeg",
+    "journalOrConference": "Metallurgical and Materials Transaction: A (Springer), vol. 48A, 2017, pp. 3852–3868",
+    "year": 2017,
+    "abstract": "In the present work, various heat treatment cycles are imposed on an A356 aluminum alloy to develop two different base microstructures, one with supersaturated aluminum matrix and the other with coarse and uniformly distributed precipitates. Both the developed materials are subjected to cryorolling and then isochronally annealed for 1 hour at various temperatures ranging from 373 K to 673 K (100 °C to 400 °C). The overall strength is maximum for the cryorolled material with supersaturated base microstructure due to the dominant dislocation strengthening and precipitation strengthening mechanisms. However, the cryorolled material with precipitated base microstructure is found to have superior microstructural stability with retained ultrafine-grained (UFG) microstructure up to the annealing temperature of 473 K (200 °C) due to effective grain boundary pinning by the precipitates. Also, the material retains about 85 pct of as-cryorolled strength with enhanced ductility even after annealing at 473 K (200 °C). A detailed investigation on the microstructural evolution of the material at various annealing temperatures along with their mechanical behavior is presented in this article.",
+    "link": "https://link.springer.com/article/10.1007/s11661-017-4153-3",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Influence-of-Initial-Microstructure.jpg",
     "type": "Journal Article"
   },
   {
     "id": "pub6",
-    "title": "Data-Driven Materials Discovery: A Computational Perspective",
+    "title": "Investigation on crashworthiness of ultrafine grained A356 sheets and validation of Hall-Petch relationship at high strain-rate deformation",
     "authors": [
-      "A. Gupta",
-      "R. Verma"
+      "R.J. Immanuel",
+      "S.K. Panigrahi",
+      "G. Racineux",
+      "S. Marya"
     ],
-    "journalOrConference": "Computational Materials Science: Methods and Applications",
-    "year": 2023,
-    "abstract": "This book chapter explores the role of data-driven approaches in accelerating materials discovery, with a focus on machine learning and high-throughput computational methods. Case studies in alloy design and energy materials are presented.",
-    "link": "https://doi.org/10.1007/978-3-030-12345-6_5",
-    "pdfLink": "/assets/pubs/data-driven-materials.pdf",
-    "imageUrl": "/images/publications/data-driven.jpeg",
-    "type": "Book Chapter"
+    "journalOrConference": "Materials Science and Engineering: A (Elsevier), vol. 701, 2017, pp. 226–236",
+    "year": 2017,
+    "abstract": "High crushing force and good energy absorption are the essential requirements for structural materials subjected to dynamic loading. In the present work, commercial A356 material is subjected to cryorolling and post-cryoroll annealing to produce sheets of different grain sizes and the influence of microstructural change on dynamic behavior of the material is studied. Dynamic tests are done in a crossbow test equipment at an average strain rate of 250 s−1. Quasi-static tests are done at an initial strain rate of 0.005 s−1 to compare the dynamic performance of the material with its static/quasi-static behavior. It is found that strength and ductility of cryorolled material at dynamic loading condition is lesser than that in quasi-static loading. Upon annealing, the material performance of the material is found to be better at high strain-rate deformation than that at quasi-static condition. A detailed analysis on the deformation behavior and fracture mechanism of the material at high strain-rate is carried out. Further, the existence of Hall-Petch relationship at high strain-rate deformation is evaluated. The material's strengthening factor is found to hold good agreement to the Hall-Petch relationship with a grain boundary strengthening coefficient of 112 MPa at dynamic loading.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S092150931730847X",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Investigation-on-crashworthiness.jpg",
+    "type": "Journal Article"
   },
   {
     "id": "pub7",
-    "title": "Technical Report on Scalable Quantum Computing Architectures",
+    "title": "Deformation Behavior of Ultrafine Grained A356 Material Processed by Cryorolling and Development of Johnson–Cook Model",
     "authors": [
-      "S. Khan",
-      "P. Sharma",
-      "A. Singh"
+      "Jose Immanuel Rajan",
+      "Sushanta Panigrahi"
     ],
-    "journalOrConference": "Advanced Materials and Data Computing Group Technical Report",
+    "journalOrConference": "Materials Science and Engineering: A (Elsevier) vol. 712, 2018, pp. 747-756",
+    "year": 2018,
+    "abstract": "The present research work focuses on understanding the deformation behavior of cryorolled A356 material at various strain rates ranging from 0.001 s⁻¹ to 10 s⁻¹ in the temperature range of 25–400 °C. Microstructure of the material at each deformation temperature was characterized to completely analyze the material's behavior. Presence of ultrafine grained microstructure with highly unstable dislocation networks were found to play a major role in strengthening the material up to the deformation temperature of 200 °C. Recrystallization and thermal softening decreases the material's strength at deformation temperatures beyond 200 °C. With respect to the rate of deformation, a prominent change in the deformation mechanism is observed at strain rates higher than 1 s⁻¹. The failure mechanism at various strain rate and temperature ranges is studied in detail. Finally a constitutive Johnson-Cook model is developed to predict the material's flow behavior for the range of strain-rates and temperatures under study.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0921509317316131",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Deformation-behavior.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub8",
+    "title": "Synergetic Effect of Cryorolling and Postroll Aging on Simultaneous Increase in Wear Resistance and Mechanical Properties of an Al–Cu Alloy",
+    "authors": [
+      "I. Jaseem",
+      "R.J. Immanuel",
+      "P. N. Rao",
+      "F. Khan MD",
+      "B. N. Sahoo",
+      "S. K. Panigrahi",
+      "M. Kamaraj"
+    ],
+    "journalOrConference": "Journal of Tribology, Vol. 140(6), 061607",
+    "year": 2018,
+    "abstract": "Aluminum–copper alloy system is extensively used in structural and aerospace applications for its high strength-to-weight ratio, good mechanical and tribological properties. Improving the properties of these alloys would likely widen their application area. In the present work, an attempt has been made to simultaneously enhance the wear resistance and mechanical properties of an Al–Cu alloy, AA2014 by imparting different levels of cryorolling strains and postroll aging treatment. The wear behavior of the material is studied under dry sliding condition by pin-on-disk experiments and mechanical properties are assessed by tensile test. Formation of high fraction of dislocation density and significant refinement of microstructure during cryorolling and nucleation of fine coherent Guinier–Preston (GP) zones of Al2Cu precipitates during postcryoroll aging has led to about 100% increment in the wear resistance of the material. Tensile test results proved that the synergetic effect of cryorolling and aging treatment led to 53% increment in strength (557 MPa) without compromising the material's ductility (22.5%). A detailed investigation on the various mechanisms responsible for the enhanced wear resistance and improved mechanical performance is presented based on the microstructural evidence.",
+    "link": "https://asmedigitalcollection.asme.org/tribology/article/140/6/061607/383844/Synergetic-Effect-of-Cryorolling-and-Postroll",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Synergetic-Effect.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub9",
+    "title": "Effect of Annealing on The Microstructure and Texture of Cold Rolled CrCoNi Medium-entropy Alloy",
+    "authors": [
+      "GD Sathiaraj",
+      "W Skrotzki",
+      "A Pukenas",
+      "R Schaarschuch",
+      "RJ Immanuel",
+      "SK Panigrahi",
+      "JA Chelvane",
+      "SS Satheesh Kumar"
+    ],
+    "journalOrConference": "Intermetallics, Vol. 101",
+    "year": 2018,
+    "abstract": "The microstructure, texture and mechanical properties of medium-entropy ternary CrCoNi alloy after cold rolling and annealing were investigated. The cold rolled material shows a heavily fragmented microstructure coexisting with fine scale shear bands. The deformation texture is a ɑ-fibre with a spread between the Goss and Brass component. This type of texture during cold rolling is direct evidence of a low stacking fault energy of the CrCoNi alloy. Annealing at 700 °C yields a fully recrystallized ultrafine grained microstructure with a large fraction of annealing twins. Annealing twins play a significant role in the evolution of the annealing texture. They lead to the emergence of new orientations which have first order twin relationship (60° <111> rotation) with the ɑ-fibre rolling texture components. Typical brass recrystallization texture BR {236} <385> component does not develop during recrystallization unlike in other low SFE alloys such as brass, Ag and Cu alloys. New prominent twin related orientations are retained with increasing annealing temperature due to the hindrance of preferential growth of certain crystallographic orientations. Tensile tests show that this alloy exhibits ultra-high strength and good ductility.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0966979518304114?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Effect-of-annealing.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub10",
+    "title": "Microstructure and Texture of Cold Rolled and Recrystallized CrNoNi Medium-Entropy Alloy",
+    "authors": [
+      "G Dan Sathiaraj",
+      "W. Skrotzki",
+      "Jose Immanuel Rajan",
+      "A Pukenas",
+      "R Schaarschuch",
+      "SK Panigrahi",
+      "JA Chelvane",
+      "SS Kumar"
+    ],
+    "journalOrConference": "Materials Science Forum, Vol. 941, 2018, pp. 833-838. (Q3, Impact Factor: 0.557)",
+    "year": 2018,
+    "abstract": "An equiatomic CrCoNi medium-entropy alloy plate was heavily deformed by conventional cold rolling and subsequently annealed at different temperatures. Microstructure and texture evolution of the deformed and annealed sheets were investigated by electron backscatter diffraction and X-ray diffraction. Heavy cold rolling induces an alloy type α-fibre texture with major brass component. This type of texture is indicative of low stacking fault energy of the CrCoNi alloy. Annealing at 700 °C leads to a homogeneously recrystallized microstructure with ultrafine grains of about 800 nm average size. The volume fraction of different texture components is almost similar after annealing at different temperatures. However, the overall texture intensity after annealing is very weak. Finally, in order to understand the microstructure and texture evolution of the CrCoNi alloy, it is critically compared with other low stacking fault energy FCC materials.",
+    "link": "https://www.scientific.net/MSF.941.833",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Microstructure-and-Texture.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub11",
+    "title": "High temperature oxidation study of direct laser deposited AlXCoCrFeNi (X=0.3,0.7) high entropy alloys",
+    "authors": [
+      "A. Mohanty",
+      "J.K. Sampreeth",
+      "Omkar Bembalge",
+      "J.Y. Hascoet",
+      "S. Marya",
+      "R.J. Immanuel",
+      "S.K. Panigrahi"
+    ],
+    "journalOrConference": "Surface and Coatings Technology, Vol. 380",
+    "year": 2019,
+    "abstract": "High entropy alloys (HEAs) are being explored as prospective substitutes for high temperature structural components. These HEAs are typically fabricated using conventional techniques like arc melting, mechanical alloying etc., but these routes exhibit a wide range of limitations. Direct laser deposition (DLD) process (an additive manufacturing technique) generates complex products from metal powder by selectively melting alloy powder in successive layers. The present study shows the development of HEAs namely Al0.3CoCrFeNi, Al0.7CoCrFeNi possessing crystal structures face-centered cubic (FCC) and FCC plus body-centered cubic (BCC) respectively using direct laser deposition (DLD) technique. HEA plates of the above-mentioned alloys were fabricated using DLD technique. In the present work, microstructures, mechanical (mainly hardness) and cyclic oxidation behaviors at 1100 ̊Cof developed HEAs have been investigated. Microstructural studies revealed FCC and FCC + BCC structures respectively, for Al0.3CoCrFeNi and Al0.7CoCrFeNi alloys with corresponding hardness of 170HV and 380HV. Cyclic oxidation studies were performed on the HEAs at a temperature of 1100 ̊°C for 200 h. Both the HEAs displayed quasi parabolic oxide growth after an initial sharp growth slope. Over the studied oxidation period, the mass gain for HEA Al0.3CoCrFeNi was greater than for Al0.7CoCrFeNi. Each oxidized HEAs forms an external Cr2O3 scale with Al2O3 subscale formed beneath, but the thickness and continuity of oxide layers vary according to Al content. Increased Al content enhanced the oxidation resistance of the HEA.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0257897219310199",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/High-temperature.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub12",
+    "title": "PAN IIT Survey on Online Education: A Report",
+    "authors": [
+      "Achla M. Raina",
+      "Aditya Nigam",
+      "......",
+      "Jose Immanuel R"
+    ],
+    "journalOrConference": "arXiv preprint arXiv:2007.03613",
+    "year": 2020,
+    "abstract": "The online education has several advantages, such as self¥paced learning, any¥time and any¥place learning. However, efforts are needed to improve online education. The starting point is to improve the availability of computing/streaming devices and enabling good internet connectivity among the students. The next step is to prepare decent quality content and deliver it to students § here majority of the faculty members and students prefer a combination of synchronous and asynchronous modes. Lack of real¥time interaction is also an issue both among instructors and faculty members. Unavailability of textbooks, reference material and software are also big challenges as many students could not complete their assignments, labs and projects due to this. Lack of a campus¥like environment at home is also a serious issue in online education. From the survey, it is clear that addressing the above issues is critical for making online education a success. Overall, it therefore appears challenging to visualise online education replacing classroom education for technical education at this point in time. However, it could certainly supplement regular classroom education for our main offerings, such as BTech, MTech and MS/PhD programs which will still have to continue in regular mode. Nevertheless, with improvements in technology and its accessibility, high quality online education is expected to become pervasive.",
+    "link": "http://arxiv.org/pdf/2007.03613",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/PAN-IIT.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub13",
+    "title": "Establishing flow stress behaviour of Ti-6Al-4V alloy and development of constitutive models using Johnson-Cook method and Artificial Neural Network for quasi-static and dynamic loading",
+    "authors": [
+      "S. Deb",
+      "A. Muraleedharan",
+      "R.J. Immanuel",
+      "S.K. Panigrahi",
+      "G. Racineux",
+      "S. Marya"
+    ],
+    "journalOrConference": "Theoretical and Applied Fracture Mechanics, Vol. 119, 2022, 103338",
+    "year": 2022,
+    "abstract": "Ti-6Al-4V alloy is one of the most widely used material in both research as well as in commercial industries at present due to its high strength-to-weight ratio, low density and excellent high-temperature properties. Understanding the behaviour of this alloy at various deformation conditions (strain, strain rate and temperature) is crucial to fit the material in demanding applications. In our present work, the mechanical behaviour of α + β dual phase Ti-6Al-4V alloy is studied in the temperature ranging from 25 ℃ to 200 ℃ and rate of deformation ranging from 10-3 s−1 to 104 s−1. Tensile tests were done using uniaxial tensile tester for quasi-static range of deformation and Split-Hopkinson bar machine for dynamic range of deformation. Post deformation fracture surface analysis were carried out to understand the effects of strain rate and temperature variations on the deformation behaviour, and to establish a structure–property correlation. For the studied range of deformation parameters, constitutive models are developed. As Johnson-Cook model is one of the widely used model in various numerical analysis software, a modified Johnson-Cook model has been developed for the alloy. Moreover, artificial intelligence (AI) is found to be an efficient tool these days to solve complex problems in various fields of engineering. An attempt is also made in this study to develop an artificial neural network (ANN) framework for the prediction of flow stress at various deformation condition for Ti-6Al-4V alloy. Our study revealed that the AI based ANN technique is more efficient in calculating the flow stress as compared with the traditional Johnson-Cook model.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0167844222000891",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Establishing-flow-stress.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub14",
+    "title": "Dissimilar metal welding on Mg AZ31 and AA 6061 alloys by using friction stir welding",
+    "authors": [
+      "Thipparthi Raja Gopala Chary",
+      "Srikar Potnuru",
+      "R. Jose Immanuel",
+      "Kuldeep K. Saxena",
+      "Dharam Buddhi",
+      "Ajit Behera"
+    ],
+    "journalOrConference": "International Journal on Interactive Design and Manufacturing",
+    "year": 2022,
+    "abstract": "The objective of this study is to investigate the mechanical properties and microstructures on dissimilar metal friction stir welding (FSW) between AA 6061 and Mg AZ31 alloys. For the purpose of improving the strength of the dissimilar welded joint, the process parameters such as rotational speeds and travel speeds play a vital role to obtain the better welded joint for dissimilar metals. FSW was performed at travel speeds ranging from 20 to 80 mm/min, with tool rotational speeds ranging from 500 to 1000 rpm. In the experimental work, investigation has been performed using microhardness testing, tensile testing and optical microscopy. This research reveals that using FSW, a welded joint between dissimilar metal alloys AA 6061 and Mg AZ31 can be created by choosing the right tool pin profile and process parameters that are responsible for creating complex recrystallization, grain refining occurred in the stir field. The weld sample rotation speed of 560 r/min and a travel speed of 20 mm/min shows the most contributing parameters of the experiment. The welded specimen had a tensile strength of about 74.4% of that of AA 6061 alloy and 59.3% of that of Mg AZ31 alloy, and it failed through the brittle-mode fracture. The stir zone has a maximum hardness of HV 108 was measured with sample 560, and in the away stir zone, an irregular hardness distribution was obtained with a 50 HV. Due to the high strain rate, the welding tool pin imparts to the material and the heat produced by friction between the material and the tool, dynamic recrystallization (DRX) happens in the stir zone (SZ) of the FSW process.",
+    "link": "https://link.springer.com/article/10.1007/s12008-022-01036-3",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Dissimilar-metal-welding.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub15",
+    "title": "High energy ball milling – An advanced processing route for effective development of Titanium Aluminide intermetallic alloy through mechanical alloying",
+    "authors": [
+      "Ilyas Hussain",
+      "R. J. Immanuel"
+    ],
+    "journalOrConference": "Metal Powder Report, Vol. 77 (4)",
+    "year": 2022,
+    "abstract": "Mechanical alloying is traditionally being used for developing novel alloys, which are difficult to prepare by conventional manufacturing routes, through solid state diffusion. It offers unique feature of extended solid solubility resulting in the formation of non-equilibrium immiscible phases that have huge potential in aerospace and defense applications. However, the development of intermetallic class of materials has always been a challenge. Titanium Aluminide, possessing various advantageous properties, has got limited practical usage owing to the difficulty in development. The current research focuses on developing Titanium Aluminide intermetallic material (TiAl) from elemental Aluminumand Titanium powders using high energy planetary ball milling process. The centrifugal force combined with high gravitational counterforce resulted in the formation of intermetallic phase with near stoichiometric ratio. The developed TiAl was subjected to various microstructural and morphological analysis to understand the mechanism of phase formation during the milling process. Results reveal new dimensions for developing intermetallic alloys for various advanced engineering applications.",
+    "link": "https://www.magonlinelibrary.com/doi/10.12968/S0026-0657%2822%2970020-3",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Titanium-Aluminium.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub16",
+    "title": "Improved structural uniformity and specific strength of commercially pure aluminum through variable temperature multi axial forging: Finite element analysis and experimental study",
+    "authors": [
+      "S. Deb",
+      "M.B. Abhilash",
+      "R.J. Immanuel",
+      "S.K. Panigrahi"
+    ],
+    "journalOrConference": "International Journal of Lightweight Materials and Manufacture, Vol. 6 (3)",
+    "year": 2023,
+    "abstract": "Multi axial forging (MAF) is a forging-based severe plastic deformation (SPD) technique which is prominently used to refine grain structure and improve the strength of the material. While the advantages of MAF lie in its simple tool design and ability to process bulk materials, the main limitation is the inhomogeneity in the generated microstructure across the cross-section at initial passes. Increasing the number of MAF passes may partially help to solve the problem, but arbitrary increase in the number of passes may lead to redundant increase in manufacturing cost and time. The current work proposes a manufacturing strategy for MAF to achieve homogeneous microstructure with uniform grain refinement by using reduced number of MAF passes. To achieve structural uniformity within fewer MAF passes, a controlled thermo-mechanical based optimum MAF process strategy is developed on a commercial pure Al through the finite element analysis (FEA) simulation and the same is validated experimentally. The manufacturing strategy resulted significant grain refinement via simultaneous action of continuous dynamic recrystallization and geometric dynamic recrystallization with microstructural homogeneity which caused a significant improvement in tensile properties (more than two times than the base) with considerable ductility (more than 25%) and isotropy property across the thickness. The scientific knowhow has been established via processing–structure–property correlation-ship.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S2588840423000069",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Improved-structural-uniformity.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub17",
+    "title": "Recycling of titanium as reinforcement in cast aluminium alloy A356 for improving the microstructural refinement and mechanical performance towards a sustainable material development",
+    "authors": [
+      "Anand Besekar",
+      "Ilyas Hussain",
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Materials Today: Proceedings, 2023 DOI: 10.1016/j.matpr.2023.02.226",
+    "year": 2023,
+    "abstract": "A356 is one of the most commonly used Al-Si cast alloy containing copper, magnesium and titanium, as other predominant alloying elements. Due to its wide application in domains where dominant loading is compressive in nature, various research work is being carried out to improve the compressive performance of A356 alloy by adding particulate reinforcement in it, converting it to metal matrix composite. However, ceramic particles added as reinforcement have always been posing challenges due to the poor wettability and weak interface bonding. In the present research work, an attempt is made to recycle titanium in a greener way of adding it to Aluminium alloy as a strengthening reinforcement which shall address the interface boding issues due to better compatibility of Titanium and Aluminum – both being metals. 5% by weight of micro and nano-sized Titanium particles is added to A356 through stir casting method. Cast material was then subjected to hot extrusion. The as-cast and extruded composites are studied for the micro structural evolution and mechanical performance against the base alloy. Results indicate that the performance of the composite is found to be significantly enhanced as compared with the base alloy in terms of strength, hardness and ductility. Increased mechanical performance is attributed to refinement of dendrite size, presence of uniformly distributed Ti particle, and partial diffusion of Ti into the Al matrix.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S2214785323007708",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Recycling-of-titanium.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub18",
+    "title": "Microstructural Characterization and Mechanical Performance of AZ91 Magnesium Alloy Processed by Friction Stir Processing Using Novel Tool Designs",
+    "authors": [
+      "Ketha Jaya Sandeep",
+      "Atul Kumar Choudhary",
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Journal of Materials Engineering and Performance",
+    "year": 2023,
+    "abstract": "Moderate strength and poor ductility of AZ91 Mg alloy are some of the primary concerns that impede its engineering application. In the present research work, an attempt is made to microstructurally engineer the material through friction stir processing (FSP) using new tool designs. Two new stepped-pin designs are proposed in this work-In the first design, the pin is of square steps where the larger square is followed by a smaller square from the shoulder with 0°inclination angle (S tool), and in the second design, the smaller square is inclined at 45°with respect to the first square making it appear like a diamond on a square from the top view (D tool). A constant processing speed of 100 mm/minute with a varied rotational speed of 800, 1000 and 1200 rpm was employed for the analysis. FSP with the proposed tool designs resulted in significant grain refinement due to intense frictional heat generation and severe plastic deformation. Multi-pass with 100% overlap has shown further refinement in the grain structure. Maximum grain refinement (75%) is observed after 3 passes of FSP using the S tool. On the other hand, the D tool is found to yield maximum strength gain along with improved ductility after multi-pass FSP. Fragmentation and dissolution of the b-Mg 17 Al 12 phase and dynamic recrystallization of an a-Mg matrix are prominent reasons for significantly enhancing the material's performance. Detailed analysis of the mechanism for microstructural refinement and mechanical performance with fractographic analysis is presented in detail.",
+    "link": "https://link.springer.com/article/10.1007/s11665-023-07980-9",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Microstructural-Characterization.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub19",
+    "title": "A short review on SLM-processed Ti6Al4V composites",
+    "authors": [
+      "M Kathiresan",
+      "M Karthikeyan",
+      "R Jose Immanuel"
+    ],
+    "journalOrConference": "Proceedings of the Institution of Mechanical Engineers, Part E: Journal of Process Mechanical Engineering",
+    "year": 2023,
+    "abstract": "The advancements in computer-aided design, manufacturing, and additive manufacturing techniques attracted the researcher to apply various new methods with the unique combination of alloys and composites to design and develop complex parts. Among them the selective laser melting (SLM) process, a branch of additive manufacturing, and Ti6Al4V (Ti64) composite. Due to the better mechanical and corrosion resistance characteristics of Ti64 and its composites, they have been utilized for making various engineering parts related to jet engine fans of aero-engine, engine valves of automobiles, knee and hip joint endoprosthesis in the biomedical field, and corrosion resistance pipes in chemical industries. Also, more complex, net-shaped, and lattice-structured components can be fabricated by advancing the SLM process. The final quality of the parts manufactured from the SLM technique will depend on the fabrication process parameters followed. Many researchers have done research work on metal additive manufacturing by changing and optimizing the SLM process parameters such as laser power (P), scanning speed (v), hatch spacing (d), and layer thickness (h). Also, they have studied the effect of changes on the feedstock preparation, SLM process parameters, milling time of composite and post-heat treatment on the quality of Ti6Al4V composites. Therefore, a detailed review is needed to study the effect of the abovementioned parameters on the quality of metal additively manufactured parts through SLM. Hence, a short review is done on future challenges and opportunities of SLM-processed Ti6Al4V composites and reported in this article.",
+    "link": "https://journals.sagepub.com/doi/10.1177/09544089231169380",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/SLM-processed.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub20",
+    "title": "Development and Performance Studies of a Lightweight AA6061/Ti Particulate Surface Composite through Friction Stir Processing",
+    "authors": [
+      "Ilyas Hussain",
+      "Jose Immanuel"
+    ],
+    "journalOrConference": "SAE Technical Paper, 2023-28-1303",
+    "year": 2023,
+    "abstract": "Surface engineering is becoming increasingly crucial for several automotive and aerospace components that involve intense surface interactions. Friction stir processing (FSP) has emerged as an effective surface modification and hardening technique in recent days. The technique also allows the incorporation of reinforcement into the modified surface to enhance the strength and hardness further. This work applied FSP to develop a pure Ti particulate reinforced AA6061 metal matrix composite (MMC). Six different strategies were adapted (in the form of micro grooves, micro drills on the surface) to effectively infuse reinforcement on the alloy surface. Microstructural changes before and after FSP were studied using SEM and EBSD. Other tests such as post-mortem EDS, XRD, hardness, and compression were also done to examine the performance of developed composite. Microstructural lineaments revealed a more uniform dispersion of reinforcement particles in the matrix when the particles were impregnated using a multi-groove approach. Details on the development strategy, microstructural evolution and various strengthening mechanisms involved in enhancing the mechanical properties are presented in this manuscript.",
+    "link": "https://www.sae.org/publications/technical-papers/content/2023-28-1303/",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/friction-stir.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub21",
+    "title": "Influence of titanium particulate reinforcement on microstructural evolution and mechanical performance of AZ91 magnesium matrix surface composite developed through friction stir processing",
+    "authors": [
+      "Ketha Jaya Sandeep",
+      "Atul Kumar Choudhary",
+      "Ilyas Hussain",
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Canadian Metallurgical Quarterly",
+    "year": 2023,
+    "abstract": "AZ91 Magnesium alloy is widely used in automobile components, bio-implants, mobile and computer parts, sporting goods, etc., owing to its low density, high strength to weight ratio, good machinability, and biodegradable characteristics. However, it has moderate strength and poor ductility that hinders its engineering application. Incorporation of ceramic reinforcement in Mg alloys to form high-strength composites shows a major loss in its ductility. In this research work, friction stir processing (FSP) was used with two innovative tool designs to enhance mechanical and microstructural properties by employing titanium powders as reinforcement particles - metallic reinforcement possessing higher melting point, offering a solution to the issue. The tools were designed with stepped square profile, where in one design, the square steps were aligned with each other (S-type) and in the other design, the square edges were mis-aligned by 45˚ (D-type). Microstructural analysis was done using optical microscopy, scanning electron microscopy and X-ray diffraction. Mechanical properties were studied mico-indentation hardness test and compression test. in detail. Results revealed that the FSP process performed with D-type tool yielded better results with more uniform distribution of Ti particles in the stir zone and grain refinement with refined recrystallized grains down to about 8 µm due to severe plastic deformation and dynamic recrystallization. The compressive strength of the material processed using D-tool was found to be increased to 456 MPa. Ti particles established a proper interface with the matrix delaying the failure of the material, thereby improving the ductily of the material as well. The mechanisms leading to microstructural refinement and enhancement in mechanical performance is presented in detail.",
+    "link": "https://www.tandfonline.com/doi/full/10.1080/00084433.2023.2238927#abstract",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Influence-of-titanium-particulate.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub22",
+    "title": "Role of Nickel Particulate Reinforcement on Microstructure and Mechanical Performance of AZ31 Magnesium Composite",
+    "authors": [
+      "Md Saad Patel",
+      "Anand Besekar",
+      "S. Annamalai",
+      "M. Sunil Kumar",
+      "Rahul Jain",
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Transactions of the Indian Institute of Metals",
     "year": 2024,
-    "abstract": "This technical report outlines the design and simulation of scalable quantum computing architectures using novel materials. We discuss implementation challenges and propose solutions for fault-tolerant systems.",
-    "link": null,
-    "pdfLink": "/assets/pubs/quantum-computing-report.pdf",
-    "imageUrl": "/images/publications/quantum-report.jpeg",
-    "type": "Technical Report"
+    "abstract": "Magnesium (Mg) and its alloys are one of the highly sought after structural material due to its lowest density among the structural material. Various attempts are being made by researchers to improve the mechanical performance of Mg alloys to widen their scope of application domains, especially in defence and biomedical sectors. On the development of Mg matrix composites, various works are reported on adding ceramic-based reinforcement which is proven to improve the strength of the material, but at the cost of ductility. With the research attempt on developing metallic reinforcement-based Mg composites being scarce, the scope of developing such composite material with superior strength and ductility is huge. Nickel has zero-solubility in Mg, high melting point and few closely matching lattice spacing with Mg crystal, which enabled simultaneous crystallization of Mg, with Ni acting as nucleation sites, and helped refining the microstructure. In the present research work, an attempt is made to incorporate 5 Wt.% of sub-micron-Ni particulate as reinforcement in developing an AZ31 matrix composite through stir casting route. A field emission scanning electron microscope and optical microscope was used to give the detailed analysis on the microstructural evaluation of the cast AZ31 alloy and the developed composite. Elemental mapping was done to confirm the uniform distribution of Ni particles throughout the magnesium matrix. The influence of reinforcement on the mechanical properties of the composites were investigated. The composite displayed improved properties when compared to the base alloy in terms of hardness, yield strength and ultimate tensile strength. The hardness of the composite was found to be 68.4HV, whereas the base alloy had a hardness of 53HV. The ultimate tensile strength (UTS) for the AZ31/Ni composite was greater than 50% when compared with the base alloy. Fractography study revealed the type of fracture of the base alloy and the composite.",
+    "link": "https://link.springer.com/article/10.1007/s12666-023-03192-w",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Role-of-Nickel-Particulate.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub23",
+    "title": "Friction Stir Processing of Recycled Titanium Reinforced A356 Composite Developed Through Stir Casting",
+    "authors": [
+      "Anand Besekar",
+      "M Kathiresan",
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Transactions of the Indian Institute of Metals",
+    "year": 2023,
+    "abstract": "Titanium is a well-known material which is highly used in manufacturing now a days. The extracts coming out during manufacturing, especially machining chips, are a big issue for the industries. Effective reusage of such extracted material to enable a green, circular manufacturing process is a challenge of this decade. While researchers are working on various ways of reusing the machined chips, this research work attempts employing ball milling to break the chips into refined powder which is subsequently used as reinforcement to strengthen cast A356 Aluminum alloy. The developed composite is subjected to friction stir processing to understand the strengthening ability of the reinforcement during severe plastic deformation processing of the material. Microstructural characterization is performed using optical and electron microscopes. Mechanical properties of the material are evaluated using micro-indentation hardness testing and tensile testing. Results indicate that addition of Titanium up to 5% leads to better performance in terms of strength and ductility. Better compatibility between the matrix and reinforcement due to the metallic nature and closer atomic properties of Titanium reinforcement is found to be the major reason for significant improvement in the performance of the developed composite. Intense microstructural characterization and mechanical evaluation are presented in this paper to correlate the structure–property relationship of the developed material.",
+    "link": "https://link.springer.com/article/10.1007/s12666-023-03208-5",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Friction-Stir-Processing.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub24",
+    "title": "Live Demonstration: IoT based smart vertical farming framework with sensor network and mobile application for real-time monitoring",
+    "authors": [
+      "Ankita Awasthi",
+      "Astha Rangare",
+      "R. Kaushik",
+      "J. Immanuel"
+    ],
+    "journalOrConference": "2023 IEEE SENSORS, doi: 10.1109/SENSORS56945.2023.10325121",
+    "year": 2023,
+    "abstract": "FarmTech is an affordable and automated vertical farming setup for high-yield indoor cultivation in small spaces. Its features include a vertically stacked lightweight structure with integrated LEDs for providing energy to the crop for photosynthesis. It has an energy-efficient sensor network connected with Wi-Fi for monitoring and communication of live data from the farm to an IoT platform Thingspeak. An automated irrigation system utilizes data from soil moisture sensors. FarmView mobile app enables remote access to live farm updates and warnings from Thingspeak data.",
+    "link": "https://ieeexplore.ieee.org/document/10325121/authors#authors",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/smart-vertical-farming.gif",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub25",
+    "title": "Enhancing crashworthiness characteristics of modified hexagonal honeycomb structural panels through stretching and bending of ribs",
+    "authors": [
+      "Kathiresan M",
+      "Jose Immanuel", 
+      "Vasudevan R"
+    ],
+    "journalOrConference": "Journal of Materials: Design and Applications",
+    "year": 2024,
+    "abstract": "The effects of stretching and bending of concave, convex, and horizontal ribs on the energy absorption characteristics of modified hexagonal honeycomb structural panels are investigated under in-plane quasi-static compression loading conditions. In this regard, five hierarchical modified structural panel configurations were fabricated using polylactic acid material (PLA) via a fused filament 3D printer, ensuring uniform wall thickness in the 1.5–2 mm range. The panels included the regular hexagonal panel (RHP), regular hexagonal panel with concave rib (RHCP), regular hexagonal panel with convex rib (RHXP), regular hexagonal panel with concave and horizontal ribs (RHCRP), and regular hexagonal panel with convex and horizontal ribs (RHXRP). In-plane quasi-static compressive loading tests were conducted to analyze crush resistance characteristics, and buckling modes of the modified honeycomb panels were examined through experimental and finite element analysis procedures. The result indicates that the specific energy absorption capacity (SEA) of RHXRP is increasing significantly compared to the SEA capacity of other categories of the structures. The changes in failure modes and increased crush energy absorption characteristics of modified RHP with the introduction of concave, convex, and horizontal ribs are elaborated.",
+    "link": "https://journals.sagepub.com/doi/10.1177/14644207241245857",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Enhancing-crashworthiness.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub26",
+    "title": "Tribological profiling of Mg-Gd-Y Alloy: Investigating sliding wear dynamics under varied temperature conditions",
+    "authors": [
+      "Md Saad Patel", 
+      "Ariful Rahaman", 
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Materials letters, Vol. 370",
+    "year": 2024,
+    "abstract": "This work presents a concise report on the tribological performance of a new Gd/Y based Mg in the temperatures ranging from room temperature up to 250 °C. The alloys’ tribological resilience and sensitivity to temperature variations were systematically explored, revealing intricate dynamics that influence sliding wear behaviour. Results offered valuable insights into the underlying mechanisms governing the tribological response of Mg-Gd-Y alloys, thereby contributing to the design and optimization of materials for applications requiring enhanced performance under varying temperature conditions. This research not only advances our understanding of the intricate interplay between alloy composition, microstructural features, and temperature but also provides a foundation for the development of tailored Mg-based materials with superior tribological properties.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0167577X24009479?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Tribological-profiling.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub27",
+    "title": "Critical Review on Advanced Cooling Strategies in Friction Stir Processing for Microstructural Control",
+    "authors": [
+      "Patel M.S.", 
+      "Immanuel R.J.", 
+      "Rahaman A.", 
+      "Khan M.F.", 
+      "Jouiad M"
+    ],
+    "journalOrConference": "Crystals, 2024, 14, 655",
+    "year": 2024,
+    "abstract": "Friction stir processing (FSP) stands as an effective approach designed for grain refinement and site-specific microstructural modification. The evolving microstructure during FSP is determined by various variables out of which rate of sample cooling is the key parameter. More often, FSP is conducted in naturally flowing air; however, a large number of studies are conducted by researchers across the world; stressing the importance of additional sample cooling strategy for tailoring the material microstructure. Such strategies vary not only in terms of the cooling medium used but also with regard to various other compliant conditions that must be fulfilled for the cooling process to make them successful and economically viable. This work critically reviews the most prevalent methods practiced by various researchers and industries for controlled sample cooling during and after FSP. The underlying mechanisms; advantages; disadvantages; and limitations of each procedure along with the resulting microstructure and material performances are discussed and recommendations are provided.",
+    "link": "https://www.mdpi.com/2073-4352/14/7/655",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Advanced-Cooling-Strategies.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub28",
+    "title": "Development and characterization of a novel AA6061 composite reinforced with titanium aluminide via friction stir processing",
+    "authors": [
+      "Ilyas Hussain", 
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Journal of Alloys and Compounds",
+    "year": 2024,
+    "abstract": "Current research work emphasizes on the development of particulate titanium aluminide (TiAl), an intermetallic class of material, through mechanical alloying (MA) from elemental powders and usage of same as reinforcement in AA6061 aluminum matrix to enhance its mechanical and tribological performance. TiAl, being a light weight, strong and abrasion-resistant material, is found to be a suitable candidate to replace dense ceramic-based reinforcements in aluminum composite. Friction stir processing (FSP), a well-established surface severe plastic deformation tool, is used to develop the composite in this study. Several strategies on improving the stirring action and particle distribution during FSP is employed and their scientific effect is studied in detail. Microstructural evolution was studied through scanning electron microscopy (SEM) combined with electron backscattered diffraction (EBSD) analysis which revealed uniform particle distribution of reinforcement in the friction stir processed (FSPed) zone with 88.23 % reduction in grain size of composite as compared to base material. Hardness studied showed an increase in the hardness by 33 % for composite material as compared to un-reinforced FSPed material, showing the positive effect of reinforcement alone on the mechanical strength of the material. Tensile results showed an improvement in yield tensile strength from 156 MPa in base to 186.8 MPa in the composite material without significant compromise in the ductility 26.86 % for composite and 28.14 % for base. Mechanisms aiding uniform particle distribution, and the reasons for improvement in mechanical performance of the developed composite is discussed in detail with the help of microstructural studies and post-deformation fractograph.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0925838824029049?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/AA6061-composite-reinforced.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub29",
+    "title": "A novel sustainable AZ31 based Mg matrix composite reinforced with recycled IN718 powder for circular materials economy",
+    "authors": [
+      "P. Kashyap", 
+      "Md S. Patel", 
+      "C. Upadhyay", 
+      "M. Sharma", 
+      "S. Gahir", 
+      "S.K. Tamang", 
+      "M. Kathiresan", 
+      "S. Gangopadhyay", 
+      "R. Jain", 
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Materials letters",
+    "year": 2025,
+    "abstract": "The pursuit of sustainable practices in manufacturing has sparked an increased interest in recycling and reusing materials to reduce waste and environmental effect. One interesting technique is incorporating recycled materials to develop advanced composite materials. In this study, we focus on utilizing recycled Inconel IN718 powders as reinforcement particles in AZ31D. Powders of IN718 finer than 37 μm, developed from machining chips through high energy ball milling process, are infused into AZ31 through friction stir processing (FSP), enabling a circular economy practice in advanced material development. The resulting composite material is evaluated for its microstructure and mechanical performance. Microstructural study reveals a uniform distribution of reinforcement particle inside the matrix throughout the processed zone. Strong interfacial bonding between the matrix and reinforcement, and the addition of dispersion strengthening mechanisms helped reducing the tension/compression yield asymmetry problem. The study highlights the use of recycled materials in composites to achieve sustainability in manufacturing.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0167577X24015192?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/sustainable-AZ31.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub30",
+    "title": "Fabrication and characterization of Al alloy composites reinforced with nanocrystalline Al4CrFeMnTi0.25 high-entropy alloy particles via double ultrasonic stir casting for aerospace applications",
+    "authors": [
+      "Vivek Pandey", 
+      "R. Seetharam", 
+      "H. Chelladurai", 
+      "J. Immanuel R."
+    ],
+    "journalOrConference": "Journal of Alloys and Compounds, 1010",
+    "year": 2025,
+    "abstract": "The aim of the present work is to fabricate the Al alloy-based composites by using a new class of High Entropy Alloy (HEA) reinforcement particles for aerospace applications, addressing the limitations associated with traditional ceramic reinforcement particles. Therefore, the present work is to fabricate an Al-7150 alloy-based composite by incorporating a novel nanocrystalline Al4CrFeMnTi0.25 HEA (NCHEA) reinforcing particle (0.5, 1, 1.5 and 2 wt%) through a double ultrasonic two-step stir casting technique. The relative density decreases with the addition of NCHEA particles in the mixture, however, the porosity remains below 5 % due to double ultrasonication. The grain size was significantly refined with the addition of NCHEA particles. The AA7150-HEA composite exhibits a “stone in mud” structure in which the HEA particles (stone) are embedded in an aluminum matrix (mud) due to the high density of NCHEA reinforcement. The AA7150–1.5 wt% HEA composite exhibited a small average crystallite size of 27.03 nm and a maximum dislocation density of 2.67 nm-2 analysed by X-Ray Diffraction (XRD) analysis. The AA7150–1.5 wt% HEA alloy achieved a maximum Vickers microhardness of 214.49 HV and an ultimate tensile strength of 218.37 MPa, which were 37 % and 27.5 % higher, respectively, compared to the base Al-7150 alloys. Failure usually occurs at the interface where the alloy is bonded to the ceramic reinforcement, however, in the HEA-reinforced composite, this fall-off action does not occur as observed by fractographic analysis. Nonetheless, Al7150–2wt% HEA-composites have many cracks on the fractured surface due to the agglomeration of NCHEA particles in composite. The NCHEA reinforcement particles can be incorporated into the Al7150 matrix as an alternative to ceramic reinforcements, enabling enhanced strength improvement.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0925838824044888?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Fabrication-and-characterization.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub31",
+    "title": "Achieving microstructural homogeneity in the stir zone across thick AA6061 welds using self-reacting bobbin tool friction stir welding",
+    "authors": [
+      "Aishwary Mishra", 
+      "Md Saad Patel", 
+      "Ilyas Hussain", 
+      "Gaurav Chandra Tripathi", 
+      "Atul Kumar Choudary", 
+      "P Chakravarthy", 
+      "Rahul Jain", 
+      "R Jose Immanuel"
+    ],
+    "journalOrConference": "Discover Materials, 4 (1)",
+    "year": 2024,
+    "abstract": "This study focuses into strategizing the usage of self-reacting bobbin tool friction stir welding (SRBT-FSW) to obtain consistent microstructural homogeneity along the thickness of AA6061 aluminium alloy (AA) thick plates during welding. The SRBT-FSW technology, distinguished by its dual-shoulder design, represents a significant step forward in FSW by eliminating the requirement for a backing anvil and promoting balanced heat distribution. This study seeks to address the issues of maintaining uniform microstructural characteristics throughout the weld zone, which is crucial for the mechanical performance and durability of welded joints in structural applications. The experimental study entails the systematic welding of AA6061 plates of 6 mm thickness using a self-reacting bobbin tool under a fixed processing condition. Electron backscatter diffraction (EBSD) was used to characterize the grain structure and phase distribution over the weld. Mechanical parameters like as tensile strength and hardness were determined to establish correlations between microstructure and mechanical performance. The results demonstrated that SRBT-FSW significantly enhances microstructural homogeneity across the weld zone, leading to improved mechanical properties. In the Bottom Zone (BZ), a refined grain structure with an average grain size (AGS) of 3.53 µm and a random or weak texture was observed, contributing to enhanced hardness and mechanical performance, with an ultimate tensile strength (UTS) of 220 MPa. In contrast, the Top Zone (TZ) exhibited a coarser AGS of 4.33 µm with a pronounced {111} crystallographic texture, resulting in a slightly lower UTS of 205 MPa. The Middle Zone (MZ), influenced by the greater heat input from both the TZ and BZ, showed an intermediate AGS of 3.99 µm, predominantly oriented along the {101} plane, and achieved a UTS of 194 MPa, with a slight reduction in ductility. This study highlights the potential of self-reacting bobbin tool friction stir welding as a reliable method for making high-quality, homogeneous welds in thick aluminium plates and paving way for their wider application in the aerospace, automotive, and shipbuilding industries, where homogeneous microstructural qualities are of significant importance.",
+    "link": "https://link.springer.com/article/10.1007/s43939-024-00138-x",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Achieving-microstructural.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub32",
+    "title": "Engineering Corrosion-Resistant Microstructures in AZ31D Magnesium Alloy through Friction Stir Processing",
+    "authors": [
+      "Md Saad Patel", 
+      "Ariful Rahaman", 
+      "R. Jose Immanuel", 
+      "MD. F Khan", 
+      "Mousumi Upadhyay Kahaly", 
+      "Abdul Munaf Nafeena"
+    ],
+    "journalOrConference": "Materials Science Forum",
+    "year": 2024,
+    "abstract": "In this study friction stir processing (FSP) was utilized to refine the microstructure of thick AZ31D magnesium (Mg) alloy, followed by evaluation of its microstructure and corrosion behavior in a NaCl environment. The application of a tapered threaded pin profile resulted in enhanced material mixing, significant grain refinement and reduced defect formation due to minimal heat input and minimized thermal gradients across the stir zone (SZ). The SZ, dominated by the pin profile, exhibited a fine, equiaxed, and uniform grain structure throughout its thickness the average grain size reduced from 13.8 µm to 5.19 µm after second pass of FSP confirmed through field-emission scanning election microscopy (FE-SEM) analysis. This structural refinement significantly enhanced the corrosion performance of the FSPed alloys, as compared to the base material (BM), demonstrated by electrochemical testing in 3.5% NaCl solution. The FSPed alloy surface showed uniform corrosion behavior, instead of intergranular corrosion with deep mud cracking patterns observed in the BM. This improved corrosion resistance was due to the uniformity of the produced microstructure via FSP, which reduced localised corrosion sites. These findings suggest that FSP is a promising technique for improving the durability of Mg alloys in corrosive environments, potentially benefiting applications in the automotive and aerospace industries.",
+    "link": "https://www.scientific.net/MSF.1143.127",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Engineering-Corrosion-Resistant.gif",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub33",
+    "title": "Micro-surface Texturing of Ti6Al4V Alloy for Improved Hydrophobicity: Integrating Experimental and Mathematical Approaches",
+    "authors": [
+      "Rishanbor Syiemlieh", 
+      "Priyam Kashyap", 
+      "Santosh Kumar Tamang", 
+      "Successful Khlem", 
+      "Geethapriyan Thangamani", 
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Journal of Materials Engineering and Performance",
+    "year": 2025,
+    "abstract": "This study investigates inducing hydrophobicity on Ti6Al4V titanium alloy through micro-surface texturing using high-speed micromachining. The objective of the present study is to improve the surface features of Ti6Al4V alloy which is employed in the aerospace and biomedical industries by mimicking the super hydrophobicity of natural surfaces with the lotus effect. Micro-texturing is used to create micro-surface topographies that regulate contact angles and interactions energies. In fact, due to the high surface energy and therefore hydrophilicity of Ti6Al4V, the surface needs to be modified for particular applications. High-speed micromachining is employed to fabricate micro-groove and pillar patterns on Ti6Al4V plates with higher efficiency and lesser cost. Characterization of the surface is done by SEM and wettability measurements through water contact angle (WCA), whereby microstructured surface shows contact angle of well over 125° illustrating a transition of the surface from hydrophilic to hydrophobic. Further, MATLAB model has also been created to predict the WCA in relation to surface geometry and tension, by comparing it with experimental findings, the error percentage was found to be within 4 % only.",
+    "link": "https://link.springer.com/article/10.1007/s11665-025-10646-3",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Micro-surface-Texturing.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub34",
+    "title": "Unlocking the Potential of High-Entropy Alloys with Advanced Characterization Techniques",
+    "authors": [
+      "Raja Gopala Chary Thipparthi", 
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Advanced Materials and Processes",
+    "year": 2025,
+    "abstract": "As high-entropy alloys become more complex in terms of microstructure, phase stability, and intermetallics, the advent of sophisticated analytical instruments is helping scientists to develop new materials with the most desirable properties.",
+    "link": "https://static.asminternational.org/amp/202501/28/",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/potential-of-high-entropy.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub35",
+    "title": "Study on tribological behavior of Phyllostachys bambusoides bamboo fiber reinforced epoxy composites from Arunachal Pradesh, India",
+    "authors": [
+      "Priyam Kashyap Sarmah", 
+      "Kunal Borah", 
+      "Santosh Kumar Tamang", 
+      "Jose Immanuel"
+    ],
+    "journalOrConference": "International Journal of Materials Research",
+    "year": 2025,
+    "abstract": "This research explores the mechanical and tribological properties of bamboo fiber-reinforced epoxy composites, focusing on Phyllostachys bambusoides, a bamboo species known locally as “Bije bamboo,” sourced from the Apatani plateau, Arunachal Pradesh, India. The composites are fabricated by incorporating bamboo powder into an epoxy–hardener blend at 5 %, 15 %, and 25 % weight fractions using a manual molding process under sustained pressure for 24 h. The composites underwent a comprehensive tribological assessment, varying key parameters such as load (2 N, 5 N, 7 N), speed (50, 100, 150 cm s−1), and bamboo fiber content. A ball-on-disc tribometer was used to simulate wear behavior under these conditions. Profilometry, 3D surface morphology analysis, and optical microscopy are employed to assess wear depth and surface morphology. Notably, the composite containing 15 % bamboo fiber (BFC15) demonstrated superior tribological performance, achieving a low coefficient of friction (COF) of 0.087 at 5 N load and 50 cm s−1 speed. Additionally, it exhibited a remarkable 53 % improvement in wear resistance compared to the composite with 5 % bamboo fiber (BFC5). Surface roughness was observed to increase with higher bamboo fiber content, with BFC25 recording a maximum roughness of 17.57 µm, indicating delamination wear at higher speeds. The study confirms that the 15 % bamboo fiber composition strikes an optimal balance between mechanical strength, wear resistance, and frictional stability. These findings position bamboo-based biocomposites as a viable, sustainable alternative for industries requiring efficient wear management, particularly in automotive and aerospace applications.",
+    "link": "https://www.degruyterbrill.com/document/doi/10.1515/ijmr-2024-0278/html",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/bamboo-fiber-reinforced-epoxy.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub36",
+    "title": "Crashworthiness of pomelo-inspired PLA structures with gradient cellular design",
+    "authors": [
+      "Kathiresan M", 
+      "Vasudevan Rajamohan", 
+      "Jose Immanuel R", 
+      "Surekha Gnanasekar"
+    ],
+    "journalOrConference": "International Journal of Mechanical Sciences",
+    "year": 2025,
+    "abstract": "This study presents a novel approach to enhancing crashworthiness by investigating bio-inspired Voronoi panels modeled after the gradient cellular architecture of pomelo peel. The panels, fabricated using 3D additive fused filament fabrication (FFF) with PLA, feature controlled variations in cellular density, cellular-density-distribution, and wall thickness. A key innovation lies in the design of a centrally densified Voronoi configuration (VM100-CD50-T2), which closely replicates the natural porosity distribution present in the mesocarp region of pomelo fruit. Quasi-static in-plane compression tests, validated by finite element simulations using ABAQUS®, were used to evaluate critical crashworthiness metrics, including Load Uniformity Index (LUI), Crush Force Efficiency (CFE), and Specific Energy Absorption (SEA). Results show that increasing wall thickness significantly enhances SEA by up to 89 % in UM50 panels and that cell density distribution plays a critical role in load response. The VM100-CD50-T2 panel exhibited a 12 % increase in SEA and progressive collapse behavior with a 26 % reduction in initial peak load, demonstrating the structural advantage of a functionally graded cellular design. This work introduces a bio-inspired gradient design methodology with direct applications in lightweight, energy-absorbing components for automotive, aerospace, and protective systems.",
+    "link": "https://www.sciencedirect.com/science/article/pii/S0020740325004874?via%3Dihub",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/pomelo-inspired-PLA.jpg",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub37",
+    "title": "Role of Microstructural Modification in the Slurry Erosion Behavior of Friction Stir Processed AZ31 Magnesium Alloy",
+    "authors": [
+      "S. Annamalai", 
+      "Md Saad Patel", 
+      "B. Anand Ronald", 
+      "Ariful Rahaman",  
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Journal of Materials Engineering and Performance",
+    "year": 2025,
+    "abstract": "Material degradation due to slurry erosive wear affects components exposed to particle-entrained slurries. This study investigates the slurry erosion behavior of AZ31 Magnesium alloy processed through friction stir processing. The base and processed materials were subjected to slurry jet erosion test under various impingement angles. Alumina abrasive particles of 700 µm nominal size were used as the erodent. Experimental results indicated that the base and processed materials exhibit ductile erosion behavior, with maximum mass loss occurring at an oblique angle of 30°. With increase in impact angle, mass loss is found to be decreased. Compared to the unprocessed alloy, material processed through friction stir processing at 1500 rpm tool rotation speed and 60 mm/min traverse speed showed minor mass loss at all impingement angles. Surface profile analysis revealed a ‘U’-shaped scar profile, regardless of the impingement angle. Furthermore, surface roughness decreased with increasing impact angle. Scanning electron microscopy confirmed that micro-cutting and ploughing mechanisms dominated at shallow angles, while indentation and plastic deformation were more prevalent at higher impingement angles.",
+    "link": "https://link.springer.com/article/10.1007/s11665-025-11636-1",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Microstructural-Modification.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub38",
+    "title": "Investigation on the Tribological Behavior of Aluminum Matrix Composite Reinforced With Particulate Titanium Aluminide",
+    "authors": [
+      "Ilyas Hussain", 
+      "R.J. Immanuel"
+    ],
+    "journalOrConference": "Journal of Tribology",
+    "year": 2025,
+    "abstract": "The present work aims to examine the tribological performance of AA6061 alloy-based surface composite with titanium aluminide particulate reinforcement. Friction stir processing, a well-known surface severe plastic deformation technique, was employed to fabricate the composite via a two-pass approach using distinct pin profiles—taper-threaded in the first pass and square in the second. In accordance with ASTM G99, a pin-on-disc wear test was used to assess the samples' wear behavior under both normal and abrasive wear conditions. The microstructural evolution and post-wear analysis were examined using field emission scanning electron microscopy along with electron backscattered diffraction. The results revealed uniformly distributed reinforcement particles within the friction stir processed (FSPed) zone and demonstrated a reduction in grain size of about 88.23% in the composite compared to the base material. The wear-rate of the composite was lowered by 71% from the base material in the abrasive condition and 63% in the normal wear condition. The hardness analysis revealed a 33% increase in the composite material compared to the unreinforced FSPed sample, highlighting the beneficial impact of the reinforcement on the material's mechanical strength. The composite's yield strength increased from 156 MPa in the base material to 187 MPa in the composite, with only a minimal reduction in ductility (27% for the composite versus 28% for the base). The factors contributing to the improved mechanical and tribological properties, such as uniform particle distribution and grain refinement, are explored in detail through microstructural analysis and post-wear micrographs.",
+    "link": "https://asmedigitalcollection.asme.org/tribology/article/148/2/021401/1218756/Investigation-on-the-Tribological-Behavior-of",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/Tribological-Behavior-of-Aluminum.png",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub39",
+    "title": "Advanced microstructural engineering through thermo-mechanical processing for enhanced corrosion resistance in Mg-Gd-Y alloys",
+    "authors": [
+      "Md Saad Patel", 
+      "Ariful Rahaman", 
+      "R. Jose Immanuel"
+    ],
+    "journalOrConference": "Chemical Papers",
+    "year": 2025,
+    "abstract": "Magnesium alloys with Gd and Y alloying have emerged as promising materials for various critical applications due to their excellent strength-to-weight ratio and mechanical performance. However, their corrosion resistance often hinders their broader adoption, necessitating advanced strategies to optimize their performance. This study explores the potential of a surface thermo-mechanical process, friction stir processing (FSP), in tailoring the corrosion behavior of Mg-Gd-Y alloys through microstructural engineering. The prime focus of this study is to look into the role of rare-earth elements distribution and grain refinement on the corrosion performance. Results demonstrate that FSP effectively reduces grain size from 302.36 to 10.05 µm in the material with 4% alloying of Gd and Y. Differential scanning calorimetry (DSC) analysis suggests that the temperature during FSP was higher than the dissolution temperature of the alloy’s intermetallic phases (282–375 °C), which improved the solid solubility of rare-earth elements (REE) in the Mg-matrix thereby facilitating their redistribution and minimizing the intergranular segregation. X-ray photoelectron spectroscopy (XPS) analysis suggests that suppressed micro-galvanic coupling and promoted formation of stable Mg/REE oxide layers leads to better corrosion performance. Multi-pass FSP processing strategy led to further microstructural refinement and superior corrosion resistance of 0.18 mm/year. The study opens up a potential research direction in exploring surface microstructural engineering as a promising technique for developing corrosion-resistant Mg alloys.",
+    "link": "https://link.springer.com/article/10.1007/s11696-025-04172-8",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/microstructural-engineering.webp",
+    "type": "Journal Article"
+  },
+  {
+    "id": "pub40",
+    "title": "Microstructural evolution and deformation behavior of an Al-Si hypo-eutectic alloy subjected to various severe plastic deformation methods",
+    "authors": [
+      "R. J. Immanuel", 
+      "S. K. Panigrahi"
+    ],
+    "journalOrConference": "Materials Science & Technology 2016(MS&T 16), October 23-27, 2016, Salt Lake City, USA.",
+    "year": 2016,
+    "abstract": "High strength-to-weight ratio, good weldability, excellent corrosion and wear resistance make Al-Si alloys a good alternative for steel in automobile and aerospace industries. However, presence of coarse and non-uniformly distributed second phase particles degrades the mechanical properties, limiting their application in various industries. In the present research work, two different severe plastic deformation(SPD) techniques are employed in a hypo-eutectic Al-Si alloy(A356): (i) Friction stir processing(FSP) and (ii) Cryo-rolling(CR) to enhance the mechanical properties via microstructural modification. FSP is found to enhance the ductility of the material five-fold(22.81 %) with moderate strength increment. However, cryorolling led to significant increase in the strength(332 MPa) with moderate enhancement in ductility. The difference in the mechanical behavior of the material subjected to different SPD processes is explained based on their deformation behavior during SPD process and their resultant microstructure. The tribological behavior of the material is also discussed based on microstructure and mechanical properties.",
+    "link": "https://www.researchgate.net/publication/309533181_Microstructural_Evolution_and_Mechanical_Behavior_of_an_Al-Si_Hypo-eutectic_Alloy_Subjected_to_Various_Severe_Plastic_Deformation_Methods",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/conference_presentations/microstructural-evolution.png",
+    "type": "Conference Paper"
+  },
+  {
+    "id": "pub41",
+    "title": "Arc Additive Manufacturing: A new tool to simultaneously develop advanced copper alloys and print large scale components",
+    "authors": [
+      "Shivraj Gahir", 
+      "R. J. Immanuel"
+    ],
+    "journalOrConference": "International Materials Applications & Technologies Conference and Exposition (IMAT 2025, ASM), Detroit, USA",
+    "year": "October 20-23, 2025",
+    "abstract": "Coming Soon",
+    "link": "https://www.asminternational.org/imat/",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/imat-2025.png",
+    "type": "Conference Paper"
+  },
+  {
+    "id": "pub42",
+    "title": "Composite Materials and Its Advancements for a Cleaner Engine of Future",
+    "authors": [
+      "Ilyas Hussain", 
+      "R. J. Immanuel"
+    ],
+    "journalOrConference": "Advances in Engine Tribology, Springer",
+    "year": 2022,
+    "abstract": "Composites form a modern class of structural materials that are increasingly replacing the conventional materials in various engineering domains due to the reduced density along with simultaneous enhancement in mechanical and tribological performance. Specific to the combustion engine application, usage of lighter materials becomes imperative as it yields greater fuel efficiency, bringing down the pollution related problems and leading to cleaner energy. Metal-based composite materials are found to be a potential solution to such problem owing to its higher strength to weight ratio achieved by tailoring the reinforcement-matrix composition and distribution. This chapter attempts to highlight the fundamental aspects of these composite materials and their performance against the conventional metallic class of materials along with the recent development in advanced composite materials. To rightly align with the central theme of this book, this chapter mainly focus on the role of composite materials on the improvement in tribological performance of automobile and aerospace engines. Special attention is given to the advanced composite materials that are of current research focus for improved tribological and high temperature performance in aerospace engine applications. A complete survey on the available work in this direction is being presented along with the challenges and future prospect.",
+    "link": "https://link.springer.com/chapter/10.1007/978-981-16-8337-4_9",
+    "pdfLink": null,
+    "imageUrl": "/images/publications/book_chapters/cleaner-engine.png",
+    "type": "Book Chapter"
   },
   {
     "id": "pat1",
-    "title": "Novel High-Entropy Alloy Composition for Structural Applications",
+    "title": "AI based smart glasses for techneck and posture correction",
     "authors": [
-      "A. Gupta",
-      "S. Khan"
+      "Ankita Awasthi", 
+      "Astha Rangare", 
+      "Roshni Kaushik", 
+      "Jose Immanuel", 
+      "Pugazhenthan Thangaraju"
     ],
-    "patentNumber": "US9876543B2",
+    "patentNumber": "409270-001 (Granted)",
     "year": 2024,
-    "abstract": "This patent describes a novel high-entropy alloy composition with enhanced strength and corrosion resistance for structural applications in extreme environments.",
-    "link": "https://patents.google.com/patent/US9876543B2",
-    "pdfLink": "/assets/patents/alloy-patent.pdf",
-    "imageUrl": "/images/patents/alloy-patent.jpeg",
-    "type": "Utility Patent"
-  },
-  {
-    "id": "pat2",
-    "title": "Photocatalytic Coating for Environmental Purification",
-    "authors": [
-      "A. Singh",
-      "R. Das"
-    ],
-    "patentNumber": "US1234567A1",
-    "year": 2023,
-    "abstract": "This patent covers a novel photocatalytic coating design based on g-C3N4/TiO2 composites for efficient degradation of organic pollutants under visible light.",
-    "link": "https://patents.google.com/patent/US1234567A1",
-    "pdfLink": "/assets/patents/photocatalytic-coating.pdf",
-    "imageUrl": "/images/patents/photocatalytic-patent.jpeg",
-    "type": "Utility Patent"
-  },
-  {
-    "id": "pat3",
-    "title": "Design for a Biomedical Implant with Enhanced Biocompatibility",
-    "authors": [
-      "S. Reddy",
-      "R. Das"
-    ],
-    "patentNumber": "USD789123S1",
-    "year": 2022,
     "abstract": "This design patent covers the unique geometric configuration of a biomedical implant optimized for enhanced biocompatibility and mechanical stability.",
-    "link": "https://patents.google.com/patent/USD789123S1",
+    "link": null,
     "pdfLink": null,
     "imageUrl": "/images/patents/implant-design.jpeg",
     "type": "Design Patent"
