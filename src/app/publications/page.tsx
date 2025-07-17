@@ -1,17 +1,32 @@
-"use client"; // Required for client-side interactivity and Framer Motion
+"use client";
 
 import { useState, useEffect, useRef } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { FiExternalLink, FiDownload, FiFilter } from "react-icons/fi"; 
+import { FiExternalLink, FiDownload, FiFilter } from "react-icons/fi";
 import HeroSection from "@/components/HeroSection";
-
-// Import your publications and patents data
-import publicationsData from "@/data/publications/publications.json";
 import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
-// --- Animation Variants ---
+// Import publications data
+import publicationsData from "@/data/publications/publications.json";
+
+// Define Publication interface
+interface Publication {
+  id: string;
+  title: string;
+  type: string;
+  authors: string[];
+  journalOrConference: string;
+  year: number | string; // Allow string from JSON, will parse to number
+  imageUrl?: string;
+  link?: string;
+  pdfLink?: string;
+  patentNumber?: string;
+  abstract?: string;
+}
+
+// Animation variants
 const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -41,20 +56,19 @@ const cardVariants: Variants = {
 };
 
 export default function PublicationsAndPatentsPage() {
-  // State for filters
   const [typeFilter, setTypeFilter] = useState<"all" | "journal article" | "conference presentation" | "book chapter" | "patent">("all");
   const [yearFilter, setYearFilter] = useState<string>("all");
-  const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false); // State for dropdown
-  const dropdownRef = useRef<HTMLDivElement>(null); // Ref for dropdown
+  const [isTypeDropdownOpen, setIsTypeDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Get unique years from data for the year filter
+  // Get unique years, converting to numbers for sorting
   const uniqueYears = Array.from(
-    new Set(publicationsData.map((item) => item.year.toString()))
-  ).sort((a, b) => parseInt(b) - parseInt(a));
+    new Set(publicationsData.map((item: Publication) => parseInt(item.year.toString())))
+  ).sort((a, b) => b - a);
 
-  // Filter data based on type and year
+  // Filter and sort data
   const filteredData = publicationsData
-    .filter((item) => {
+    .filter((item: Publication) => {
       const isPatent = item.type.toLowerCase().includes("patent");
       const matchesType =
         typeFilter === "all" ||
@@ -62,10 +76,14 @@ export default function PublicationsAndPatentsPage() {
         (typeFilter === "conference presentation" && item.type === "Conference Paper") ||
         (typeFilter === "book chapter" && item.type === "Book Chapter") ||
         (typeFilter === "patent" && isPatent);
-      const matchesYear = yearFilter === "all" || item.year.toString() === yearFilter;
+      const matchesYear = yearFilter === "all" || parseInt(item.year.toString()) === parseInt(yearFilter);
       return matchesType && matchesYear;
     })
-    .sort((a, b) => b.year - a.year); // Sort by year in descending order
+    .sort((a: Publication, b: Publication) => {
+      const yearA = parseInt(a.year.toString());
+      const yearB = parseInt(b.year.toString());
+      return yearB - yearA; // Sort descending
+    });
 
   // Debug state changes
   useEffect(() => {
@@ -85,7 +103,6 @@ export default function PublicationsAndPatentsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 font-jakarta">
-     {/* Hero Section */}
       <HeroSection
         title="Publications"
         description="Explore the scientific contributions and innovative patents from the Advanced Materials Development & Characterization Group."
@@ -93,20 +110,16 @@ export default function PublicationsAndPatentsPage() {
         gradientTo="to-cyan-100"
       />
 
-      {/* Filter Section */}
       <section className="py-10 px-6 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-8 justify-center">
-            {/* Type Filter */}
             <div className="relative" ref={dropdownRef}>
-              {/* Dropdown Button for Mobile/Tablet */}
               <button
                 onClick={() => setIsTypeDropdownOpen(!isTypeDropdownOpen)}
                 className="lg:hidden px-4 py-2 rounded-lg font-semibold transition-colors duration-200 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-teal-500 hover:text-white flex items-center"
               >
                 Filter by Type <FiFilter className="ml-2" />
               </button>
-              {/* Dropdown Menu for Mobile/Tablet */}
               {isTypeDropdownOpen && (
                 <div className="lg:hidden absolute z-10 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
                   <button
@@ -181,7 +194,6 @@ export default function PublicationsAndPatentsPage() {
                   </button>
                 </div>
               )}
-              {/* Buttons for Desktop */}
               <div className="hidden lg:flex flex-wrap gap-2">
                 <button
                   onClick={() => {
@@ -250,7 +262,6 @@ export default function PublicationsAndPatentsPage() {
                 </button>
               </div>
             </div>
-            {/* Year Filter */}
             <select
               value={yearFilter}
               onChange={(e) => {
@@ -270,7 +281,6 @@ export default function PublicationsAndPatentsPage() {
         </div>
       </section>
 
-      {/* Publications and Patents Grid Section */}
       <section className="py-20 px-6 bg-white dark:bg-gray-900">
         <motion.div
           initial="hidden"
@@ -302,7 +312,6 @@ export default function PublicationsAndPatentsPage() {
                   variants={cardVariants}
                   className="bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-200 dark:border-gray-700 flex flex-col"
                 >
-                  {/* Optional Image */}
                   {item.imageUrl && (
                     <div className="relative w-full h-48 sm:h-56 overflow-hidden">
                       <Image
