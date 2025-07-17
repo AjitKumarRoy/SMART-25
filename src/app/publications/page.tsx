@@ -20,7 +20,7 @@ interface Publication {
   journalOrConference?: string | undefined; // Allow undefined for patents
   year: number | string; // Allow string from JSON, will parse to number
   imageUrl?: string;
-  link?: string;
+  link?: string | undefined | null;
   pdfLink?: string | undefined | null; // Allow null from previous fix
   patentNumber?: string;
   abstract?: string;
