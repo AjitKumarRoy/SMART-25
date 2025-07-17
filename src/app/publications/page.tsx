@@ -17,7 +17,7 @@ interface Publication {
   title: string;
   type: string;
   authors: string[];
-  journalOrConference: string;
+  journalOrConference: string | undefined;
   year: number | string; // Allow string from JSON, will parse to number
   imageUrl?: string;
   link?: string;
