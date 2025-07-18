@@ -2,33 +2,39 @@
   "heroCarousel": [
     {
       "id": 1,
-      "image": "/images/iitbh-htower.jpg",  
-      "title": "Pioneering AI for Tomorrow's World",
-      "description": "Driving innovation in artificial intelligence and machine learning research."
+      "image": "/images/home/hero/iitbh-htower.jpg",  
+      "title": "Welcome to AMDCG group at IIT Bhilai",
+      "description": ""
     },
     {
       "id": 2,
-      "image": "/images/jose-sir-conference.jpeg",
-      "title": "Advancing Robotics & Automation",
-      "description": "Designing intelligent robotic systems for complex challenges."
+      "image": "/images/home/hero/jose-sir-conference.jpeg",
+      "title": "Dr. Jose (Principal Investigator) at a summit",
+      "description": ""
     },
     {
       "id": 3,
-      "image": "/images/group2.jpeg",
-      "title": "Next-Gen Machine Design & Simulation",
-      "description": "Utilizing advanced computational tools for robust engineering solutions."
+      "image": "/images/home/hero/micro-indentation-testing-facility.jpeg",
+      "title": "State-of-art automated micro-indentation testing facility",
+      "description": ""
     },
     {
       "id": 4,
-      "image": "/images/group4.jpeg",
-      "title": "Collaborative Research Excellence",
-      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
+      "image": "/images/home/hero/dr-jose-with-his-supervisor.jpeg",
+      "title": "Dr. Jose with his supervisor (middle) in HT&SE",
+      "description": ""
     },
     {
-      "id": 4,
-      "image": "/images/group7.jpeg",
-      "title": "Collaborative Research Excellence",
-      "description": "Fostering interdisciplinary partnerships for impactful discoveries."
+      "id": 5,
+      "image": "/images/home/hero/ilyas-pitching-startup-idea.jpeg",
+      "title": "Our PhD scholar Mr. Ilyas Hussain pitching his PhD thesis work as startup idea for Seed grant",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "image": "/images/home/hero/some-machine.jpeg",
+      "title": "what is this",
+      "description": ""
     }
   ]
 }

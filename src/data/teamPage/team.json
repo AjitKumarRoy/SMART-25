@@ -117,10 +117,10 @@
   },
   {
     "id": "phd-rahul-patel",
-    "name": "RAHUL SINGH PATEL",
+    "name": "Rahul singh patel",
     "title": "Ph.D. Scholar",
     "category": "phd_scholars",
-    "image": "/images/teams/rahul-phd.jpeg",
+    "image": "/images/teams/phd/rahul-phd.jpeg",
     "bio": "Research area: Optimization of thermomechanical treatment of AA- 7068 alloy, Deformation behaviour of Materials,Cryorolling, Friction Stir processing ( FSP) , Residual stress development during processing of Materials and its Impact on Stress corrosion cracking behaviour of Al -7068.",
     "socialLinks": {
       "website": null,
@@ -132,143 +132,140 @@
     },
     "contributions": [
       {
-        "project": "Quantum Cryptography",
+        "project": "To be updated soon",
         "role": "Ph.D. Candidate",
-        "years": "2022-Present",
-        "description": "Investigating quantum key distribution protocols and their resilience against quantum attacks."
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "2022 - Present"
+    "yearsWorked": "Dec 2022 - Present"
   },
   {
-    "id": "phd-arjun-gupta",
-    "name": "Arjun Gupta",
-    "title": "Ph.D. Scholar",
-    "category": "phd_scholars",
-    "image": "https://placehold.co/400x400/5E81AC/FFFFFF?text=Arjun+Gupta",
-    "bio": "Arjun is developing computational models to simulate complex fluid dynamics for aerospace applications.",
+    "id": "mtech-jessy",
+    "name": "v.jessy",
+    "title": "M.Tech Scholar",
+    "category": "mtech_scholars",
+    "image": "/images/teams/mtech/jessy-mtech.jpeg",
+    "bio": "Research area: Optimization of thermomechanical treatment of AA- 7068 alloy, Deformation behaviour of Materials,Cryorolling, Friction Stir processing ( FSP) , Residual stress development during processing of Materials and its Impact on Stress corrosion cracking behaviour of Al -7068.",
     "socialLinks": {
       "website": null,
       "researchGate": null,
       "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/arjun-gupta/",
+      "linkedin": "https://www.linkedin.com/in/jessy-vankayalapati-980aa1363/",
       "twitter": null,
       "github": null
     },
     "contributions": [
       {
-        "project": "Computational Fluid Dynamics",
-        "role": "Ph.D. Candidate",
-        "years": "2021-Present",
-        "description": "Developing high-fidelity numerical methods for simulating turbulent flows around complex geometries."
+        "project": "Predicting of jamming in the hammer mill using AI and image processing",
+        "role": "M.Tech Candidate",
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "2021 - Present"
+    "yearsWorked": "July 2024 - Present"
   },
   {
-    "id": "research-associate-priya-sharma",
-    "name": "Priya Sharma",
-    "title": "Research Associate",
+    "id": "research-associate-ashish-d",
+    "name": "Ashish D",
+    "title": "Research Assistant",
     "category": "research_staff",
-    "image": "https://placehold.co/400x400/B48EAD/FFFFFF?text=Priya+Sharma",
-    "bio": "Priya manages the lab's experimental setup and data collection for material synthesis projects.",
+    "image": "/images/teams/researchers/ashish.jpeg",
+    "bio": "Ashish D is currently a Project Assistant in this group at IIT Bhilai, bringing strong technical expertise from his B.Tech in Mechanical Engineering from APJ Abdul Kalam Technological University. His interdisciplinary background spans automation, environmental sustainability, and innovative waste management solutions. He has demonstrated exceptional research capabilities through multiple funded projects and patent publications. Prior to his current role, Ashish gained extensive experience in urban development analysis, automation implementation, and environmental impact reduction projects. His research interests are centered around plasma technology applications, waste-to-energy systems, AI/ML development, automation in industrial processes, and sustainable engineering solutions.",
     "socialLinks": {
       "website": null,
       "researchGate": null,
       "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/priya-sharma-ra/",
+      "linkedin": "www.linkedin.com/in/ashish-d-07185a1a6",
       "twitter": null,
       "github": null
     },
     "contributions": [
       {
-        "project": "Advanced Material Synthesis",
-        "role": "Lab Manager & Data Analyst",
-        "years": "2023-Present",
-        "description": "Responsible for experimental design, data acquisition, and initial analysis of novel material synthesis processes."
+        "project": "Smart Cities Data Analysis Project",
+        "role": "Project Assistant",
+        "years": " Jul 2024 – dec 2024",
+        "description": "Collected and analyzed comprehensive data for Indian 100 smart cities initiative contributing significantly to urban development projects and policy recommendations."
+      },
+      {
+        "project": "Automation in Waste Management Systems",
+        "role": "Project Assistant",
+        "years": "Jan 2024 - Present ",
+        "description": "Implemented advanced automation solutions in garbage suction trucks, streamlining waste management processes and improving operational efficiency across multiple urban centers."
+      },
+      {
+        "project": "Carbon Purification Research Project",
+        "role": "Project Assistant",
+        "years": "Current",
+        "description": "Working on cutting-edge carbon purification projects, developing innovative solutions to reduce environmental impact and promote sustainability in industrial applications. Using Electrostatics and tribo-charging technology."
+      },
+      {
+        "project": "South Eastern Coalfields Limited",
+        "role": "Project Assistant",
+        "years": "Current",
+        "description": "Working on SECL-funded research initiative involving regular site visits to coal mining facilities to evaluate water usage efficiency, analyze current water management systems, and develop innovative solutions for sustainable water utilization in mining operations."
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "2023 - Present"
+    "yearsWorked": "July 2024 - Present "
   },
   {
-    "id": "intern-ritika-verma",
-    "name": "Ritika Verma",
-    "title": "Research Intern",
+    "id": "intern-ajit-kumar-roy",
+    "name": "Ajit Kumar Roy",
+    "title": "Software Developer",
     "category": "interns",
-    "image": "https://placehold.co/400x400/8FBCBB/FFFFFF?text=Ritika+Verma",
-    "bio": "Ritika is assisting with data preprocessing and model training for our AI healthcare initiatives.",
+    "image": "/images/teams/interns/ajit.png",
+    "bio": "Ajit Kumar Roy is currently an undergraduate intern in the group. He is a final year B.Tech, CSE'26 student at CIT Kokrajhar. He is passionate about software development and has been actively involved in building web applications, contributing to open-source projects, and participating in national-level hackathons such as the Smart India Hackathon. His technical interests include full-stack development, UI/UX design, and exploring scalable backend architectures.",
     "socialLinks": {
       "website": null,
       "researchGate": null,
       "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/ritika-verma-intern/",
-      "twitter": null,
-      "github": null
+      "linkedin": "https://www.linkedin.com/in/ajitroyofficial/",
+      "twitter": "https://x.com/AjitKumrRoy",
+      "github": "https://github.com/AjitKumarRoy"
     },
     "contributions": [
       {
-        "project": "AI for Medical Imaging",
-        "role": "Intern",
-        "years": "Summer 2025",
-        "description": "Assisted in data annotation and training of deep learning models for early cancer detection from medical images."
+        "project": "AMDCG Group's WebApp",
+        "role": "Full-Stack Developer",
+        "years": "July 2025 - Present",
+        "description": "Designed and developed a full-stack web application for the Advanced Materials Development & Characterization Group at IIT Bhilai. The platform highlights the group's research focus, publications, lab facilities, team members, and ongoing projects, providing an engaging and informative online presence for the research community."
+      },
+      {
+        "project": "TECHNECKAL",
+        "role": "Mobile Application Developer",
+        "years": "July 2025 - Present",
+        "description": "A mobile application that measures the angle at which the user is holding their phone to determine the angle of the users neck to give alerts to avoid TechNeck spine issue."
       }
     ],
     "workingStatus": "Current",
-    "yearsWorked": "Summer 2025"
+    "yearsWorked": "July 2025 - Present"
   },
   {
-    "id": "alumni-dr-sanjay-mittal",
-    "name": "Dr. Sanjay Mittal",
-    "title": "Former Postdoctoral Researcher",
+    "id": "alumni-Priyam-kashyap-sharma",
+    "name": "Priyam Kashyap Sharma",
+    "title": "Former Research Assistant",
     "category": "alumni",
-    "image": "https://placehold.co/400x400/A3BE8C/FFFFFF?text=Dr.+Sanjay",
-    "bio": "Dr. Mittal contributed significantly to our quantum computing projects before moving to a faculty position.",
+    "image": "/images/teams/researchers/priyam-passport.jpeg",
+    "bio": "Mr. Priyam is now a PhD scholar in Mechanical Engineering at IIT Bombay with a strong background in high-entropy alloys, composite and bio materials, and sustainable engineering. He holds B.Tech degree from PTU and M.Tech degree from NERIST and has previously worked as a Research Assistant in this group. His research spans advanced materials, circular economy applications, surface engineering, and materials design for defense and aerospace. He actively collaborates with institutions like ISRO on interdisciplinary and funded research projects.",
     "socialLinks": {
       "website": null,
-      "researchGate": null,
-      "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/sanjay-mittal-alumni/",
+      "researchGate": "https://www.researchgate.net/profile/Priyam-Kashyap-Sarmah",
+      "googleScholar": "https://scholar.google.com/citations?user=48LqOSIAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/prriyam-kashyap-bb28a71aa/?originalSubdomain=in",
       "twitter": null,
       "github": null
     },
     "contributions": [
       {
-        "project": "Quantum Algorithm Development",
-        "role": "Postdoctoral Researcher",
-        "years": "2018-2022",
-        "description": "Developed and optimized quantum algorithms for simulating molecular dynamics, leading to two high-impact publications."
+        "project": "To be updated soon",
+        "years": null,
+        "description": null
       }
     ],
     "workingStatus": "Alumni",
-    "yearsWorked": "2018 - 2022"
-  },
-  {
-    "id": "alumni-dr-pooja-desai",
-    "name": "Dr. Pooja Desai",
-    "title": "Former Ph.D. Scholar",
-    "category": "alumni",
-    "image": "https://placehold.co/400x400/EBCB8B/FFFFFF?text=Dr.+Pooja",
-    "bio": "Dr. Desai's thesis focused on AI applications in environmental monitoring. She is now a data scientist at a leading tech firm.",
-    "socialLinks": {
-      "website": null,
-      "researchGate": null,
-      "googleScholar": null,
-      "linkedin": "https://www.linkedin.com/in/pooja-desai-alumni/",
-      "twitter": null,
-      "github": null
-    },
-    "contributions": [
-      {
-        "project": "Environmental AI Monitoring",
-        "role": "Ph.D. Candidate",
-        "years": "2017-2021",
-        "description": "Developed machine learning models for predicting air quality based on sensor data, culminating in her doctoral dissertation."
-      }
-    ],
-    "workingStatus": "Alumni",
-    "yearsWorked": "2017 - 2021"
+    "yearsWorked": "March 2024 - July 2025"
   }
 ]

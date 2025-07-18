@@ -76,6 +76,7 @@ export default function TeamPage() {
       collaborators: [],
       postdoctorals: [],
       phd_scholars: [],
+      mtech_scholars: [],
       research_staff: [],
       interns: [],
       alumni: [],
@@ -128,6 +129,11 @@ export default function TeamPage() {
           <TeamCategorySection
             title="Ph.D. Scholars"
             members={categorizedMembers.phd_scholars}
+            onMemberClick={openModal}
+          />
+          <TeamCategorySection
+            title="M.Tech Scholars"
+            members={categorizedMembers.mtech_scholars}
             onMemberClick={openModal}
           />
           <TeamCategorySection

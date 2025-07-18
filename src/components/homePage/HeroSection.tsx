@@ -102,7 +102,7 @@ export function HeroSection() {
               >
                 {item.description}
               </motion.p> */}
-              <motion.div
+              {/* <motion.div
                 variants={heroButtonVariants}
                 initial="hidden"
                 animate="visible"
@@ -119,7 +119,7 @@ export function HeroSection() {
                   >
                     Learn More <FiArrowRight />
                   </Link>
-              </motion.div>
+              </motion.div> */}
             </div>
           </div>
         ))}
