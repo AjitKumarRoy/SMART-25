@@ -8,8 +8,6 @@ import {
   FiMapPin,
   FiClock,
   FiSend,
-  FiUser,
-  FiClipboard,
   FiExternalLink,
 } from "react-icons/fi";
 import { CallToActionSection } from "@/components/homePage/CallToActionSection";
