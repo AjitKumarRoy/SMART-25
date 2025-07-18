@@ -10,8 +10,13 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-plus-jakarta-sans' });
 
 export const metadata = {
-  title: "IIT Bhilai Research Group",
+  title: "AMDCG Research Group",
   description: "Official website of the AMDCG group at IIT Bhilai.",
+
+   // --- ADD THIS LINE FOR THE APPLE MOBILE WEB APP TITLE ---
+  appleWebApp: {
+    title: "amdcg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

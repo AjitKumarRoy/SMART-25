@@ -159,23 +159,7 @@ export default function ResearchPage() {
         </motion.div>
       </section>
 
-      {/* Optional: Add a general description about research philosophy/approach */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-950">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-          className="max-w-4xl mx-auto text-center"
-        >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold mb-8 text-gray-900 dark:text-gray-100">
-            Our Research Philosophy
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            We believe in a dynamic and collaborative research environment that fosters innovation and addresses real-world challenges. Our approach integrates theoretical insights with experimental validation and computational modeling to drive impactful discoveries.
-          </motion.p>
-        </motion.div>
-      </section>
+    
 
       {/* Call to Action Section (Re-use from your existing components) */}
       <CallToActionSection />
