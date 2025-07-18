@@ -10,6 +10,19 @@
 
 @import "tailwindcss";
 
+@keyframes scrollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-scrollUp {
+  animation: scrollUp var(--animation-duration) linear infinite;
+}
+
 
 
 .font-heading-display {

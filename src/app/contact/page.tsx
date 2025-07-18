@@ -14,6 +14,9 @@ import {
 } from "react-icons/fi";
 import { CallToActionSection } from "@/components/homePage/CallToActionSection";
 
+
+const locationMap = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29750.42555589095!2d81.28712141562498!3d21.239651400000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a293d920dfc4355%3A0x62d2d02080f3e3b2!2sIIT%20Bhilai%20Gate%20Number%202%3A%20Kohka%20Gate!5e0!3m2!1sen!2sin!4v1752823431662!5m2!1sen!2sin";
+
 // --- Animation Variants (Consistent with other pages) ---
 const sectionVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -112,7 +115,7 @@ export default function ContactPage() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
-          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-8"
         >
           {/* General Inquiries */}
           <motion.div
@@ -135,107 +138,13 @@ export default function ContactPage() {
             </p>
           </motion.div>
 
-          {/* Admissions Office */}
-          <motion.div
-            variants={listItemVariants}
-            className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700 text-center"
-          >
-            <FiUser className="text-5xl text-green-600 dark:text-green-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-3 text-green-800 dark:text-green-300">Admissions Office</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-2">
-              Queries related to undergraduate and postgraduate admissions.
-            </p>
-            <a
-              href="mailto:admissions@iitbhilai.ac.in"
-              className="text-green-600 dark:text-green-400 hover:underline font-semibold flex items-center justify-center gap-2"
-            >
-              admissions@iitbhilai.ac.in <FiExternalLink />
-            </a>
-            <p className="text-gray-700 dark:text-gray-300 mt-2 flex items-center justify-center gap-2">
-              <FiPhone /> +91-77123-55001
-            </p>
-          </motion.div>
-
-          {/* Media & PR */}
-          <motion.div
-            variants={listItemVariants}
-            className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 dark:border-gray-700 text-center"
-          >
-            <FiClipboard className="text-5xl text-purple-600 dark:text-purple-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-3 text-purple-800 dark:text-purple-300">Media & PR</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-2">
-              For press releases, media inquiries, and public relations.
-            </p>
-            <a
-              href="mailto:pr@iitbhilai.ac.in"
-              className="text-purple-600 dark:text-purple-400 hover:underline font-semibold flex items-center justify-center gap-2"
-            >
-              pr@iitbhilai.ac.in <FiExternalLink />
-            </a>
-            <p className="text-gray-700 dark:text-gray-300 mt-2 flex items-center justify-center gap-2">
-              <FiPhone /> +91-77123-55002
-            </p>
-          </motion.div>
+          
         </motion.div>
       </section>
 
-      {/* Campus Location & Map Section */}
-      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-          className="max-w-6xl mx-auto"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
-            Our Campus Location
-          </h2>
-          <motion.div
-            variants={itemVariants}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <FiMapPin className="text-blue-600 dark:text-blue-400 text-3xl" />
-              <div>
-                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
-                  Indian Institute of Technology Bhilai
-                </p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Permanent Campus, Kutelabhata, Bhilai
-                  <br />
-                  District Durg, Chhattisgarh - 491001, India
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 mb-6">
-              <FiClock className="text-blue-600 dark:text-blue-400 text-3xl" />
-              <div>
-                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">Office Hours</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Monday - Friday: 9:00 AM - 5:00 PM IST
-                </p>
-              </div>
-            </div>
 
-            {/* Embedded Google Map (Placeholder) */}
-            <div className="aspect-video w-full rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-inner">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.285871238294!2d81.35338167500588!3d21.14441468051786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a29367d3dd1016f%3A0xc3910c663e26463e!2sIndian%20Institute%20Of%20Technology%20Bhilai!5e0!3m2!1sen!2sin!4v1701388800000!5m2!1sen%20in"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false} // Changed to false as full screen embedding often causes issues
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="IIT Bhilai Campus Location"
-              ></iframe>
-            </div>
-          </motion.div>
-        </motion.div>
-      </section>
 
-      {/* Contact Form Section */}
+        {/* Contact Form Section */}
       <section className="py-20 px-6 bg-white dark:bg-gray-900">
         <motion.div
           initial="hidden"
@@ -318,6 +227,66 @@ export default function ContactPage() {
           </motion.p>
         </motion.div>
       </section>
+
+
+
+      {/* Campus Location & Map Section */}
+      <section className="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={sectionVariants}
+          className="max-w-6xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">
+            Our Campus Location
+          </h2>
+          <motion.div
+            variants={itemVariants}
+            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <FiMapPin className="text-blue-600 dark:text-blue-400 text-3xl" />
+              <div>
+                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                  Indian Institute of Technology Bhilai
+                </p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Office: 414B, Bhardwaj Building, Academic Zone, IIT Bhilai
+                  <br />
+                  Kutelabhata, Durg - 491 002, Chhattisgarh, INDIA
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 mb-6">
+              <FiClock className="text-blue-600 dark:text-blue-400 text-3xl" />
+              <div>
+                <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">Office Hours</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Monday - Friday: 9:00 AM - 5:00 PM IST
+                </p>
+              </div>
+            </div>
+
+            {/* Embedded Google Map (Placeholder) */}
+            <div className="aspect-video w-full rounded-lg overflow-hidden border border-gray-300 dark:border-gray-600 shadow-inner">
+              <iframe
+                src={locationMap}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false} // Changed to false as full screen embedding often causes issues
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="IIT Bhilai Campus Location"
+              ></iframe>
+            </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+    
 
       {/* Re-use the existing CallToActionSection */}
       <CallToActionSection />

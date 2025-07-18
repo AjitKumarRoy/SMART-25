@@ -1,12 +1,4 @@
 [
-  {
-    "id": 1,
-    "title": "PostDoctoral Positions",
-    "link": "https://iitg.ac.in/iitg_page_details.php?page=61/fac_rec"
-  },
-  {
-    "id": 2,
-    "title": "Project Assistant",
-    "link": "https://iitg.ac.in/iitg_reqr?ct=YjY3OFRpbEJoZmZtYjdiaW5Hdjd4dz09"
-  }
+  { "id": 1, "title": "Recruitment 1", "link": "/recruitment/1" },
+  { "id": 2, "title": "Recruitment 2", "link": "/recruitment/2" }
 ]
