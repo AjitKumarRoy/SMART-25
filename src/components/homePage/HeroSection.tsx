@@ -2,13 +2,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+//import Link from "next/link";
 import { useState } from "react";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FiArrowRight } from "react-icons/fi";
+//import { FiArrowRight } from "react-icons/fi";
 
 // Import your homepage data (assuming it's accessible or passed as prop)
 import homepageData from "@/data/homePage/heroSection.json";
@@ -25,14 +25,14 @@ const heroTitleVariants: Variants = {
 
 // Removed heroDescriptionVariants as description is being removed
 
-const heroButtonVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.9, duration: 0.8 },
-  },
-};
+// const heroButtonVariants: Variants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: { delay: 0.9, duration: 0.8 },
+//   },
+// };
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);

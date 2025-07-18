@@ -204,7 +204,7 @@ export default function InitialLoader() {
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
-  }, [canvasRef.current]);
+  }, []);
 
   return (
     <AnimatePresence>
