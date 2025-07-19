@@ -2,6 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
    output: 'export',
+     basePath: '/~amdcg',
+  assetPrefix: '/~amdcg',
   /* config options here */
    images: {
     domains: [
