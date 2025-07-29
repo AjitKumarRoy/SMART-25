@@ -45,7 +45,7 @@ export default function InitialLoader() {
           animate="visible"
           exit="exit"
         >
-          {/* The canvas and its related logic have been removed */}
+          
           <motion.div
             className="relative z-10 flex flex-col items-center gap-4"
             variants={contentVariants}
