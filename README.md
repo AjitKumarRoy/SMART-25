@@ -1,2 +1,4 @@
-# AMDCG-IITBhilai
-This repository contains the source code of AMDCG website.
+
+# SMART-25
+SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025 
+
