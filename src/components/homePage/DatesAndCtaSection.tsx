@@ -4,11 +4,11 @@ import { Section } from '@/components/ui/Section';
 import datesData from '@/data/homePage/importantDates.json'; // Import new dates data
 import conferenceData from '@/data/homePage/conference.json'; // Import global data for the link
 
-interface ImportantDate {
-  event: string;
-  date: string;
-  link: string;
-}
+// interface ImportantDate {
+//   event: string;
+//   date: string;
+//   link: string;
+// }
 
 // interface DatesAndCtaSectionProps {
 //   data: {

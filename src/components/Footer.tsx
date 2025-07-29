@@ -5,7 +5,6 @@ import Image from "next/image"; // Import Image component for the logo
 import {
   FiMail,
   FiPhone,
-  FiMapPin,
   FiFacebook,
   FiTwitter,
   FiLinkedin,
@@ -75,7 +74,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className="text-sm leading-relaxed max-w-xs mt-4"> {/* Added mt-4 for spacing */}
-            SMART'25 focuses on "Accelerating SDGs through AI." It brings together researchers to explore AI’s impact on sustainable design, resilient infrastructure, energy efficiency, and core AI/ML systems. The conference emphasizes interdisciplinary collaboration to tackle global challenges like climate change and resource scarcity, with a special focus on emerging economies.
+            SMART&apos;25 focuses on &quot;Accelerating SDGs through AI.&quot; It brings together researchers to explore AI&apos;s impact on sustainable design, resilient infrastructure, energy efficiency, and core AI/ML systems. The conference emphasizes interdisciplinary collaboration to tackle global challenges like climate change and resource scarcity, with a special focus on emerging economies.
           </p>
         </div>
 
