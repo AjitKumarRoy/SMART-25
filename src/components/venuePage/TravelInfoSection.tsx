@@ -20,7 +20,7 @@ export const TravelInfoSection = () => {
                 <div>
                     <SectionTitle>Find Us</SectionTitle>
                     <div className="mt-8 overflow-hidden rounded-xl shadow-lg border border-gray-200">
-                        <iframe
+                       <iframe
                             src={pageData.map.embedUrl}
                             width="100%"
                             height="450"
@@ -49,8 +49,16 @@ export const TravelInfoSection = () => {
                                     </Disclosure.Button>
                                     <AnimatePresence>
                                       {open && (
-                                        <Disclosure.Panel static as={motion.div} initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: 'easeInOut' }} className="overflow-hidden">
-                                          <p className="px-4 pb-4 pt-2 text-gray-600">{method.details}</p>
+                                        // THE FIX: Render motion.div INSIDE Disclosure.Panel
+                                        <Disclosure.Panel static className="overflow-hidden">
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: 'auto', opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                                            >
+                                                <p className="px-4 pb-4 pt-2 text-gray-600">{method.details}</p>
+                                            </motion.div>
                                         </Disclosure.Panel>
                                       )}
                                     </AnimatePresence>
