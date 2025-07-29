@@ -61,7 +61,7 @@ export default function InitialLoader() {
               className="rounded-full shadow-2xl border-2 border-white/20 sm:w-[150px] sm:h-[150px] md:w-[200px] md:h-[200px]"
             />
             <div className="flex flex-col items-center gap-2">
-              <span className="text-white text-lg md:text-xl font-jakarta font-medium">SMART'25</span>
+              <span className="text-white text-lg md:text-xl font-jakarta font-medium">SMART&apos;25</span>
               <div className="flex gap-2">
                 {[0, 1, 2].map((i) => (
                   <motion.span
