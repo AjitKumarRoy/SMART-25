@@ -206,7 +206,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="border-t border-gray-200 dark:border-gray-800 mt-10 pt-6 text-center text-sm text-gray-600 dark:text-gray-400 px-6">
-        <p>© {new Date().getFullYear()} SMART'25. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} SMART&apos;25. All rights reserved.</p>
         <p className="mt-1">
           Designed & Developed by {" "}
           <Link
