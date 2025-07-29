@@ -42,7 +42,7 @@ export const CtaSection = () => {
         viewport={{ once: true, amount: 0.5 }}
       >
         <motion.div variants={itemVariants}>
-            <SectionTitle>Ready to attend SMART'25?</SectionTitle>
+            <SectionTitle>Ready to attend SMART&apos;25?</SectionTitle>
         </motion.div>
         
         <motion.p
