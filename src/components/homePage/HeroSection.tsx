@@ -19,13 +19,16 @@ interface Countdown {
 
 export const HeroSection = () => {
   const [countdown, setCountdown] = useState<Countdown | null>(null);
-  const conferenceDate = new Date(heroData.countdownTarget);
+  // const conferenceDate = new Date(heroData.countdownTarget);
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
   ]);
 
   useEffect(() => {
+     const conferenceDate = new Date(heroData.countdownTarget);
+
+
     const countdownTimer = setInterval(() => {
       const totalSeconds = differenceInSeconds(conferenceDate, new Date());
       if (totalSeconds <= 0) {
@@ -42,7 +45,7 @@ export const HeroSection = () => {
     }, 1000);
 
     return () => clearInterval(countdownTimer);
-  }, [conferenceDate]);
+  }, []);
 
   return (
     // Responsive height

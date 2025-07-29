@@ -89,7 +89,7 @@ export default function ContactPage() {
 
                 {/* Redesigned Map Section */}
                 <Section className="bg-gray-50">
-                    <SectionTitle>SMART'25 Venue Location</SectionTitle>
+                    <SectionTitle>SMART&apos;25 Venue Location</SectionTitle>
                     <motion.div 
                         className="mt-12 overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
                         initial={{ opacity: 0, scale: 0.9 }}
