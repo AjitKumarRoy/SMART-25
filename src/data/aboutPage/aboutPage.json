@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "About SMART-25",
+    "subtitle": "Pioneering Sustainable Futures through Artificial Intelligence",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "jointlyOrganized": {
+    "title": "A Global Collaboration",
+    "logos": [
+      {
+        "alt": "Indian Institute Of Technology Bhilai",
+        "src": "/images/organizing_institutes/iitbh_logo.png"
+      },
+      {
+        "alt": "Villa College, Maldives",
+        "src": "/images/organizing_institutes/villa_college.webp"
+      },
+      {
+        "alt": "St. Mother Theresa Engineering College",
+        "src": "/images/organizing_institutes/mother-teressa-college.png"
+      }
+    ],
+    "theme": "Theme: Accelerating SDGs through AI",
+    "conferenceDates": "14-15 Nov ‘25 || India || Maldives",
+    "conferenceTitle": {
+      "line1": "Jointly Organises",
+      "line2": "4th International Conference",
+      "line3": "(Hybrid Mode)",
+      "line4": "on",
+      "line5": "SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025"
+    }
+  },
+  "scope": {
+  "image": "/images/smart25-logo.jpeg",
+  "text": "The \"Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025\" conference, themed \"Accelerating SDGs through AI,\" aims to be a pivotal platform that will unite researchers and practitioners to explore how AI can drive the United Nations Sustainable Development Goals. The conference's broad scope covers AI's role in material science for sustainable design, building structures and geology for resilient infrastructure, and optimizing mechanical and electrical systems for energy efficiency. It also delves into core AI/ML, automation, power systems, and communication systems advancements that improve resource conservation, disaster preparedness, and equitable development. By promoting interdisciplinary collaboration, the conference seeks to translate innovative AI research into tangible actions, addressing critical global challenges like climate change and resource scarcity, particularly relevant for emerging economies."
+  },
+  "organizerDetails": [
+  {
+    "name": "Indian Institute of Technology Bhilai",
+    "location": "Chhattisgarh, India",
+    "imageSrc": "/images/organizing_institutes/iitbh.png",
+    "description": "Established in 2016, the Indian Institute of Technology Bhilai (IIT Bhilai) is one of the newer institutions in the prestigious IIT system, strategically located in Chhattisgarh. The institute was founded to improve excellence in engineering education, research, and technological innovation. Situated near the industrial city of Bhilai, the campus offers a unique advantage by providing students with close proximity to various industries, facilitating practical learning and industry exposure. IIT Bhilai is committed to providing a vibrant campus life, encouraging students to participate in a wide range of extracurricular activities, including sports, cultural events, and technical clubs, thus promoting holistic development alongside rigorous academic pursuits."
+  },
+  {
+    "name": "Villa College, Maldives",
+    "location": "Malé, Maldives",
+    "imageSrc": "/images/organizing_institutes/villaCllg.png",
+    "description": "Villa College is the first private higher education institution of the Maldives. In 2007, it was founded by Hon. Dr. Qasim Ibrahim, Chairman of the Villa group, through the Private-Public Partnership Agreement with the government. In 2015, a new partnership with the University of the West of England (UWE) was established, which has proved to be the most fruitful partnership for the College. Since then, the College has signed to collaborate with numerous universities, the most recent most significant one being the agreement signed with Taylor’s University, which will introduce Culinary Arts as a new field of studies offered by Villa College. In the last few years, the variety of programs Villa College offers has expanded immensely, offering programs from high-demand areas such as Master’s in Counselling, and also offering programs from niche areas such as Art and Design."
+  },
+  {
+    "name": "St. Mother Theresa Engineering College",
+    "location": "Tamil Nadu, India",
+    "imageSrc": "/images/organizing_institutes/theresaCllg.png",
+    "description": "St. Mother Theresa Engineering College, popularly known as SMTEC, was established in the year 2009 with the vision to empower budding engineers in technical and entrepreneurial training and to contribute to the socio-economic augmentation of the nation. The campus is self-sustained with all the modern facilities required for quality Engineering Education, Upgraded Laboratories, Smart Classroom, Excellent Library Facility. The college offers a plethora of options for students to develop their talents, and it methodically turns graduates into professionals who are prepared for the future. The organization fosters an environment that is open to the sharing of ideas and supports the growth of individuals as well as professionals."
+  }
+],
+"award" : {
+  "title": "Best Student Presentation Award at the Conference",
+  "description": "The Certificate for Best Student Presentation will be given to recognize and celebrate outstanding research and presentation skills demonstrated by our esteemed presenters during the conference. We encourage all participants to deliver their best, as this is an excellent opportunity to gain recognition for your valuable contributions to the field of Sustainable Multidisciplinary Artificial Intelligence.",
+  "prize": "The winner will be honored during the valedictory ceremony and will receive a Certificate of Excellence."
+}
+}

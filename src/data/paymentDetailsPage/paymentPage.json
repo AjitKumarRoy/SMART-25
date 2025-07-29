@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "title": "Payment Details",
+    "subtitle": "Final Step to Complete Your SMART-25 Registration",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "accountDetails": [
+    { "label": "Account Name", "value": "SMART-25 Conference" },
+    { "label": "Account Number", "value": "2158000102065152" },
+    { "label": "Bank Name", "value": "Punjab National Bank" },
+    { "label": "IFSC Code", "value": "PUNB0215800" }
+  ],
+  "qrCode": {
+    "image": "/images/qr-scanner.png",
+    "instruction": "Scan with any UPI App (GPay, PhonePe, Paytm, etc.)"
+  },
+  "postPayment": {
+    "title": "IMPORTANT: After Your Payment",
+    "description": "Once your payment is complete, please make sure to fill out the final registration form and upload a screenshot of your transaction receipt. Your registration will not be complete until this form is submitted.",
+    "formLink": "#"
+  }
+}

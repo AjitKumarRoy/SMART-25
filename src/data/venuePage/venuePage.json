@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "title": "Conference Venue",
+    "subtitle": "Villa College, Maldives – Where Innovation Meets Nature",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "aboutVenue": {
+    "name": "Villa College",
+    "location": "Male, Maldives",
+    "description": "Villa College is the first private higher education institution of the Maldives. In 2007, it was founded by Hon. Dr. Qasim Ibrahim, Chairman of the Villa group, through the Private-Public Partnership Agreement with the government. In 2015, a new partnership with the University of the West of England (UWE) was established, which has proved to be the most fruitful partnership for the College. Since then, the College has signed to collaborate with numerous universities, the most recent most significant one being the agreement signed with Taylor’s University, which will introduce Culinary Arts as a new field of studies offered by Villa College. In the last few years, the variety of programs Villa College offers has expanded immensely, offering programs from high-demand areas such as Master’s in Counselling, and also offering programs from niche areas such as Art and Design.",
+    "features": [
+      "State-of-the-art Auditoriums",
+      "High-Speed Campus-wide Wi-Fi",
+      "Modern Research Laboratories",
+      "Serene & Lush Green Campus"
+    ],
+    "mainImage": "/images/venue/villa-cllg2.webp",
+    "galleryImages": [
+      "/images/venue/villa-cllg1.webp",
+      "/images/venue/villa-cllg3.png"
+    ]
+  },
+  "map": {
+    "title": "Interactive Map",
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.2583561127885!2d73.50648650994755!3d4.169539846016964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b3f7e570b96395b%3A0xa0d4298f1f0a8031!2sVilla%20College!5e0!3m2!1sen!2sin!4v1753729272038!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\""
+  },
+  "howToReach": [
+    {
+      "method": "1. Fly to Malé:",
+      "icon": "FaPlane",
+      "details": "Take a flight to Velana International Airport (MLE) in Malé, Maldives"
+    },
+    {
+      "method": "2. Reach the College:",
+      "icon": "FaBus",
+      "details": "From Villa International Airport, you can either take a taxi/a short ferry/public bus to reach Villa College's campus."
+    }
+  ],
+  "accommodation": [
+    {
+      "name": "Hotel Arunachal Green",
+      "distance": "5 km from NERIST",
+      "link": "#"
+    },
+    {
+      "name": "Cygnett Inn Trendz",
+      "distance": "15 km from NERIST",
+      "link": "#"
+    },
+    {
+      "name": "Hotel Blue Pine",
+      "distance": "16 km from NERIST",
+      "link": "#"
+    }
+  ]
+}

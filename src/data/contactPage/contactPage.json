@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Reach out with your questions or inquiries.",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "generalQuery": {
+    "title": "For General Queries",
+    "email": "smartconf25@gmail.com"
+  },
+  "contactPersons": [
+    {
+      "name": "Dr. Sindhu V",
+      "phone": "+91 98841 87643"
+    },
+    {
+      "name": "Mr. T. Raja Gopala Chary",
+      "phone": "+91 95020 47809"
+    },
+    {
+      "name": "Dr. S. Joe Patrick Gnanaraj",
+      "phone": "+91 97903 87317"
+    }
+  ],
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.2583561127885!2d73.50648650994755!3d4.169539846016964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b3f7e570b96395b%3A0xa0d4298f1f0a8031!2sVilla%20College!5e0!3m2!1sen!2sin!4v1753729272038!5m2!1sen!2sin\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\""
+}

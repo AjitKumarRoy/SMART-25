@@ -1,0 +1,99 @@
+{
+  "hero": {
+    "title": "Call for Papers",
+    "subtitle": "Share Your Vision, Shape the Future of AI",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "thematicAreas": [
+    {
+      "theme": "AI/ML (CORE & CROSS-DISCIPLINARY)",
+      "icon": "FaRobot",
+      "topics": [
+        "Novel AI/ML Algorithms for SDG Challenges",
+        "Explainable AI (XAI) for Sustainability Decisions",
+        "Edge AI for Decentralized SDG Solutions",
+        "AI for Sustainable Innovation",
+        "Reinforcement Learning for Resource Optimization"
+      ]
+    },
+    {
+      "theme": "AUTOMATION",
+      "icon": "FaCogs",
+      "topics": [
+        "Robotic Process Automation (RPA) for Sustainable Operations",
+        "Autonomous Systems for Environmental Monitoring and Remediation",
+        "Smart Grid Automation for Renewable Energy Integration",
+        "Automated Waste Management and Recycling Systems",
+        "Automation in Sustainable Agriculture"
+      ]
+    },
+    {
+      "theme": "BUILDING STRUCTURES AND GEOLOGY",
+      "icon": "FaBuilding",
+      "topics": [
+        "AI for Sustainable Building Design and Construction",
+        "AI-powered Structural Health Monitoring for Resilient Infrastructure",
+        "AI in Geo-spatial Data Analysis for Sustainable Urban Planning",
+        "AI for Geohazard Prediction and Mitigation",
+        "Automated Building Management Systems (BMS) for Energy Optimization",
+        "AI for Sustainable Land Use and Resource Management"
+      ]
+    },
+    {
+      "theme": "COMMUNICATION SYSTEMS",
+      "icon": "FaBroadcastTower",
+      "topics": [
+        "AI for Energy-Efficient Communication Networks",
+        "IoT and AI for Environmental Sensing and Data Collection",
+        "AI-powered Disaster Communication and Early Warning Systems",
+        "Sustainable Communication Technologies",
+        "AI for Bridging the Digital Divide and Promoting Digital Inclusion"
+      ]
+    },
+    {
+      "theme": "ELECTRICAL SYSTEMS",
+      "icon": "FaBolt",
+      "topics": [
+        "AI for Power Electronics Optimization",
+        "AI-driven Motor Control for Industrial Efficiency",
+        "Smart Metering and AI for Residential Energy Management",
+        "AI for Electric Vehicle Charging Infrastructure Optimization",
+        "Fault Diagnosis and Predictive Maintenance in Electrical Equipment using AI"
+      ]
+    },
+    {
+      "theme": "MATERIAL SCIENCE",
+      "icon": "FaAtom",
+      "topics": [
+        "AI-driven Discovery and Design of Sustainable Materials",
+        "AI for Circular Economy in Materials",
+        "Predictive Maintenance and Lifecycle Assessment of Materials using AI",
+        "AI for Energy-Efficient Material Manufacturing",
+        "Smart Materials and AI for Environmental Monitoring"
+      ]
+    },
+    {
+      "theme": "MECHANICAL SYSTEMS",
+      "icon": "FaWrench",
+      "topics": [
+        "AI for Energy Efficiency in Mechanical Systems",
+        "Predictive Maintenance and Anomaly Detection in Mechanical Systems",
+        "Robotics and Automation for Sustainable Manufacturing",
+        "AI in Renewable Energy Mechanical Systems",
+        "Intelligent Control Systems for Sustainable Transportation"
+      ]
+    },
+    {
+      "theme": "POWER SYSTEMS",
+      "icon": "FaPlug",
+      "topics": [
+        "AI-driven Smart Grids for Renewable Energy Integration",
+        "Predictive Analytics for Energy Demand Forecasting",
+        "AI for Energy Storage Optimization",
+        "Fault Detection and Self-Healing Grids using AI",
+        "Decentralized Energy Systems and Microgrids with AI"
+      ]
+    }
+  ],
+  "submissionLink": "/paper-submission"
+}

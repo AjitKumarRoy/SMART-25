@@ -1,129 +1,163 @@
-// FILE: src/components/sections/HeroSection.tsx
 "use client";
 
-import Image from "next/image";
-//import Link from "next/link";
-import { useState } from "react";
-import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-//import { FiArrowRight } from "react-icons/fi";
+import { useState, useEffect } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from "framer-motion";
+import { differenceInSeconds } from 'date-fns';
+import heroData from '@/data/homePage/hero.json';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { FaArrowRight, FaTicketAlt } from "react-icons/fa";
 
-// Import your homepage data (assuming it's accessible or passed as prop)
-import homepageData from "@/data/homePage/heroSection.json";
+interface Countdown {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
 
-// Animation Variants (could be moved to a central variants file if many components use them)
-const heroTitleVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.5, duration: 0.8 },
-  },
-};
+export const HeroSection = () => {
+  const [countdown, setCountdown] = useState<Countdown | null>(null);
+  const conferenceDate = new Date(heroData.countdownTarget);
 
-// Removed heroDescriptionVariants as description is being removed
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true }),
+  ]);
 
-// const heroButtonVariants: Variants = {
-//   hidden: { opacity: 0, y: 20 },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: { delay: 0.9, duration: 0.8 },
-//   },
-// };
+  useEffect(() => {
+    const countdownTimer = setInterval(() => {
+      const totalSeconds = differenceInSeconds(conferenceDate, new Date());
+      if (totalSeconds <= 0) {
+        setCountdown(null);
+        clearInterval(countdownTimer);
+        return;
+      }
+      setCountdown({
+        days: Math.floor(totalSeconds / 86400),
+        hours: Math.floor((totalSeconds % 86400) / 3600),
+        minutes: Math.floor((totalSeconds % 3600) / 60),
+        seconds: totalSeconds % 60,
+      });
+    }, 1000);
 
-export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Settings for the Hero Carousel
-  const heroSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-    cssEase: "ease-in-out",
-    beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
-    appendDots: (dots: React.ReactNode) => (
-      <div style={{ position: "absolute", bottom: "30px", width: "100%", display: "flex", justifyContent: "center" }}>
-        <ul className="flex space-x-2"> {dots} </ul>
-      </div>
-    ),
-    customPaging: (i: number) => (
-      <div className={`w-3 h-3 rounded-full border border-white transition-all duration-300 ${i === currentSlide ? "bg-white scale-125" : "bg-transparent"}`}></div>
-    )
-  };
-
-  // Parallax effect for the hero section
-  const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    return () => clearInterval(countdownTimer);
+  }, [conferenceDate]);
 
   return (
-    // Reduced height for smaller devices: h-[50vh] for mobile/tablet, h-screen for larger
-    <section className="relative h-[60vh] md:h-[70vh] lg:h-screen w-full overflow-hidden flex items-center justify-center text-white">
-      <Slider {...heroSliderSettings} className="absolute inset-0 w-full h-full">
-        {homepageData.heroCarousel.map((item, index) => (
-          // Adjusted height for the individual slide container
-          <div key={item.id} className="relative w-full h-[50vh] md:h-[60vh] lg:h-screen">
-            <motion.div
-              style={{ y }}
-              className="absolute inset-0 z-0"
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover object-center"
-                priority={index === 0}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-              />
-            </motion.div>
-            <div className="absolute inset-0 -top-5 -bottom-5 bg-black/60 z-10 flex flex-col items-center justify-end pb-6  lg:pb-22 p-8 text-center">
-              <motion.h1
-                variants={heroTitleVariants}
-                initial="hidden"
-                animate="visible"
-                // Smaller text for mobile (2xl), medium for tablets (4xl), original for large screens (6xl)
-                className="text-2xl md:text-4xl lg:text-6xl font-extrabold tracking-tight mb-4  drop-shadow-lg"
-              >
-                {item.title}
-              </motion.h1>
-              {/* Removed the description paragraph entirely */}
-              {/* <motion.p
-                variants={heroDescriptionVariants}
-                initial="hidden"
-                animate="visible"
-                className="text-lg md:text-xl max-w-2xl mb-8 opacity-90 drop-shadow-md"
-              >
-                {item.description}
-              </motion.p> */}
-              {/* <motion.div
-                variants={heroButtonVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                <Link href="/about"
-                    // Smaller button for mobile (py-1.5 px-4 text-sm)
-                    // Slightly larger for tablets (md:py-2 md:px-6 md:text-base)
-                    // Original size for large screens (lg:py-3 lg:px-8 lg:text-lg)
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold
-                               py-1.5 px-4 text-sm
-                               md:py-2 md:px-6 md:text-base
-                               lg:py-3 lg:px-8 lg:text-lg
-                               rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 inline-flex items-center gap-2"
-                  >
-                    Learn More <FiArrowRight />
-                  </Link>
-              </motion.div> */}
+    // Responsive height
+    <section id="hero" className="relative w-full py-20 text-white lg:h-[60vh] lg:min-h-[700px] lg:py-0">
+      {/* Background & Overlay */}
+      <div className="absolute inset-0 z-0 hero-embla-carousel" ref={emblaRef}>
+        <div className="embla__container">
+          {heroData.backgroundImages.map((src, index) => (
+            <div className="embla__slide" key={index}>
+              <Image src={src} alt="Conference background" fill className="object-cover" priority={index === 0} />
             </div>
+          ))}
+        </div>
+      </div>
+      <div className="absolute inset-0 bg-black/60 z-10" />
+
+      {/* Foreground Content */}
+      <div className="relative z-20 flex h-full flex-col items-center justify-center p-4 text-center sm:p-8">
+        {/* Countdown & Logos */}
+        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+          {countdown && (
+            <div className="mb-8">
+              <h4 className="mb-4 bg-gradient-to-r from-indigo-300 to-rose-300 bg-clip-text text-center text-lg font-semibold uppercase tracking-widest text-transparent">
+                Conference Starts In
+              </h4>
+              <div className="flex justify-center gap-3 sm:gap-6">
+                {Object.entries(countdown).map(([unit, value]) => (
+                  <div key={unit} className="w-20 text-center sm:w-24">
+                    <span className="text-4xl font-bold sm:text-5xl bg-gradient-to-r from-indigo-300 to-rose-300 bg-clip-text text-transparent">
+                      {String(value).padStart(2, '0')}
+                    </span>
+                    <span className="mt-1 block text-sm uppercase text-white/70">{unit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className="mt-6 flex items-center justify-center gap-8 sm:gap-10">
+            {heroData.organizerLogos.map((logo) => (
+              <div key={logo.alt} className="relative h-16 w-16 rounded-full bg-white/20 p-2 ring-2 ring-white/30 sm:h-20 sm:w-20">
+                <Image src={logo.src} alt={logo.alt} fill className="rounded-full" sizes="(max-width: 640px) 4rem, 5rem" />
+              </div>
+            ))}
           </div>
-        ))}
-      </Slider>
+        </motion.div>
+
+      {/* --- NEW: Scrolling Marquee Title --- */}
+<div className="mt-8 w-full max-w-6xl overflow-hidden">
+  <motion.div
+    className="whitespace-nowrap"
+    initial={{ x: "100%" }}
+    animate={{ x: "-100%" }}
+    transition={{
+      duration: 40, // Adjust duration to control speed
+      repeat: Infinity,
+      ease: "linear",
+    }}
+  >
+    <p 
+      className="inline-block bg-gradient-to-r from-cyan-300 to-indigo-400 bg-clip-text px-8 text-2xl font-bold text-transparent sm:text-3xl"
+    >
+      {heroData.conferenceTitle}
+    </p>
+    {/* Duplicate the text for a seamless loop */}
+    <p 
+      className="inline-block bg-gradient-to-r from-cyan-300 to-indigo-400 bg-clip-text px-8 text-2xl font-bold text-transparent sm:text-3xl"
+    >
+      {heroData.conferenceTitle}
+    </p>
+  </motion.div>
+</div>
+{/* --- END OF NEW SECTION --- */}
+
+                {/* Three Info Sections */}
+                <motion.div
+          className="mt-8 grid w-full max-w-6xl grid-cols-1 gap-4 md:grid-cols-3 md:gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{ visible: { transition: { staggerChildren: 0.2, delayChildren: 0.5 } } }}
+        >
+          {heroData.infoSections.map((section) => (
+            <motion.div
+              key={section.title}
+              className="rounded-lg border border-white/20 bg-white/10 p-4 backdrop-blur-sm"
+              variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+            >
+              <h3 className="mb-1 text-xs uppercase tracking-widest text-indigo-300 sm:text-sm">{section.title}</h3>
+              <p className="text-lg font-semibold sm:text-xl">{section.content}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+        
+        {/* Responsive Buttons */}
+        <motion.div
+          className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <Link
+            href={heroData.submitLink}
+            className="group inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-indigo-500 hover:scale-105 sm:w-auto"
+          >
+            Submit Abstract
+            <FaArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
+          </Link>
+          <Link
+            href={heroData.registerLink}
+            className="group inline-flex w-full items-center justify-center rounded-md border-2 border-gray-300 px-6 py-3 text-base font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white/10 sm:w-auto"
+          >
+            Register Now
+            <FaTicketAlt className="ml-2 transition-transform group-hover:rotate-12" />
+          </Link>
+        </motion.div>
+      </div>
     </section>
   );
-}
+};

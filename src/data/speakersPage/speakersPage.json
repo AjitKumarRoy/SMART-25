@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Esteemed Speakers",
+    "subtitle": "Insights from Global Leaders in AI and Sustainable Technology",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "keynoteSpeakers": [
+    {
+      "name": "Mr. Rishikesan Visuvamithran",
+      "title": "Enthusiastic Engineer",
+      "affiliation": "Renault Nissan Technology and Business Center, India",
+      "image": "/images/speakers/Rishikesan.jfif",
+      "bio": "Mr. Visuvamithran is a leading expert in automotive AI, focusing on developing sustainable and efficient transportation systems. His work is pivotal in shaping the future of autonomous driving and smart vehicle technology.",
+      "profileLink": "#"
+    },
+    {
+      "name": "Dr. Alankrita Singh",
+      "title": "Assistant Professor",
+      "affiliation": "Indian Institute of Technology Roorkee, India",
+      "image": "/images/speakers/Alankrita.jfif",
+      "bio": "Dr. Singh's research lies at the intersection of machine learning and climate science. She develops advanced models to predict environmental changes and inform policies for sustainable development and disaster mitigation.",
+      "profileLink": "#"
+    },
+    {
+      "name": "Dr. Geethapriyan Thangamani",
+      "title": "Researcher",
+      "affiliation": "Politecnico di Torino, Italy",
+      "image": "/images/speakers/Geethapriyan.jfif",
+      "bio": "Specializing in AI for renewable energy systems, Dr. Thangamani's work contributes to creating more resilient and efficient smart grids. His research is key to integrating sustainable energy sources globally.",
+      "profileLink": "#"
+    }
+  ],
+  "invitedSpeakers": [
+    {
+      "name": "Mr. Rishikesan Visuvamithran",
+      "title": "Enthusiastic Engineer",
+      "affiliation": "Renault Nissan Technology and Business Center, India",
+      "image": "/images/speakers/Rishikesan.jfif"
+    },
+    {
+      "name": "Dr. Alankrita Singh",
+      "title": "Assistant Professor",
+      "affiliation": "Indian Institute of Technology Roorkee, India",
+      "image": "/images/speakers/Alankrita.jfif"
+    },
+    {
+      "name": "Dr. Geethapriyan Thangamani",
+      "title": "Researcher",
+      "affiliation": "Politecnico di Torino, Italy",
+      "image": "/images/speakers/Geethapriyan.jfif"
+    },
+    {
+      "name": "Dr. Abhijeet Dhal",
+      "title": "Assistant Research Scientist",
+      "affiliation": "Johns Hopkins University, USA",
+      "image": "/images/speakers/Abhijeet.jfif"
+    },
+    {
+      "name": "Dr. Faseeulla Khan Mohammad",
+      "title": "Assistant Professor",
+      "affiliation": "King Faisal University, Saudi Arabia",
+      "image": "/images/speakers/Faseeulla.jfif"
+    }
+  ],
+  "cta": {
+    "title": "Ready to Hear Them Speak?",
+    "subtitle": "Explore the full program to find out when and where these experts will be presenting their groundbreaking work.",
+    "link": "/program-schedule",
+    "buttonText": "View Program Schedule"
+  }
+}

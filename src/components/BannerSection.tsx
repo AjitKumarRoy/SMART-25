@@ -1,120 +1,67 @@
 // FILE: src/components/BannerSection.tsx
 "use client";
 
-import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
-//import all the images
-import amdcgLogo from '../../public/images/amdcg-logo2.png'
-import iitBhLogo from '../../public/images/iitbh_logo.png'
+// Import desktop, tablet, and mobile background images
+import desktopBanner from '../../public/images/smart-25-banner-desktop.png'; // Replace with your desktop image path
+import tabletBanner from '../../public/images/smart-25-banner-tablet.png';   // Replace with your tablet image path
+import mobileBanner from '../../public/images/smart-25-banner-mobile.png';   // Replace with your mobile image path
 
-// Animation variants for the banner elements
-const bannerVariants: Variants = {
-  hidden: { opacity: 0, y: -20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 10,
-      stiffness: 100,
-      duration: 0.5,
-      delayChildren: 0.3, // Stagger children appearance
-      staggerDirection: -1 // Right to left stagger for logos
-    },
-  },
+// Using a custom hook to preload all the images
+const usePreloadImages = (srcs: string[]) => {
+  useEffect(() => {
+    if (srcs && srcs.length > 0) {
+      srcs.forEach(src => {
+        const img = new Image();
+        img.src = src;
+      });
+    }
+  }, [srcs]);
 };
-
-const logoVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      damping: 15,
-      stiffness: 150,
-    },
-  },
-};
-
-const titleVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 12,
-      stiffness: 120,
-      delay: 0.2 // Appear slightly after banner starts
-    },
-  },
-};
-
 
 export function BannerSection() {
+  // Pre-load all three images when the component mounts
+  usePreloadImages([desktopBanner.src, tabletBanner.src, mobileBanner.src]);
+
   return (
-    <motion.div
-      className="bg-white dark:bg-gray-800 py-6 md:py-8 lg:py-10 px-6 flex flex-col md:flex-row items-center justify-between shadow-md relative z-30 border-b border-gray-200 dark:border-gray-700"
-      variants={bannerVariants}
-      initial="hidden"
-      animate="visible"
-    >
-      {/* Left Logo - IIT Bhilai */}
-      <motion.div variants={logoVariants} className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
-        <Image
-          src={amdcgLogo} // Placeholder, replace with actual path
-          alt="IIT Bhilai Logo"
-          width={150}
-          height={150}
-          // Changed className: added rounded-full, adjusted h- and w- classes for responsiveness
-          className="h-24 w-24 object-contain rounded-full md:h-28 md:w-28 lg:h-34 lg:w-34"
-          onError={(e) => {
-            e.currentTarget.src = "https://placehold.co/150x150/4A90E2/FFFFFF?text=IIT+Logo";
-            e.currentTarget.srcset = "";
-          }}
-        />
-      </motion.div>
+    <div className="relative w-full h-[40vh] overflow-hidden">
+      
+      {/* Desktop Banner (visible on large screens and up) */}
+      <div
+        className="hidden lg:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${desktopBanner.src})` }}
+      ></div>
+      
+      {/* Tablet Banner (visible on small and medium screens) */}
+      <div
+        className="hidden sm:block lg:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${tabletBanner.src})` }}
+      ></div>
 
-      {/* Center Text - Group Name */}
-      <motion.div variants={titleVariants} className="flex-grow text-center max-w-2xl">
-        <h1 className="
-          text-2xl md:text-3xl lg:text-4xl
-          font-extrabold
-          bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400
-          text-transparent bg-clip-text
-          leading-tight mb-2
-          font-heading-display
-        ">
-          Advanced Materials Development & Characterization Group
+      {/* Mobile Banner (visible only on extra-small screens) */}
+      <div
+        className="block sm:hidden absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${mobileBanner.src})` }}
+      ></div>
+
+      {/* Content Layer */}
+      <motion.div 
+        className="absolute inset-0 flex flex-col items-center justify-center text-white p-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center drop-shadow-lg">
+          [Your Conference Title]
         </h1>
-        <p className="
-          text-base md:text-lg
-          text-gray-700 dark:text-gray-300
-          font-body-text /* Changed from font-sans-body for consistency */
-          font-semibold /* Added font weight for more presence */
-          tracking-wider /* Added letter spacing for better appearance in all-caps */
-        ">
-          INDIAN INSTITUTE OF TECHNOLOGY BHILAI
-        </p>
+        <p className="mt-2 text-base sm:text-lg md:text-xl text-center drop-shadow-md">
+          A Modern and Premium Conference
+        </p> */}
       </motion.div>
-
-      {/* Right Logo - G20 or similar */}
-      <motion.div variants={logoVariants} className="flex-shrink-0 mt-4 md:mt-0 md:ml-8">
-        <Image
-          src={iitBhLogo} // Placeholder, replace with actual path
-          alt="G20 Logo"
-          width={150}
-          height={150}
-          // Changed className: added rounded-full, adjusted h- and w- classes for responsiveness
-          className="h-24 w-24 object-contain rounded-full md:h-28 md:w-28 lg:h-34 lg:w-34"
-          onError={(e) => {
-            e.currentTarget.src = "https://placehold.co/120x120/E53E3E/FFFFFF?text=G20+Logo";
-            e.currentTarget.srcset = "";
-          }}
-        />
-      </motion.div>
-    </motion.div>
+    </div>
   );
 }
+
+export default BannerSection;

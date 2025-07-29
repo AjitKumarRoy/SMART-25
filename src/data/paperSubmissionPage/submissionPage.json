@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Paper Submission",
+    "subtitle": "Share Your Innovations with the World",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "submissionPortals": {
+    "title": "Submission Portals",
+    "abstractLink": "https://shorturl.at/cMmpm",
+    "fullPaperLink": ""
+  },
+  "guidelines": {
+    "intro": "We invite you to share your latest research and innovations at SMART-25. Your work will gain valuable visibility and open doors for networking and future partnerships within the field of Sustainable Multidisciplinary Artificial Intelligence.",
+    "abstractTitle": "How to Submit Your Abstract",
+    "steps": [
+      "Submit your abstract online through the dedicated Google Form.",
+      "Only one theme can be selected per submission.",
+      "Submissions by post, fax, or email are not accepted.",
+      "Abstracts must be in English, up to 250 words, and formatted using the official template."
+    ],
+    "templateLink": "https://shorturl.at/ruHS7",
+    "lastYearAbstractsLink": "https://drive.google.com/file/d/14fmTHWlpIbw4KUFOmkCWW7BnsvFR3Gm5/view?usp=drive_link"
+  },
+  "publicationPartners": {
+    "intro": "Accepted manuscripts will be considered for publication in the following SCOPUS-indexed journals and book chapters:",
+    "journals": [
+      "Advances in Science and Technology",
+      "Key Engineering Materials",
+      "Materials Science Forum",
+      "Solid State Phenomena",
+      "Defect and Diffusion Forum"
+    ],
+    "bookChapters": [
+      "Taylor & Francis",
+      "Springer"
+    ]
+  },
+  "contactEmail": "submissions@smart25.com"
+}

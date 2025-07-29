@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Conference Registration",
+    "subtitle": "Secure Your Place at SMART-25",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "fees": [
+    {
+      "category": "Conference presentation only",
+      "indian": { "online": "2000", "offline": "5000" },
+      "other": { "online": "100", "offline": "250" }
+    },
+    {
+      "category": "Conference presentation with Journal publication",
+      "indian": { "online": "12000", "offline": "15000" },
+      "other": { "online": "250", "offline": "400" }
+    },
+    {
+      "category": "Additional participants",
+      "indian": { "online": "2000", "offline": "2000" },
+      "other": { "online": "100", "offline": "100" }
+    }
+  ],
+  "note": "Each registration includes a certificate of participation for the presenting author and one additional co-author. In case of additional certificate requirements, other authors should register under the 'Additional participants' category.",
+  "included": [
+    "Access to all technical sessions and keynotes",
+    "Conference proceedings (digital copy)",
+    "Official conference kit",
+    "Lunch and coffee breaks on both days",
+    "Certificate of Presentation/Participation"
+  ],
+  "registrationLink": "/payment-details",
+  "cancellationPolicy": "Registration fees are non-refundable. However, the registration is transferable to another person if a request is made at least 15 days before the conference."
+}

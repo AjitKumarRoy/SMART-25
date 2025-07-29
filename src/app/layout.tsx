@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-plus-jakarta-sans' });
 
 export const metadata = {
-  title: "AMDCG Research Group",
-  description: "Official website of the AMDCG group at IIT Bhilai.",
+  title: "SMART'25",
+  description: "4th International Conference on Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025",
 
    // --- ADD THIS LINE FOR THE APPLE MOBILE WEB APP TITLE ---
   appleWebApp: {
-    title: "amdcg",
+    title: "smart'25",
   },
 };
 

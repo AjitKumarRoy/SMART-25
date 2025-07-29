@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Program Schedule",
+    "subtitle": "Explore the Sessions, Keynotes, and Events at SMART-25",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "schedule": {
+    "day1": {
+      "date": "November 14, 2025",
+      "events": [
+        {
+          "time": "09:00 AM - 09:30 AM",
+          "title": "Registration & Welcome Coffee",
+          "type": "break"
+        },
+        {
+          "time": "09:30 AM - 10:30 AM",
+          "title": "Inauguration Ceremony & Opening Remarks",
+          "speaker": "Chief Patrons & General Chairs",
+          "type": "ceremony"
+        },
+        {
+          "time": "10:30 AM - 11:30 AM",
+          "title": "Keynote Address 1: AI for Sustainable Infrastructure",
+          "speaker": "Dr. Alankrita Singh, IIT Roorkee",
+          "type": "keynote"
+        },
+        {
+          "time": "11:30 AM - 01:00 PM",
+          "title": "Technical Session 1: Core AI & Automation",
+          "speaker": "Session Chair: Dr. B. Chen",
+          "type": "session"
+        },
+        {
+          "time": "01:00 PM - 02:00 PM",
+          "title": "Lunch Break",
+          "type": "break"
+        },
+        {
+          "time": "02:00 PM - 03:30 PM",
+          "title": "Technical Session 2: Power & Electrical Systems",
+          "speaker": "Session Chair: Dr. F. Garcia",
+          "type": "session"
+        },
+        {
+          "time": "03:30 PM - 04:00 PM",
+          "title": "Coffee & Networking Break",
+          "type": "break"
+        },
+        {
+          "time": "04:00 PM - 05:30 PM",
+          "title": "Panel Discussion: The Future of AI in Emerging Economies",
+          "speaker": "Moderated by Dr. Emily Carter",
+          "type": "panel"
+        }
+      ]
+    },
+    "day2": {
+      "date": "November 15, 2025",
+      "events": [
+        {
+          "time": "09:30 AM - 10:30 AM",
+          "title": "Keynote Address 2: AI in Sustainable Material Science",
+          "speaker": "Mr. Rishikesan Visuvamithran",
+          "type": "keynote"
+        },
+        {
+          "time": "10:30 AM - 12:00 PM",
+          "title": "Technical Session 3: Building Structures & Geology",
+          "speaker": "Session Chair: Prof. C. Das",
+          "type": "session"
+        },
+        {
+          "time": "12:00 PM - 01:00 PM",
+          "title": "Workshop: Explainable AI (XAI) in Practice",
+          "speaker": "Hosted by Dr. D. Evans",
+          "type": "panel"
+        },
+        {
+          "time": "01:00 PM - 02:00 PM",
+          "title": "Lunch Break",
+          "type": "break"
+        },
+        {
+          "time": "02:00 PM - 03:30 PM",
+          "title": "Technical Session 4: Communication & Mechanical Systems",
+          "speaker": "Session Chair: Dr. H. Ivanova",
+          "type": "session"
+        },
+        {
+          "time": "03:30 PM - 04:00 PM",
+          "title": "Coffee Break",
+          "type": "break"
+        },
+        {
+          "time": "04:00 PM - 05:00 PM",
+          "title": "Awards & Valedictory Ceremony",
+          "speaker": "Closing remarks by General Chairs",
+          "type": "ceremony"
+        }
+      ]
+    }
+  },
+  "downloadLink": "#"
+}

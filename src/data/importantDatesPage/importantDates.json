@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "Important Dates",
+    "subtitle": "Key Deadlines & Milestones for SMART-25",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "cta": {
+    "title": "Don't Miss a Deadline",
+    "subtitle": "Ready to contribute? The next step is to prepare your submission.",
+    "submitLink": "/paper-submission",
+    "registerLink": "/registration"
+  }
+}

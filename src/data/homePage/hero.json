@@ -1,0 +1,40 @@
+{
+  "backgroundImages": [
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1471&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1470&auto=format&fit=crop"
+  ],
+  "countdownTarget": "2025-11-06T09:00:00",
+  "conferenceEndDate": "2025-11-07T17:00:00",
+  "organizerLogos": [
+    {
+      "alt": "Indian Institute Of Technology Bhilai",
+      "src": "/images/organizing_institutes/iitbh_logo.png"
+    },
+    {
+      "alt": "Villa College, Maldives",
+      "src": "/images/organizing_institutes/villa_college.webp"
+    },
+    {
+      "alt": "St. Mother Theresa Engineering College",
+      "src": "/images/organizing_institutes/mother-teressa-college.png"
+    }
+  ],
+  "infoSections": [
+    {
+      "title": "Conference Theme",
+      "content": "Sustainable Multidisciplinary AI Research for Global Transformations"
+    },
+    {
+      "title": "Conference Dates",
+      "content": "November 6th & 7th, 2025"
+    },
+    {
+      "title": "Conference Venue",
+      "content": "Villa College, Maldives"
+    }
+  ],
+  "submitLink": "/paper-submission",
+  "registerLink": "/registration",
+  "conferenceTitle": "4th INTERNATIONAL CONFERENCE (Hybrid mode) On SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025 || Accelerating SDGs through AI"
+}

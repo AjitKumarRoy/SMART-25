@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Poppins:wght@700;800;900&display=swap');
 
-
-
-
 /* React Slick CSS */
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
 
-
 @import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 @keyframes scrollUp {
   0% {
@@ -23,439 +23,81 @@
   animation: scrollUp var(--animation-duration) linear infinite;
 }
 
-
-
 .font-heading-display {
-  /* Choose one of the imported fonts here */
-  font-family: 'Poppins', sans-serif; /* Example: using Poppins */
-  /* Or: font-family: 'Montserrat', sans-serif; */
-  /* Or: font-family: 'Rubik', sans-serif; (if you imported Rubik) */
-
-  /* You can also explicitly set other styles if needed, though Tailwind classes are preferred for consistency */
-  /* font-weight: 800; /* Example: a very bold weight */
-  /* text-transform: uppercase; /* Example: make it all caps */
+  font-family: 'Poppins', sans-serif;
 }
 
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+}
 
+/* Consolidated body styles */
 body {
+  font-family: var(--font-plus-jakarta-sans);
   @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300;
 }
 
-:root {
-  --font-inter: 'Inter', sans-serif;
-  --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
+
+/* === Hero Carousel Fix === */
+/* This targets our specific hero carousel */
+.hero-carousel.slick-slider {
+  height: 100%;
 }
 
-body {
-  font-family: var(--font-plus-jakarta-sans); /* Apply a premium font globally */
+.hero-carousel .slick-list,
+.hero-carousel .slick-track {
+  height: 100%;
 }
 
-
-
-/* FILE: src/app/globals.css or src/styles/globals.css */
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+/* Ensures each slide's direct child container takes up full height */
+.hero-carousel .slick-slide > div {
+  height: 100%;
 }
 
 
-
-
-/* Custom Fonts (if you're using them and haven't imported via next/font) */
-/*
-  If you're using `next/font`, you don't need these @import rules here,
-  as the fonts are handled by the Next.js font optimization.
-  However, if you're NOT using next/font and prefer classic Google Fonts import,
-  uncomment and use these:
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
-
-:root {
-  --font-inter: 'Inter', sans-serif;
-  --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
-}
-
-body {
-  font-family: var(--font-plus-jakarta-sans);
-}
-*/
-
-
-/* --- Custom Animations (corresponding to tailwind.config.ts keyframes) --- */
-
-/* Keyframes for fadeInDown */
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Keyframes for slideIn (for mobile menu) */
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-/* Keyframes for slideOut (for mobile menu) */
-@keyframes slideOut {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Keyframes for underlineGrow (for nav link hover effect) */
-@keyframes underlineGrow {
-  0% {
-    transform: scaleX(0);
-  }
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-/* --- Apply Custom Animations via CSS Classes --- */
-
-/* You will need to replace the Tailwind `animate-` classes with these direct CSS animations. */
-/* For example, where you had `animate-fadeInDown`, you'd now use a class like `fade-in-down-animation` */
-
-/* Example of how to apply these: */
-
-/* For elements that should fade in and slide down (like dropdown items if not using framer-motion fully for them) */
-.animate-fade-in-down {
-  animation: fadeInDown 0.3s ease-out forwards;
-}
-
-/* For mobile menu slide-in */
-/* Note: Framer Motion handles `slideIn` and `slideOut` directly via its `variants` prop.
-   If you were *not* using Framer Motion, you would apply these to the mobile menu:
-.animate-slide-in {
-  animation: slideIn 0.3s ease-out forwards;
-}
-.animate-slide-out {
-  animation: slideOut 0.3s ease-out forwards;
-}
-*/
-
-/* For the underline grow effect on nav/footer links */
-/* This is applied to the <span> element within the Link */
-.group-hover\\:scaleX-100.transition-transform.origin-left.duration-300 {
-    /* Tailwind's utility classes already handle this. If for some reason
-       the `group-hover` utility is not working due to config,
-       you might need a custom class, but typically this is handled by Tailwind.
-       The keyframes are mostly for Framer Motion's height/opacity transitions now.
-    */
-    /* If you needed a direct CSS way for the underline, you'd do something like: */
-    /* .underline-grow-animation { animation: underlineGrow 0.3s ease-out forwards; } */
-    /* And then apply `transform: scaleX(0);` initially and `transform: scaleX(1);` on hover */
-}
-
-
-/* Hide scrollbar for elements with `overflow-y-auto` but not `scrollbar-hidden` utility */
-.hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera*/
-}
-
-/* Ensure dark mode colors work if you are manually toggling a 'dark' class on <html> or <body> */
-/* Example: If you add `class="dark"` to your <html> tag */
-/* This part is usually handled by Tailwind's dark mode variant system if configured */
-/* However, if you need to manually ensure it works: */
-/*
-html.dark .dark\:bg-gray-950\/90 { background-color: rgba(10, 10, 10, 0.9); }
-html.dark .dark\:to-gray-900\/90 { background-color: rgba(20, 20, 20, 0.9); }
-html.dark .dark\:border-gray-800 { border-color: #1F2937; }
-html.dark .dark\:text-gray-200 { color: #E5E7EB; }
-html.dark .dark\:hover\:text-blue-400:hover { color: #60A5FA; }
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ------------------------ */
-/* src/styles/globals.css */
-
-/* ... (Your existing Tailwind imports and custom keyframes) ... */
-
-/* Slick Carousel Overrides for a modern look */
-.slick-slider {
-  margin-bottom: 2rem; /* Spacing below carousels */
-}
-
-/* Dots styling */
-.slick-dots {
-  bottom: -40px; /* Position dots below carousel */
-}
-
-.slick-dots li button:before {
-  font-size: 10px; /* Adjust dot size */
-  color: #a0aec0; /* Default dot color (gray-400) */
-  opacity: 0.75;
-  transition: all 0.3s ease-in-out;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #2563eb; /* Active dot color (blue-600) */
-  opacity: 1;
-}
-
-/* Arrows (if you enable them, they are off by default in our settings) */
-/*
-.slick-prev:before, .slick-next:before {
-  color: #2563eb;
-  font-size: 30px;
-}
-.slick-prev {
-  left: -40px;
-}
-.slick-next {
-  right: -40px;
-}
-*/
-
-/* Custom scrollbar hiding (for the mobile menu specifically) */
-.hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
-
-/* Ensure images cover their container for responsive image handling */
-.object-cover {
-  object-fit: cover;
-}
-.object-center {
-  object-position: center;
-}
-
-/* Line clamping utility for text */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
+/* === Embla Carousel Styles === */
+.embla {
   overflow: hidden;
-  -webkit-line-clamp: 2; /* Number of lines to show */
+}
+.embla__container {
+  display: flex;
+  /* Add a gap between slides */
+  margin-left: -1rem;
+}
+.embla__slide {
+  position: relative;
+  /* This sets the width of each slide */
+  flex: 0 0 30%;
+  min-width: 0;
+  padding-left: 1rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* -------------------------------------------- */
-
-
-
-
-
-/* src/styles/globals.css */
-
-/* ... (Your existing Tailwind imports, custom keyframes, slick carousel styles) ... */
-
-/* Keyframes for blob animation */
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
+/* Responsive slide widths */
+@media (max-width: 1024px) {
+  .embla__slide {
+    flex: 0 0 50%;
   }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
+}
+@media (max-width: 767px) {
+  .embla__slide {
+    flex: 0 0 90%;
   }
 }
 
-/* Custom animation delay utility (for staggering blobs if needed) */
-.animation-delay-2000 {
-  animation-delay: 2s;
+
+
+/* === Hero Section Embla Carousel Styles === */
+.hero-embla-carousel {
+  height: 100%;
+  overflow: hidden;
 }
-.animation-delay-4000 {
-  animation-delay: 4s;
+.hero-embla-carousel .embla__container {
+  height: 100%;
+  display: flex;
 }
-
-/* Base styles for list items to ensure consistent spacing */
-.list {
-  list-style: none; /* Remove default list bullets */
-  padding: 0;
-  margin: 0;
+.hero-embla-carousel .embla__slide {
+  flex: 0 0 100%; /* Each slide takes the full width */
+  min-width: 0;
+  position: relative; /* Important for the Image component */
 }
-
-.list li {
-  padding: 0.75rem 0; /* Vertical padding for list items */
-  border-bottom: 1px solid theme('colors.gray.200'); /* Separator lines */
-}
-
-.list li:last-child {
-  border-bottom: none; /* No border for the last item */
-}
-
-/* For the angle-double-right icon, if you decide to use it in other places */
-/* You would typically define this using a pseudo-element like: */
-/* .angle-double-right li:before {
-  content: '\f101'; // FontAwesome angle-double-right unicode
-  font-family: 'Font Awesome 6 Free'; // Ensure you've loaded FontAwesome
-  margin-right: 0.5rem;
-  color: theme('colors.blue.600');
-} */
-
-
-/* Custom background pattern for events (create this image or use a similar one) */
-/* This assumes you have an SVG or image file at public/images/event-bg-pattern.svg */
-/* If you don't have it, remove the background-image and related styles from UpcomingEvents.tsx */
-
-
-
-
-
-
-
-
-
-
-
-
-@keyframes scrollUp {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
-}
-
-.animate-scrollUp {
-  animation-name: scrollUp;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  /* Add this line to pause on hover */
-  animation-play-state: running; /* Default state */
-}
-
-/* New: Pause animation on hover */
-.animate-scrollUp:hover {
-  animation-play-state: paused;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ----------------------------------------- */
-
-
-
-
-/* In your global CSS file, e.g., src/app/globals.css or src/styles/globals.css */
-
-@keyframes pulse-custom {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.05);
-    opacity: 0.8;
-  }
-}
-
-.animate-pulse-custom {
-  animation: pulse-custom 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes bounce-custom {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-50%);
-  }
-}
-
-.animate-bounce-custom {
-  animation: bounce-custom 0.6s infinite alternate;
-}
-
-.text-shadow-lg {
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-
-
-
-
-
-
-
-
-
-

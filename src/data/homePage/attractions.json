@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Male City",
+    "imageSrc": "/images/attractions/male-city.jpg"
+  },
+  {
+    "title": "Maafushi Island",
+    "imageSrc": "/images/attractions/maafushi-island.jpg"
+  },
+  {
+    "title": "Vaadhoo Island",
+    "imageSrc": "/images/attractions/vaadhoo-island.webp"
+  },
+  {
+    "title": "Sun Island",
+    "imageSrc": "/images/attractions/sun-island.jpg"
+  },
+  {
+    "title": "Mirihi Island",
+    "imageSrc": "/images/attractions/mirihi-island.jpg"
+  },
+  {
+    "title": "Baros Island",
+    "imageSrc": "/images/attractions/baros-island.jpg"
+  },
+  {
+    "title": "Addu Atoll",
+    "imageSrc": "/images/attractions/addu-atoll.jpg"
+  },
+  {
+    "title": "Alimatha Island",
+    "imageSrc": "/images/attractions/alimatha-island.webp"
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "Committee Members",
+    "subtitle": "Meet the Dedicated Team Behind SMART-25",
+    "backgroundImage": "/images/pagesBanner/banner4.png"
+  },
+  "chiefPatrons": {
+    "title": "Conference Chair",
+    "members": [
+      {
+        "name": "Prof. Surender K Marya",
+        "affiliation": "Ecoles Centrales Nantes",
+        "image": "/images/committe_members/surendar.jpg"
+      }
+    ]
+  },
+  "generalChairs": {
+    "title": "Advisory Board",
+    "members": [
+      {
+        "name": "Dr. Muthu Krishnan",
+        "affiliation": "Principal || SMTEC",
+        "image": "/images/committe_members/muthukrishnan.webp"
+      },
+      {
+        "name": "Dr. A. George Klington",
+        "affiliation": "General Manager || SCAD Group of Institutions",
+        "image": "/images/committe_members/klington.jpg"
+      },
+      {
+        "name": "Dr. Ali Najeeb",
+        "affiliation": "Vice Rector || Villa College",
+        "image": "/images/committe_members/najeeb.jfif"
+      },
+      {
+        "name": "Ms. Udhuma Abdul Latheef",
+        "affiliation": "VHead of School, School of Computer Science || Villa College",
+        "image": "/images/committe_members/udhuma.jfif"
+      }
+    ]
+  },
+  "organizers": {
+    "title": "Organizers",
+    "members": [
+      {
+        "name": "Dr. R. JOSE IMMANUEL",
+        "affiliation": "Assistant Professor, Department of Mechanical Engineering, IIT Bhilai",
+        "image": "/images/committe_members/jose.png"
+      },
+      {
+        "name": "Dr. R. NAFEENA ABDUL MUNAF",
+        "affiliation": "Assistant Professor, Faculty of Engineering and Technology, Villa College, Maldives",
+        "image": "/images/committe_members/nafeena.png"
+      },
+      {
+        "name": "Dr. S. JOE PATRICK GNANARAJ",
+        "affiliation": "Professor, Department of Mechanical Engineering, St. Mother Theresa Engineering College",
+        "image": "/images/committe_members/patrick.png"
+      }
+    ]
+  },
+  "technicalCommittee": {
+    "title": "Technical Committee",
+    "members": [
+      {
+        "name": "Dr. Kathiresan M",
+        "affiliation": "National Engineering College, India"
+      },
+      {
+        "name": "Dr. R. Rajeswari",
+        "affiliation": "Sri Sivasubramaniya Nadar (SSN) College of Engineering, India"
+      },
+      {
+        "name": "Dr. Umamaheswari Madopothula",
+        "affiliation": "SoftCorp International Inc, USA"
+      },
+      {
+        "name": "Dr. Bhagya K R",
+        "affiliation": "Rao Bahadur Y.  Mahabaleswarappa Engineering College, India"
+      },
+      {
+        "name": "Dr. Ezhilmaran",
+        "affiliation": "Anna University, India"
+      },
+      {
+        "name": "Dr. Suya Prem Anand P",
+        "affiliation": "VIT Vellore, India"
+      },
+      {
+        "name": "Dr. Indhu R",
+        "affiliation": "IIT Madras, India"
+      },
+      {
+        "name": "Dr. Anu Tomy",
+        "affiliation": "Sri Sivasubramaniya Nadar (SSN) College of Engineering, India"
+      },
+      {
+        "name": "Dr. Nalini Lekkala",
+        "affiliation": "Vignan Institute of Information and Technology (Autonomous), India"
+      },
+      {
+        "name": "Dr. Omkar Baswaraj Bembalge",
+        "affiliation": "IIT Dharwad, India"
+      },
+      {
+        "name": "Dr. Biranchi Narayan Sahoo",
+        "affiliation": "SVNIT, India"
+      },
+      {
+        "name": "Dr. Srinivas Behera",
+        "affiliation": "NIT Rourkela, India"
+      },
+      {
+        "name": "Dr. Santosh Kumar Tamang",
+        "affiliation": "NERIST, India"
+      },
+      {
+        "name": "Dr. Srikar Potnuru",
+        "affiliation": "O.P. Jindal University, India"
+      },
+      {
+        "name": "Dr. Ramasubramanian Kannan",
+        "affiliation": "India Centre for Lab Grown Diamond, India"
+      }
+    ]
+  }
+}

@@ -1,5 +1,377 @@
 [
-  { "title": "Our Team", "url": "/team", "description": "Meet our researchers" },
-  { "title": "Research Projects", "url": "/research", "description": "Explore our projects" },
-  { "title": "Publications", "url": "/publications", "description": "View papers and journals" }
+  {
+    "title": "Home",
+    "url": "/",
+    "description": "4th INTERNATIONAL CONFERENCE (Hybrid mode) On SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025 || Accelerating SDGs through AI"
+  },
+  {
+    "title": "Conference Theme",
+    "url": "/#hero",
+    "description": "Sustainable Multidisciplinary AI Research for Global Transformations"
+  },
+  {
+    "title": "Conference Dates",
+    "url": "/#hero",
+    "description": "November 6th & 7th, 2025"
+  },
+  {
+    "title": "Conference Venue",
+    "url": "/#hero",
+    "description": "Villa College, Maldives"
+  },
+  {
+    "title": "Organizer: About Indian Institute of Technology Bhilai",
+    "url": "/#organizers",
+    "description": "Established in 2016, the Indian Institute of Technology Bhilai (IIT Bhilai) is one of the newer institutions in the prestigious IIT system, strategically located in Chhattisgarh. The institute was founded to improve excellence in engineering education, research, and technological innovation. Situated near the industrial city of Bhilai, the campus offers a unique advantage by providing students with close proximity to various industries, facilitating practical learning and industry exposure. IIT Bhilai is committed to providing a vibrant campus life, encouraging students to participate in a wide range of extracurricular activities, including sports, cultural events, and technical clubs, thus promoting holistic development alongside rigorous academic pursuits."
+  },
+  {
+    "title": "Organizer: About Villa College, Maldives",
+    "url": "/#organizers",
+    "description": "Villa College is the first private higher education institution of the Maldives. In 2007, it was founded by Hon. Dr. Qasim Ibrahim, Chairman of the Villa group, through the Private-Public Partnership Agreement with the government. In 2015, a new partnership with the University of the West of England (UWE) was established, which has proved to be the most fruitful partnership for the College. Since then, the College has signed to collaborate with numerous universities, the most recent most significant one being the agreement signed with Taylor’s University, which will introduce Culinary Arts as a new field of studies offered by Villa College. In the last few years, the variety of programs Villa College offers has expanded immensely, offering programs from high-demand areas such as Master’s in Counselling, and also offering programs from niche areas such as Art and Design."
+  },
+  {
+    "title": "Organizer: About St. Mother Theresa Engineering College",
+    "url": "/#organizers",
+    "description": "St. Mother Theresa Engineering College, popularly known as SMTEC, was established in the year 2009 with the vision to empower budding engineers in technical and entrepreneurial training and to contribute to the socio-economic augmentation of the nation. The campus is self-sustained with all the modern facilities required for quality Engineering Education, Upgraded Laboratories, Smart Classroom, Excellent Library Facility. The college offers a plethora of options for students to develop their talents, and it methodically turns graduates into professionals who are prepared for the future. The organization fosters an environment that is open to the sharing of ideas and supports the growth of individuals as well as professionals."
+  },
+  {
+    "title": "Speaker: Mr. Rishikesan Visuvamithran",
+    "url": "/#speakers",
+    "description": "Renault Nissan Technology and Business Center, India"
+  },
+  {
+    "title": "Speaker: Dr. Alankrita Singh",
+    "url": "/#speakers",
+    "description": "Indian Institute of Technology Roorkee, India"
+  },
+  {
+    "title": "Speaker: Dr. Geethapriyan Thangamani",
+    "url": "/#speakers",
+    "description": "Politecnico di Torino, Italy"
+  },
+  {
+    "title": "Speaker: Dr. Abhijeet Dhal",
+    "url": "/#speakers",
+    "description": "Johns Hopkins University, USA"
+  },
+  {
+    "title": "Speaker: Dr. Faseeulla Khan Mohammad",
+    "url": "/#speakers",
+    "description": "King Faisal University, Saudi Arabia"
+  },
+  {
+    "title": "Date: Opening of Abstract submission",
+    "url": "/#dates",
+    "description": "July 21, 2025"
+  },
+  {
+    "title": "Date: Last date for Abstract submission",
+    "url": "/#dates",
+    "description": "August 1, 2025"
+  },
+  {
+    "title": "Date: Deadline for Full Paper submission",
+    "url": "/#dates",
+    "description": "August 31, 2025"
+  },
+  {
+    "title": "Date: Early bird Registration (10% discount on the total registration fee)",
+    "url": "/#dates",
+    "description": "September 30, 2025"
+  },
+  {
+    "title": "Date: Deadline for Conference Registration",
+    "url": "/#dates",
+    "description": "October 15, 2025"
+  },
+  {
+    "title": "Date: Conference Dates",
+    "url": "/#dates",
+    "description": "November 14-15, 2025"
+  },
+  {
+    "title": "Venue: Villa College, Maldives",
+    "url": "/#venue",
+    "description": "Villa College is the first private higher education institution of the Maldives. In 2007, it was founded by Hon. Dr. Qasim Ibrahim, Chairman of the Villa group, through the Private-Public Partnership Agreement with the government. In 2015, a new partnership with the University of the West of England (UWE) was established, which has proved to be the most fruitful partnership for the College. Since then, the College has signed to collaborate with numerous universities, the most recent most significant one being the agreement signed with Taylor’s University, which will introduce Culinary Arts as a new field of studies offered by Villa College. In the last few years, the variety of programs Villa College offers has expanded immensely, offering programs from high-demand areas such as Master’s in Counselling, and also offering programs from niche areas such as Art and Design."
+  },
+  {
+    "title": "Place: Male City",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Maafushi Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Vaadhoo Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Sun Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Mirihi Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Baros Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Addu Atoll",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "Place: Alimatha Island",
+    "url": "/#attraction",
+    "description": "Nearby places to visit."
+  },
+  {
+    "title": "FAQ: How do I submit my research paper?",
+    "url": "/#faq",
+    "description": "All papers must be submitted electronically through the Microsoft CMT portal. Please visit our 'Paper Submission' page for detailed guidelines on formatting and to access the submission link. Ensure your paper is anonymized for the double-blind review process."
+  },
+  {
+    "title": "FAQ: What are the registration fees and deadlines?",
+    "url": "/#faq",
+    "description": "We offer tiered registration fees for students, academics, and industry professionals, with early-bird discounts available until September 15, 2025. You can find the complete fee structure and payment instructions on our 'Registration' page. The final registration deadline is October 25, 2025."
+  },
+  {
+    "title": "FAQ: Will accommodation be provided for attendees?",
+    "url": "/#faq",
+    "description": "While the conference does not directly provide accommodation, we have partnered with several nearby hotels to offer discounted rates for our attendees. A list of recommended hotels and booking information is available on the 'Venue & Travel' page."
+  },
+  {
+    "title": "FAQ: What is the official language of the conference?",
+    "url": "/#faq",
+    "description": "The official language for all paper submissions, presentations, and conference proceedings is English. All sessions will be conducted in English."
+  },
+  {
+    "title": "About Smart'25",
+    "url": "/about",
+    "description": "Pioneering Sustainable Futures through Artificial Intelligence"
+  },
+  {
+    "title": "Committee",
+    "url": "/committee",
+    "description": "Meet the Dedicated Team Behind SMART-25"
+  },
+  {
+    "title": "Committee: Prof. Surender K Marya",
+    "url": "/committee#chiefPatron",
+    "description": "Conference Chair - Ecoles Centrales Nantes"
+  },
+  {
+    "title": "Committee: Dr. Muthu Krishnan",
+    "url": "/committee#generalChar",
+    "description": "Advisory Board - Principal || SMTEC"
+  },
+  {
+    "title": "Committee: Dr. A. George Klington",
+    "url": "/committee#generalChar",
+    "description": "Advisory Board - General Manager || SCAD Group of Institutions"
+  },
+  {
+    "title": "Committee: Dr. Ali Najeeb",
+    "url": "/committee#generalChar",
+    "description": "Advisory Board - Vice Rector || Villa College"
+  },
+  {
+    "title": "Committee: Ms. Udhuma Abdul Latheef",
+    "url": "/committee#generalChar",
+    "description": "Advisory Board - VHead of School, School of Computer Science || Villa College"
+  },
+  {
+    "title": "Committee: Dr. R. JOSE IMMANUEL",
+    "url": "/committee#organizer",
+    "description": "Organizers - Assistant Professor, Department of Mechanical Engineering, IIT Bhilai"
+  },
+  {
+    "title": "Committee: Dr. R. NAFEENA ABDUL MUNAF",
+    "url": "/committee#organizer",
+    "description": "Organizers - Assistant Professor, Faculty of Engineering and Technology, Villa College, Maldives"
+  },
+  {
+    "title": "Committee: Dr. S. JOE PATRICK GNANARAJ",
+    "url": "/committee#organizer",
+    "description": "Organizers - Professor, Department of Mechanical Engineering, St. Mother Theresa Engineering College"
+  },
+  {
+    "title": "Committee: Dr. Kathiresan M",
+    "url": "/committee#technical",
+    "description": "Technical Committee - National Engineering College, India"
+  },
+  {
+    "title": "Committee: Dr. R. Rajeswari",
+    "url": "/committee#technical",
+    "description": "Technical Committee - Sri Sivasubramaniya Nadar (SSN) College of Engineering, India"
+  },
+  {
+    "title": "Committee: Dr. Umamaheswari Madopothula",
+    "url": "/committee#technical",
+    "description": "Technical Committee - SoftCorp International Inc, USA"
+  },
+  {
+    "title": "Committee: Dr. Bhagya K R",
+    "url": "/committee#technical",
+    "description": "Technical Committee - Rao Bahadur Y.  Mahabaleswarappa Engineering College, India"
+  },
+  {
+    "title": "Committee: Dr. Ezhilmaran",
+    "url": "/committee#technical",
+    "description": "Technical Committee - Anna University, India"
+  },
+  {
+    "title": "Committee: Dr. Suya Prem Anand P",
+    "url": "/committee#technical",
+    "description": "Technical Committee - VIT Vellore, India"
+  },
+  {
+    "title": "Committee: Dr. Indhu R",
+    "url": "/committee#technical",
+    "description": "Technical Committee - IIT Madras, India"
+  },
+  {
+    "title": "Committee: Dr. Anu Tomy",
+    "url": "/committee#technical",
+    "description": "Technical Committee - Sri Sivasubramaniya Nadar (SSN) College of Engineering, India"
+  },
+  {
+    "title": "Committee: Dr. Nalini Lekkala",
+    "url": "/committee#technical",
+    "description": "Technical Committee - Vignan Institute of Information and Technology (Autonomous), India"
+  },
+  {
+    "title": "Committee: Dr. Omkar Baswaraj Bembalge",
+    "url": "/committee#technical",
+    "description": "Technical Committee - IIT Dharwad, India"
+  },
+  {
+    "title": "Committee: Dr. Biranchi Narayan Sahoo",
+    "url": "/committee#technical",
+    "description": "Technical Committee - SVNIT, India"
+  },
+  {
+    "title": "Committee: Dr. Srinivas Behera",
+    "url": "/committee#technical",
+    "description": "Technical Committee - NIT Rourkela, India"
+  },
+  {
+    "title": "Committee: Dr. Santosh Kumar Tamang",
+    "url": "/committee#technical",
+    "description": "Technical Committee - NERIST, India"
+  },
+  {
+    "title": "Committee: Dr. Srikar Potnuru",
+    "url": "/committee#technical",
+    "description": "Technical Committee - O.P. Jindal University, India"
+  },
+  {
+    "title": "Committee: Dr. Ramasubramanian Kannan",
+    "url": "/committee#technical",
+    "description": "Technical Committee - India Centre for Lab Grown Diamond, India"
+  },
+  {
+    "title": "Call for Papers",
+    "url": "/call-for-papers",
+    "description": "Share Your Vision, Shape the Future of AI"
+  },
+  {
+    "title": "Theme: AI/ML (CORE & CROSS-DISCIPLINARY)",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: Novel AI/ML Algorithms for SDG Challenges, Explainable AI (XAI) for Sustainability Decisions, Edge AI for Decentralized SDG Solutions..."
+  },
+  {
+    "title": "Theme: AUTOMATION",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: Robotic Process Automation (RPA) for Sustainable Operations, Autonomous Systems for Environmental Monitoring and Remediation, Smart Grid Automation for Renewable Energy Integration..."
+  },
+  {
+    "title": "Theme: BUILDING STRUCTURES AND GEOLOGY",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI for Sustainable Building Design and Construction, AI-powered Structural Health Monitoring for Resilient Infrastructure, AI in Geo-spatial Data Analysis for Sustainable Urban Planning..."
+  },
+  {
+    "title": "Theme: COMMUNICATION SYSTEMS",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI for Energy-Efficient Communication Networks, IoT and AI for Environmental Sensing and Data Collection, AI-powered Disaster Communication and Early Warning Systems..."
+  },
+  {
+    "title": "Theme: ELECTRICAL SYSTEMS",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI for Power Electronics Optimization, AI-driven Motor Control for Industrial Efficiency, Smart Metering and AI for Residential Energy Management..."
+  },
+  {
+    "title": "Theme: MATERIAL SCIENCE",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI-driven Discovery and Design of Sustainable Materials, AI for Circular Economy in Materials, Predictive Maintenance and Lifecycle Assessment of Materials using AI..."
+  },
+  {
+    "title": "Theme: MECHANICAL SYSTEMS",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI for Energy Efficiency in Mechanical Systems, Predictive Maintenance and Anomaly Detection in Mechanical Systems, Robotics and Automation for Sustainable Manufacturing..."
+  },
+  {
+    "title": "Theme: POWER SYSTEMS",
+    "url": "/call-for-papers#topics",
+    "description": "Topics include: AI-driven Smart Grids for Renewable Energy Integration, Predictive Analytics for Energy Demand Forecasting, AI for Energy Storage Optimization..."
+  },
+  {
+    "title": "Registration",
+    "url": "/registration",
+    "description": "Secure Your Place at SMART-25"
+  },
+  {
+    "title": "Fee: Conference presentation only",
+    "url": "/registration",
+    "description": "Indian Participants (Online): INR 2000, Other Participants (Online): USD 100"
+  },
+  {
+    "title": "Fee: Conference presentation with Journal publication",
+    "url": "/registration",
+    "description": "Indian Participants (Online): INR 12000, Other Participants (Online): USD 250"
+  },
+  {
+    "title": "Fee: Additional participants",
+    "url": "/registration",
+    "description": "Indian Participants (Online): INR 2000, Other Participants (Online): USD 100"
+  },
+  {
+    "title": "Included: Access to all technical sessions and keynotes",
+    "url": "/registration",
+    "description": "This item is included with your conference registration."
+  },
+  {
+    "title": "Included: Conference proceedings (digital copy)",
+    "url": "/registration",
+    "description": "This item is included with your conference registration."
+  },
+  {
+    "title": "Included: Official conference kit",
+    "url": "/registration",
+    "description": "This item is included with your conference registration."
+  },
+  {
+    "title": "Included: Lunch and coffee breaks on both days",
+    "url": "/registration",
+    "description": "This item is included with your conference registration."
+  },
+  {
+    "title": "Included: Certificate of Presentation/Participation",
+    "url": "/registration",
+    "description": "This item is included with your conference registration."
+  },
+  {
+    "title": "Cancellation Policy",
+    "url": "/registration",
+    "description": "Registration fees are non-refundable. However, the registration is transferable to another person if a request is made at least 15 days before the conference."
+  }
 ]
