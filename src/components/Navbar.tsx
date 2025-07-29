@@ -33,10 +33,10 @@ const moreDropdownLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const allPaths = [
-  ...mainNavLinks.map((link) => link.href),
-  ...moreDropdownLinks.map((link) => link.href),
-];
+// const allPaths = [
+//   ...mainNavLinks.map((link) => link.href),
+//   ...moreDropdownLinks.map((link) => link.href),
+// ];
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

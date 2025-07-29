@@ -16,7 +16,7 @@ export const PreviousConferenceSection = () => {
 
   return (
     <Section className="bg-indigo-50">
-      <SectionTitle>Glimpses of SMART'24</SectionTitle>
+      <SectionTitle>Glimpses of SMART&apos;24</SectionTitle>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}

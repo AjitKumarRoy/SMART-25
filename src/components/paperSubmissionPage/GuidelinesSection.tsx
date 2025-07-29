@@ -35,7 +35,7 @@ export const GuidelinesSection = () => {
               <FaFileDownload className="mr-2" /> Download Abstract Template
             </Link>
             <Link href={pageData.guidelines.lastYearAbstractsLink} target="_blank" className="group inline-flex items-center justify-center rounded-md bg-gray-100 px-5 py-3 font-semibold text-gray-700 transition-colors hover:bg-gray-200">
-              <FaBookOpen className="mr-2" /> View Last Year's Abstracts
+              <FaBookOpen className="mr-2" /> View Last Year&apos;s Abstracts
             </Link>
           </div>
         </div>

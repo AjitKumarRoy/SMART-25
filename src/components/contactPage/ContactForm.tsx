@@ -65,7 +65,7 @@ export const ContactForm = () => {
                         >
                             <motion.h2 variants={itemVariants} className="text-4xl font-extrabold text-gray-900">Send us a Message</motion.h2>
                             <motion.p variants={itemVariants} className="mt-4 text-lg text-gray-600">
-                                Have a question, comment, or suggestion? We'd love to hear from you. Fill out the form and our team will get back to you as soon as possible.
+                                Have a question, comment, or suggestion? We&apos;d love to hear from you. Fill out the form and our team will get back to you as soon as possible.
                             </motion.p>
                         </motion.div>
 

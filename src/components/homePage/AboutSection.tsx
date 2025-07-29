@@ -9,7 +9,7 @@ import aboutData from '@/data/homePage/about.json';
 
 export const AboutSection = () => (
   <Section className="bg-indigo-50">
-    <SectionTitle>About SMART'25</SectionTitle>
+    <SectionTitle>About SMART&apos;25</SectionTitle>
     <div className="grid md:grid-cols-12 gap-12 items-center">
       <div className="md:col-span-4">
         <Image

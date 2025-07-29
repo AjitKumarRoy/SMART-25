@@ -12,7 +12,7 @@ export const IncludedSection = () => {
         <Section className="bg-indigo-50">
             <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
                 <div>
-                    <SectionTitle>What's Included</SectionTitle>
+                    <SectionTitle>What&apos;s Included</SectionTitle>
                     <motion.ul
                         className="mt-8 space-y-4"
                         initial="hidden"

@@ -42,7 +42,7 @@ export const CtaSection = () => {
         viewport={{ once: true, amount: 0.5 }}
       >
         {/* Using the SectionTitle component */}
-        <SectionTitle>Ready to attend SMART'25?</SectionTitle>
+        <SectionTitle>Ready to attend SMART&apos;25?</SectionTitle>
         <motion.p
           className="mx-auto mt-4 max-w-2xl text-lg text-gray-600"
           variants={itemVariants}

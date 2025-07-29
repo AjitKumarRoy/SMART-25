@@ -30,7 +30,7 @@ export const FaqSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-gray-600">
-            Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us directly.
+            Have questions? We&apos;ve got answers. If you can&apos;t find what you&apos;re looking for, feel free to contact us directly.
           </p>
         </motion.div>
 

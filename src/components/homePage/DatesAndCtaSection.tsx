@@ -10,12 +10,12 @@ interface ImportantDate {
   link: string;
 }
 
-interface DatesAndCtaSectionProps {
-  data: {
-    importantDates: ImportantDate[];
-    cmtLink: string;
-  };
-}
+// interface DatesAndCtaSectionProps {
+//   data: {
+//     importantDates: ImportantDate[];
+//     cmtLink: string;
+//   };
+// }
 
 export const DatesAndCtaSection = () => (
   <Section id="dates">

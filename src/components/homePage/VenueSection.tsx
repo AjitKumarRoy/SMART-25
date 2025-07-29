@@ -21,7 +21,7 @@ export const VenueSection = () => {
 
   return (
     <Section id="venue" className="bg-indigo-50">
-      <SectionTitle>SMART'25 Venue</SectionTitle>
+      <SectionTitle>SMART&apos;25 Venue</SectionTitle>
       <motion.div
         className="grid items-center gap-12 md:grid-cols-2"
         variants={contentVariants}

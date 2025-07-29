@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FaArrowRight, FaPhone } from 'react-icons/fa';
+import { FaArrowRight} from 'react-icons/fa';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 
