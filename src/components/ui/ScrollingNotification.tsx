@@ -15,7 +15,7 @@ export const ScrollingNotification = ({ text }: ScrollingNotificationProps) => {
         animate={{ x: ['0%', '-50%'] }}
         transition={{
           ease: 'linear',
-          duration: 40, // Slower duration for a more premium feel
+          duration: 10, // Slower duration for a more premium feel
           repeat: Infinity,
         }}
       >
