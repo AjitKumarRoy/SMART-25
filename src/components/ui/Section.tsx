@@ -1,13 +1,12 @@
 "use client";
-import { motion } from 'framer-motion';
+// STEP 1: Import the 'HTMLMotionProps' type from framer-motion
+import { motion, HTMLMotionProps } from 'framer-motion';
 
-// STEP 1: Update the interface to accept all standard HTML attributes
-interface SectionProps extends React.HTMLAttributes<HTMLElement> {
+// STEP 2: Update the interface to use the correct Framer Motion props
+interface SectionProps extends HTMLMotionProps<"section"> {
   children: React.ReactNode;
-  className?: string;
 }
 
-// STEP 2: Collect all other props into a '...rest' variable
 export const Section = ({ children, className = '', ...rest }: SectionProps) => {
   return (
     <motion.section
@@ -16,7 +15,7 @@ export const Section = ({ children, className = '', ...rest }: SectionProps) => 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      {...rest} // And apply them here. This will add your id="faq".
+      {...rest} // This will now be correctly typed
     >
       <div className="max-w-7xl mx-auto">
         {children}
