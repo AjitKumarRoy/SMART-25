@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
@@ -10,14 +10,14 @@ import venueData from '@/data/homePage/venue.json';
 
 export const VenueSection = () => {
   // Animation for the content to fade and slide in
-  const contentVariants = {
+  const contentVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
       y: 0, 
       transition: { duration: 0.8, ease: 'easeOut' } 
     },
-  };
+  }
 
   return (
     <Section id="venue" className="bg-indigo-50">
