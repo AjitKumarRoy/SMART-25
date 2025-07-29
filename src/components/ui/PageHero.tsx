@@ -1,7 +1,7 @@
 "use client";
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 interface PageHeroProps {
   title: string;
@@ -11,7 +11,7 @@ interface PageHeroProps {
 
 export const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
   // Animation variants for staggering each character of the title
-  const titleContainerVariants = {
+  const titleContainerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -19,7 +19,7 @@ export const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) =>
     },
   };
 
-  const characterVariants = {
+  const characterVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } },
   };
