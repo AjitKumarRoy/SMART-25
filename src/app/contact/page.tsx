@@ -1,16 +1,17 @@
 "use client";
 
-import { motion } from 'framer-motion';
+// STEP 1: Import the 'Variants' type from framer-motion
+import { motion, Variants } from 'framer-motion';
 import { PageHero } from '@/components/ui/PageHero';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import pageData from '@/data/contactPage/contactPage.json';
 import Head from 'next/head';
 import { FaEnvelope, FaPhone, FaUserCircle } from 'react-icons/fa';
-import { ContactForm } from '@/components/contactPage/ContactForm'; // Import the new form
+import { ContactForm } from '@/components/contactPage/ContactForm';
 
 export default function ContactPage() {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -18,7 +19,7 @@ export default function ContactPage() {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 30, scale: 0.95 },
         visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5, ease: 'easeOut' } },
     };
@@ -45,7 +46,6 @@ export default function ContactPage() {
                 {/* Contact Hub */}
                 <Section>
                     <SectionTitle>Get in Touch</SectionTitle>
-                    {/* General Queries Card with new gradient */}
                     <motion.div 
                         className="mx-auto mt-12 max-w-2xl rounded-xl bg-gradient-to-br from-gray-800 via-slate-900 to-black p-8 text-center text-white shadow-xl"
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -60,7 +60,7 @@ export default function ContactPage() {
                         </a>
                     </motion.div>
 
-                    {/* Contact Persons Grid with new animations */}
+                    {/* Contact Persons Grid */}
                     <motion.div
                         className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3"
                         variants={containerVariants}
@@ -85,12 +85,11 @@ export default function ContactPage() {
                     </motion.div>
                 </Section>
                 
-                {/* New Contact Form Section */}
                 <ContactForm />
 
                 {/* Redesigned Map Section */}
                 <Section className="bg-gray-50">
-                    <SectionTitle>SMART&apos;25 Venue Location</SectionTitle>
+                    <SectionTitle>SMART'25 Venue Location</SectionTitle>
                     <motion.div 
                         className="mt-12 overflow-hidden rounded-2xl border border-gray-200 shadow-2xl"
                         initial={{ opacity: 0, scale: 0.9 }}
