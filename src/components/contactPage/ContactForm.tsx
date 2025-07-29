@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
 import emailjs from '@emailjs/browser';
 import { FaCheckCircle, FaSpinner, FaUser, FaEnvelope, FaPen } from 'react-icons/fa';
@@ -27,7 +27,7 @@ export const ContactForm = () => {
         });
     };
 
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -35,7 +35,7 @@ export const ContactForm = () => {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, x: -30 },
         visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } },
     };
