@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import pageData from '@/data/committeePage/committePage.json';
 
 export const OrganizingCommitteeSection = () => {
-    const containerVariants = {
+    const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
@@ -14,7 +14,7 @@ export const OrganizingCommitteeSection = () => {
         },
     };
 
-    const itemVariants = {
+    const itemVariants: Variants = {
         hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
     };
