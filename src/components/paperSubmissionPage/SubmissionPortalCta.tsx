@@ -43,7 +43,7 @@ export const SubmissionPortalsCta = () => {
             className="mx-auto mt-4 max-w-xl text-lg text-gray-300"
             variants={itemVariants}
           >
-            Choose the appropriate portal to upload your abstract or full research paper. We look forward to your contribution.
+            Submit the Abstract through the link provided. After the announcement of abstract selection by the organizers, candidates can upload their full paper to the given link.
           </motion.p>
 
           <motion.div 

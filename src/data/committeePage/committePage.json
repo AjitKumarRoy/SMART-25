@@ -30,17 +30,17 @@
       {
         "name": "Dr. Ali Najeeb",
         "affiliation": "Vice Rector || Villa College",
-        "image": "/images/committe_members/najeeb.jfif"
+        "image": "/images/committe_members/najeeb.png"
       },
       {
         "name": "Ms. Udhuma Abdul Latheef",
         "affiliation": "VHead of School, School of Computer Science || Villa College",
-        "image": "/images/committe_members/udhuma.jfif"
+        "image": "/images/committe_members/udhuma.png"
       }
     ]
   },
   "organizers": {
-    "title": "Organizers",
+    "title": "Conveners",
     "members": [
       {
         "name": "Dr. R. JOSE IMMANUEL",
@@ -56,6 +56,45 @@
         "name": "Dr. S. JOE PATRICK GNANARAJ",
         "affiliation": "Professor, Department of Mechanical Engineering, St. Mother Theresa Engineering College",
         "image": "/images/committe_members/patrick.png"
+      }
+    ]
+  },
+  "organizingCommittee": {
+    "title": "Organizing Committee",
+    "subcommittees": [
+      {
+        "name": "Co-ordinations",
+        "members": [
+          "Dr. Sindhu V, IIT Bhilai, India",
+          "Mr. T. Raja Gopala Chary , IIT Bhilai, India"
+        ]
+      },
+      {
+        "name": "Publication",
+        "members": [
+          "Dr. Ilyas Hussain, IIT Bhilai, India",
+          "Dr. Md. Saad Patel, IIT Bhilai, India",
+          "Dr. Saravana Kumar, Villa College, Maldives",
+          "Dr. Siva Kumar, Villa College, Maldives"
+        ]
+      },
+      {
+        "name": "Virtual Sessions",
+        "members": [
+          "Ms. Selva Jenisha, IIT Bhilai, India",
+          "Mr. Jessie, IIT Bhilai, India"
+        ]
+      },
+      {
+        "name": "Registration & Hospitality",
+        "members": [
+          "Ms. Litty Tressa, Villa College, Maldives",
+          "Ms. Aishath Mihna, Villa College, Maldives",
+          "Mr. Nithin Jose, Villa College, Maldives",
+          "Mr. Shivraj Gahir, IIT Bhilai, India",
+          "Mr. Rahul Patel, IIT Bhilai, India",
+          "Mr. Harinarayan Namdev, IIT Bhilai, India"
+        ]
       }
     ]
   },
@@ -121,6 +160,46 @@
       {
         "name": "Dr. Ramasubramanian Kannan",
         "affiliation": "India Centre for Lab Grown Diamond, India"
+      },
+      {
+        "name": "Dr. Lokesh",
+        "affiliation": "Villa College, Maldives"
+      },
+      {
+        "name": "Dr. Gnana Jeba Das",
+        "affiliation": "Villa College, Maldives"
+      },
+      {
+        "name": "Dr. Jobin Varghese",
+        "affiliation": "Villa College, Maldives"
+      },
+      {
+        "name": "Dr. Premkumar",
+        "affiliation": "Villa College, Maldives"
+      },
+      {
+        "name": "Dr. Tamilarasi",
+        "affiliation": "Villa College, Maldives"
+      },
+      {
+        "name": "Dr. C. Subharaj",
+        "affiliation": "St. Mother Theresa Engineering College, India"
+      },
+      {
+        "name": "Mrs. Mcluret",
+        "affiliation": "St. Mother Theresa Engineering College, India"
+      },
+      {
+        "name": "Mr. Muniasamy",
+        "affiliation": "St. Mother Theresa Engineering College, India"
+      },
+      {
+        "name": "Mr. Bakthiraj",
+        "affiliation": "St. Mother Theresa Engineering College, India"
+      },
+      {
+        "name": "Mrs. Sathiya",
+        "affiliation": "St. Mother Theresa Engineering College, India"
       }
     ]
   }

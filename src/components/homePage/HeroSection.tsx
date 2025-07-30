@@ -133,7 +133,17 @@ export const HeroSection = () => {
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
             >
               <h3 className="mb-1 text-xs uppercase tracking-widest text-indigo-300 sm:text-sm">{section.title}</h3>
-              <p className="text-lg font-semibold sm:text-xl">{section.content}</p>
+              <motion.p
+              className="text-lg font-semibold sm:text-xl"
+              animate={{ opacity: [1, 0.7, 1] }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeOut",
+              }}
+            >
+              {section.content}
+            </motion.p>
             </motion.div>
           ))}
         </motion.div>
@@ -147,6 +157,7 @@ export const HeroSection = () => {
         >
           <Link
             href={heroData.submitLink}
+            target="_blank"
             className="group inline-flex w-full items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-indigo-500 hover:scale-105 sm:w-auto"
           >
             Submit Abstract

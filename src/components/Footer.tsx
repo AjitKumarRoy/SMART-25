@@ -73,6 +73,7 @@ const Footer = () => {
               />
             </div>
           </Link>
+          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-1 border-b-2 border-blue-500 dark:border-blue-400 pb-2 inline-block">SMART'25</h3>
           <p className="text-sm leading-relaxed max-w-xs mt-4"> {/* Added mt-4 for spacing */}
             SMART&apos;25 focuses on &quot;Accelerating SDGs through AI.&quot; It brings together researchers to explore AI&apos;s impact on sustainable design, resilient infrastructure, energy efficiency, and core AI/ML systems. The conference emphasizes interdisciplinary collaboration to tackle global challenges like climate change and resource scarcity, with a special focus on emerging economies.
           </p>

@@ -1,35 +1,36 @@
-"use client";
+import { Metadata } from 'next';
+import { AboutPageClient } from '@/components/aboutPage/AboutPageClient'; // Import the new client component
 
-import { motion } from 'framer-motion';
-import aboutData from '@/data/aboutPage/aboutPage.json';
-import { PageHero } from '@/components/ui/PageHero';
-import { JointlyOrganizedSection } from '@/components/aboutPage/JointlyOrganizedSection';
-import { Scope } from '@/components/aboutPage/Scope';
-import { AboutOrganizersSection } from '@/components/aboutPage/AboutOrganizerSection';
-import { StudentAwardSection } from '@/components/aboutPage/StudentAwardSection';
+// --- SEO for the About Page ---
+export const metadata: Metadata = {
+  title: "About SMART-25 | International AI Conference",
+  description: "Learn about the mission, organizers, and thematic areas of the SMART-25 conference. A joint initiative by IIT Bhilai, Villa College, and St. Mother Theresa Engineering College.",
+  alternates: {
+    canonical: "https://smart25.org/about", // Use your actual domain
+  },
+  openGraph: {
+    title: "About the SMART-25 AI Conference",
+    description: "Discover the vision behind SMART-25, a conference dedicated to accelerating SDGs through Artificial Intelligence.",
+    url: "https://smart25.org/about",
+    images: [
+      {
+        url: 'https://smart25.org/og-image-about.jpg', // A dedicated OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'About the SMART-25 Conference',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "About SMART-25 | International AI Conference",
+    description: "Learn about the mission and organizers of the SMART-25 conference on AI for Sustainable Development Goals.",
+    images: ['https://smart25.org/og-image-about.jpg'],
+  },
+};
 
-
+// This is now a simple Server Component
 export default function AboutPage() {
-    return (
-        <motion.div 
-            className="bg-gray-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            {/* 2. Use the new PageHero, passing data as props */}
-            <PageHero
-                title={aboutData.hero.title}
-                subtitle={aboutData.hero.subtitle}
-                backgroundImage={aboutData.hero.backgroundImage}
-            />
-            
-            <JointlyOrganizedSection />
-            <Scope />
-            <AboutOrganizersSection />
-            <StudentAwardSection />
-            {/* You can continue to add your other page sections here */}
-
-        </motion.div>
-    );
+  return <AboutPageClient />;
 }

@@ -4,8 +4,8 @@
     "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1632&auto=format&fit=crop",
     "https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1470&auto=format&fit=crop"
   ],
-  "countdownTarget": "2025-11-14T09:00:00",
-  "conferenceEndDate": "2025-11-15T17:00:00",
+  "countdownTarget": "2025-11-21T09:00:00",
+  "conferenceEndDate": "2025-11-22T17:00:00",
   "organizerLogos": [
     {
       "alt": "Indian Institute Of Technology Bhilai",
@@ -22,19 +22,19 @@
   ],
   "infoSections": [
     {
-      "title": "Conference Theme",
+      "title": "Conference Title",
       "content": "Sustainable Multidisciplinary AI Research for Global Transformations"
     },
     {
       "title": "Conference Dates",
-      "content": "November 14'th & 15'th, 2025"
+      "content": "November 21st & 22nd, 2025"
     },
     {
       "title": "Conference Venue",
       "content": "Villa College, Maldives"
     }
   ],
-  "submitLink": "/paper-submission",
+  "submitLink": "https://docs.google.com/forms/d/e/1FAIpQLSdvmnKiFovdybTjvyoXLMzjY_livLqH-QSIV7H-QrTITBxeQQ/viewform",
   "registerLink": "/registration",
   "conferenceTitle": "4th INTERNATIONAL CONFERENCE (Hybrid mode) On SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations - 2025 || Accelerating SDGs through AI"
 }

@@ -17,6 +17,6 @@
   "postPayment": {
     "title": "IMPORTANT: After Your Payment",
     "description": "Once your payment is complete, please make sure to fill out the final registration form and upload a screenshot of your transaction receipt. Your registration will not be complete until this form is submitted.",
-    "formLink": "#"
+    "formLink": "https://docs.google.com/forms/d/e/1FAIpQLSd79OE3vtZOS-RsPL4daSQoXtlDmyFUsEVZCq8T3zpChAAQPg/viewform"
   }
 }

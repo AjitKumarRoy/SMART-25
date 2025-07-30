@@ -1,30 +1,43 @@
-"use client";
+import { Metadata } from 'next';
+import { RegistrationPageClient } from '@/components/registrationPage/RegistrationPageClient';
+import pageData from '@/data/registrationPage/registrationPage.json'; // Import data for SEO
 
-import { motion } from 'framer-motion';
-import { PageHero } from '@/components/ui/PageHero';
-import pageData from '@/data/registrationPage/registrationPage.json';
-import { FeesSection } from '@/components/registrationPage/FeesSection';
-import { IncludedSection } from '@/components/registrationPage/IncludedSection';
-import { CancellationPolicySection } from '@/components/registrationPage/CancellationPolicySection';
+// --- SEO for the Registration Page ---
+export async function generateMetadata(): Promise<Metadata> {
+  // Automatically create a list of keywords from the fee categories
+  const feeKeywords = pageData.fees.map(fee => fee.category);
 
+  return {
+    title: "Registration | SMART-25 AI Conference",
+    description: `Register for the SMART-25 conference. View fees for students, academicians, and industry professionals. Early bird discounts available until 30th September.`,
+    keywords: ["conference registration", "register for SMART-25", "AI conference fees", ...feeKeywords],
+    alternates: {
+      canonical: "https://smart25.org/registration", // Use your actual domain
+    },
+    openGraph: {
+      title: "Register Now for the SMART-25 AI Conference",
+      description: "Secure your spot at SMART-25. View detailed registration fees and see what's included with your pass.",
+      url: "https://smart25.org/registration",
+      images: [
+        {
+          url: 'https://smart25.org/og-image.jpg', // A dedicated OG image for this page
+          width: 1200,
+          height: 630,
+          alt: 'Registration for SMART-25 Conference',
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: "Registration | SMART-25 AI Conference",
+      description: `Register for the SMART-25 conference and view fees for students, academicians, and industry professionals.`,
+      images: ['https://smart25.org/og-image.jpg'],
+    },
+  };
+}
+
+// This is now a simple Server Component
 export default function RegistrationPage() {
-    return (
-        <motion.div
-            className="bg-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-        >
-            <PageHero
-                title={pageData.hero.title}
-                subtitle={pageData.hero.subtitle}
-                backgroundImage={pageData.hero.backgroundImage}
-            />
-
-            <FeesSection />
-            <IncludedSection />
-            <CancellationPolicySection />
-
-        </motion.div>
-    );
+  return <RegistrationPageClient />;
 }

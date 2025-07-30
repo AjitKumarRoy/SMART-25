@@ -1,30 +1,39 @@
-"use client";
+import { Metadata } from 'next';
+import { ImportantDatesPageClient } from '@/components/importantDatesPage/ImportantDatesPageClient';
 
-import { motion } from 'framer-motion';
-import { PageHero } from '@/components/ui/PageHero';
-import pageData from '@/data/importantDatesPage/importantDates.json';
-import { DatesTimelineSection } from '@/components/importantDatesPage/DatesTimelineSection';
-import { DatesCtaSection } from '@/components/importantDatesPage/DatesCtaSection';
+// --- SEO for the Important Dates Page ---
+export const metadata: Metadata = {
+  title: "Important Dates & Deadlines | SMART-25 AI Conference",
+  // UPDATED: Description now includes key dates
+  description: "Key deadlines for SMART-25: Abstract submission by Aug 15, 2025; Full paper by Sep 30; Final registration by Oct 15. Conference is Nov 21-22, 2025.",
+  alternates: {
+    canonical: "https://smart25.org/important-dates", // Use your actual domain
+  },
+  openGraph: {
+    title: "Key Deadlines for the SMART-25 AI Conference",
+    // UPDATED: OG description includes more detail
+    description: "Plan your participation for SMART-25. Abstract submission closes Aug 15, 2025, full paper deadline is Sep 30, and final registration is Oct 15, 2025.",
+    url: "https://smart25.org/important-dates",
+    images: [
+      {
+        url: 'https://smart25.org/og-image.jpg', // A dedicated OG image for this page
+        width: 1200,
+        height: 630,
+        alt: 'Important Dates for SMART-25 Conference',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Important Dates & Deadlines | SMART-25 AI Conference",
+     // UPDATED: Twitter description is concise and includes dates
+    description: "Key deadlines for SMART-25: Abstract submission by Aug 15, Full paper by Sep 30, Registration by Oct 15. Join us Nov 21-22, 2025!",
+    images: ['https://smart25.org/og-image.jpg'],
+  },
+};
 
+// This is now a simple Server Component
 export default function ImportantDatesPage() {
-  return (
-    <motion.div 
-      className="bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Section 1: Page Hero */}
-      <PageHero
-        title={pageData.hero.title}
-        subtitle={pageData.hero.subtitle}
-        backgroundImage={pageData.hero.backgroundImage}
-      />
-
-      {/* 2. Use the new components */}
-      <DatesTimelineSection />
-      <DatesCtaSection />
-      
-    </motion.div>
-  );
+  return <ImportantDatesPageClient />;
 }
