@@ -1,4 +1,5 @@
 // FILE: src/app/layout.tsx
+import { GoogleAnalytics } from '@/components/GoogleAnalytics';
 import "@/styles/globals.css";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 // Removed direct imports for Navbar, Footer, InitialLoader, NotificationBar, BannerSection
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${plusJakartaSans.variable}`}>
       <body>
+        <GoogleAnalytics />
         {/* Wrap the entire AppContentWrapper with LoadingProvider */}
         <LoadingProvider>
           <AppContentWrapper>{children}</AppContentWrapper>
