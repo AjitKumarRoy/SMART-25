@@ -14,6 +14,8 @@ import { PreviousConferenceSection } from '@/components/homePage/PreviousConfere
 import { FaqSection } from '@/components/homePage/FaqSection';
 import { CtaSection } from '@/components/homePage/CtaSection';
 
+import speakersData from '@/data/speakersPage/speakersPage.json';
+
 // --- SEO Optimization: Updated Metadata ---
 export const metadata: Metadata = {
   title: "SMART-25 AI Conference | Sustainable Tech & SDGs | Nov 21-22, 2025",
@@ -46,6 +48,16 @@ export const metadata: Metadata = {
 };
 
 export default function Homepage() {
+  const performers = speakersData.keynoteSpeakers.map(speaker => ({
+    "@type": "Person",
+    "name": speaker.name,
+    "affiliation": {
+      "@type": "Organization",
+      "name": speaker.affiliation
+    }
+  }));
+
+
    // --- SEO Optimization: JSON-LD Structured Data ---
   const structuredData = {
     "@context": "https://schema.org",
@@ -58,6 +70,7 @@ export default function Homepage() {
     ],
     "eventAttendanceMode": "https://schema.org/HybridEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
+     "performer": performers,
     "location": {
       "@type": "Place",
       "name": "Villa college, Maldives",

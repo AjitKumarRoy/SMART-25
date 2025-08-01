@@ -175,7 +175,7 @@ const Footer = () => {
               <FiTwitter />
             </a>
             <a
-              href="https://linkedin.com/school/iit-bhilai"
+              href="https://www.linkedin.com/company/amdcg-iitbhilai/posts/?feedView=all"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
