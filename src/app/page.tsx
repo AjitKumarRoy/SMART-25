@@ -53,6 +53,9 @@ export default function Homepage() {
     "name": "SMART-25: Sustainable Multidisciplinary Artificial Intelligence Research for Global Transformations",
     "startDate": "2025-11-21T09:00",
     "endDate": "2025-11-22T17:00",
+    "image": [
+      "https://smart25.org/og-image.jpg" 
+    ],
     "eventAttendanceMode": "https://schema.org/HybridEventAttendanceMode",
     "eventStatus": "https://schema.org/EventScheduled",
     "location": {
