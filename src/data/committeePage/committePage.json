@@ -74,6 +74,7 @@
         "members": [
           "Dr. Ilyas Hussain, IIT Bhilai, India",
           "Dr. Md. Saad Patel, IIT Bhilai, India",
+          "Mr. Pilli Jaya Teja, IIT Bhilai, India",
           "Dr. Saravana Kumar, Villa College, Maldives",
           "Dr. Siva Kumar, Villa College, Maldives"
         ]
@@ -101,6 +102,18 @@
   "technicalCommittee": {
     "title": "Technical Committee",
     "members": [
+      {
+        "name": "Dr. Chinmaya Prasad Padhy",
+        "affiliation": "Gandhi Institute of Technology and Management, India"
+      },
+      {
+        "name": "Dr. Devesh Shrivastava",
+        "affiliation": "Bhilai Institute of Technology, India"
+      },
+      {
+        "name": "Dr. Dharmender Singh Saini",
+        "affiliation": "OP Jindal University, India"
+      },
       {
         "name": "Dr. Kathiresan M",
         "affiliation": "National Engineering College, India"
@@ -134,7 +147,7 @@
         "affiliation": "Sri Sivasubramaniya Nadar (SSN) College of Engineering, India"
       },
       {
-        "name": "Dr. Nalini Lekkala",
+        "name": "Ms. Nalini Lekkala",
         "affiliation": "Vignan Institute of Information and Technology (Autonomous), India"
       },
       {
@@ -186,13 +199,140 @@
         "affiliation": "St. Mother Theresa Engineering College, India"
       },
       {
+    "name": "Dr. Mahendra Govindrao Gadge",
+    "affiliation": "Vishwakarma Institute of Information Technology, India"
+  },
+  {
+    "name": "Dr. Sharath Chandra N",
+    "affiliation": "The National Institute of Engineering, India"
+  },
+  {
+    "name": "Dr. Sunu Surendran K T",
+    "affiliation": "KMCT College of Engineering, India"
+  },
+  {
+    "name": "Dr. Nandagopal Ramasamy K.R",
+    "affiliation": "K.S. Rangasamy College of Technology, India"
+  },
+  {
+    "name": "Dr. Sukhwinder Singh",
+    "affiliation": "Gulzar Group of Institutions, India"
+  },
+  {
+    "name": "Dr. J R K Kumar Dabbakuti",
+    "affiliation": "K L University, India"
+  },
+  {
+    "name": "Dr. Manish Kumar",
+    "affiliation": "RV Institute of Technology and Management, India"
+  },
+  {
+    "name": "Dr. H. Seshagiri Rao",
+    "affiliation": "RGUKT, India"
+  },
+  {
+    "name": "Dr. D. Ananthapadmanaban",
+    "affiliation": "SSN College of engineering, India"
+  },
+  {
+    "name": "Dr. K. N. Bharath",
+    "affiliation": "GM University, India"
+  },
+  {
+    "name": "Dr. Durga Prasad",
+    "affiliation": "Guru Nanak Dev Engineering College, India"
+  },
+  {
+    "name": "Dr. Bollu Satyanarayana",
+    "affiliation": "VNR Vignana Jyothi Institute of Engineering and Technology, India"
+  },
+  {
+    "name": "Dr. Anuj Singh",
+    "affiliation": "SRMCEM, India"
+  },
+  {
+    "name": "Dr. Sharvan Kumar Garg",
+    "affiliation": "Swami Vivekanand Subharti University, India"
+  },
+  {
+    "name": "Dr. Ashwani Kumar Yadav",
+    "affiliation": "Technical Education Department, India"
+  },
+  {
+    "name": "Dr. J. Laxmi Lalitha",
+    "affiliation": "Bapatla Engineering College, India"
+  },
+  {
+    "name": "Dr. Manisha Kulthe",
+    "affiliation": "COEP Technological University, India"
+  },
+  {
+    "name": "Dr. Payal Soni Gupta",
+    "affiliation": "SVCT, India"
+  },
+  {
+    "name": "Dr R Tharmaraj",
+    "affiliation": "SRM Institute of Science and Technology, India"
+  },
+  {
+    "name": "Dr. Shriram.S",
+    "affiliation": "Amrita Vishwa Vidyapeetham, India"
+  },
+  {
+    "name": "Dr.E.Ganesh",
+    "affiliation": "Rajalakshmi Institute of Technology, India"
+  },
+  {
+    "name": "Dr. Mukund A. Patil",
+    "affiliation": "G. H. Raisoni College of Engineering & Management, India"
+  },
+  {
+    "name": "Dr. Manikanda Prabu N",
+    "affiliation": "Jawaharlal College of Engineering and Technology, India"
+  },
+  {
+    "name": "Dr. Navneet Kaur",
+    "affiliation": "CSE-SIRT, India"
+  },
+  {
+    "name": "Dr. Manjunatha B",
+    "affiliation": "JSS Science and Technology University, India"
+  },
+  {
+    "name": "Dr. Girish M G",
+    "affiliation": "MIT Manipal, India"
+  },
+  {
+    "name": "Prof. Aditya Kumar",
+    "affiliation": "Government Engineering College, India"
+  },
+  {
+    "name": "Dr. Katherasan Duraisamy",
+    "affiliation": "Dhanalakshmi Srinivasan Engineering College, India"
+  },
+  {
+    "name": "Prof. Omprakash Mandge",
+    "affiliation": "MET Institute of Computer Science, India"
+  }
+      
+    ]
+  },
+  "virtualCommittee": {
+    "title": "Virtual Sessions Committee",
+    "members": [
+      {
         "name": "Mrs. Mcluret",
         "affiliation": "St. Mother Theresa Engineering College, India"
       },
       {
         "name": "Mr. Muniasamy",
         "affiliation": "St. Mother Theresa Engineering College, India"
-      },
+      }
+    ]
+  },
+  "registrationHospitality": {
+    "title": "Registration & Hospitality Committee",
+    "members": [
       {
         "name": "Mr. Bakthiraj",
         "affiliation": "St. Mother Theresa Engineering College, India"

@@ -20,7 +20,7 @@ import speakersData from '@/data/speakersPage/speakersPage.json';
 export const metadata: Metadata = {
   title: "SMART-25 AI Conference | Sustainable Tech & SDGs | Nov 21-22, 2025",
   description: "Join SMART-25, the 4th International Conference on AI for Sustainable Development Goals. Submit your paper for this premier hybrid event at Villa College, Maldives.",
-  keywords: ["AI conference 2025", "sustainable technology", "SDGs", "machine learning conference", "SMART-25", "IIT Bhilai","Villa College", "St. Mother Theresa Engineering College", "international conference India", "paper submission", "AI research"],
+  keywords: ["Scopus indexed conference", "Scopus indexed journal", "AI conference 2025", "sustainable technology", "SDGs", "machine learning conference", "SMART-25", "SMART 25", "SMART 2025", "IIT Bhilai","Villa College", "St. Mother Theresa Engineering College", "international conference India", "paper submission", "AI research"],
   alternates: {
     canonical: "https://smart25.org/", // Replace with your actual domain
   },

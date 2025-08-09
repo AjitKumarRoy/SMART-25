@@ -8,6 +8,8 @@ import { GeneralChairsSection } from '@/components/committePage/GeneralChairsSec
 import { TechnicalCommitteeSection } from '@/components/committePage/TechnicalCommitteeSection';
 import { Organizers } from '@/components/committePage/Organizers';
 import { OrganizingCommitteeSection } from '@/components/committePage/OrganizingCommitteeSection';
+import { VirtualSessionsCommittee } from '@/components/committePage/VirtualSessionsCommittee';
+import { RegistrationAndHospitality } from '@/components/committePage/RegistrationAndHospitality';
 
 export const CommitteePageClient = () => {
     return (
@@ -28,6 +30,8 @@ export const CommitteePageClient = () => {
             <Organizers />
             <OrganizingCommitteeSection />
             <TechnicalCommitteeSection />
+            <VirtualSessionsCommittee />
+            <RegistrationAndHospitality />
             
         </motion.div>
     );

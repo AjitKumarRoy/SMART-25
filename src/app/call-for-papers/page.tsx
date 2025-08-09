@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: "Call for Papers | SMART-25 AI Conference",
     description: "Submit your research to SMART-25. We invite papers on themes like Core AI/ML, Automation, Sustainable Infrastructure, and more. Join us in accelerating SDGs through AI.",
-    keywords: ["call for papers", "submit paper", "AI conference submission", "SMART-25 themes", ...themeKeywords],
+    keywords: ["Scopus indexed conference", "Scopus indexed journal", "call for papers", "submit paper", "AI conference submission", "SMART-25 themes", ...themeKeywords],
     alternates: {
       canonical: "https://smart25.org/call-for-papers", // Use your actual domain
     },
