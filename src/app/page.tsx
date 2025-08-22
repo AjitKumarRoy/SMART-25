@@ -106,11 +106,11 @@ export default function Homepage() {
     const daysLeft = differenceInDays(deadline, today);
 
     if (daysLeft > 1) {
-      return `The abstract submission deadline is August 15, 2025. Only ${daysLeft} days left! 🗓️`;
+      return `The abstract submission deadline is August 31, 2025. Only ${daysLeft} days left! 🗓️`;
     } else if (daysLeft === 1) {
       return `Final call! The abstract submission deadline is tomorrow. Submit your work now! ⏳`;
     } else if (daysLeft === 0) {
-        return `Today is the last day to submit abstracts! Deadline: August 15, 2025. 🚨`;
+        return `Today is the last day to submit abstracts! Deadline: August 31, 2025. 🚨`;
     } else {
       return `Abstract submissions are now closed. Thank you for your interest!`;
     }
