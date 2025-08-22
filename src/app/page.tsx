@@ -101,7 +101,7 @@ export default function Homepage() {
 
   // --- Dynamic Deadline Calculation ---
   const getDeadlineText = () => {
-    const deadline = new Date('2025-08-15');
+    const deadline = new Date('2025-08-31');
     const today = new Date(); // Gets the current date
     const daysLeft = differenceInDays(deadline, today);
 
