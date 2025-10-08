@@ -9,6 +9,7 @@ import { DatesAndCtaSection } from '@/components/homePage/DatesAndCtaSection';
 import { ScrollingNotification } from '@/components/ui/ScrollingNotification';
 import { OrganizersSection } from '@/components/homePage/OrganizersSection';
 import { VenueSection } from '@/components/homePage/VenueSection';
+import { CollaboratorsSection } from '@/components/homePage/CollaboratorSection';
 import { AttractionsSection } from '@/components/homePage/AttractionSection';
 import { PreviousConferenceSection } from '@/components/homePage/PreviousConferenceSection';
 import { FaqSection } from '@/components/homePage/FaqSection';
@@ -135,6 +136,7 @@ export default function Homepage() {
       <SpeakersSection />
       <DatesAndCtaSection/>
       <VenueSection />
+      <CollaboratorsSection />
       <AttractionsSection />
       <PreviousConferenceSection />
       <FaqSection />
