@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import aboutData from '@/data/aboutPage/aboutPage.json';
+import Link from 'next/link';
+
 
 export const JointlyOrganizedSection = () => {
   // Animation variants for the logo items
@@ -75,6 +77,28 @@ export const JointlyOrganizedSection = () => {
           <motion.h2 variants={itemVariants} className="mt-2 text-4xl font-extrabold sm:text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
             {title.line5}
           </motion.h2>
+        </motion.div>
+
+        {/* --- NEW TITLE SPONSOR SECTION --- */}
+        <motion.div
+          className="mt-12 flex flex-col items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+        >
+          <p className="text-sm font-bold uppercase tracking-widest text-gray-500">Title Sponsor</p>
+          <Link href="https://www.konnifel.com/" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105">
+            <div className="relative h-20 w-48">
+              <Image 
+                src="/images/sponsors/konnifel.png" 
+                alt="Konnifel Logo" 
+                fill 
+                className="object-contain"
+                sizes="200px"
+              />
+            </div>
+          </Link>
         </motion.div>
 
         {/* Highlights Container */}
