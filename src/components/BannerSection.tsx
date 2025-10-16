@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 
 // Import desktop, tablet, and mobile background images
 import desktopBanner from '../../public/images/smart-25-banner-desktop.png'; // Replace with your desktop image path
-import tabletBanner from '../../public/images/smart-25-banner-tablet.png';   // Replace with your tablet image path
-import mobileBanner from '../../public/images/smart-25-banner-mobile.png';   // Replace with your mobile image path
+import tabletBanner from '../../public/images/smart-25-banner-tablet.jpg';   // Replace with your tablet image path
+import mobileBanner from '../../public/images/smart-25-banner-tablet.jpg';   // Replace with your mobile image path
 
 // Using a custom hook to preload all the images
 const usePreloadImages = (srcs: string[]) => {
