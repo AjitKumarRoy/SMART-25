@@ -211,11 +211,11 @@ const Footer = () => {
         <p className="mt-1">
           Designed & Developed by {" "}
           <Link
-            href="https://www.linkedin.com/in/ajitroyofficial/" 
+            href="" 
             target="_blank"
             className="text-blue-600 dark:text-blue-400 hover:underline hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200"
           >
-            Ajit Kumar Roy
+            Vistora Web-Solutions
           </Link>
           .
         </p>
