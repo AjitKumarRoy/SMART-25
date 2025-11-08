@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
+// import Link from 'next/link';
+// import { FaArrowRight } from 'react-icons/fa';
 import { Section } from '@/components/ui/Section';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import aboutData from '@/data/aboutPage/aboutSponsor.json'
