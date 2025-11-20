@@ -4,102 +4,100 @@
     "subtitle": "Explore the Sessions, Keynotes, and Events at SMART-25",
     "backgroundImage": "/images/pagesBanner/banner4.png"
   },
-  "schedule": {
-    "day1": {
-      "date": "November 14, 2025",
-      "events": [
+  "schedule": [
+    {
+      "id": "day1",
+      "label": "Day 1",
+      "date": "November 21, 2025",
+      "tracks": [
         {
-          "time": "09:00 AM - 09:30 AM",
-          "title": "Registration & Welcome Coffee",
-          "type": "break"
-        },
-        {
-          "time": "09:30 AM - 10:30 AM",
-          "title": "Inauguration Ceremony & Opening Remarks",
-          "speaker": "Chief Patrons & General Chairs",
-          "type": "ceremony"
-        },
-        {
-          "time": "10:30 AM - 11:30 AM",
-          "title": "Keynote Address 1: AI for Sustainable Infrastructure",
-          "speaker": "Dr. Alankrita Singh, IIT Roorkee",
-          "type": "keynote"
-        },
-        {
-          "time": "11:30 AM - 01:00 PM",
-          "title": "Technical Session 1: Core AI & Automation",
-          "speaker": "Session Chair: Dr. B. Chen",
-          "type": "session"
-        },
-        {
-          "time": "01:00 PM - 02:00 PM",
-          "title": "Lunch Break",
-          "type": "break"
-        },
-        {
-          "time": "02:00 PM - 03:30 PM",
-          "title": "Technical Session 2: Power & Electrical Systems",
-          "speaker": "Session Chair: Dr. F. Garcia",
-          "type": "session"
-        },
-        {
-          "time": "03:30 PM - 04:00 PM",
-          "title": "Coffee & Networking Break",
-          "type": "break"
-        },
-        {
-          "time": "04:00 PM - 05:30 PM",
-          "title": "Panel Discussion: The Future of AI in Emerging Economies",
-          "speaker": "Moderated by Dr. Emily Carter",
-          "type": "panel"
+          "name": "Offline Session",
+          "downloadLink": "/docs/SMART_2025_Offline_schedule_21-11-25.pdf",
+          "events": [
+            { "time": "08:30 - 09:00", "title": "Registration", "type": "break" },
+            { "time": "09:10 - 09:25", "title": "Opening Ceremony", "type": "ceremony" },
+            { "time": "09:25 - 09:40", "title": "Keynote Lecture 1: Dr. Alankritha", "type": "keynote" },
+            { "time": "09:40 - 10:00", "title": "Networking Break", "type": "break" },
+            { "time": "10:00 - 11:00", "title": "Paper Presentation: Session A (Hall AA701)", "speaker": "Hydrokinetic Turbines, Smart Shopping Trolley, Edge Detection", "type": "session" },
+            { "time": "10:00 - 11:00", "title": "Paper Presentation: Session B (Hall AA702)", "speaker": "Baby Car Seat, SDGs 2/7/13, Aluminum Matrix", "type": "session" },
+            { "time": "11:00 - 11:15", "title": "Invited Lecture 1: Dr. Sneha Singh", "type": "keynote" },
+            { "time": "11:15 - 11:30", "title": "Speech by Collaborator: Dr. Jose Immanuel", "speaker": "IIT Bhilai", "type": "ceremony" },
+            { "time": "11:30 - 11:45", "title": "Awards Ceremony", "type": "ceremony" }
+          ]
         }
       ]
     },
-    "day2": {
-      "date": "November 15, 2025",
-      "events": [
+    {
+      "id": "day2",
+      "label": "Day 2",
+      "date": "November 22, 2025",
+      "tracks": [
         {
-          "time": "09:30 AM - 10:30 AM",
-          "title": "Keynote Address 2: AI in Sustainable Material Science",
-          "speaker": "Mr. Rishikesan Visuvamithran",
-          "type": "keynote"
+          "name": "Online Session A",
+          "downloadLink": "/docs/SMART_2025_Online_schedule_A_22-11-25.pdf",
+          "events": [
+             { "time": "09:50 - 10:00", "title": "Introduction", "type": "break" },
+             { "time": "10:00 - 10:30", "title": "Keynote Lecture 1: Mr. Rishikesan Visuvamithran", "type": "keynote" },
+             { "time": "10:35 - 11:05", "title": "Keynote Lecture 2: Dr. Kalpana Kannan", "type": "keynote" },
+             { "time": "11:10 - 13:05", "title": "Paper Presentation: Morning Session", "speaker": "Focus: Sustainable Building, Geopolymer Concrete, Energy Performance", "type": "session" },
+             { "time": "13:10 - 14:00", "title": "Lunch", "type": "break" },
+             { "time": "14:00 - 14:20", "title": "Keynote Lecture 3: Dr. Geethapriyan Thangamani", "type": "keynote" },
+             { "time": "14:25 - 16:20", "title": "Paper Presentation: Afternoon Session", "speaker": "Focus: River Pollution, Solar Still, Lean Six Sigma, HAWT Blades", "type": "session" },
+             { "time": "16:20 - 16:40", "title": "Closing Ceremony & Awards", "speaker": "Dr. S. Joe Patrick Gnanaraj", "type": "ceremony" }
+          ]
         },
         {
-          "time": "10:30 AM - 12:00 PM",
-          "title": "Technical Session 3: Building Structures & Geology",
-          "speaker": "Session Chair: Prof. C. Das",
-          "type": "session"
+          "name": "Online Session B",
+          "downloadLink": "/docs/SMART_2025_Online_schedule_B_22-11-25.pdf",
+          "events": [
+             { "time": "09:50 - 10:00", "title": "Introduction", "type": "break" },
+             { "time": "10:00 - 10:30", "title": "Keynote Lecture 1: Mr. Rishikesan Visuvamithran", "type": "keynote" },
+             { "time": "10:35 - 11:05", "title": "Keynote Lecture 2: Dr. Kalpana Kannan", "type": "keynote" },
+             { "time": "11:10 - 13:05", "title": "Paper Presentation: Morning Session", "speaker": "Focus: Vision-Language Models, Speech Synthesis, Health Coaching", "type": "session" },
+             { "time": "13:10 - 14:00", "title": "Lunch", "type": "break" },
+             { "time": "14:00 - 14:20", "title": "Keynote Lecture 3: Dr. Geethapriyan Thangamani", "type": "keynote" },
+             { "time": "14:25 - 16:20", "title": "Paper Presentation: Afternoon Session", "speaker": "Focus: Fault Detection, Clinical Reasoning, Workforce Diversity", "type": "session" },
+             { "time": "16:20 - 16:40", "title": "Closing Ceremony & Awards", "speaker": "Dr. S. Joe Patrick Gnanaraj", "type": "ceremony" }
+          ]
         },
         {
-          "time": "12:00 PM - 01:00 PM",
-          "title": "Workshop: Explainable AI (XAI) in Practice",
-          "speaker": "Hosted by Dr. D. Evans",
-          "type": "panel"
-        },
-        {
-          "time": "01:00 PM - 02:00 PM",
-          "title": "Lunch Break",
-          "type": "break"
-        },
-        {
-          "time": "02:00 PM - 03:30 PM",
-          "title": "Technical Session 4: Communication & Mechanical Systems",
-          "speaker": "Session Chair: Dr. H. Ivanova",
-          "type": "session"
-        },
-        {
-          "time": "03:30 PM - 04:00 PM",
-          "title": "Coffee Break",
-          "type": "break"
-        },
-        {
-          "time": "04:00 PM - 05:00 PM",
-          "title": "Awards & Valedictory Ceremony",
-          "speaker": "Closing remarks by General Chairs",
-          "type": "ceremony"
+          "name": "Online Session C",
+          "downloadLink": "/docs/SMART_2025_Online_schedule_C_22-11-25.pdf",
+          "events": [
+             { "time": "09:50 - 10:00", "title": "Introduction", "type": "break" },
+             { "time": "10:00 - 10:30", "title": "Keynote Lecture 1: Mr. Rishikesan Visuvamithran", "type": "keynote" },
+             { "time": "10:35 - 11:05", "title": "Keynote Lecture 2: Dr. Kalpana Kannan", "type": "keynote" },
+             { "time": "11:10 - 13:05", "title": "Paper Presentation: Morning Session", "speaker": "Focus: SportScout, Cold Storage IoT, Waste Segregation", "type": "session" },
+             { "time": "13:10 - 14:00", "title": "Lunch", "type": "break" },
+             { "time": "14:00 - 14:20", "title": "Keynote Lecture 3: Dr. Geethapriyan Thangamani", "type": "keynote" },
+             { "time": "14:25 - 16:40", "title": "Paper Presentation: Afternoon Session", "speaker": "Focus: Aluminum-Ceramic Composites, Hybrid Nanocomposites", "type": "session" },
+             { "time": "16:20 - 16:40", "title": "Closing Ceremony & Awards", "speaker": "Dr. S. Joe Patrick Gnanaraj", "type": "ceremony" }
+          ]
         }
       ]
     }
-  },
-  "downloadLink": "#"
+  ],
+  "downloads": [
+    {
+      "title": "Day 1: Offline Schedule",
+      "description": "Physical session schedule at Villa College",
+      "link": "/docs/SMART_2025_Offline_schedule_21-11-25.pdf"
+    },
+    {
+      "title": "Day 2: Online Session A",
+      "description": "Virtual Track A - Morning & Afternoon",
+      "link": "/docs/SMART_2025_Online_schedule_A_22-11-25.pdf"
+    },
+    {
+      "title": "Day 2: Online Session B",
+      "description": "Virtual Track B - Morning & Afternoon",
+      "link": "/docs/SMART_2025_Online_schedule_B_22-11-25.pdf"
+    },
+    {
+      "title": "Day 2: Online Session C",
+      "description": "Virtual Track C - Morning & Afternoon",
+      "link": "/docs/SMART_2025_Online_schedule_C_22-11-25.pdf"
+    }
+  ]
+
 }

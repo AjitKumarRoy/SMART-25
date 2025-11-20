@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import { PageHero } from '@/components/ui/PageHero';
 import pageData from '@/data/programSchedulePage/programSchedule.json';
-import { ComingSoon } from '@/components/ui/ComingSoon';
-//import { ScheduleTabs } from '@/components/schedulePage/ScheduleTabs'; 
+import { ScheduleTabs } from '@/components/schedulePage/ScheduleTabs'; 
+import { ScheduleDownloads } from './ScheduleDownloads';
 
 export const SchedulePageClient = () => {
   return (
@@ -20,12 +20,10 @@ export const SchedulePageClient = () => {
         backgroundImage={pageData.hero.backgroundImage}
       />
 
-      {/* <ScheduleTabs /> */}
+      <ScheduleTabs />
       
-      <ComingSoon
-        title="Schedule to be Announced"
-        message="The detailed program schedule for the conference is being finalized and will be updated soon."
-      />
+      <ScheduleDownloads downloads={pageData.downloads} />
+      
       
     </motion.div>
   );
