@@ -21,9 +21,7 @@ export const SchedulePageClient = () => {
       />
 
       <ScheduleTabs />
-      
       <ScheduleDownloads downloads={pageData.downloads} />
-      
       
     </motion.div>
   );

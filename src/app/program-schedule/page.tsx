@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     canonical: "https://smart25.org/program-schedule", // Use your actual domain
   },
   openGraph: {
-    title: "Program Schedule for SMART-25 (To Be Announced)",
+    title: "Program Schedule for SMART-25",
     description: "The full schedule of events for the SMART-25 AI Conference will be released soon. Stay tuned for details on keynotes, panels, and technical sessions.",
     url: "https://smart25.org/program-schedule",
     images: [
